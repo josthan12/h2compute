@@ -1,5 +1,13 @@
 # Architecture and Decision Notes
 
+## Dated planning review
+
+The [12 October 2026 feasibility review](phase-1-feasibility.md) verifies the three confirmed MVP areas: Python programming, algorithms/data structures, and relational databases/SQL. Its hosting, runner and content decisions are proposals awaiting owner approval. No implementation has started.
+
+The recommended initial beta is theory, quizzes and local progress on Vercel Hobby. Judge0 remains a candidate behind the server-side adapter described below; no suitable zero-cost hosted allowance was verified, and public execution stays disabled until its cost, privacy, security and live integration gates pass. Initial practice can be labelled offline/self-check. This fallback requires the owner to approve revised beta acceptance criteria; it does not satisfy the existing hosted-execution gate.
+
+For future execution, prefer stdin/stdout, asynchronous bounded polling and host-native edge rate limits. Per-IP or in-memory limits do not enforce a global provider spend cap. Hidden inputs necessarily reach learner code; suppress hidden-case output and disable runner network access rather than promising absolute secrecy. See [runner proposal](decisions/runner-provider.md), [hosting proposal](decisions/hosting-provider.md) and [content mapping](decisions/content-mapping.md).
+
 ## Overview
 
 The preferred design is a simple Next.js application with mostly static content and a small server-side boundary for code execution. The site should not require a database or account system in the first release.
