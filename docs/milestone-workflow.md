@@ -5,7 +5,7 @@
 
 ## Current direction
 
-Planning research is complete and the owner approved theory-first implementation. The repository and origin remote are connected; application implementation has not started. Build lessons, quizzes, offline practice/model explanations and local progress first. Evaluate Pyodide only after the first theory topic works. Browser practice uses visible examples and local self-checks; hosted grading/private tests are deferred.
+Planning research is complete and the owner approved theory-first implementation. The repository and origin remote are connected; Milestone 1 is merged and Milestone 2 has a local three-lesson implementation. Use current-status.md for current checks and review limits. Build lessons, quizzes, offline practice/model explanations and local progress first. Evaluate Pyodide only after the first theory topic works. Browser practice uses visible examples and local self-checks; hosted grading/private tests are deferred.
 
 The owner's supplied Git guidelines included an earlier “Phase 1: Planning and Feasibility” snapshot. That snapshot is historical; the later theory-first approval and current-status.md determine present implementation scope. The Git rules below remain in force. This file does not grant permission for new paid services, hosted grading or expanded scope.
 
@@ -99,9 +99,9 @@ Check working-tree safety first. Delete the remote feature branch only when appr
 
 > Continue Milestone [number] from current-status.md. Read AGENTS.md, implementation.md, roadmap.md and docs/milestone-workflow.md. Inspect the branch and working tree; follow the feature-branch rules and preserve existing changes. Deliver the smallest complete approved slice, run relevant checks, report exact results and update status/roadmap. Keep later milestones deferred. Do not commit, push or merge without explicit authorization.
 
-For the immediate next milestone:
+After the current topic is reviewed and merged:
 
-> Continue Milestone 1: build the minimal theory foundation and one Python control-flow lesson → explanatory quiz → offline practice/model explanation → local completion journey. Keep the editor, Pyodide dependency and execution backend deferred.
+> Continue Milestone 3 feasibility only: read the current status, inspect Git, and validate a pinned runtime and isolated runner on the actual deployment. Keep editor integration and executable learner controls deferred until all activation gates pass. Do not commit, push, publish or merge without authorization.
 
 ## Exception recorded for saving this workflow
 

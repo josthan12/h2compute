@@ -46,7 +46,7 @@ test("complete journey, explanation, persistence, reset and narrow layout", asyn
     page.getByRole("button", { name: "Journey complete", exact: true }),
   ).toBeDisabled();
   await expect(
-    page.getByText("1 of 1 published journeys complete.", { exact: false }),
+    page.getByText("1 of 3 published journeys complete.", { exact: false }),
   ).toBeVisible();
   expect(
     await page.evaluate(

@@ -14,15 +14,13 @@ export default function Home() {
             <em>Then make it yours.</em>
           </h1>
           <p className="lead">
-            Clear explanations, small checkpoints, and time to practise. Start
-            with one complete Python lesson, at your own pace.
+            Clear explanations, small checkpoints, and time to practise. Work
+            through three connected Python lessons, at your own pace.
           </p>
           <Link className="btn btn-primary" href="/topics/python-control-flow">
             Explore Python control flow <span aria-hidden="true">→</span>
           </Link>
-          <p className="meta">
-            Original content · Local progress · No sign-up
-          </p>
+          <p className="meta">Original content · Local progress · No sign-up</p>
         </div>
         <aside className="card hero-note border border-base-300 bg-base-200">
           <span className="eyebrow">A useful first question</span>
@@ -47,8 +45,9 @@ export default function Home() {
           <p className="eyebrow">Your first learning path</p>
           <h2>Python control flow</h2>
           <p>
-            Learn to follow execution in order and select the right branch. One
-            15-minute lesson, then an 8-minute offline task.
+            Learn to follow execution in order and select the right branch.
+            Three lessons with worked examples, explanatory checkpoints and
+            offline tasks.
           </p>
           <ProgressBadge />
         </div>
@@ -80,9 +79,9 @@ export default function Home() {
         <h2>A focused beginning</h2>
         <p>
           Python programming is the first published area. Algorithms and data
-          structures, and relational databases and SQL, are planned. This
-          foundation covers only sequence and selection; full syllabus coverage
-          is not claimed.
+          structures, and relational databases and SQL, are planned. This topic
+          teaches sequence, selection and iteration; full syllabus coverage is
+          not claimed.
         </p>
         <Link href="/about">See syllabus mapping & limits →</Link>
       </section>

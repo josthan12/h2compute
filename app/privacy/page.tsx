@@ -8,14 +8,16 @@ export default function Privacy() {
       <h2>What is saved</h2>
       <p>
         The versioned local-storage entry h2compute.progress stores whether you
-        reviewed the checkpoint and offline model, and marked the lesson
+        reviewed each checkpoint and offline model, and marked each lesson
         complete. Answers, source code and personal details are not saved.
       </p>
       <p>
         Progress is specific to this browser and site address. Clearing site
         data, switching browsers or using private browsing can erase it. If
-        storage is blocked, progress lasts only for this visit. Corrupt or
-        unsupported progress starts fresh.
+        storage is blocked, progress lasts only for this visit. Earlier
+        Milestone 1 progress is preserved during migration. Invalid lesson
+        entries start fresh while valid entries are kept. Unsupported versions
+        start fresh.
       </p>
       <h2>Your controls</h2>
       <p>

@@ -1,7 +1,7 @@
 # Content mapping proposal
 
 **Date checked:** 12 October 2026  
-**Status:** Source verified; one original sequence/selection lesson, quiz and offline task authored and automatically checked against 2.2.3/2.2.6, printed page 8. Independent teacher review remains pending. Both outcomes have partial coverage.
+**Status:** Source verified; three original sequence/selection, loop and combined-flow lessons with quizzes and offline tasks authored and automatically checked against 2.2.3/2.2.6, printed page 8. Independent teacher review remains pending. Both outcomes have partial coverage.
 
 Use the official 2026 syllabus's numeric learning outcome references as strings, with syllabus year 2026 and printed PDF page numbers. Internal lesson IDs must not be presented as official identifiers. Every quiz/exercise maps to the precise subset it assesses.
 

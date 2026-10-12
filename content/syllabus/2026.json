@@ -3,7 +3,17 @@
   "source": "https://isomer-user-content.by.gov.sg/334/cd7aef2f-eef7-4e5a-bebe-2339b214db42/9569_y26_sy.pdf",
   "verifiedOn": "2026-10-12",
   "outcomes": {
-    "2.2.3": { "page": 8, "summary": "Control execution using sequence, selection and iteration.", "coverage": "partial", "taught": "Sequence and selection only; iteration is planned." },
-    "2.2.6": { "page": 8, "summary": "Trace recursive and non-recursive programs and their results.", "coverage": "partial", "taught": "Short non-recursive branching traces only; loops and recursion are not covered." }
+    "2.2.3": {
+      "page": 8,
+      "summary": "Control execution using sequence, selection and iteration.",
+      "coverage": "partial",
+      "taught": "Sequence, selection and counted/conditional iteration in small single-file programs; advanced combinations are not exhaustive."
+    },
+    "2.2.6": {
+      "page": 8,
+      "summary": "Trace recursive and non-recursive programs and their results.",
+      "coverage": "partial",
+      "taught": "Short non-recursive branching, loop and combined-flow traces; recursive tracing is not covered."
+    }
   }
 }

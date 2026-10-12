@@ -1,5 +1,7 @@
 import { test, expect } from "@playwright/test";
-test("notes theme and generated controls remain readable with dark system preference", async ({ page }) => {
+test("notes theme and generated controls remain readable with dark system preference", async ({
+  page,
+}) => {
   await page.emulateMedia({ colorScheme: "dark", reducedMotion: "reduce" });
   await page.goto("/lessons/sequence-and-selection");
   await expect(page.locator("html")).toHaveAttribute("data-theme", "h2notes");
@@ -7,13 +9,27 @@ test("notes theme and generated controls remain readable with dark system prefer
   await expect(reset).toBeEnabled();
   const size = await reset.boundingBox();
   expect(size?.height).toBeGreaterThanOrEqual(44);
-  const first = page.getByRole("radio", { name: "Review, then Recorded", exact: true });
+  const first = page.getByRole("radio", {
+    name: "Review, then Recorded",
+    exact: true,
+  });
   await first.focus();
   await page.keyboard.press("ArrowDown");
-  const selected = page.getByRole("radio", { name: "Ready, then Recorded", exact: true });
+  const selected = page.getByRole("radio", {
+    name: "Ready, then Recorded",
+    exact: true,
+  });
   await expect(selected).toBeFocused();
-  expect(await selected.evaluate(element => parseFloat(getComputedStyle(element).outlineWidth))).toBeGreaterThanOrEqual(3);
-  expect(await page.locator("body").evaluate(element => getComputedStyle(element).backgroundColor)).toBe("rgb(248, 247, 242)");
+  expect(
+    await selected.evaluate((element) =>
+      parseFloat(getComputedStyle(element).outlineWidth),
+    ),
+  ).toBeGreaterThanOrEqual(3);
+  expect(
+    await page
+      .locator("body")
+      .evaluate((element) => getComputedStyle(element).backgroundColor),
+  ).toBe("rgb(248, 247, 242)");
 });
 test("published routes fit narrow screens and expose semantic navigation", async ({
   page,
@@ -24,7 +40,11 @@ test("published routes fit narrow screens and expose semantic navigation", async
       "/",
       "/topics/python-control-flow",
       "/lessons/sequence-and-selection",
+      "/lessons/counted-and-conditional-loops",
+      "/lessons/combined-flow-and-tracing",
       "/exercises/classify-a-score",
+      "/exercises/sum-a-sequence",
+      "/exercises/summarise-revision-scores",
       "/about",
       "/privacy",
     ]) {
@@ -40,15 +60,34 @@ test("published routes fit narrow screens and expose semantic navigation", async
         `${route} at ${width}px`,
       ).toBe(true);
       if (route === "/") {
-        await expect(page.getByText("Original content · Local progress · No sign-up", { exact: true })).toBeVisible();
+        await expect(
+          page.getByText("Original content · Local progress · No sign-up", {
+            exact: true,
+          }),
+        ).toBeVisible();
         await page.screenshot({
           path: testInfo.outputPath(`home-${width}.png`),
         });
       }
-      if (route === "/exercises/classify-a-score") {
+      if (route.startsWith("/exercises/")) {
+        expect(await page.locator("table tbody td").evaluateAll(cells => cells.every(cell => cell.scrollWidth <= cell.clientWidth))).toBe(true);
+        if (width === 320 && route === "/exercises/summarise-revision-scores") {
+          await expect(page.locator("table tbody td code").first()).toHaveCSS(
+            "white-space",
+            "pre-wrap",
+          );
+          await page
+            .getByRole("table")
+            .screenshot({
+              path: testInfo.outputPath("multi-line-input-320.png"),
+            });
+        }
         await page.getByText("Show model explanation", { exact: true }).click();
-        await expect(page.locator("details[open] pre")).toBeVisible();
-        await expect(page.locator("details[open] pre")).toHaveCSS("background-color", "rgb(32, 55, 47)");
+        await expect(page.locator("details[open] pre").first()).toBeVisible();
+        await expect(page.locator("details[open] pre").first()).toHaveCSS(
+          "background-color",
+          "rgb(32, 55, 47)",
+        );
         expect(
           await page.evaluate(
             () => document.documentElement.scrollWidth <= window.innerWidth,
@@ -56,8 +95,13 @@ test("published routes fit narrow screens and expose semantic navigation", async
         ).toBe(true);
         if (width === 320)
           await page.screenshot({
-            path: testInfo.outputPath("practice-320.png"),
+            path: testInfo.outputPath(`${route.split("/").pop()}-320.png`),
           });
+      }
+      if (width === 320 && route.startsWith("/lessons/")) {
+        await page.screenshot({
+          path: testInfo.outputPath(`${route.split("/").pop()}-320.png`),
+        });
       }
     }
   }

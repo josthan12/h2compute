@@ -43,24 +43,31 @@ export default async function ExercisePage({
       <Markdown body={exercise.body} />
       <section>
         <h2>Visible examples</h2>
-        <p>Each input is one line. Each expected output is one line.</p>
+        <p>
+          Each row is a separate example. Line breaks follow the input/output
+          contract above.
+        </p>
         <div className="table-scroll">
-          <table className="table">
-            <caption>Normal values and category boundaries</caption>
+          <table className="table table-fixed">
+            <caption>Visible normal and boundary examples</caption>
             <thead>
               <tr>
-                <th scope="col">Input score</th>
-                <th scope="col">Expected output</th>
+                <th scope="col" className="w-1/2 whitespace-normal">Input</th>
+                <th scope="col" className="w-1/2 whitespace-normal">Expected output</th>
               </tr>
             </thead>
             <tbody>
               {exercise.examples.map((example) => (
                 <tr key={example.input}>
                   <td>
-                    <code>{example.input.trim()}</code>
+                    <code className="inline-block whitespace-pre-wrap">
+                      {example.input.trim()}
+                    </code>
                   </td>
                   <td>
-                    <code>{example.output.trim()}</code>
+                    <code className="inline-block whitespace-pre-wrap">
+                      {example.output.trim()}
+                    </code>
                   </td>
                 </tr>
               ))}
@@ -84,7 +91,11 @@ export default async function ExercisePage({
           </details>
         ))}
       </section>
-      <PracticeReview model={<Markdown body={exercise.model} />} />
+      <PracticeReview
+        key={exercise.slug}
+        lessonId={exercise.lesson}
+        model={<Markdown body={exercise.model} />}
+      />
       <section className="source-note">
         <h2>Content review</h2>
         <p>
