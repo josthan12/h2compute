@@ -1,7 +1,7 @@
 # Architecture and Decision Notes
 
 **Updated:** 12 October 2026
-**Direction:** Milestone 1 theory foundation locally implemented; Pyodide browser practice remains deferred until feasibility. See milestone-1-verification.md.
+**Direction:** Milestone 1 merged; three-lesson Milestone 2 theory topic implemented locally. Pyodide remains deferred until feasibility. See milestone-2-verification.md.
 
 ## Overview
 
@@ -65,6 +65,12 @@ Decisions: [runner](decisions/runner-provider.md), [hosting](decisions/hosting-p
 
 App Router pages are prerendered. The server-only filesystem loader reads bounded Git Markdown with validated JSON frontmatter; no learner input is executed. react-markdown escapes content and raw HTML is rejected. The shared Markdown AST parser validates publication links/anchors and derives the table of contents. Published lesson/exercise routes are generated statically; missing slugs receive a useful 404.
 
-A client progress provider reads an external storage snapshot after hydration, stores only versioned review/completion flags, handles blocked storage in memory for the current visit, and resets only its own key after confirmation. Unsupported versions/corrupt state start fresh; there is no historical schema to migrate yet. The current implementation deliberately supports the one lesson journey; extend the lesson-keyed schema and migration tests when Milestone 2 adds lessons. Quiz answers are ephemeral and all answer explanations are public.
+A client progress provider reads storage after hydration. Schema version 2 stores separate quiz/model/completion flags for the three registered lesson IDs; valid version 1 flags migrate to the first lesson without completing the others. Migration is read-only until the next learning update persists version 2. Invalid entries reset individually while valid neighbours survive; malformed/oversized envelopes or unsupported versions recover safely. Unknown lesson keys are ignored. No answers, source or personal details are stored.
+
+Writes re-read the latest storage snapshot to preserve sequential updates from other tabs, then update only the selected lesson. Storage events refresh other tabs; reset removes only h2compute.progress after confirmation. An external removal of that key or clearing localStorage also clears failed-save memory and its stale notice, preventing a later successful save from restoring reset progress. Unrelated keys and sessionStorage events do not trigger that reset. Blocked storage uses in-memory progress across navigation for the current visit and loses it on refresh. localStorage writes are not a transactional concurrent database; truly simultaneous writes can still use last-writer behaviour. Quiz answer/model-disclosure state resets when navigating to a different lesson/task.
 
 Use Tailwind CSS 4.3.3/daisyUI 5.7.47 with one h2notes theme and system fonts; there is no remote font, additional UI library, runtime/editor, server API, account or analytics integration. Build telemetry is a Next.js developer tool setting, separate from learner-app privacy. Deployment/host logs and terms remain a release check.
+
+## Milestone 2 content links
+
+The shared lesson-ID catalog sets the sequence and typed progress keys; published content must have a registered ID. Each lesson has one validated offline task that links back to it, and exercise mappings stay within the parent outcome subset. Per-lesson coverage notes and derived previous/next links prevent the original branching-specific copy from leaking into later lessons. Content size validation now measures UTF-8 bytes. Multi-line examples retain their line breaks in fixed-width, wrapping table columns. No runtime, package or styling system was added.

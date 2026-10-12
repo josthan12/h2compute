@@ -4,7 +4,7 @@
 **Version:** 0.2
 **Date:** 12 October 2026
 **Owner:** Solo developer
-**Implementation status:** Milestone 1 theory foundation implemented and locally verified on feat/project-setup. One lesson/checkpoint/offline-practice/local-completion journey exists; deployment, hosted CI and browser execution remain unverified or deferred. See current-status.md and docs/milestone-1-verification.md. The scope and activation gates below remain in force.
+**Implementation status:** Milestone 1 merged; Milestone 2 implements three connected lesson/checkpoint/offline-practice/local-completion journeys on feat/python-control-flow; deployment, hosted CI and browser execution remain unverified or deferred. See current-status.md and docs/milestone-2-verification.md. The scope and activation gates below remain in force.
 
 ## 1. Product summary
 

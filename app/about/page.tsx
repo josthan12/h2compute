@@ -9,9 +9,10 @@ export default function About() {
         H2Compute is an independent learning project for H2 Computing 9569.
       </p>
       <p>
-        This foundation publishes one sequence-and-selection lesson and one
-        offline task. It is not full-topic or full-syllabus coverage, an
-        official resource, or a replacement for school teaching.
+        This site publishes three connected control-flow lessons with three
+        offline tasks. They cover a bounded topic, not all Python or the full
+        syllabus. This is not an official resource, or a replacement for school
+        teaching.
       </p>
       <h2>2026 coverage register</h2>
       {Object.entries(syllabus.outcomes).map(([id, outcome]) => (
@@ -36,7 +37,10 @@ export default function About() {
       </p>
       <h2>Within the MVP</h2>
       <ul>
-        <li>Python programming: partial, sequence and selection published.</li>
+        <li>
+          Python programming: partial, sequence, selection, iteration and
+          non-recursive tracing published.
+        </li>
         <li>Algorithms and data structures: planned, no lessons published.</li>
         <li>Relational databases and SQL: planned, no lessons published.</li>
       </ul>

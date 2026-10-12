@@ -3,9 +3,16 @@ import { useState, type ReactNode } from "react";
 import Link from "next/link";
 import type { Question } from "@/lib/content";
 import { checkAnswers } from "@/lib/quiz";
+import type { LessonId } from "@/lib/lesson-ids";
 import { useProgress } from "./ProgressProvider";
-export function Checkpoint({ questions }: { questions: Question[] }) {
-  const { progress, update, ready } = useProgress();
+export function Checkpoint({
+  questions,
+  lessonId,
+}: {
+  questions: Question[];
+  lessonId: LessonId;
+}) {
+  const { progress, update, ready } = useProgress(lessonId);
   const [answers, setAnswers] = useState<(number | null)[]>(
     questions.map(() => null),
   );
@@ -95,15 +102,21 @@ export function Checkpoint({ questions }: { questions: Question[] }) {
           {submitted && result
             ? `${result.correct} of ${result.total} correct. Explanations are shown beneath each question. You can change your answers and check again.`
             : !result
-              ? "Answer both questions to check your reasoning."
+              ? `Answer all ${questions.length} questions to check your reasoning.`
               : ""}
         </p>
       </form>
     </section>
   );
 }
-export function PracticeReview({ model }: { model: ReactNode }) {
-  const { progress, update, ready } = useProgress();
+export function PracticeReview({
+  model,
+  lessonId,
+}: {
+  model: ReactNode;
+  lessonId: LessonId;
+}) {
+  const { progress, update, ready } = useProgress(lessonId);
   const [open, setOpen] = useState(false);
   return (
     <section className="journey-section">
@@ -131,15 +144,15 @@ export function PracticeReview({ model }: { model: ReactNode }) {
           : "I reviewed the model explanation"}
       </button>
       <p>
-        <Link href="/lessons/sequence-and-selection#completion">
+        <Link href={`/lessons/${lessonId}#completion`}>
           Return to lesson completion →
         </Link>
       </p>
     </section>
   );
 }
-export function Completion() {
-  const { progress, update, ready } = useProgress();
+export function Completion({ lessonId }: { lessonId: LessonId }) {
+  const { progress, update, ready } = useProgress(lessonId);
   return (
     <section
       id="completion"

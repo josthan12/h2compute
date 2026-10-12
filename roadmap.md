@@ -1,6 +1,6 @@
 # Roadmap
 
-**Status:** Milestone 1 theory foundation implemented and locally verified; deployment and hosted CI remain unverified.
+**Status:** Milestone 1 merged; Milestone 2 bounded topic implemented locally. This branch’s hosted CI and deployment remain pending.
 **Scope:** Python programming, algorithms/data structures and relational databases/SQL only. Start with Python control flow. Browser practice follows theory; hosted grading is deferred.
 
 Use [docs/milestone-workflow.md](docs/milestone-workflow.md) for the repeatable task/Git workflow, milestone gates and continuation prompts.
@@ -17,22 +17,24 @@ The [historical feasibility review](docs/phase-1-feasibility.md) is research, no
 
 ## Phase 1 — Minimal theory foundation
 
-- [ ] Verify branch/CI settings; preserve existing worktree changes. Local branch and preservation verified; CI workflow configured. GitHub run and branch protection remain unverified.
+- [ ] Verify branch/CI settings; preserve existing worktree changes. Local branch and preservation verified; CI configured. Owner reported passing checks for merged PR #1. Branch protection remains unverified.
 - [x] Set up Next.js/TypeScript, Tailwind CSS/daisyUI as the styling system and relevant lint/typecheck/tests/build/CI.
 - [x] Load Git-based content with validated metadata, numeric syllabus references and internal links.
 - [x] Establish readable responsive navigation and accessible lesson/quiz components.
 - [x] Add defensive versioned local progress, refresh persistence and reset.
 - [x] Prove one original Python control-flow lesson → quiz → offline practice/model explanation → completion journey.
 
-**Local exit:** one theory journey works without an editor, runner dependency or execution backend. See [verification](docs/milestone-1-verification.md). Hosted CI/branch protection and deployment are pending; this is not public-beta release evidence.
+**Local exit:** one theory journey works without an editor, runner dependency or execution backend. See [verification](docs/milestone-1-verification.md). Milestone 1 checks passed per owner; branch protection and deployment remain pending; this is not public-beta release evidence.
 
 ## Phase 2 — First complete theory topic
 
-- [ ] Complete sequence/branching, counted/conditional loops and combined flow/tracing lessons.
-- [ ] Include prerequisite refresher, worked examples, misconceptions and explanatory quizzes.
-- [ ] Add original practice prompts/model explanations and local self-marked completion.
-- [ ] Review precise 2026 mappings and test every Python example locally.
-- [ ] Verify keyboard/mobile use, refresh/reset and corrupted-storage recovery.
+The three-lesson implementation and local checks are recorded in [Milestone 2 verification](docs/milestone-2-verification.md). Independent teacher review, real devices, screen readers and deployment remain separate review/release limits.
+
+- [x] Complete sequence/branching, counted/conditional loops and combined flow/tracing lessons.
+- [x] Include prerequisite refresher, worked examples, misconceptions and explanatory quizzes.
+- [x] Add original practice prompts/model explanations and local self-marked completion.
+- [x] Review precise 2026 mappings and test every Python example locally.
+- [x] Verify keyboard/mobile use, refresh/reset and corrupted-storage recovery.
 
 **Exit:** the bounded Python control-flow topic provides a connected revision journey. This is not complete Python or full-syllabus coverage.
 

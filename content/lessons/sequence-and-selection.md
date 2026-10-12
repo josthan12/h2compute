@@ -4,6 +4,7 @@
   "slug": "sequence-and-selection",
   "topic": "python-control-flow",
   "summary": "Follow a program in order, choose one branch, and explain exactly what it prints.",
+  "coverageNote": "Sequence and selection with short non-recursive traces; iteration is taught in the next lesson.",
   "syllabus": { "year": 2026, "outcomes": ["2.2.3", "2.2.6"] },
   "difficulty": "core", "estimatedMinutes": 15,
   "prerequisites": ["Assign an integer to a variable", "Read comparisons such as >= and <", "Recognise print()"],
@@ -98,3 +99,5 @@ For 80, the first branch prints `Stretch`. For 59, both comparisons are false an
 Say which condition is tested next and why. Then use the checkpoint below. You can retry every question; mistakes are useful evidence for revision.
 
 After the checkpoint, try the [offline score classifier](/exercises/classify-a-score). Return to the [control-flow topic](/topics/python-control-flow) whenever you want to revisit the learning path.
+
+Next, learn to [repeat with counted and conditional loops](/lessons/counted-and-conditional-loops).

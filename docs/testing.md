@@ -58,3 +58,7 @@ Future hosted grading needs separate provider-key/private-test/sanitization/rate
 ## Milestone 1 local checks
 
 The framework and checks now exist. See [milestone-1-verification.md](milestone-1-verification.md) for exact commands, failures corrected, outcomes and remaining deployment/browser-review limits. Run the README commands from the isolated feature worktree; browser tests require a production build first.
+
+## Milestone 2 checks
+
+See [milestone-2-verification.md](milestone-2-verification.md). Tests now cover all three learning journeys, all authored Python blocks, version 1 migration, independent lesson flags, per-entry corruption recovery, sequential cross-tab changes/reset and storage-blocked completion of the whole topic. Layout checks cover all published routes and table-cell overflow as well as page overflow. Hosted CI for this branch remains pending publication.

@@ -3,6 +3,7 @@ import path from "node:path";
 import { fromMarkdown } from "mdast-util-from-markdown";
 import type { Root, RootContent } from "mdast";
 import syllabus from "../content/syllabus/2026.json";
+import { LESSON_IDS, isLessonId, type LessonId } from "./lesson-ids";
 
 export { syllabus };
 export type Option = { text: string; explanation: string };
@@ -31,7 +32,9 @@ export type Metadata = {
   reviewer: string;
   provenance: string;
 };
-export type Lesson = Metadata & {
+export type Lesson = Omit<Metadata, "slug"> & {
+  slug: LessonId;
+  coverageNote: string;
   kind: "lessons";
   body: string;
   quiz: Question[];
@@ -40,7 +43,7 @@ export type Exercise = Metadata & {
   kind: "exercises";
   body: string;
   model: string;
-  lesson: string;
+  lesson: LessonId;
   objective: string;
   examples: { input: string; output: string }[];
   hints: string[];
@@ -101,7 +104,7 @@ export function parseContent(
   source: string,
   kind: "lessons" | "exercises",
 ): Content {
-  assert(source.length <= 65536, "Content exceeds 64 KiB");
+  assert(Buffer.byteLength(source, "utf8") <= 65536, "Content exceeds 64 KiB");
   const match = /^---\r?\n([\s\S]*?)\r?\n---\r?\n([\s\S]+)$/.exec(source);
   assert(match, "Expected JSON frontmatter between --- delimiters");
   const meta: unknown = JSON.parse(match[1]);
@@ -132,6 +135,12 @@ export function parseContent(
     "Invalid review date",
   );
   if (kind === "lessons") {
+    text(meta.coverageNote);
+    if (meta.status === "published")
+      assert(
+        isLessonId(meta.slug),
+        "Published lesson requires a registered progress ID",
+      );
     assert(
       Array.isArray(meta.quiz) &&
         meta.quiz.length > 0 &&
@@ -183,6 +192,7 @@ export function parseContent(
     return { ...meta, kind, body: match[2] } as Lesson;
   }
   slug(meta.lesson);
+  assert(isLessonId(meta.lesson), "Unknown parent lesson ID");
   text(meta.objective);
   strings(meta.hints);
   assert(
@@ -269,6 +279,44 @@ export function validateCollection(items: Content[]) {
     );
     if (item.kind === "exercises")
       assert(routes.has(`/lessons/${item.lesson}`), "Missing parent lesson");
+    if (item.kind === "lessons") {
+      assert(
+        item.relatedExercises.length === 1,
+        "Each lesson requires one offline journey task",
+      );
+      const exercise = items.find(
+        (candidate) =>
+          candidate.kind === "exercises" &&
+          candidate.slug === item.relatedExercises[0],
+      );
+      assert(
+        exercise?.kind === "exercises" && exercise.lesson === item.slug,
+        "Exercise belongs to a different lesson",
+      );
+    }
+    if (item.kind === "exercises") {
+      const lesson = items.find(
+        (candidate) =>
+          candidate.kind === "lessons" && candidate.slug === item.lesson,
+      );
+      assert(
+        lesson?.kind === "lessons" &&
+          lesson.relatedExercises.includes(item.slug),
+        "Parent lesson does not link this exercise",
+      );
+      assert(
+        item.syllabus.outcomes.every((id) =>
+          lesson.syllabus.outcomes.includes(id),
+        ),
+        "Exercise outcome outside parent mapping",
+      );
+      item.prerequisites.forEach((id) =>
+        assert(
+          routes.has(`/lessons/${id}`),
+          `Missing prerequisite lesson: ${id}`,
+        ),
+      );
+    }
     const definitions = new Map<string, string>();
     const tree = fromMarkdown(item.body + ("model" in item ? item.model : ""));
     walk(tree, (node) => {
@@ -336,10 +384,12 @@ export function loadContent(): Content[] {
   return items;
 }
 export function lessons(): Lesson[] {
-  return loadContent().filter(
-    (item): item is Lesson =>
-      item.kind === "lessons" && item.status === "published",
-  );
+  return loadContent()
+    .filter(
+      (item): item is Lesson =>
+        item.kind === "lessons" && item.status === "published",
+    )
+    .sort((a, b) => LESSON_IDS.indexOf(a.slug) - LESSON_IDS.indexOf(b.slug));
 }
 export function exercises(): Exercise[] {
   return loadContent().filter(

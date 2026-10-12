@@ -2,6 +2,7 @@
 import {
   createContext,
   useContext,
+  useEffect,
   useState,
   useSyncExternalStore,
   type ReactNode,
@@ -12,8 +13,12 @@ import {
   readProgress,
   resetProgress,
   saveProgress,
+  STORAGE_KEY,
   type Progress,
+  type LessonProgress,
+  updateLesson,
 } from "@/lib/progress";
+import { LESSON_IDS, type LessonId } from "@/lib/lesson-ids";
 const EVENT = "h2compute-progress";
 function subscribe(callback: () => void) {
   window.addEventListener("storage", callback);
@@ -32,7 +37,7 @@ function snapshot() {
 }
 const Context = createContext<{
   progress: Progress;
-  update: (value: Partial<Progress>) => void;
+  update: (lessonId: LessonId, value: Partial<LessonProgress>) => void;
   reset: () => void;
   notice: string;
   ready: boolean;
@@ -41,14 +46,30 @@ export function ProgressProvider({ children }: { children: ReactNode }) {
   const raw = useSyncExternalStore(subscribe, snapshot, () => "loading");
   const [memory, setMemory] = useState<Progress | null>(null);
   const [notice, setNotice] = useState("");
+  useEffect(() => {
+    function handleExternalReset(event: StorageEvent) {
+      if (event.newValue !== null) return;
+      if (event.key !== STORAGE_KEY && event.key !== null) return;
+      try {
+        if (event.storageArea !== window.localStorage) return;
+      } catch {
+        return;
+      }
+      // A failed save may leave memory overriding storage, even after reset.
+      setMemory(null);
+      setNotice("Local progress reset in another tab.");
+    }
+    window.addEventListener("storage", handleExternalReset);
+    return () => window.removeEventListener("storage", handleExternalReset);
+  }, []);
   const decoded = decodeProgress(
     raw === "loading" || raw === "unavailable" ? null : raw,
   );
   const progress = memory ?? decoded.progress;
-  function update(value: Partial<Progress>) {
-    const next = { ...progress, ...value, version: 1 as const };
-    next.completed =
-      next.completed && next.quizReviewed && next.practiceReviewed;
+  function update(lessonId: LessonId, value: Partial<LessonProgress>) {
+    // Re-read storage to preserve updates from another tab before writing.
+    const latest = memory ?? decodeProgress(snapshot()).progress;
+    const next = updateLesson(latest, lessonId, value);
     let saved = false;
     try {
       saved = saveProgress(window.localStorage, next);
@@ -83,8 +104,10 @@ export function ProgressProvider({ children }: { children: ReactNode }) {
     (raw === "unavailable"
       ? "Browser storage is unavailable. You can learn and complete this journey for this visit."
       : decoded.recovered
-        ? "Saved progress was invalid or used an unsupported version. Starting fresh; your next update will replace it."
-        : "");
+        ? "Saved progress was invalid or used an unsupported version. Invalid entries start fresh; valid lesson progress is preserved."
+        : decoded.migrated
+          ? "Your earlier lesson progress is preserved. The next learning update will save it in the new format."
+          : "");
   return (
     <Context.Provider
       value={{
@@ -99,25 +122,44 @@ export function ProgressProvider({ children }: { children: ReactNode }) {
     </Context.Provider>
   );
 }
-export function useProgress() {
+function useProgressState() {
   const value = useContext(Context);
   if (!value) throw new Error("ProgressProvider missing");
   return value;
 }
-export function ProgressBadge() {
-  const { progress, ready } = useProgress();
+export function useProgress(lessonId: LessonId) {
+  const state = useProgressState();
+  return {
+    ...state,
+    progress: state.progress.lessons[lessonId],
+    update: (value: Partial<LessonProgress>) => state.update(lessonId, value),
+  };
+}
+export function ProgressBadge({ lessonId }: { lessonId?: LessonId }) {
+  const { progress, ready } = useProgressState();
+  const entry = lessonId ? progress.lessons[lessonId] : null;
+  const count = LESSON_IDS.filter(
+    (id) => progress.lessons[id].completed,
+  ).length;
   return (
     <span className="badge badge-outline h-auto min-h-8 text-wrap border-base-300 bg-base-200 px-3 py-1 font-semibold">
       {!ready
         ? "Loading progress…"
-        : progress.completed
-          ? "Journey complete"
-          : "One lesson · start here"}
+        : entry
+          ? entry.completed
+            ? "Lesson complete"
+            : entry.quizReviewed || entry.practiceReviewed
+              ? "In progress"
+              : "Not yet completed"
+          : `${count} of ${LESSON_IDS.length} lessons complete`}
     </span>
   );
 }
 export function ProgressControls() {
-  const { progress, notice, ready, reset } = useProgress();
+  const { progress, notice, ready, reset } = useProgressState();
+  const completed = LESSON_IDS.filter(
+    (id) => progress.lessons[id].completed,
+  ).length;
   const [confirm, setConfirm] = useState(false);
   return (
     <section
@@ -127,9 +169,7 @@ export function ProgressControls() {
       <div>
         <strong>Your learning, your device</strong>
         <p>
-          {ready && progress.completed
-            ? "1 of 1 published journeys complete."
-            : "0 of 1 published journeys complete."}{" "}
+          {`${ready ? completed : 0} of ${LESSON_IDS.length} published journeys complete.`}{" "}
           Saved in this browser, without an account. Clearing site data removes
           it.
         </p>
@@ -144,7 +184,9 @@ export function ProgressControls() {
         </button>
       ) : (
         <div className="reset-confirm">
-          <p>Reset lesson, checkpoint and practice progress on this browser?</p>
+          <p>
+            Reset all lesson, checkpoint and practice progress on this browser?
+          </p>
           <button
             className="btn btn-primary"
             onClick={() => {
