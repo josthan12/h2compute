@@ -1,4 +1,6 @@
-# Runner Provider Decision
+# Future Hosted Runner Provider Decision Template
+
+Use this template only if hosted grading is separately authorized. The current MVP uses the Pyodide browser feasibility direction recorded in runner-provider.md, with visible tests and local self-checks; hosted-provider requirements below are not blockers for theory work.
 
 **Status:** Not decided  
 **Date checked:** Not checked
