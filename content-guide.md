@@ -6,7 +6,7 @@ Create accurate, approachable, exam-relevant learning material for Singapore H2 
 
 ## Source of truth
 
-Official syllabus: https://www.seab.gov.sg/files/A%20Level%20Syllabus%20Private%20Cddts/2026/9569_y26_sy.pdf
+Official syllabus: https://isomer-user-content.by.gov.sg/334/cd7aef2f-eef7-4e5a-bebe-2339b214db42/9569_y26_sy.pdf
 
 Before authoring a topic:
 1. Read the relevant official syllabus section.
@@ -71,7 +71,7 @@ Every question needs:
 
 For programming problems, document input/output format precisely. Decide whether a task is stdin/stdout or function-based and use the same pattern consistently within a topic. Avoid ambiguous whitespace rules. Include empty input, singleton, duplicate, negative or boundary cases when relevant.
 
-Hidden tests must not be bundled to the browser. Keep test definitions on the trusted server side or in the execution provider's private configuration.
+Browser practice uses visible test inputs/expected outputs and local self-check results. These can be inspected or changed by the learner; do not describe them as hidden tests or trusted grades. First deliver offline practice prompts/model explanations, then add runnable versions only after the browser gate passes. Use single-file stdin/stdout and supplied input for MVP; verify each authored example on the target Pyodide runtime as well as locally. Future private hosted tests must remain separate and server-side.
 
 ## Markdown/MDX conventions
 
@@ -114,3 +114,9 @@ Allowed `status` values: `draft`, `review`, `published`, `archived`. Only `publi
 ## Copyright and attribution
 
 Link to sources and identify external assets. Do not upload commercial textbooks, copyrighted notes, or past-paper questions unless permission/licence permits it. Prefer original questions and explanations. Keep third-party asset licences in a simple attribution file.
+
+## Implemented foundation format
+
+Milestone 1 uses plain `.md` files with JSON frontmatter between `---` lines. JSON is a YAML subset, but the loader deliberately accepts JSON only to avoid a separate YAML parser. Lesson quizzes live in frontmatter with IDs, objectives, outcome subsets, time/difficulty, answer indices and per-option explanations. Offline exercise frontmatter includes visible examples and hints; `<!-- model -->` separates the prompt and model Markdown. Raw HTML, images and MDX are unsupported in this first slice. Only published items are linked.
+
+The checked 2026 register currently contains 2.2.3 and 2.2.6, printed page 8, with explicit partial-coverage notes. Extending it requires reading the official syllabus and recording exact scope; an invented ID must never be added merely to pass validation. Publication here reflects automated example/source-mapping review; an independent teacher review remains pending and is disclosed on the learner pages.

@@ -1,50 +1,25 @@
-# Initial Build Prompt (Use Only After Owner Approval)
+# Initial Build Prompt — Theory First
 
-You are the implementation assistant for a solo-developer educational website for Singapore H2 Computing (syllabus 9569).
+You are implementing a free Singapore H2 Computing (9569) learning website. The owner approved theory-first work and the Pyodide browser-practice direction; follow the documented milestone gates. This file records scope, not authority for unrelated changes.
 
-## Mandatory first step
+## Before editing
 
-Before editing any files:
-1. Read `implementation.md`, `roadmap.md`, `current-status.md`, `content-guide.md`, `AGENTS.md`, `docs/architecture.md`, and `docs/testing.md`.
-2. Inspect the repository tree, package files, Git status and existing tests.
-3. Summarise the current state and propose the smallest next implementation step.
-4. Stop and ask if the approved documents conflict, the runner/hosting provider is undecided, or a task would create a cost/security/privacy commitment not covered by the documents.
+Read implementation.md, roadmap.md, current-status.md, content-guide.md, AGENTS.md, docs/milestone-workflow.md, docs/architecture.md, docs/testing.md and docs/decisions/runner-provider.md. Inspect the tree, package files, Git status and existing checks. Preserve existing user changes. State acceptance criteria and work in the smallest coherent slice.
 
-The owner must explicitly approve implementation before this prompt is used. Do not interpret this file as approval by itself.
+## First milestone
 
-## Product constraints
+Use Next.js/TypeScript and Git-based content with validated 2026 syllabus references. Build Python control flow first: a topic page, one original lesson, checkpoint quiz with explanations, linked offline practice/model explanation and local completion. Once the first journey works, complete the three-lesson topic. Include responsive keyboard-accessible UI and meaningful checks. Do not add an editor, Pyodide dependency or server runner during this milestone.
 
-- Free for students; no accounts in MVP.
-- Progress is local to the browser.
-- Content is Markdown/MDX in Git and maps to verified official 2026 syllabus outcomes.
-- Python execution uses a hosted provider through a server-side adapter only.
-- Do not execute learner code inside the app server.
-- Do not expose secrets, hidden tests or unbounded provider output.
-- Keep architecture small and maintainable for one developer.
-- Do not add analytics, a database, authentication or extra services without approval.
-- Donation is optional and never unlocks learning features.
-- Do not claim official SEAB/MOE/NUS affiliation.
+## Later browser-practice milestone
 
-## First milestone: one vertical slice
+After theory works, verify the Pyodide feasibility gate in implementation.md before building the full editor. Keep a replaceable runner adapter, Python-only single-file stdin/stdout, visible cases and local self-check wording. Pin runtime assets. Demonstrate isolated frame/worker execution, storage/DOM/network separation, Stop/Reset, infinite-loop termination, output bounds and device compatibility. A worker alone is not a security boundary. Keep theory usable if execution is unavailable. No trusted grading or hidden tests in browser practice.
 
-Implement only after provider feasibility is resolved:
-- one topic page;
-- one original syllabus-mapped lesson;
-- one checkpoint quiz with explanation;
-- one linked Python exercise;
-- a CodeMirror editor with run/submit/loading/error states;
-- server-side runner adapter and bounded requests;
-- local progress for completion;
-- responsive accessible UI;
-- automated tests for the core learner flow and runner failure paths.
+## Constraints and workflow
 
-Do not bulk-generate content or build speculative features before this slice works.
-
-## Engineering workflow
-
-- Write acceptance criteria before coding.
-- Make a small change, add tests, run lint/typecheck/tests/build.
-- Report exact commands and results; never claim checks passed without running them.
-- Keep hidden tests server-side and use trusted exercise configuration.
-- Update `current-status.md` and `roadmap.md` after meaningful progress.
-- Stop before choosing a paid service, changing data/privacy scope, or widening the MVP.
+- No accounts, database, analytics, payment backend, additional language or SQL execution service.
+- Local progress only; no source/input uploads or default source persistence.
+- Never execute learner code on the app server or in the main UI context.
+- Do not scaffold /api/run or subscribe to Judge0; hosted grading is deferred.
+- Test authored examples; run relevant lint/typecheck/tests/build and report exact outcomes.
+- Update status/roadmap after meaningful progress and disclose coverage gaps.
+- Do not re-request existing theory approval. Ask only for a new material cost/service/scope/privacy commitment; ordinary authorized implementation choices can proceed.

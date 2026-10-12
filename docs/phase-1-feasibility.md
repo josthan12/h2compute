@@ -1,5 +1,7 @@
 # Phase 1 planning and feasibility review
 
+> **Historical review; direction updated 12 October 2026.** The owner approved theory-first work and requested a Pyodide browser-practice planning revision. Hosted-only recommendations and pending approval statements below describe the earlier pass, not the current plan. Follow [implementation.md](../implementation.md), [current status](../current-status.md) and the [runner decision](decisions/runner-provider.md): theory first, browser feasibility next, visible-example self-checks if feasible, hosted grading deferred. Syllabus mappings and dated hosted-service findings remain useful; no browser feasibility success is claimed.
+
 **Checked:** 12 October 2026 (Singapore time)  
 **Status:** Research complete; proposals awaiting owner approval. Application implementation has not started.  
 **Scope:** Python programming; algorithms and data structures; relational databases and SQL only.
@@ -149,3 +151,16 @@ Research is complete for this planning pass. Production feasibility remains cond
 Successful checks: current SEAB index → exact linked PDF; pypdf extraction; Poppler rendering of pages 7–11; visual inspection of pages 7, 8, 9 and 11; SHA-256 capture; primary-source hosting, API, pricing and security research.
 
 Failures/limitations: old syllabus download returned 404; initial restricted-network download had DNS failure; PyMuPDF rendering was unavailable (`fitz` not installed), so bundled Poppler was used successfully; Git state unavailable as above; dynamic RapidAPI checkout and Judge0 status page were not inspectable enough to verify billing or uptime. No dependencies were installed. No lint, typecheck, application tests, build, live runner or deployment checks were run because this task is planning-only.
+
+Relevant local commands actually run:
+
+- `rg --files -g AGENTS.md -g implementation.md -g roadmap.md -g current-status.md -g architecture.md`
+- PowerShell `Get-Content` for the planning documents and `Get-ChildItem` for the workspace/decision records.
+- `git status --short` and `git -C .. status --short` (failed as described).
+- `Invoke-WebRequest` against the old SEAB URL (failed) and the replacement government PDF URL (succeeded, including the exact currently linked copy).
+- Bundled Python with `pypdf.PdfReader` to extract the learning-outcome pages (succeeded).
+- Bundled Python `import fitz` rendering attempt (failed; module unavailable).
+- `pdftoppm -f 7 -l 11 -scale-to 1200 -png 9569_y26_sy.pdf syllabus-check` (succeeded).
+- `Get-FileHash 9569_y26_sy.pdf -Algorithm SHA256` (succeeded).
+
+Documentation changes: this report, three proposed decision records, an architecture review addendum, and synchronized root current-status/roadmap updates. The specification's material acceptance amendments remain proposals for approval. Downloaded sources are local research artifacts, not educational content for redistribution.

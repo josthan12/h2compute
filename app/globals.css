@@ -1,0 +1,336 @@
+@import "tailwindcss";
+@source "../app";
+@source "../components";
+
+@plugin "daisyui" {
+  themes: false;
+  include: button, card, badge, radio, table, collapse, fieldset;
+  logs: false;
+}
+
+@plugin "daisyui/theme" {
+  name: "h2notes";
+  default: true;
+  prefersdark: false;
+  color-scheme: light;
+  --color-base-100: #fffefa;
+  --color-base-200: #eaf0e8;
+  --color-base-300: #d5ddd4;
+  --color-base-content: #20372f;
+  --color-primary: #285c46;
+  --color-primary-content: #fffefa;
+  --color-secondary: #52665e;
+  --color-secondary-content: #fffefa;
+  --color-accent: #bdf086;
+  --color-accent-content: #20372f;
+  --color-neutral: #20372f;
+  --color-neutral-content: #f0f6eb;
+  --color-info: #285c46;
+  --color-info-content: #fffefa;
+  --color-success: #285c46;
+  --color-success-content: #fffefa;
+  --color-warning: #9e4e19;
+  --color-warning-content: #fffefa;
+  --color-error: #9e4e19;
+  --color-error-content: #fffefa;
+  --radius-selector: 0.4rem;
+  --radius-field: 0.4rem;
+  --radius-box: 0.75rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 0;
+  --noise: 0;
+}
+
+@theme {
+  --color-paper: #f8f7f2;
+  --font-sans: Arial, Helvetica, sans-serif;
+  --font-serif: Georgia, serif;
+  --font-mono: Consolas, "Courier New", monospace;
+}
+
+@layer base {
+  html {
+    scroll-padding-top: 2rem;
+  }
+  body {
+    @apply bg-paper text-base-content font-sans text-base leading-[1.7] sm:text-[17px];
+  }
+  a {
+    @apply text-primary underline underline-offset-4 hover:decoration-2;
+  }
+  button,
+  input,
+  summary,
+  a {
+    touch-action: manipulation;
+  }
+  h1,
+  h2,
+  h3 {
+    @apply leading-[1.2] tracking-tight;
+  }
+  h1 {
+    @apply my-6 font-serif text-[clamp(2.5rem,5vw,4.3rem)] font-normal;
+  }
+  h2 {
+    @apply mt-9 mb-4 text-[1.75rem] font-bold;
+  }
+  h3 {
+    @apply text-[1.35rem] font-bold;
+  }
+  p {
+    @apply mt-3 mb-4;
+  }
+  ul {
+    @apply list-disc pl-6;
+  }
+  ol {
+    @apply list-decimal pl-6;
+  }
+  pre {
+    @apply max-w-full overflow-x-auto rounded-lg bg-neutral p-5 font-mono text-sm leading-[1.8] text-neutral-content;
+    tab-size: 4;
+  }
+  code {
+    @apply font-mono text-[0.9em];
+  }
+  p code,
+  li code,
+  td code {
+    @apply rounded bg-base-200 px-1 py-0.5;
+  }
+  caption {
+    @apply py-2 text-left text-sm text-secondary;
+  }
+  summary {
+    @apply cursor-pointer;
+  }
+}
+
+/* Notes layout and typography are Tailwind compositions; reusable controls use daisyUI. */
+@layer components {
+  .skip-link {
+    @apply absolute -top-20 left-4 z-10 bg-base-100 p-4 focus:top-4;
+  }
+  .site-header {
+    @apply mx-auto flex max-w-[1250px] flex-wrap items-center gap-4 border-b border-base-300 px-5 py-4 sm:flex-nowrap sm:px-6 lg:gap-10 lg:px-10 lg:py-5;
+  }
+  .brand {
+    @apply flex items-center gap-1 text-[1.4rem] font-extrabold text-base-content no-underline;
+  }
+  .brand-mark {
+    @apply rounded bg-neutral px-1.5 py-1 text-sm text-accent;
+  }
+  .site-header nav {
+    @apply flex basis-full gap-4 sm:ml-auto sm:basis-auto sm:gap-6;
+  }
+  .site-header nav a {
+    @apply text-sm font-semibold no-underline;
+  }
+  .header-note {
+    @apply hidden border-l border-base-300 pl-6 text-xs text-secondary lg:block;
+  }
+  .shell {
+    @apply mx-auto max-w-[1180px] px-5 py-7 sm:p-10;
+  }
+  .narrow {
+    @apply max-w-[850px] pt-8 sm:pt-12;
+  }
+  .eyebrow {
+    @apply text-xs font-bold tracking-[0.13em] text-secondary uppercase;
+  }
+  .lead {
+    @apply max-w-[40rem] text-xl leading-relaxed text-secondary;
+  }
+  .meta {
+    @apply text-sm text-secondary;
+  }
+  .home-hero {
+    @apply grid grid-cols-1 items-center gap-8 pt-4 pb-10 sm:grid-cols-[1.6fr_1fr] sm:pt-8 sm:pb-16 lg:gap-16;
+  }
+  .home-hero h1 {
+    @apply text-[clamp(2.7rem,4.4vw,4rem)];
+  }
+  h1 em {
+    @apply font-normal text-primary;
+  }
+  .home-hero .btn {
+    @apply mt-4 mb-1;
+  }
+  .hero-note {
+    @apply min-w-0 p-6 sm:p-8;
+  }
+  .large-question {
+    @apply my-6 font-serif text-4xl leading-tight sm:text-[2.7rem];
+  }
+  .hero-note p:last-child {
+    @apply text-sm;
+  }
+  .intro-grid {
+    @apply grid grid-cols-1 gap-5 border-t border-base-300 py-10 sm:grid-cols-2 lg:gap-16;
+  }
+  .intro-grid h2 {
+    @apply my-2;
+  }
+  .path {
+    @apply m-0 list-none p-0;
+  }
+  .path li {
+    @apply flex gap-6 border-b border-base-300 py-4;
+  }
+  .path li > span {
+    @apply font-serif text-2xl text-primary;
+  }
+  .path p {
+    @apply my-1 text-sm text-secondary;
+  }
+  .coverage-strip {
+    @apply border-t border-base-300 pt-4;
+  }
+  .coverage-strip h2 {
+    @apply text-2xl;
+  }
+  .coverage-strip p {
+    @apply text-base text-secondary;
+  }
+  .lesson-card {
+    @apply my-6 p-5 sm:p-7;
+  }
+  .lesson-card h3 {
+    @apply my-2;
+  }
+  .section-title {
+    @apply mt-10;
+  }
+  .lesson-layout {
+    @apply grid grid-cols-1 items-start gap-4 min-[850px]:grid-cols-[220px_minmax(0,740px)] min-[850px]:gap-12;
+  }
+  .toc {
+    @apply text-sm min-[850px]:sticky min-[850px]:top-8;
+  }
+  .toc nav {
+    @apply my-4 flex flex-wrap gap-x-4 gap-y-1 min-[850px]:mt-8 min-[850px]:block;
+  }
+  .toc nav p {
+    @apply m-0 w-full min-[850px]:mb-2;
+  }
+  .toc nav a {
+    @apply block py-2 text-secondary no-underline;
+  }
+  .lesson-content {
+    @apply min-w-0;
+  }
+  .lesson-content h1 {
+    @apply text-[2.6rem] sm:text-5xl;
+  }
+  .prerequisites {
+    @apply my-8 border-l-[3px] border-primary bg-base-200 px-6 py-4;
+  }
+  .prerequisites ul {
+    @apply my-2 text-base;
+  }
+  .notes-prose {
+    overflow-wrap: anywhere;
+  }
+  .notes-prose h2 {
+    @apply mt-11;
+  }
+  .notes-prose li {
+    @apply my-2;
+  }
+  .journey-section {
+    @apply mt-11 border-t border-base-300 pt-8;
+  }
+  .journey-section h2 {
+    @apply mt-3;
+  }
+  .quiz-fieldset {
+    @apply my-7 min-w-0 rounded-box border border-base-300 p-5 text-base sm:p-6;
+  }
+  .quiz-fieldset legend {
+    @apply max-w-full px-1 text-base font-bold leading-relaxed;
+  }
+  .quiz-option {
+    @apply my-2 flex cursor-pointer items-start gap-3 rounded-field border border-base-300 bg-base-100 p-3;
+  }
+  .quiz-option:has(input:checked) {
+    @apply border-primary bg-base-200;
+  }
+  .feedback {
+    @apply mt-4 rounded bg-base-200 p-4 text-sm;
+  }
+  .feedback li {
+    @apply my-3;
+  }
+  .status {
+    @apply min-h-6 text-sm text-secondary;
+  }
+  .completion {
+    @apply p-5 sm:p-8;
+  }
+  .source-note {
+    @apply mt-12 border-t border-base-300 text-sm text-secondary;
+  }
+  .source-note h2 {
+    @apply text-xl;
+  }
+  .table-scroll {
+    @apply overflow-x-auto;
+  }
+  .progress-card {
+    @apply flex-row flex-wrap items-center gap-x-8 gap-y-2 p-5 sm:p-6;
+  }
+  .progress-card > div:first-child {
+    @apply min-w-0 flex-1;
+  }
+  .progress-card p {
+    @apply my-2 text-sm;
+  }
+  .progress-card > .status,
+  .reset-confirm {
+    @apply basis-full;
+  }
+  .reset-confirm .btn {
+    @apply my-1;
+  }
+  .btn {
+    @apply h-auto min-h-11 max-w-full py-3 text-sm whitespace-normal;
+  }
+  .collapse-title {
+    @apply text-base;
+  }
+  .collapse-content {
+    @apply text-base;
+  }
+  footer.shell {
+    @apply border-t border-base-300 pt-0 text-sm text-secondary;
+  }
+  footer p {
+    @apply pt-4;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* Keep keyboard focus visible above component defaults. */
+:focus-visible {
+  outline: 3px solid var(--color-warning);
+  outline-offset: 4px;
+}
+
+/* Educational notes do not need animated control or disclosure transitions. */
+.btn { text-decoration: none; }
+.btn, .radio, .collapse, .collapse-title, .collapse-content,
+.collapse-title::after, details.collapse::details-content {
+  transition: none;
+  animation: none;
+}

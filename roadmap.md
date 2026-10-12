@@ -1,95 +1,76 @@
 # Roadmap
 
-**Status:** Proposed; no implementation started.  
-**Planning principle:** priority-topic public beta: prove one complete vertical slice, then expand to several high-value areas with depth and transparent coverage gaps; full syllabus coverage is deferred.
+**Status:** Milestone 1 theory foundation implemented and locally verified; deployment and hosted CI remain unverified.
+**Scope:** Python programming, algorithms/data structures and relational databases/SQL only. Start with Python control flow. Browser practice follows theory; hosted grading is deferred.
 
-## Phase 0 — Validate assumptions and approve plan
+Use [docs/milestone-workflow.md](docs/milestone-workflow.md) for the repeatable task/Git workflow, milestone gates and continuation prompts.
 
-- [ ] Review and approve `implementation.md`.
-- [ ] Audit the official 2026 syllabus PDF and build an outcome mapping table for candidate priority areas, recording uncovered outcomes separately.
-- [ ] Compare hosted runner options: free allowance, authentication, rate limits, terms, retention, quotas and acceptable use.
-- [ ] Compare hosting terms for public educational use and optional donations.
-- [ ] Decide how the runner behaves if the free allowance is exhausted.
-- [ ] Prioritise a small set of syllabus areas based on learning value, prerequisite coherence, quiz/Python-practice suitability and manageable original-content workload; choose the first vertical slice.
-- [ ] Record material choices under `docs/decisions/`.
+## Phase 0 — Planning (completed research, conditional runtime gate)
 
-**Exit criteria:** architecture and runner plan are feasible without committing the owner to unexpected costs.
+- [x] Verify official 2026 outcomes, exclusions and partial coverage.
+- [x] Investigate Judge0 and compare hosting/cost constraints; preserve dated findings.
+- [x] Owner approves theory-first work, Vercel Hobby and Python control flow first.
+- [x] Document Pyodide browser-practice direction, visible-test rules and theory-only fallback.
+- [x] Verify repository and configured origin remote.
 
-## Phase 1 — Repository and design foundation
+The [historical feasibility review](docs/phase-1-feasibility.md) is research, not evidence of live runtime/deployment success. Current decisions are in implementation.md and docs/decisions/runner-provider.md.
 
-- [ ] Create a new repository and default branch protections where available.
-- [ ] Set up framework, TypeScript, linting, formatting, tests and CI.
-- [ ] Add `AGENTS.md`, README, environment template, docs and contribution conventions.
-- [ ] Establish layout, typography, responsive navigation and accessible components.
-- [ ] Define validated lesson/exercise metadata and content loading.
-- [ ] Add placeholder pages for home, topic, lesson, exercise, about, privacy and feedback.
+## Phase 1 — Minimal theory foundation
 
-**Exit criteria:** clean install, lint, typecheck, test and production build work in CI.
+- [ ] Verify branch/CI settings; preserve existing worktree changes. Local branch and preservation verified; CI workflow configured. GitHub run and branch protection remain unverified.
+- [x] Set up Next.js/TypeScript, Tailwind CSS/daisyUI as the styling system and relevant lint/typecheck/tests/build/CI.
+- [x] Load Git-based content with validated metadata, numeric syllabus references and internal links.
+- [x] Establish readable responsive navigation and accessible lesson/quiz components.
+- [x] Add defensive versioned local progress, refresh persistence and reset.
+- [x] Prove one original Python control-flow lesson → quiz → offline practice/model explanation → completion journey.
 
-## Phase 2 — One complete learning vertical slice
+**Local exit:** one theory journey works without an editor, runner dependency or execution backend. See [verification](docs/milestone-1-verification.md). Hosted CI/branch protection and deployment are pending; this is not public-beta release evidence.
 
-- [ ] Create one syllabus-mapped topic page.
-- [ ] Create one polished lesson with worked example, common mistakes and a checkpoint quiz.
-- [ ] Create one linked Python exercise with prompt, examples, starter code and tests.
-- [ ] Add CodeMirror Python editor with run/submit states.
-- [ ] Implement server-side runner adapter and provider timeout/error mapping.
-- [ ] Ensure hidden tests remain server-side and enforce rate/body limits.
-- [ ] Add local progress for the lesson, quiz and exercise.
-- [ ] Add responsive and keyboard smoke tests.
+## Phase 2 — First complete theory topic
 
-**Exit criteria:** a student can learn, check understanding, code, receive results and see local progress without creating an account.
+- [ ] Complete sequence/branching, counted/conditional loops and combined flow/tracing lessons.
+- [ ] Include prerequisite refresher, worked examples, misconceptions and explanatory quizzes.
+- [ ] Add original practice prompts/model explanations and local self-marked completion.
+- [ ] Review precise 2026 mappings and test every Python example locally.
+- [ ] Verify keyboard/mobile use, refresh/reset and corrupted-storage recovery.
 
-## Phase 3 — MVP content and revision features
+**Exit:** the bounded Python control-flow topic provides a connected revision journey. This is not complete Python or full-syllabus coverage.
 
-- [ ] Expand from the vertical slice into several selected priority topic areas with coherent prerequisite-to-practice sequences.
-- [ ] Aim for roughly 8–12 polished lessons and up to 20–30 thoroughly tested Python exercises as **flexible planning targets**, not ship-blocking quotas; include fewer where content quality or runner limits warrant it.
-- [ ] Display a coverage map marking published, partial and unaddressed outcomes; do not imply full syllabus coverage.
-- [ ] Add search/filter/navigation and related content links where they materially help.
-- [ ] Add quiz explanations and exercise hints.
-- [ ] Add local progress dashboard and reset/export decision (export is optional).
-- [ ] Run content review for accuracy, clarity, accessibility and copyright.
-- [ ] Check all links and metadata in CI.
+## Phase 3 — Browser Python feasibility, then practice
 
-**Exit criteria:** a learner can complete multiple meaningful revision journeys across selected priority areas, coverage gaps are clear, and each released item passes content review; full syllabus coverage is not required.
+- [ ] Pin/review Pyodide and target Python version; choose minimal runtime assets and retain licence notices.
+- [ ] Verify asset sizes, loading/cache/CORS/CSP on the deployment; budget host bandwidth.
+- [ ] Prototype isolated iframe + module worker; prove main-site storage/DOM/cookie/navigation and unauthorized network separation.
+- [ ] Verify supplied stdin/stdout, syntax/runtime errors, infinite loops, output floods, cancellation, fresh case/job state and stale-message rejection.
+- [ ] Check supported desktop/mobile startup and memory/performance limitations.
+- [ ] If feasible, add CodeMirror and a replaceable Pyodide adapter with Run, Stop/Reset and Check examples.
+- [ ] Use visible cases and local self-check labels; no hidden tests or trusted-grade claims.
+- [ ] Keep theory usable during runtime failure; preserve editor text and progress.
 
-## Phase 4 — Beta hardening
+**Exit:** implementation.md Gate 3 passes before browser activation. If it fails, retain theory/quizzes and offline practice; do not add a paid/hosted service by assumption.
 
-- [ ] Verify hosting and runner plan terms immediately before launch.
-- [ ] Add rate limiting, request validation, output caps and graceful outage handling.
-- [ ] Add privacy and attribution pages, feedback route and optional donation link.
-- [ ] Test keyboard access, contrast, narrow screens, browser refresh and local-storage corruption.
-- [ ] Test runner accepted/wrong-answer/runtime/timeout/provider-error paths.
-- [ ] Check no provider key or hidden test data appears in client assets.
-- [ ] Ask a small number of students/teachers to test and record feedback.
-- [ ] Fix high-severity issues before announcement.
+## Phase 4 — MVP content and beta hardening
 
-**Exit criteria:** known limitations are disclosed, basic security and quality checks pass, and owner understands operating costs/limits.
+- [ ] Expand reviewed connected lessons within the three confirmed areas; keep lesson/exercise counts flexible.
+- [ ] Display planned/published/partial/uncovered outcomes and related revision links.
+- [ ] Add filtering/search only where useful; validate links/content in CI.
+- [ ] Add privacy/attribution, feedback and optional external donation link.
+- [ ] Recheck Vercel Hobby terms/usage, verify production deployment and run relevant automated/manual checks.
+- [ ] If browser practice ships, verify runner security/recovery on deployed browsers and disclose self-check limitations.
+- [ ] Obtain student/teacher feedback and resolve serious accuracy/accessibility/security problems.
 
-## Phase 5 — Public beta and portfolio polish
+**Exit:** worthwhile theory beta with honest coverage and no mandatory runner. Runtime controls appear only if the browser gate passes.
 
-- [ ] Publish the site and repository.
-- [ ] Add screenshots, architecture diagram and setup instructions to README.
-- [ ] Document design trade-offs and lessons learned.
-- [ ] Create issues from feedback and prioritise corrections.
-- [ ] Keep a changelog and release notes.
-- [ ] Prepare resume bullets only from verified shipped work and evidence.
+## Phase 5 — Public beta and portfolio evidence
 
-## Later / explicitly deferred
+- [ ] Publish site/repository, setup guidance, screenshots and known limitations.
+- [ ] Record corrections, release notes and engineering decisions.
+- [ ] Draft resume claims only from shipped features and measured evidence.
 
-- Accounts and cloud sync.
-- More languages or a self-hosted runner.
-- SQL execution, Flask projects or multi-file sandboxes.
-- Teacher dashboards and classroom management.
-- AI tutoring.
-- Social features, leaderboard, streak pressure or paid content.
-- Large-scale analytics.
+## Later / deferred
 
-## Definition of done for every feature
+Hosted grading (Judge0 or another provider), private tests and server execution API; self-hosted sandbox; extra languages; SQL execution; Flask/multi-file projects; accounts/cloud sync; dashboards; AI tutoring; social/gamification; paid features; large-scale analytics.
 
-- Acceptance criteria written before implementation.
-- Relevant unit/integration tests added.
-- Accessible states and responsive layout checked.
-- Errors handled and user-facing copy written.
-- Documentation/status updated.
-- No secrets or hidden tests exposed.
-- Syllabus mapping and content provenance recorded when educational content is involved.
+## Definition of done
+
+Acceptance criteria and precise syllabus mapping; original reviewed content; meaningful relevant tests/build checks; accessible responsive states; error recovery; updated docs/status; no secrets/personal data; honest local self-check results. Paid services or broader scope require separate owner authorization.

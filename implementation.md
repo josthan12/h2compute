@@ -1,32 +1,34 @@
 # Implementation Specification — Singapore A-Level Computing Learning Platform
 
-**Status:** Draft for review — documentation only  
-**Version:** 0.1  
-**Date:** 12 October 2026  
-**Owner:** Solo developer  
-**Implementation status:** Not started; do not begin coding until this specification is approved.
+**Status:** Theory-first direction approved; Pyodide practice planned subject to feasibility — documentation only
+**Version:** 0.2
+**Date:** 12 October 2026
+**Owner:** Solo developer
+**Implementation status:** Milestone 1 theory foundation implemented and locally verified on feat/project-setup. One lesson/checkpoint/offline-practice/local-completion journey exists; deployment, hosted CI and browser execution remain unverified or deferred. See current-status.md and docs/milestone-1-verification.md. The scope and activation gates below remain in force.
 
 ## 1. Product summary
 
 Build a free, syllabus-aligned learning website for students taking Singapore-Cambridge H2 Computing (syllabus 9569), beginning with the 2026 syllabus. The site combines structured theory notes, short formative checks, and browser-based Python programming practice. Its teaching style should be clear and structured, inspired by the organisation of university lecture notes, without copying another site's content or visual identity.
 
-The project should also demonstrate software engineering quality for the owner's resume: clear architecture, tested code, documented decisions, secure integration with a code execution provider, accessible UI, and a public issue/roadmap process.
+The project should also demonstrate software engineering quality for the owner's resume: clear architecture, tested code, documented decisions, safe browser Python practice behind a replaceable runner adapter, accessible UI, and a public issue/roadmap process.
 
 ### Product principles
 
 1. **Syllabus-first:** every published lesson and exercise maps to a syllabus outcome.
 2. **Free for learners:** no paywall, subscription, account requirement, or ads in the initial public beta.
 3. **Low-maintenance:** one developer should be able to understand and operate the system.
-4. **Safety before convenience:** learner code must never execute directly inside the web application's own process.
-5. **Honest feedback:** tests explain what failed without leaking hidden tests or server secrets.
+4. **Safety before convenience:** learner code must never execute on the app server or in the main UI context; browser execution requires a separately isolated runner context and worker.
+5. **Honest feedback:** browser practice uses visible tests and labels results as self-checks; private hosted grading and secrets are deferred.
 6. **Progress without accounts:** save progress locally on the learner's device; explain that clearing browser data or changing devices may erase it.
 7. **Incremental release:** ship one complete vertical slice, then expand from evidence and feedback.
 
 ### Confirmed beta coverage strategy — priority topics, not the whole syllabus
 
+The confirmed MVP areas are Python programming, algorithms and data structures, and relational databases and SQL. No other topic area is added by the browser-runner decision.
+
 The first public beta will teach **several carefully chosen, high-value syllabus topic areas in depth**, rather than attempt comprehensive syllabus coverage. Selection must be grounded in the verified 2026 syllabus and consider learning value, prerequisites, availability of original explanations, and suitability for quizzes and Python practice. Do not state that the beta covers the entire syllabus.
 
-- **First proof point:** one complete topic learning loop (lesson → quiz → Python practice → local progress) before scaling content.
+- **First proof point:** Python control flow: lesson → checkpoint quiz → practice prompt/model explanation → local progress. Add runnable browser practice only after its feasibility gate passes.
 - **Beta content:** expand into multiple coherent priority areas with linked, reviewed lessons and meaningful practice. As a planning target, aim for roughly 8–12 polished lessons and up to 20–30 Python exercises, **not fixed release requirements**; quality and safe operation take precedence over counts.
 - **Coverage transparency:** show which syllabus outcomes are covered, partially covered, and not yet covered; distinguish original syllabus content from optional enrichment.
 - **Release bar:** students can complete worthwhile, connected revision journeys within the selected areas; no promise of full-topic or full-syllabus completeness.
@@ -39,9 +41,10 @@ The first public beta will teach **several carefully chosen, high-value syllabus
 - Browse **selected priority syllabus topics** and lessons, with visible indications of beta coverage.
 - Read responsive, accessible Markdown/MDX notes with diagrams, code, worked examples, and common mistakes.
 - Complete embedded multiple-choice and short-answer checks.
-- Open a linked Python exercise in an in-browser editor.
-- Run sample/custom input and submit against exercise tests through a hosted execution service.
-- See clear statuses: accepted, wrong answer, runtime error, time limit, compile/system error, or runner unavailable.
+- First deliver linked practice prompts and model explanations without execution.
+- Later add a Python-only editor using a replaceable Pyodide browser adapter, with Run, Stop/Reset and Check examples.
+- Run supplied stdin and compare against visible cases locally; browser results are self-checks, not trusted grades.
+- Show loading, completed, examples-passed, examples-failed, runtime-error, timeout, output-limit and unavailable states.
 - Store lesson completion, quiz attempts, and exercise completion locally.
 - Search/filter content by topic, difficulty, and status where useful.
 - Offer a voluntary donation link without restricting learning access.
@@ -50,6 +53,7 @@ The first public beta will teach **several carefully chosen, high-value syllabus
 
 ### Not in the initial release
 
+- Hosted grading, hidden programming tests, Judge0 subscription or a server execution route.
 - User accounts, cloud synchronisation, teacher dashboards, classes, leaderboards, social features, or paid features.
 - AI tutoring or AI-generated grading.
 - Multi-file Flask/web application sandbox, arbitrary package installation, SQL server, HTML hosting, or general-purpose shell access.
@@ -71,7 +75,9 @@ Home → syllabus topic → lesson → worked example → checkpoint quiz → ma
 
 ### Journey B — practise programming
 
-Exercise page → read problem/specification → edit Python code → run sample/custom input → submit to tests → inspect failed case feedback → retry → mark completed locally.
+Initially: practice prompt → attempt offline or trace by hand → review explanation → mark completed locally.
+
+After browser feasibility passes: exercise → edit Python → Run with supplied stdin / Check examples → inspect visible output → retry → mark local self-check progress. Stop/Reset cancels execution. No Submit for hidden grading in this MVP.
 
 ### Journey C — revise
 
@@ -83,8 +89,8 @@ Footer/About page → submit feedback or open voluntary donation link. Donations
 
 ## 4. Syllabus alignment and content integrity
 
-Use the official SEAB 2026 H2 Computing syllabus 9569 as the source of truth:  
-https://www.seab.gov.sg/files/A%20Level%20Syllabus%20Private%20Cddts/2026/9569_y26_sy.pdf
+Use the official SEAB 2026 H2 Computing syllabus 9569 as the source of truth:
+https://isomer-user-content.by.gov.sg/334/cd7aef2f-eef7-4e5a-bebe-2339b214db42/9569_y26_sy.pdf
 
 Before publishing the selected priority-topic tree, inspect the PDF and transcribe the relevant sections and learning outcomes accurately. Do not rely on informal topic lists alone. Store a stable syllabus outcome ID and a human-readable reference for every lesson, quiz, and exercise. Record the syllabus year/version.
 
@@ -98,43 +104,48 @@ Do not present unofficial notes as official SEAB material. Re-check the syllabus
 
 ## 5. Scope and release gates
 
-### Gate 0 — planning approval
-Approve this specification, runner strategy, deployment constraints, content model, and MVP boundaries. No implementation before approval.
+### Gate 0 — approved direction
 
-### Gate 1 — feasibility spike
-In a throwaway branch or minimal proof of concept, verify the chosen host can deploy the intended app and that the hosted runner permits the intended educational use within an acceptable free allowance. Check authentication requirements, rate limits, data retention, privacy terms, CORS/server-side API requirements, and whether a payment/donation link affects hosting eligibility. Document the provider and date checked.
+The owner approved theory-first work, Vercel Hobby and Python control flow as the first topic, then requested planning for free browser Python practice. Follow the three confirmed MVP areas only. Do not re-request this approval for ordinary theory work. Paid services, extra infrastructure, hosted grading or scope/privacy changes need separate authorization.
 
-**Pass condition:** a Python sample can be submitted through a server-side route, safely bounded by provider limits, without exposing API credentials, and the expected monthly cost is acceptable to the owner.
+### Gate 1 — theory deployment
 
-**Fallback:** if no suitable hosted free allowance exists, launch theory and quiz functionality first with a clearly labelled “coding runner temporarily unavailable” state, or use a mock runner only for local development. Do not silently ship a nonfunctional Run button or run untrusted code on the app server.
+After documentation changes, establish the Next.js/TypeScript foundation, validated Git content, quizzes and local progress. Verify a production build and Vercel Hobby deployment within free-plan terms. A runner is not required to pass this gate.
 
-### Gate 2 — vertical slice
-One syllabus topic, one lesson, one checkpoint quiz, and one Python exercise must work end to end. This proves the learning loop before bulk content authoring.
+### Gate 2 — first theory learning journey
 
-### Gate 3 — MVP completeness
-Content navigation, progress, runner failure handling, accessibility, tests, privacy notice, deployment, and feedback route are ready.
+Complete Python control flow: sequence/branching, counted/conditional loops, combined flow/tracing. Begin with one polished lesson, then complete the bounded topic. Each lesson has an original worked example, misconceptions, quiz explanations, practice prompt/model explanation and local completion. Check syllabus mapping, code examples, keyboard/mobile use and refresh/reset progress before expanding.
+
+### Gate 3 — Pyodide feasibility and activation
+
+Only after the theory journey works, investigate a minimal browser runner before building the full editor. Pin a reviewed Pyodide/Python version compatible with the exercises. Verify runtime asset loading on the actual host, supported desktop/mobile browsers, stdin/stdout, cancellation of infinite loops, output flooding, reset isolation and initial download/resource costs.
+
+Security pass condition: learner code runs outside the main site context in an isolated iframe/worker arrangement; it cannot read or modify the site's DOM, local progress or cookies, navigate the parent or make unauthorized network requests. A worker alone is not origin isolation. Test the proposed opaque-origin sandbox and its CORS/CSP/worker restrictions; do not grant same-origin access merely to make loading work. Keep cross-frame messages narrowly validated. Browser memory use cannot be given a dependable per-run server-style memory quota; assess practical device limits and document this limitation.
+
+If those checks pass, add CodeMirror and the Pyodide adapter using visible tests only. Check examples is local, inspectable and alterable by the learner; do not claim trusted acceptance or concealed tests. If feasibility fails, keep the usable theory/quizzes beta and offline/self-check practice. Do not substitute a paid hosted service without approval.
 
 ### Gate 4 — public beta
-Invite a small group to test; publish known limitations, feedback route, content correction process, and incident/runner outage plan. Beta is not a claim of official endorsement.
+
+Navigation, content accuracy, progress, accessibility, tests, privacy/attribution and feedback must be ready. Browser execution may be included only after Gate 3 passes; otherwise disclose its absence and omit executable controls. Recheck host terms and publish coverage gaps. Hosted execution is a later, separate decision, not a beta requirement.
 
 ## 6. Recommended architecture
 
 ### Default recommendation
 
 - **Framework:** Next.js App Router with TypeScript.
-- **Styling:** Tailwind CSS or a similarly simple CSS approach; use one consistent system rather than multiple UI libraries.
+- **Styling:** Tailwind CSS with daisyUI, requested by the owner for Milestone 1. Use one quiet notes theme and only the needed journey components; pin compatible versions. No other UI library or paid tooling.
 - **Content:** Markdown/MDX files committed to Git, with frontmatter validated at build/test time.
-- **Editor:** CodeMirror 6 configured for Python.
-- **Code execution:** a hosted execution API accessed only through a server-side adapter route. Judge0 is a candidate, not a committed dependency until Gate 1 is passed.
+- **Editor:** CodeMirror 6 configured for Python, added after the theory journey and browser feasibility check.
+- **Code execution:** Pyodide in an isolated browser runner context plus module worker, behind a small replaceable adapter. No execution API/backend, API key or hidden tests in MVP. PyScript is not required. Pin and review the runtime during feasibility work.
 - **Progress:** browser local storage behind a typed storage adapter and schema version. No account or database in MVP.
-- **Hosting:** static-first/Next-compatible host selected after checking current free-tier and project-use terms. Vercel is one candidate, not an unconditional choice.
+- **Hosting:** Vercel Hobby, mostly static pages; confirm terms/limits again before release. Pyodide asset delivery still consumes bandwidth and storage allowances.
 - **Testing:** unit/component tests for parsing, quizzes, progress and result mapping; end-to-end tests for core learner journey; typecheck, lint and production build in CI.
 
 This is deliberately not a microservice architecture. Avoid a separate database, authentication service, analytics platform, and backend service unless a concrete MVP requirement demands one.
 
 ### Cost principle
 
-Keep the site static where possible and use server routes only where required (principally code execution). Do not introduce a payment processor, database, analytics, or authentication dependency just because it is familiar. A donation link can be an external link and must be optional.
+Keep the site static where possible. Browser Python adds no per-execution provider bill, but runtime downloads consume bandwidth and students supply CPU/memory. Lazy-load only on explicit use. Prefer pinned same-deployment assets if viable; verify distribution/licence notices, asset limits and caching before choosing delivery. Do not add a runtime CDN dependency by default. Do not introduce a payment processor, database, analytics, or authentication dependency just because it is familiar. A donation link can be an external link and must be optional.
 
 A “free” provider tier can change, impose usage limits, require a card, or disallow a use case. Record provider plan terms and a dated decision. Do not promise perpetual zero cost to users or the owner.
 
@@ -148,7 +159,7 @@ A “free” provider tier can change, impose usage limits, require a card, or d
 │   ├── lessons/[slug]/
 │   ├── exercises/[slug]/
 │   ├── about/
-│   └── api/run/route.ts
+│   └── privacy/
 ├── components/
 │   ├── content/
 │   ├── quiz/
@@ -177,7 +188,7 @@ A “free” provider tier can change, impose usage limits, require a card, or d
 └── .env.example
 ```
 
-Keep paths adaptable to the framework's conventions. Do not create empty abstractions for speculative future features.
+Keep paths adaptable to the framework's conventions. Add editor/worker/runtime assets only in the browser-practice milestone; no `/api/run` route is required. Do not create empty abstractions for speculative future features.
 
 ## 8. Content schema
 
@@ -190,7 +201,9 @@ topic: "algorithms-and-data-structures"
 syllabus:
   year: 2026
   outcomes:
-    - "VERIFY-AGAINST-OFFICIAL-PDF"
+    - "1.2.3"
+    - "1.2.4"
+    - "2.3.2"
 difficulty: "core"
 estimatedMinutes: 12
 prerequisites: []
@@ -199,9 +212,9 @@ relatedExercises:
 status: "draft"
 ```
 
-Replace placeholder outcome IDs only after checking the official syllabus. Content validation must fail CI for missing required fields, duplicate slugs, invalid links where testable, or references to nonexistent exercises.
+The binary-search example covers only the binary-search portions of those outcomes; record that partial coverage. Use verified numeric outcome references as strings with year 2026 and printed page references. Content validation must fail CI for missing required fields, duplicate slugs, invalid links where testable, or references to nonexistent exercises.
 
-Exercise metadata should include slug, title, topic, difficulty, syllabus mapping, prompt, constraints, examples, starter code, sample tests, hidden tests, hints, explanation, and tags. Hidden tests must remain server-side or inside the trusted runner configuration; never embed hidden expected answers in the client bundle.
+Exercise metadata includes slug, title, topic, difficulty, syllabus mapping, prompt, constraints, examples, starter code, visible test cases, hints, explanation and tags. Initially prompts can be offline/self-check. All browser test inputs, answers and checking logic are intentionally public; no hidden-test field is required for this MVP. Any future private hosted test set must remain separate from client content.
 
 ## 9. Theory and quiz behaviour
 
@@ -214,43 +227,19 @@ Exercise metadata should include slug, title, topic, difficulty, syllabus mappin
 
 ## 10. Python exercise runner contract
 
-All execution requests pass through a server-side route and a provider adapter. The browser must never receive provider secrets. Validate request body size, exercise slug, language ID, code length, input length, and request rate before contacting the provider.
+Use a small adapter with execute and cancel/reset operations, independent of Pyodide-specific UI calls. Support Python only; users cannot select arbitrary runtimes. Start with single-file stdin/stdout exercises and predefined input rather than an interactive terminal. The UI receives normalized state, bounded stdout/stderr and visible-case comparisons.
 
-Suggested request shape:
+Request metadata includes exercise slug, source code, stdin and mode (`run` or `check-examples`). App content supplies visible cases. Validate all messages and sizes in the host UI as well as the runner context. Never render output/errors as HTML or let runner messages write arbitrary storage keys. Tag each job/session and discard stale or unexpected responses.
 
-```json
-{
-  "exerciseSlug": "binary-search-index",
-  "sourceCode": "def solve(...): ...",
-  "mode": "run"
-}
-```
+Suggested initial bounds to verify: 16 KiB UTF-8 source, 8 KiB stdin per case, 16 KiB decoded output per job, at most five visible cases and a five-second execution watchdog per case after runtime initialization. Give runtime loading a separate bounded timeout. Caps are application targets, not proven sandbox guarantees. Enforce a host-side cumulative output/message budget and terminate flooding workers. Browser memory exhaustion remains a practical limitation to test and disclose.
 
-The server resolves the exercise from trusted repository content and determines which tests to run. The client must not submit arbitrary test definitions for hidden-test mode. `run` mode may use public sample input; `submit` mode executes the server-defined test set.
+Keep the UI responsive in a module worker within an isolated runner context. The trusted host owns Stop/Reset/watchdog control. Terminate the worker on cancellation/timeout/output flooding, reset the context on malformed protocol traffic, and create a fresh interpreter for independent jobs/cases so previous globals/files cannot affect later results. Avoid requiring SharedArrayBuffer for MVP cancellation. Preserve the learner's editor text in the UI during recovery.
 
-Response shape should be stable and provider-independent:
+Status vocabulary: `loading`, `running`, `completed`, `examples-passed`, `examples-failed`, `runtime-error`, `timeout`, `output-limit`, `cancelled`, `unavailable`. Show “All visible examples passed — local self-check”, never a claim of trusted grading or all hidden tests passed. Client-side checking and progress can be modified by learners; that is acceptable for this account-free revision tool.
 
-```json
-{
-  "status": "accepted",
-  "summary": "All visible tests passed.",
-  "results": [
-    {
-      "label": "Example 1",
-      "passed": true,
-      "expected": "…",
-      "actual": "…"
-    }
-  ],
-  "execution": {
-    "timeMs": 42
-  }
-}
-```
+Gate 3 must demonstrate browser origin/storage/network isolation, bounded message handling and recovery. Pyodide exposes JavaScript/Web APIs; a worker is not automatically a security sandbox. Do not run learner code in the app server or the main UI context, auto-run shared source, or enable arbitrary package installation.
 
-Do not return provider internals, environment variables, hidden test inputs/outputs, stack traces containing secrets, or raw unbounded stderr. Map provider outcomes to a fixed status enum. Handle queued submissions, timeout, quota exhaustion, malformed responses, provider outage, and rate limiting.
-
-**Important security limitation:** the app server must not execute arbitrary learner code directly. Use a reputable isolated runner with resource limits. Verify provider terms, privacy, data retention, free quotas and permitted public educational use before selecting it. Do not send student names or personal information to the runner.
+Future hosted execution, if separately authorized, uses a server-only adapter with its own credentials, private tests, provider validation, limits, privacy and cost gates. Do not scaffold that service now.
 
 ## 11. Local progress and privacy
 
@@ -261,7 +250,7 @@ Do not return provider internals, environment variables, hidden test inputs/outp
 - Add “Reset local progress” with confirmation and a clear explanation.
 - Explain that progress is device/browser-specific and can be lost when site data is cleared.
 - Do not add analytics or trackers by default.
-- Include a privacy page explaining what code is sent to the execution provider and what the site itself stores.
+- Explain that Pyodide executes source/input on the learner's device; the app must not upload or log it. Disclose runtime asset hosting/CDN requests and host access logs separately. No execution-provider submission storage exists in the browser MVP. Update privacy terms before any future hosted integration.
 - Follow applicable laws and hosting/provider terms; obtain qualified advice if adding accounts, analytics, or handling more personal data.
 
 ## 12. UI and accessibility
@@ -285,42 +274,38 @@ Accessibility baseline:
 
 ## 13. Error states and resilience
 
-Design explicit UI for:
-- runner not configured;
-- provider unavailable or slow;
-- submission queued;
-- rate limit/quota reached;
-- malformed code or runtime error;
-- output too long;
-- no network;
-- corrupted local progress;
-- missing lesson/exercise slug.
-
-A failed runner must not erase learner code or progress. Show a retry action only when safe and useful. Avoid endless polling.
+Theory remains usable if runtime assets are offline, blocked or unsupported. Browser-practice states include loading failure, unsupported browser, syntax/runtime errors, execution timeout, cancelled job, output limit, malformed worker message and interrupted network download. Keep editor text and progress during recovery; offer Stop/Reset and a bounded retry. Also handle corrupted local progress and missing content slugs. Avoid endless loading, worker accumulation or silent auto-runs.
 
 ## 14. Quality and acceptance criteria
 
-MVP is acceptable for beta only when:
+### Theory/quizzes beta (first release gate)
 
-1. Every published item maps to a verified syllabus outcome and includes original or properly licensed material.
-2. A learner can navigate topic → lesson → quiz → linked Python exercise.
-3. A working solution passes all public and hidden tests, and a known incorrect solution produces a meaningful wrong-answer result.
-4. Runtime, provider outage and rate-limit states are handled.
-5. Provider credentials are server-only and no hidden test data is shipped to the client.
-6. Progress persists across refreshes on the same browser and can be reset.
-7. Site remains usable on desktop and mobile and passes basic keyboard/contrast checks.
-8. `lint`, typecheck, unit tests, end-to-end smoke tests, and production build pass.
-9. README documents setup, environment variables, provider setup, limitations, and deployment.
-10. Privacy, terms/attribution, feedback, and donation pages/links are present where applicable.
-11. No secret or personal data is committed.
-12. Deployment and runner terms/free-tier eligibility have been checked and recorded before public beta.
+1. Every published item maps to verified 2026 outcomes with original/licensed material and honest partial coverage.
+2. A learner completes the Python control-flow lesson/quiz/practice-prompt journey without an account.
+3. Quiz answers have explanations; offline practice has model explanations and self-marked completion, not grading claims.
+4. Progress persists across refreshes and can be reset; corrupted storage recovers safely.
+5. Desktop/mobile and keyboard/contrast checks pass.
+6. Relevant lint, typecheck, unit/integration/end-to-end checks and production build pass.
+7. Setup, hosting, limitations, attribution/privacy and feedback documentation are complete; optional donations never affect access.
+8. Vercel deployment/terms are checked; no secret/personal data is committed. No executable controls appear before runner readiness.
+
+### Additional gate for browser Python practice
+
+1. Gate 3 feasibility passes on the actual deployment and supported browsers, with a pinned runtime and documented licence/asset delivery.
+2. Correct/incorrect examples, runtime errors, infinite loops, output floods and runtime loading failures yield useful bounded feedback.
+3. Stop/Reset/timeouts work; the main UI, source text and progress survive recovery; stale responses are ignored and cases/jobs do not share interpreter state.
+4. Isolation checks verify that executed code cannot access the main site's storage/DOM/cookies, navigate it or make unauthorized network requests.
+5. Visible cases and local results are labelled inspectable self-checks. No hosted key, private tests or trusted-grade claims are introduced.
+6. Source/input are not uploaded, telemetry is absent, and browser resource/performance limitations are disclosed.
+
+If browser checks fail, ship the theory/quizzes beta only. Hosted grading has separate future acceptance criteria; it is not required for either initial theory or public-example practice.
 
 ## 15. Resume-quality evidence
 
 Keep a small engineering log and be able to demonstrate:
 - syllabus outcome-to-content traceability;
-- an isolated, provider-agnostic code runner integration;
-- defensive validation, rate limiting, and failure handling;
+- isolated browser Python practice behind a replaceable adapter, once actually shipped;
+- defensive message/input/output validation, cancellation and failure recovery;
 - automated tests and CI;
 - accessibility and responsive design;
 - a documented architecture and trade-offs;
@@ -328,13 +313,10 @@ Keep a small engineering log and be able to demonstrate:
 
 Do not claim user numbers, performance gains, or learning outcomes without evidence. A truthful resume bullet can be drafted after the public beta and actual results exist.
 
-## 16. Open decisions before implementation
+## 16. Remaining decisions by milestone
 
-- Which hosted runner provider and plan meet cost, quota, terms and privacy requirements?
-- Which hosting provider permits this project under its current free-tier terms?
-- Exact syllabus topic/outcome identifiers after auditing the official PDF.
-- Whether the initial public beta should expose code execution immediately or launch notes/quizzes first if runner terms fail.
-- Donation provider and whether it introduces fees or account requirements for the owner.
-- Whether exercise evaluation should use stdin/stdout or function-based calls. Prefer a consistent interface with the syllabus and exercise set.
+Theory work can proceed under the owner's existing approval. Verified syllabus references and first topic are recorded in docs/phase-1-feasibility.md and docs/decisions/content-mapping.md.
 
-Do not resolve these by assumption. Record each decision in `docs/decisions/` before coding if it materially affects architecture or cost.
+Before browser activation, verify the exact pinned Pyodide/Python version, runtime asset delivery/cache/licensing, input/output conventions, isolated frame/worker deployment, message protocol, cancellation/limits, browser/device support and startup/resource costs. These are feasibility tasks, not reasons to block theory development.
+
+External donation setup remains optional. Hosted grading/provider selection, private tests and any paid or additional service remain deferred and require separate authorization. Record material findings in docs/decisions/runner-provider.md; preserve the theory-only fallback if the browser runner cannot pass its gates.
