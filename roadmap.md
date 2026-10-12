@@ -1,0 +1,95 @@
+# Roadmap
+
+**Status:** Proposed; no implementation started.  
+**Planning principle:** priority-topic public beta: prove one complete vertical slice, then expand to several high-value areas with depth and transparent coverage gaps; full syllabus coverage is deferred.
+
+## Phase 0 — Validate assumptions and approve plan
+
+- [ ] Review and approve `implementation.md`.
+- [ ] Audit the official 2026 syllabus PDF and build an outcome mapping table for candidate priority areas, recording uncovered outcomes separately.
+- [ ] Compare hosted runner options: free allowance, authentication, rate limits, terms, retention, quotas and acceptable use.
+- [ ] Compare hosting terms for public educational use and optional donations.
+- [ ] Decide how the runner behaves if the free allowance is exhausted.
+- [ ] Prioritise a small set of syllabus areas based on learning value, prerequisite coherence, quiz/Python-practice suitability and manageable original-content workload; choose the first vertical slice.
+- [ ] Record material choices under `docs/decisions/`.
+
+**Exit criteria:** architecture and runner plan are feasible without committing the owner to unexpected costs.
+
+## Phase 1 — Repository and design foundation
+
+- [ ] Create a new repository and default branch protections where available.
+- [ ] Set up framework, TypeScript, linting, formatting, tests and CI.
+- [ ] Add `AGENTS.md`, README, environment template, docs and contribution conventions.
+- [ ] Establish layout, typography, responsive navigation and accessible components.
+- [ ] Define validated lesson/exercise metadata and content loading.
+- [ ] Add placeholder pages for home, topic, lesson, exercise, about, privacy and feedback.
+
+**Exit criteria:** clean install, lint, typecheck, test and production build work in CI.
+
+## Phase 2 — One complete learning vertical slice
+
+- [ ] Create one syllabus-mapped topic page.
+- [ ] Create one polished lesson with worked example, common mistakes and a checkpoint quiz.
+- [ ] Create one linked Python exercise with prompt, examples, starter code and tests.
+- [ ] Add CodeMirror Python editor with run/submit states.
+- [ ] Implement server-side runner adapter and provider timeout/error mapping.
+- [ ] Ensure hidden tests remain server-side and enforce rate/body limits.
+- [ ] Add local progress for the lesson, quiz and exercise.
+- [ ] Add responsive and keyboard smoke tests.
+
+**Exit criteria:** a student can learn, check understanding, code, receive results and see local progress without creating an account.
+
+## Phase 3 — MVP content and revision features
+
+- [ ] Expand from the vertical slice into several selected priority topic areas with coherent prerequisite-to-practice sequences.
+- [ ] Aim for roughly 8–12 polished lessons and up to 20–30 thoroughly tested Python exercises as **flexible planning targets**, not ship-blocking quotas; include fewer where content quality or runner limits warrant it.
+- [ ] Display a coverage map marking published, partial and unaddressed outcomes; do not imply full syllabus coverage.
+- [ ] Add search/filter/navigation and related content links where they materially help.
+- [ ] Add quiz explanations and exercise hints.
+- [ ] Add local progress dashboard and reset/export decision (export is optional).
+- [ ] Run content review for accuracy, clarity, accessibility and copyright.
+- [ ] Check all links and metadata in CI.
+
+**Exit criteria:** a learner can complete multiple meaningful revision journeys across selected priority areas, coverage gaps are clear, and each released item passes content review; full syllabus coverage is not required.
+
+## Phase 4 — Beta hardening
+
+- [ ] Verify hosting and runner plan terms immediately before launch.
+- [ ] Add rate limiting, request validation, output caps and graceful outage handling.
+- [ ] Add privacy and attribution pages, feedback route and optional donation link.
+- [ ] Test keyboard access, contrast, narrow screens, browser refresh and local-storage corruption.
+- [ ] Test runner accepted/wrong-answer/runtime/timeout/provider-error paths.
+- [ ] Check no provider key or hidden test data appears in client assets.
+- [ ] Ask a small number of students/teachers to test and record feedback.
+- [ ] Fix high-severity issues before announcement.
+
+**Exit criteria:** known limitations are disclosed, basic security and quality checks pass, and owner understands operating costs/limits.
+
+## Phase 5 — Public beta and portfolio polish
+
+- [ ] Publish the site and repository.
+- [ ] Add screenshots, architecture diagram and setup instructions to README.
+- [ ] Document design trade-offs and lessons learned.
+- [ ] Create issues from feedback and prioritise corrections.
+- [ ] Keep a changelog and release notes.
+- [ ] Prepare resume bullets only from verified shipped work and evidence.
+
+## Later / explicitly deferred
+
+- Accounts and cloud sync.
+- More languages or a self-hosted runner.
+- SQL execution, Flask projects or multi-file sandboxes.
+- Teacher dashboards and classroom management.
+- AI tutoring.
+- Social features, leaderboard, streak pressure or paid content.
+- Large-scale analytics.
+
+## Definition of done for every feature
+
+- Acceptance criteria written before implementation.
+- Relevant unit/integration tests added.
+- Accessible states and responsive layout checked.
+- Errors handled and user-facing copy written.
+- Documentation/status updated.
+- No secrets or hidden tests exposed.
+- Syllabus mapping and content provenance recorded when educational content is involved.
