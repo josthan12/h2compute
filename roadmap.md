@@ -1,6 +1,6 @@
 # Roadmap
 
-**Status:** Milestones 1 and 2 merged; Milestone 3 local feasibility investigation on feat/pyodide-feasibility. Activation, hosted CI for this branch and deployment remain pending. See [verification](docs/milestone-3-verification.md).
+**Status:** Milestones 1 and 2 merged; Milestone 3 local feasibility investigation on feat/pyodide-feasibility. The separate protected developer preview is deployed; learner activation, hosted browser/device verification and CI remain pending. See [verification](docs/milestone-3-verification.md).
 **Scope:** Python programming, algorithms/data structures and relational databases/SQL only. Start with Python control flow. Browser practice follows theory; hosted grading is deferred.
 
 Use [docs/milestone-workflow.md](docs/milestone-workflow.md) for the repeatable task/Git workflow, milestone gates and continuation prompts.
@@ -42,8 +42,8 @@ The three-lesson implementation and local checks are recorded in [Milestone 2 ve
 
 - [x] Pin/review Pyodide 314.0.7 / CPython 3.14.2; choose five core runtime files and retain MPL/CPython notices.
 - [x] Prepare retained compiled third-party notices and Pyodide source availability for a local reviewable static preview.
-- [x] Prepare a local preview package and exact proposed host headers with versioned assets, existing opaque-frame CSP and disabled learner controls. Publication is owner-authorized; Vercel workspace access, model-training opt-out and actual-host verification remain pending.
-- [ ] Verify asset sizes, loading/cache/CORS/CSP on the deployment; budget host bandwidth.
+- [x] Prepare a local preview package and exact proposed host headers with versioned assets, existing opaque-frame CSP and disabled learner controls. Owner-authorized publication, CLI workspace access and confirmed model-training opt-out are recorded in [Vercel setup](docs/vercel-setup-2026-10-13.md).
+- [ ] Verify asset sizes, loading/cache/CORS/CSP on the deployment; budget host bandwidth. All 57 ordinary authenticated GET hash/header checks passed; browser startup, cold/warm caching and remaining allowance are unverified.
 - [ ] Prototype isolated iframe + module worker; prove main-site storage/DOM/cookie/navigation and unauthorized network separation.
 - [ ] Verify supplied stdin/stdout, syntax/runtime errors, infinite loops, output floods, cancellation, fresh case/job state and stale-message rejection.
 - [ ] Check supported desktop/mobile startup and memory/performance limitations.

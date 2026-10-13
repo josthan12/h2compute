@@ -4,6 +4,7 @@ root = Path(__file__).resolve().parents[2]
 files = ['README.md', 'implementation.md', 'roadmap.md', 'current-status.md', 'docs/architecture.md', 'docs/testing.md', 'docs/decisions/runner-provider.md', 'docs/milestone-workflow.md', 'docs/milestone-2-verification.md', 'docs/milestone-3-verification.md', 'docs/pyodide-spike/README.md']
 count = 0
 files.extend(['docs/pyodide-spike/PREVIEW.md', 'docs/pyodide-spike/DISTRIBUTION-NOTICES.md'])
+files.extend(['docs/hosting-terms-2026-10-13.md', 'docs/vercel-setup-2026-10-13.md'])
 for file in files:
     path = root / file
     text = path.read_text(encoding='utf-8')

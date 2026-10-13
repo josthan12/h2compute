@@ -65,3 +65,12 @@ the owner. This research turn made no commit or deployment.
 Checks: official pages were opened directly, rather than relying on older search
 snippets. Local package sizes/header count and bandwidth calculations were read
 from the existing package; no assets, evidence or package hashes were changed.
+
+## Setup follow-up — 13 October 2026
+
+The owner confirmed model-training opt-out. CLI authentication verified active
+Hobby and workspace access; the separate developer preview was published.
+The [setup and delivery record](vercel-setup-2026-10-13.md) supersedes the earlier
+upload-access blocker and package-acceptance uncertainty. The earlier package
+figures above remain dated research evidence. Current allowance is unverified;
+hosted adversarial-test permission, devices and learner activation remain open.

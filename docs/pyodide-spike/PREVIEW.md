@@ -54,16 +54,20 @@ and [notice manifest](notice-manifest.json) with the review.
 Each package contains `public/`, `vercel.json` and `package-manifest.json`.
 The Vercel project root would be that generated package directory, **not the
 repository root or theory app**. `framework: null`, empty install/build commands
-and `outputDirectory: public` describe static delivery. `cleanUrls: false`
-preserves `/frame.html`. No function, rewrite, route to learner code or extra
+and `outputDirectory: public` describe static delivery. Exact file routes
+preserve `/frame.html`. No function, rewrite, route to learner code or extra
 service is configured. A preview may require protection settings; do not let a
 login/toolbar/header override alter the runner response. Do not publish any
 package until the owner explicitly authorizes it.
 
-The generated config enumerates every public file's exact headers. The loopback
+The generated config enumerates every public file's exact headers in continuing
+routes and deletes the CDN's default Access-Control-Allow-Origin header using
+a response transform. An empty header override was tested and did not remove
+the wildcard on Vercel. The loopback
 server reads the same manifest; checks compare both representations and actual
-HTTP bytes. This is local verification, not a test of Vercel routing/header
-precedence. Configuration references, checked 13 October 2026:
+HTTP bytes. Local verification alone does not certify Vercel routing/header
+precedence. See the [hosted setup record](../vercel-setup-2026-10-13.md) for actual
+delivery evidence. Configuration references, checked 13 October 2026:
 [Vercel static configuration](https://vercel.com/docs/project-configuration/vercel-json)
 and [cache headers](https://vercel.com/docs/caching/cache-control-headers).
 
@@ -83,16 +87,19 @@ allow-same-origin, runner HTTP permission or main-site unsafe-eval is added.
 
 ## Remaining publication and activation checks
 
-Once publication is explicitly authorized and a host URL is supplied, verify
+Publication is owner-authorized and a protected developer preview is deployed.
+See the [hosted setup record](../vercel-setup-2026-10-13.md). Verify
 actual headers, redirects, CORS absence, notice/source availability, MIME,
-immutable caching, compression and cold/warm transfer sizes. Run all adversarial
-probes there, including same-origin HTTP denial, worker termination and recovery.
+immutable caching, compression and cold/warm transfer sizes. Resolve the
+[Hobby security-test restriction](../hosting-terms-2026-10-13.md) before running
+hosted adversarial probes, including same-origin HTTP denial, worker termination
+and recovery.
 The local server is deliberately uncompressed; ZIP size is a review/download
 artifact size, not measured browser transfer or actual host compression.
 
 Runtime loading still transfers 13,531,207 raw bytes on a cold load; the source
 archive/notices are separate downloads. Recheck current Hobby terms/bandwidth
-allowances and preview protection before authorizing publication. Physical
+allowances and preview protection before any further release. Physical
 Android/iOS, intended desktop engines, low-memory recovery and an honest browser
 support policy remain required. Keep learner activation NO-GO until all gates
 pass, and retain theory/offline practice.

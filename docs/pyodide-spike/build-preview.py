@@ -2,6 +2,7 @@
 import hashlib
 import html
 import json
+import re
 from pathlib import Path
 import zipfile
 
@@ -66,7 +67,10 @@ for path, data in files.items():
     headers.append({"source": "/" if path == "index.html" else "/" + path, "headers": [{"key": key, "value": value} for key, value in values.items()]})
     if path == "index.html":
         headers.append({"source": "/index.html", "headers": [{"key": key, "value": value} for key, value in values.items()]})
-config = {"$schema": "https://openapi.vercel.sh/vercel.json", "framework": None, "buildCommand": "", "installCommand": "", "outputDirectory": "public", "cleanUrls": False, "headers": headers}
+# Response transforms remove the CDN's default wildcard; an empty header did not.
+routes = [{"src": "/.*", "continue": True, "transforms": [{"type": "response.headers", "op": "delete", "target": {"key": "Access-Control-Allow-Origin"}}]}]
+routes += [{"src": "^" + re.escape(rule["source"]) + "$", "continue": True, "headers": {h["key"]: h["value"] for h in rule["headers"]}} for rule in headers]
+config = {"$schema": "https://openapi.vercel.sh/vercel.json", "framework": None, "buildCommand": "", "installCommand": "", "outputDirectory": "public", "routes": routes}
 package = {"runtimeVersion": version, "learnerExecutionEnabled": False, "runtimeBytes": sum(item["bytes"] for item in manifest["files"].values()), "files": entries}
 generated = {"public/" + path: data for path, data in files.items()}
 generated["vercel.json"] = (json.dumps(config, indent=2) + "\n").encode()

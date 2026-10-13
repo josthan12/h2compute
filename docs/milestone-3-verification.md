@@ -7,9 +7,12 @@ Investigation: 12 October 2026; final documentation review: 13 October 2026. Ori
 Real local Chromium evidence supports the prototype, but the actual deployment,
 supported browser engines/physical devices and memory exhaustion have not passed
 Gate 3. Local distribution notices and a preview package were prepared on
-13 October; publication/real-host review remains pending. CodeMirror/learner controls remain
+13 October; the later protected publication and ordinary GET checks are recorded
+in [Vercel setup](vercel-setup-2026-10-13.md). Browser/device Gate 3 remains open. CodeMirror/learner controls remain
 deferred. The existing theory/quiz/offline-practice/local-progress app is intact.
-No commit, push, PR, merge or deployment was performed.
+No commit, push, PR, merge or deployment was performed in the original investigation;
+later owner-authorized local commits and developer publication are recorded below
+and in the setup record.
 
 ## Acceptance and handoff
 

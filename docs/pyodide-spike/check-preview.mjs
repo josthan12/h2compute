@@ -14,11 +14,12 @@ assert.equal(manifest.learnerExecutionEnabled, false);
 assert.equal(config.framework, null);
 assert.equal(config.outputDirectory, 'public');
 assert.ok(!config.rewrites && !config.functions && !config.redirects);
+assert.deepEqual(config.routes[0], {src: '/.*', continue: true, transforms: [{type: 'response.headers', op: 'delete', target: {key: 'Access-Control-Allow-Origin'}}]});
 let total = 0;
 for (const [path, record] of Object.entries(manifest.files)) {
   const url = path === 'index.html' ? '/' : '/' + path;
-  const rule = config.headers.find(rule => rule.source === url);
-  assert.deepEqual(Object.fromEntries(rule.headers.map(h => [h.key, h.value])), record.headers);
+  const rule = config.routes.slice(1).find(rule => new RegExp(rule.src).test(url));
+  assert.deepEqual(rule.headers, record.headers);
   const response = await fetch(base + url);
   assert.equal(response.status, 200, path);
   assert.equal(response.headers.get('access-control-allow-origin'), null, path);
