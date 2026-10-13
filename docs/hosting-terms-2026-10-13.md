@@ -74,3 +74,35 @@ The [setup and delivery record](vercel-setup-2026-10-13.md) supersedes the earli
 upload-access blocker and package-acceptance uncertainty. The earlier package
 figures above remain dated research evidence. Current allowance is unverified;
 hosted adversarial-test permission, devices and learner activation remain open.
+
+## Security-testing policy decision — 13 October 2026
+
+Rechecked the official [pentesting policy](https://vercel.com/kb/guide/penetration-testing-on-vercel)
+(published update: 17 June 2026) and
+[fair-use guidance](https://vercel.com/docs/limits/fair-use-guidelines)
+(published update: 14 September 2026). The specific policy excludes Hobby users;
+its permission for non-volumetric own-application testing applies to Pro and
+Enterprise. The fair-use page also lists penetration testing as prohibited use.
+Direct Knowledge Base opens failed in the web tool; the primary site's indexed
+full policy text supplied that result. The fair-use page opened directly.
+
+**Decision: hosted adversarial verification is blocked on the current Hobby
+plan.** No published exception was found for browser-only probes. Treat deliberate
+DOM/storage/cookie/navigation escape attempts, network bypass attempts, forged
+messages and resource-exhaustion probes as security testing for this plan. That
+scope classification is our conservative application of the policy, not a
+provider ruling about this harness. Small request counts and client-side Python
+execution do not establish permission.
+
+Provider clarification remains possible, but is not assumed. An owner may ask:
+"Does Hobby permit security regression checks of an opaque iframe/data-worker
+on our own protected static preview, including deliberate DOM/storage/navigation
+escape, CSP network bypass and malformed-message attempts, with no scanner,
+platform attack or load test? Please confirm the permitted scope in writing."
+This is an unsent draft. No support contact, paid upgrade or replacement host
+is authorized by this review. A reply must explicitly cover the intended probes
+before that blocked work resumes; silence is not permission.
+
+The [next focused verification proposal](milestone-3-verification.md#gate-3-review-and-next-verification-proposal--13-october-2026)
+uses only normal fixed-program startup/cache measurements. It does not claim
+that the deployed security gate passes.

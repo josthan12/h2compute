@@ -504,3 +504,99 @@ for those copied `.txt` licence/notice files; authored Markdown/code remain
 checked. The final staged check passed. Staged-blob SHA-256/size checks matched
 all 39 notice-manifest records, both main licence files matched their working
 bytes, and no cache, ZIP or credential file entered the commit scope.
+
+## Gate 3 review and next verification proposal — 13 October 2026
+
+Acceptance for this continuation: review the remaining Gate 3 evidence, decide
+the Hobby security-testing boundary from current official policy, and propose
+one focused verification step. This is a documentation review, not a runtime
+test or activation decision. Read-only elevated Git checks confirmed clean
+`feat/pyodide-feasibility` at `a7081611759ea5ec35701578ea87f0609dd9dfa2`,
+no unmerged entries and `main...origin/main` at 0/0 against saved refs. The
+docs-rooted sandbox reproduced the previously recorded Git status/access errors;
+no configuration change or fresh fetch was needed.
+
+The [setup record](vercel-setup-2026-10-13.md) identifies the exact protected
+preview and package digest. Its 57 ordinary authenticated GET checks establish
+delivered bytes/headers/compression, not runtime or browser-cache behaviour.
+The [policy decision](hosting-terms-2026-10-13.md#security-testing-policy-decision--13-october-2026)
+blocks hosted adversarial probes on Hobby: no published browser-only exemption
+was found. Provider classification of this precise scope has not been obtained.
+
+| Gate 3 evidence | Current position / remaining check |
+| --- | --- |
+| Pinned runtime, notices and HTTP delivery | Local package and 57 hosted GETs passed; authenticated notice/source access only. |
+| Actual-host browser loading and cache | Open: measure startup, browser cold/warm/reload transfers and auth-dependent loading. CDN HIT is not browser-cache reuse. |
+| stdin/stdout, errors and fresh execution | Local real Chromium passed; actual-host browser outcomes remain open. |
+| Origin/network isolation and message bounds | Local enumerated probes passed; deployed adversarial verification is blocked by the Hobby policy decision. |
+| Infinite-loop Stop/Reset, flood limits and recovery | Local passed; deployed adversarial/resource probes remain blocked. Normal successful-job cleanup can be observed in the benign step. |
+| Desktop engines and physical devices | Open: intended desktop engines plus physical Android Chrome and iOS Safari, with exact device/OS/browser versions. Emulation is insufficient. |
+| Memory/resource behaviour | Open: practical low-memory failure and recovery, peak-resource observations and supported-device policy. WASM linear memory is not total RAM or a quota. |
+| Bandwidth and release readiness | Remaining account allowance unverified; independent educational/accessibility review, hosted CI and branch protection remain separate release requirements. |
+
+### Proposed next step: benign hosted Chromium startup/cache check
+
+Prepare a separate driver that runs only three fixed benign jobs against the
+exact preview URL in the setup record. Do not point the existing `check.mjs`
+at the host: it includes escape/flood probes, hard-coded local environment
+wording and a default output path that can overwrite retained evidence.
+
+1. Use one fresh desktop Chromium context with normal caching enabled. Confirm
+   accepted existing Vercel authentication and the exact deployment/content
+   digest. Keep authentication material outside page JavaScript and apply any
+   automation auth header only to the exact preview origin. Never log tokens,
+   cookies, raw auth headers, authenticated HARs or storage-state files. Stop
+   if access fails; protection changes are outside this step.
+   Use authentication that preserves normal caching: Playwright request routing
+   disables the HTTP cache, so do not use `page.route`/`context.route` for this
+   measurement. See the [official routing note](https://playwright.dev/docs/api/class-browsercontext#browser-context-route).
+2. Run a fixed stdin/stdout/stderr example from a cold browser cache, then a
+   Unicode/no-final-newline example on the same page. Require exact output,
+   Pyodide 314.0.7 / CPython 3.14.2 and normal completion. Observe cleanup after
+   each successful job and host responsiveness. Keep the original 30-second
+   loading and five-second execution limits; record failure rather than raise
+   them. No source supplied by learners is accepted.
+3. Reload that page without clearing browser caches and run the first fixed
+   example again. Record runtime-file request counts, encoded/decoded/transfer
+   bytes, browser cache indicators, startup and total duration separately for
+   cold, same-page warm and reload runs. Same-page reuse is retained host bytes;
+   reload is a distinct HTTP-browser-cache observation. Do not label a zero
+   Resource Timing value a cache hit without corroborating browser evidence.
+4. Restrict the pass to these three sequential jobs, with no retry loop, stress,
+   scanner, malformed-message, origin escape, outbound-network attempt or
+   forced memory exhaustion. At most two complete core downloads are expected
+   (cold and reload); halt if traffic departs from this scope. Two transfers at
+   the recorded CLI compression size would be 12,848,208 core bytes, excluding
+   other resources and headers. This is a planning estimate, not a browser
+   measurement or a statement of available account allowance.
+5. Save new sanitized evidence under a unique run identifier in ignored
+   `.runtime/`, then retain a separate reviewed summary with deployment ID,
+   content digest, browser/OS version, exact commands, outputs, timings and
+   failures. Preserve all existing raw results, summaries and digest packages.
+
+Pass condition: three exact completed outputs within unchanged limits, correct
+runtime versions, no residual runner frame/worker after successful jobs, and
+usable measurements for all three cache states without auth disclosure. If
+any check fails, diagnose that one failure locally before another hosted run.
+The same-page warm job should fetch no core assets; reload cache behaviour must
+be recorded as observed, including any unexpected retransfers.
+
+This proposal is ordinary bounded functional/performance QA; it does not infer
+a security-test exception. It has not been executed in this continuation. A
+passing result would address only hosted Chromium loading/basic I/O/cache and
+successful cleanup. It would leave deployed isolation, hostile-job recovery,
+other engines, physical devices and memory gates open. The protected developer
+preview is also separate from the learner app, so its sentinel checks cannot
+certify eventual learner-app integration or progress preservation.
+
+Learner execution remains disabled and Gate 3 remains NO-GO for activation.
+No branch switch, push, PR, merge, deployment or protection change was made.
+
+Review validation: `python docs/pyodide-spike/check-docs.py` passed 15 Markdown
+files and 77 local targets. Read-only inline Python (`python -`) checked both new
+heading anchors. `git diff --check` passed outside the docs sandbox; sandbox Git
+diff/status commands failed with the already documented work-tree/access errors.
+`Get-FileHash -Algorithm SHA256` before/after comparison preserved all 11 top-level
+spike JSON files (including ignored raw results) and five retained preview ZIPs.
+Application lint/typecheck/tests/build and runtime suites were not rerun for this
+documentation-only proposal. No new hosted execution result is claimed.

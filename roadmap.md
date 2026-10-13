@@ -51,7 +51,7 @@ The three-lesson implementation and local checks are recorded in [Milestone 2 ve
 - [ ] Use visible cases and local self-check labels; no hidden tests or trusted-grade claims.
 - [ ] Keep theory usable during runtime failure; preserve editor text and progress.
 
-Local progress and exact evidence are in [Milestone 3 verification](docs/milestone-3-verification.md). Remaining boxes retain their full deployment/device/activation requirements; local evidence alone does not complete them.
+Local progress and exact evidence are in [Milestone 3 verification](docs/milestone-3-verification.md). Remaining boxes retain their full deployment/device/activation requirements; local evidence alone does not complete them. Hosted adversarial probes remain blocked on Hobby under the reviewed policy. The [latest Gate 3 review](docs/milestone-3-verification.md#gate-3-review-and-next-verification-proposal--13-october-2026) proposes a bounded benign Chromium startup/cache check; it has not been run and no checkbox advances.
 
 **Exit:** implementation.md Gate 3 passes before browser activation. If it fails, retain theory/quizzes and offline practice; do not add a paid/hosted service by assumption.
 
