@@ -1,0 +1,18 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>Opaque runner</title><script>
+// Opaque sandbox; never allow-same-origin. HTTP network denied by response CSP.
+let initialized = false;
+addEventListener('message', event => {
+  if (initialized || event.source !== parent || event.data?.type !== 'init' || event.ports.length !== 1) return;
+  initialized = true;
+  const { assets, workerSource, session } = event.data;
+  const port = event.ports[0];
+  const workerURL = 'data:text/javascript,' + encodeURIComponent(workerSource);
+  const worker = new Worker(workerURL, {type: 'module', credentials: 'omit'});
+  addEventListener('pagehide', () => worker.terminate());
+  worker.onmessage = event => port.postMessage(event.data);
+  worker.onerror = event => port.postMessage({session, type: 'unavailable', detail: String(event.message).slice(0,1000)});
+  port.onmessage = event => { if (event.data?.session === session) { if (event.data.type === 'dispose') {worker.terminate(); port.postMessage({session,type:'disposed'}); port.close();} else worker.postMessage(event.data); } };
+  port.start();
+  worker.postMessage({session, type: 'boot', assets}, Object.values(assets));
+});
+</script></html>

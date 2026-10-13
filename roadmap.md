@@ -1,6 +1,6 @@
 # Roadmap
 
-**Status:** Milestone 1 merged; Milestone 2 bounded topic implemented locally. This branch’s hosted CI and deployment remain pending.
+**Status:** Milestones 1 and 2 merged; Milestone 3 local feasibility investigation on feat/pyodide-feasibility. Activation, hosted CI for this branch and deployment remain pending. See [verification](docs/milestone-3-verification.md).
 **Scope:** Python programming, algorithms/data structures and relational databases/SQL only. Start with Python control flow. Browser practice follows theory; hosted grading is deferred.
 
 Use [docs/milestone-workflow.md](docs/milestone-workflow.md) for the repeatable task/Git workflow, milestone gates and continuation prompts.
@@ -34,13 +34,15 @@ The three-lesson implementation and local checks are recorded in [Milestone 2 ve
 - [x] Include prerequisite refresher, worked examples, misconceptions and explanatory quizzes.
 - [x] Add original practice prompts/model explanations and local self-marked completion.
 - [x] Review precise 2026 mappings and test every Python example locally.
-- [x] Verify keyboard/mobile use, refresh/reset and corrupted-storage recovery.
+- [x] Verify keyboard/mobile use, refresh/reset and corrupted-storage recovery. Layout checks now use independent route/viewport cases; the 13 October follow-up passed all 82 desktop/mobile Chromium tests.
 
 **Exit:** the bounded Python control-flow topic provides a connected revision journey. This is not complete Python or full-syllabus coverage.
 
 ## Phase 3 — Browser Python feasibility, then practice
 
-- [ ] Pin/review Pyodide and target Python version; choose minimal runtime assets and retain licence notices.
+- [x] Pin/review Pyodide 314.0.7 / CPython 3.14.2; choose five core runtime files and retain MPL/CPython notices.
+- [x] Prepare retained compiled third-party notices and Pyodide source availability for a local reviewable static preview.
+- [x] Prepare a local preview package and exact proposed host headers with versioned assets, existing opaque-frame CSP and disabled learner controls. Publication is owner-authorized; Vercel workspace access, model-training opt-out and actual-host verification remain pending.
 - [ ] Verify asset sizes, loading/cache/CORS/CSP on the deployment; budget host bandwidth.
 - [ ] Prototype isolated iframe + module worker; prove main-site storage/DOM/cookie/navigation and unauthorized network separation.
 - [ ] Verify supplied stdin/stdout, syntax/runtime errors, infinite loops, output floods, cancellation, fresh case/job state and stale-message rejection.
@@ -48,6 +50,8 @@ The three-lesson implementation and local checks are recorded in [Milestone 2 ve
 - [ ] If feasible, add CodeMirror and a replaceable Pyodide adapter with Run, Stop/Reset and Check examples.
 - [ ] Use visible cases and local self-check labels; no hidden tests or trusted-grade claims.
 - [ ] Keep theory usable during runtime failure; preserve editor text and progress.
+
+Local progress and exact evidence are in [Milestone 3 verification](docs/milestone-3-verification.md). Remaining boxes retain their full deployment/device/activation requirements; local evidence alone does not complete them.
 
 **Exit:** implementation.md Gate 3 passes before browser activation. If it fails, retain theory/quizzes and offline practice; do not add a paid/hosted service by assumption.
 

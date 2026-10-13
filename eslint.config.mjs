@@ -8,6 +8,7 @@ export default defineConfig([
     ".next/**",
     "playwright-report/**",
     "test-results/**",
+    "docs/pyodide-spike/.preview/**",
     "next-env.d.ts",
   ]),
 ]);

@@ -1,6 +1,6 @@
 # Testing Strategy
 
-**Updated:** 12 October 2026. Theory first; browser checks are a later activation gate. No application checks run for this documentation edit.
+**Updated:** 13 October 2026. Developer-only local feasibility checks are in [Milestone 3 verification](milestone-3-verification.md); deployed/device checks remain activation gates.
 
 ## Theory milestone
 
@@ -10,6 +10,7 @@
 - Test local-progress persistence, defensive parsing/schema migration and reset.
 - Test authored Python examples locally and review expected results.
 - End-to-end: topic → lesson → quiz explanation → offline practice/model explanation → completion → refresh → reset. Include keyboard and narrow-screen use.
+- Test each published route at 320, 768 and 1280px as an independent layout case on both Chromium profiles. Keep the normal 30-second timeout and all overflow, navigation, model-disclosure, theme and screenshot checks; do not combine 30 navigations into one shared timeout budget.
 
 No editor/runner is required for theory acceptance; do not claim offline attempts passed executable tests.
 
@@ -61,4 +62,10 @@ The framework and checks now exist. See [milestone-1-verification.md](milestone-
 
 ## Milestone 2 checks
 
+The historical result below is retained. Milestones 1 and 2 are now merged; this feasibility branch has not run hosted CI.
+
 See [milestone-2-verification.md](milestone-2-verification.md). Tests now cover all three learning journeys, all authored Python blocks, version 1 migration, independent lesson flags, per-entry corruption recovery, sequential cross-tab changes/reset and storage-blocked completion of the whole topic. Layout checks cover all published routes and table-cell overflow as well as page overflow. Hosted CI for this branch remains pending publication.
+
+## Milestone 3 local checks
+
+Run `node docs/pyodide-spike/server.mjs` and, in another terminal, `node docs/pyodide-spike/check.mjs` from the original project root after downloading the pinned core. Actual CPython runs only inside the opaque-frame module worker. Desktop/Pixel 7 emulation cover I/O/errors, watchdogs, Stop/Reset, worker disappearance, output/message flooding, fresh globals/files, stale/malformed/oversized responses, download recovery, frame boundaries, native fetch/XHR/WebSocket/remote-module denial and every authored exercise model/visible case. CDP models network/CPU constraints separately. Emulation is not physical-device or deployment evidence. Mocks alone are not used to establish feasibility.

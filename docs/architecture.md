@@ -1,7 +1,7 @@
 # Architecture and Decision Notes
 
 **Updated:** 12 October 2026
-**Direction:** Milestone 1 merged; three-lesson Milestone 2 theory topic implemented locally. Pyodide remains deferred until feasibility. See milestone-2-verification.md.
+**Direction:** Milestones 1 and 2 merged. Milestone 3 has a developer-only local prototype; learner execution remains deferred. See [verification](milestone-3-verification.md).
 
 ## Overview
 
@@ -24,7 +24,7 @@ Main website
 No execution API, account database or hosted grading service in MVP
 ```
 
-This isolated frame/worker arrangement is a required boundary, not a tested implementation. Verify it before enabling execution. The [historical Phase 1 review](phase-1-feasibility.md) retains syllabus/hosted-service research; its hosted-only recommendation is superseded.
+The boundary is tested locally in the developer harness; deployment/device gates remain open. The [historical Phase 1 review](phase-1-feasibility.md) retains syllabus/hosted-service research; its hosted-only recommendation is superseded.
 
 ## Content and progress
 
@@ -59,7 +59,15 @@ Theory may ship without execution. Hosted grading/private tests require separate
 
 Sources checked 12 October 2026: [Pyodide project/licence](https://github.com/pyodide/pyodide), [worker integration](https://pyodide.org/en/stable/usage/webworker.html), [compatibility](https://pyodide.org/en/stable/usage/wasm-constraints.html), [worker termination](https://developer.mozilla.org/en-US/docs/Web/API/Worker/terminate), [iframe rules](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/iframe).
 
-Decisions: [runner](decisions/runner-provider.md), [hosting](decisions/hosting-provider.md), [content mapping](decisions/content-mapping.md). Version/deployment configuration and runtime success remain unverified.
+Decisions: [runner](decisions/runner-provider.md), [hosting](decisions/hosting-provider.md), [content mapping](decisions/content-mapping.md). Deployment configuration remains unverified; local runtime evidence is recorded separately.
+
+## Milestone 3 local isolation prototype
+
+The static loopback harness in docs/pyodide-spike is outside Next.js routes/public assets. The trusted host preloads five pinned same-origin core assets and transfers bytes through a private MessageChannel to an allow-scripts-only opaque frame. A data-URL module worker creates its own data-module URLs and stdlib blob. Blob module workers and frame-created blob imports failed under the opaque origin; no same-origin permission was granted to solve that failure.
+
+Frame/worker CSP permits local data/blob modules and blob reads, denying HTTP(S), WS and remote script imports. The host has no unsafe-eval permission. A fixed bootstrap response supplies WASM bytes; it is not the security boundary. Native-fetch bypass probes still meet CSP denial. No CORS permission for opaque-origin HTTP is needed or granted.
+
+Each case creates a fresh interpreter. Host watchdogs, source/stdin/output/message budgets, session/job validation and a dedicated capability port bound the accepted protocol. Cleanup requests worker.terminate in the responsive frame, waits for acknowledgement, then removes the frame; a 250 ms fallback handles failed acknowledgement. Local tests inspect worker target disappearance. Memory/structured-clone allocation is not a strict quota. Measured overhead, licence/deployment limitations and the NO-GO activation decision are in the verification record.
 
 ## Milestone 1 implementation
 

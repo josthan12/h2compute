@@ -1,5 +1,7 @@
 # Milestone 2 — First Complete Theory Topic
 
+Historical implementation record. Subsequent handoff on 12 October 2026: owner reported squash-merging PR #2; local main and saved origin/main were verified at 092dc5f in the original project folder. Milestone 3 runs on feat/pyodide-feasibility there; see [verification](milestone-3-verification.md). Earlier command/results and worktree history below are retained.
+
 Date: 12 October 2026. Branch: `feat/python-control-flow`, created from clean synchronized main at `b3fd8da` after the owner's fetch and merge of PR #1. No Milestone 2 commit, push, PR, merge or deployment has been performed. The original dirty planning checkout remains on `docs/milestone-workflow` and is preserved.
 
 ## Acceptance and delivered journey

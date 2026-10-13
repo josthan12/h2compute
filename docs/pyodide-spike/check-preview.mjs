@@ -1,0 +1,45 @@
+// Verify the actual local package, not the source harness's server mapping.
+import assert from 'node:assert/strict';
+import {readFile} from 'node:fs/promises';
+import {createHash} from 'node:crypto';
+import {pathToFileURL} from 'node:url';
+const root = new URL('./', import.meta.url);
+const summary = JSON.parse(await readFile(new URL('preview-summary.json', root), 'utf8'));
+const packageRoot = pathToFileURL(summary.directory + '/');
+const manifest = JSON.parse(await readFile(new URL('package-manifest.json', packageRoot), 'utf8'));
+const config = JSON.parse(await readFile(new URL('vercel.json', packageRoot), 'utf8'));
+const policy = JSON.parse(await readFile(new URL('preview-policy.json', root), 'utf8'));
+const base = 'http://127.0.0.1:3191';
+assert.equal(manifest.learnerExecutionEnabled, false);
+assert.equal(config.framework, null);
+assert.equal(config.outputDirectory, 'public');
+assert.ok(!config.rewrites && !config.functions && !config.redirects);
+let total = 0;
+for (const [path, record] of Object.entries(manifest.files)) {
+  const url = path === 'index.html' ? '/' : '/' + path;
+  const rule = config.headers.find(rule => rule.source === url);
+  assert.deepEqual(Object.fromEntries(rule.headers.map(h => [h.key, h.value])), record.headers);
+  const response = await fetch(base + url);
+  assert.equal(response.status, 200, path);
+  assert.equal(response.headers.get('access-control-allow-origin'), null, path);
+  assert.equal(response.headers.get('content-encoding'), null, 'Local server must report raw bytes honestly');
+  for (const [key, value] of Object.entries(record.headers)) assert.equal(response.headers.get(key), value, path + ' ' + key);
+  const data = Buffer.from(await response.arrayBuffer());
+  assert.equal(data.length, record.bytes, path);
+  assert.equal(createHash('sha256').update(data).digest('hex'), record.sha256, path);
+  assert.equal(record.headers['Content-Security-Policy'], path === 'frame.html' ? policy.frameCSP : policy.hostCSP);
+  total += data.length;
+}
+assert.equal(total, summary.publicBytes);
+for (const url of ['/runtime/pyodide.asm.wasm', '/.env', '/.git/config', '/package-manifest.json', '/api/run', '/check.mjs']) assert.equal((await fetch(base + url)).status, 404, url);
+assert.equal((await fetch(base + '/host.mjs', {method:'POST', body:'untrusted input'})).status, 404);
+const page = await (await fetch(base)).text();
+assert.ok(page.includes('/notices/index.html'));
+assert.ok(!/<(?:button|textarea|input)\b/i.test(page));
+const host = await (await fetch(base + '/host.mjs')).text();
+assert.ok(host.includes("frame.sandbox = 'allow-scripts'"));
+assert.ok(host.includes("'/runtime/314.0.7/'"));
+const noticePage = await (await fetch(base + '/notices/index.html')).text();
+assert.ok(noticePage.includes('/sources/pyodide-314.0.7.tar.gz'));
+assert.ok(noticePage.includes('PYODIDE-LICENSE.txt'));
+console.log(`${Object.keys(manifest.files).length} packaged files: response hashes, MIME/CSP/cache/no-CORS, source/notices, disabled controls and rejected private/POST paths passed (${total} raw bytes).`);

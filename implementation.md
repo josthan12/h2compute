@@ -4,7 +4,7 @@
 **Version:** 0.2
 **Date:** 12 October 2026
 **Owner:** Solo developer
-**Implementation status:** Milestone 1 merged; Milestone 2 implements three connected lesson/checkpoint/offline-practice/local-completion journeys on feat/python-control-flow; deployment, hosted CI and browser execution remain unverified or deferred. See current-status.md and docs/milestone-2-verification.md. The scope and activation gates below remain in force.
+**Implementation status:** Milestones 1 and 2 merged; local main and the saved origin/main reference match 092dc5f. Milestone 3 investigates a developer-only isolated Pyodide prototype on feat/pyodide-feasibility. Learner execution, deployed isolation and physical-device compatibility remain gated. See current-status.md and docs/milestone-3-verification.md. The scope and activation gates below remain in force.
 
 ## 1. Product summary
 

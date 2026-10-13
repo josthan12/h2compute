@@ -1,0 +1,3 @@
+# Notice hashes describe original upstream bytes, including line endings/spacing.
+# Keep authored Markdown/code under normal whitespace checks.
+*.txt -text -whitespace

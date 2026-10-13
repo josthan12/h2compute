@@ -5,6 +5,8 @@
 
 ## Current direction
 
+Current handoff: Milestones 1 and 2 merged at local main/saved origin/main 092dc5f. Milestone 3 investigates a developer-only prototype on feat/pyodide-feasibility in the original project folder. See current-status.md and milestone-3-verification.md; activation remains gated. The historical workflow context below is retained.
+
 Planning research is complete and the owner approved theory-first implementation. The repository and origin remote are connected; Milestone 1 is merged and Milestone 2 has a local three-lesson implementation. Use current-status.md for current checks and review limits. Build lessons, quizzes, offline practice/model explanations and local progress first. Evaluate Pyodide only after the first theory topic works. Browser practice uses visible examples and local self-checks; hosted grading/private tests are deferred.
 
 The owner's supplied Git guidelines included an earlier “Phase 1: Planning and Feasibility” snapshot. That snapshot is historical; the later theory-first approval and current-status.md determine present implementation scope. The Git rules below remain in force. This file does not grant permission for new paid services, hosted grading or expanded scope.

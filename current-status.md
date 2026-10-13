@@ -1,47 +1,37 @@
 # Current Status
 
-**Last updated:** 12 October 2026
-**Overall status:** Milestone 1 merged; Milestone 2 bounded control-flow topic implemented locally
-**Implementation:** Next.js App Router/TypeScript, Tailwind CSS/daisyUI, validated Git Markdown, three connected original lessons with explanatory checkpoints and offline practice/models. Version 2 lesson-specific progress preserves version 1 completion, handles invalid entries and storage failures, and resets all local progress. Browser execution is absent. See [Milestone 2 verification](docs/milestone-2-verification.md).
+**Last updated:** 13 October 2026
+**Overall status:** Milestones 1 and 2 merged; Milestone 3 local feasibility investigation. Browser activation is NO-GO pending deployment/device gates.
+**Implementation:** The original three-lesson theory/quiz/offline-practice journey and versioned local progress remain intact. A developer-only Pyodide prototype lives in docs/pyodide-spike, outside Next.js routes/public assets. See [Milestone 3 verification](docs/milestone-3-verification.md) for exact evidence and limitations.
 
 ## Confirmed decisions
 
-- MVP areas: Python programming; algorithms and data structures; relational databases and SQL.
-- Build theory lessons, checkpoint quizzes, offline practice/model explanations and local progress first.
-- First bounded topic: Python control flow, with sequence/selection, counted/conditional loops and combined-flow tracing journeys.
-- Next.js App Router/TypeScript, Markdown/MDX in Git and Vercel Hobby; no paid upgrades or extra services.
-- Evaluate Pyodide for later Python-only browser practice behind a replaceable adapter. Activation depends on isolation, compatibility and resource checks.
-- Browser tests and expected outputs are visible; results are local self-checks. Hosted grading/private tests are deferred.
-- Theory/quizzes beta can launch without browser execution if its gate fails.
-- No accounts, analytics, database, ads or paywall; voluntary donations never affect learning access.
-- No official SEAB/MOE/NUS affiliation claims; no full-syllabus coverage promise.
+- MVP remains Python, algorithms/data structures and relational databases/SQL.
+- Account-free theory/quizzes/offline practice and local progress remain usable.
+- Pyodide 314.0.7 / CPython 3.14.2 is pinned for the local spike; no npm runtime/editor dependency or service is added.
+- Runner isolation is an opaque allow-scripts iframe plus a data-URL module worker with browser-enforced HTTP/WS denial. A worker alone is not isolation.
+- Source/stdin stay in browser messages. Visible results are local self-checks, not trusted grades.
+- CodeMirror and learner integration stay deferred. No execution API, hosted grading, accounts, database, analytics, payment or paid service.
+- No official affiliation or full-syllabus coverage claims.
 
-## Repository and research
+## Verified Git handoff
 
-Repository and origin remote verified: git@github.com:josthan12/h2compute.git. Branch protections and host deployment are unverified. The worktree already contained status/roadmap/report changes, deletions of old research artifacts and an untracked docs/tmp directory before this update; preserve them. Milestone 1 was committed on feat/project-setup; the owner pushed and squash-merged [PR #1](https://github.com/josthan12/h2compute/pull/1). Its passing checks are owner-reported because the review connector could not independently read them. Milestone 2 remains uncommitted.
+Work is in C:/Users/crate/Documents/ProjectALEVEL on feat/pyodide-feasibility. At the start of the original feasibility investigation, elevated Git status was clean. At the 13 October preparation continuation, the expected uncommitted work was present; the owner explicitly authorized preserving it on this branch. At the initial handoff HEAD, local main and saved origin/main matched 092dc5f; main...origin/main is 0/0. The owner reported squash-merging PR #2. No fresh remote fetch or hosted CI verification is claimed. Backup branch backup/original-planning-2026-10-12 remains at 516e0dd. The older .codex worktree remains intact and untouched.
 
-The [historical Phase 1 review](docs/phase-1-feasibility.md) records verified 2026 outcomes, exclusions and hosting/Judge0 findings. Its hosted-only recommendation is superseded by the [runner decision](docs/decisions/runner-provider.md) and implementation.md. Official Pyodide/MDN documentation was checked; no runtime feasibility result is claimed.
+The owner authorized local Milestone 3 commits; the layout-test correction is committed at 606b7cd, and the preparation snapshot is recorded in the following local commit on the same branch (see git log). Local main/saved origin/main remain at 092dc5f. No push, PR, merge or deployment has been performed; pushing and PR creation remain owner actions. SSH commands must be requested from the owner in Bash, with a reply of “Done”, before dependent work continues.
 
-## Remaining work and limits
+## Remaining work and next action
 
-1. Review the Milestone 2 content, multi-lesson progress/migration and local verification record; hosted CI for this branch is pending.
-2. Review original content and item-level outcome coverage; verify code examples and accessibility.
-3. Verify Vercel deployment/free limits before release.
-4. After theory works, test a pinned Pyodide version, asset delivery, isolated frame/module-worker loading, origin/storage/network boundaries, supplied input, output bounds, Stop/Reset, state reset and mobile/desktop resource costs. A worker alone is not a sandbox; browser memory limits are not strict server-style quotas.
-5. Add editor/public-example self-check practice only if those gates pass. Source/input remain on-device; disclose runtime asset requests separately.
+1. Review the isolated prototype, local evidence and [prepared preview package](docs/pyodide-spike/PREVIEW.md). Retained upstream notices and Pyodide source availability are packaged locally; release review remains required. Activation is blocked by actual-host headers/loading, supported browsers/physical devices and practical memory limits.
+2. The owner authorized developer-preview publication and necessary local commits on 13 October; pushing and PR creation remain owner actions. [Hosting terms research](docs/hosting-terms-2026-10-13.md) is complete. Before upload, verify account plan/usage, non-commercial eligibility and model-training opt-out. Clarify whether hosted browser-only adversarial probes are permitted under Hobby's pentesting restriction. Local commits are authorized; learner execution remains disabled. Vercel is connected and the authenticated account reports active Hobby billing, but default-workspace access returned 403. Verify workspace access and model-training opt-out before any upload; no deployment has occurred.
+3. Obtain real-device Safari/iOS and Android evidence and choose an honest supported-browser policy. Emulation is not device evidence.
+4. Add CodeMirror and learner-facing Run/Check examples only after the full feasibility/activation gate passes; preserve theory/offline fallback.
+5. Independent educational/screen-reader review, host free terms, deployment and branch protection remain release requirements.
+6. The local layout-test timeout follow-up is resolved: split the ten-route/three-width matrix into independent cases with unchanged 30-second limits and assertions. All 82 desktop/mobile Chromium tests passed. Physical-device and independent accessibility review remain release requirements; see the follow-up in docs/milestone-3-verification.md.
 
-Judge0 public-use, billing, privacy and security questions are deferred hosted-grading issues, not blockers for theory or a validated browser runner. No hosted account, credential, private tests or execution API is needed for MVP.
+Existing npm audit reports five high-severity entries tracing to the development-only ESLint braces chain. No automated dependency changes were made. Pyodide compute has no provider fee, but the 13,531,207-byte uncompressed core consumes host bandwidth; no promise of permanent zero-cost hosting.
 
-## Saved workflow
-
-Follow [docs/milestone-workflow.md](docs/milestone-workflow.md). Current branch: feat/python-control-flow in the existing writable worktree at `C:/Users/crate/.codex/visualizations/2026/10/12/01a13043-c2df-7d22-a909-f11f2c7dca0a/project-setup`. The owner requested Milestone 2 after fetching origin; local main was fast-forwarded to merged commit b3fd8da. The clean worktree matched origin/main before this branch was created. The original docs/milestone-workflow checkout and its retained planning changes remain untouched. No Milestone 2 stash, commit, push, PR or merge was performed. Future SSH operations must be requested from the owner and wait for their completion.
-
-## Next actions
-
-1. Review Milestone 2, then commit/publish only with explicit authorization; hosted checks for this branch remain pending.
-2. Obtain independent educational review and address any corrections.
-3. Run the browser feasibility spike; then add Pyodide/CodeMirror if feasible or retain offline self-check practice.
-4. Expand reviewed content within the three areas, harden and deploy the beta.
+Local preparation verification: all 57 packaged response/hash/header checks and two packager safety tests passed. The final Chromium runtime suite passed with 99 evidence records and 40 exact authored comparisons; see [preview evidence](docs/pyodide-spike/preview-evidence-summary.json). Lint, typecheck, content validation, 12 unit tests, 42 local Python runs, production build and contrast checks passed. The later layout-test follow-up passed all 82 browser cases; it supersedes the preparation session's unresolved timeout. No deployment/device safety is claimed. The loopback server is stopped.
 
 ## Change log
 
@@ -58,3 +48,15 @@ Follow [docs/milestone-workflow.md](docs/milestone-workflow.md). Current branch:
 - 2026-10-12: Owner committed/pushed and squash-merged Milestone 1 PR #1, reporting passing GitHub checks. Verified merged origin/main at b3fd8da and synchronized clean local main while preserving the original dirty planning checkout.
 - 2026-10-12: Owner requested Milestone 2. Added loop and combined-flow lessons/tasks, previous/next links, explicit partial coverage, version 1 → 2 progress migration and multi-lesson tests on feat/python-control-flow. No new dependency, runner, deployment or publication.
 - 2026-10-12: Fixed a review finding where failed-save memory survived another tab's reset and could restore old progress. Desktop/mobile regressions cover owned-key reset and site-storage clear followed by successful saving. Lint, typecheck, 12 unit tests, build and all 24 browser tests passed; changes remain uncommitted.
+
+- 2026-10-12: Verified the owner’s merged Milestone 2 handoff at 092dc5f in the original project folder; began the authorized isolated Pyodide feasibility investigation. Recorded local runtime evidence and remaining activation gates in docs/milestone-3-verification.md. No learner integration or publication.
+
+- 2026-10-13: Owner authorized preserving the existing uncommitted feat/pyodide-feasibility work while completing upstream licence notices and a local static preview package. Prepared versioned assets, Pyodide source availability, proposed host headers and package checks; learner execution remains disabled. See docs/pyodide-spike/PREVIEW.md and docs/milestone-3-verification.md for exact checks and limitations. No commit, push, PR or deployment.
+
+- 2026-10-13: Addressed the layout matrix's shared timeout budget by giving each published route/viewport its own test. Preserved all assertions, screenshots and default timeouts. Full desktop/mobile Chromium suite passed 82 cases; app and runner behaviour, existing uncommitted feasibility work and preview package are preserved. No commit or publication.
+
+- 2026-10-13: Corrected the stale current layout-timeout statement and verification-table formatting; the runtime summarizer no longer emits an application-layout limitation. Tested the generator on a disposable copy of fresh readiness evidence, preserving all five original evidence/package snapshots. Documentation and syntax checks passed. Existing readiness evidence, Git work and activation/publication gates are unchanged.
+
+- 2026-10-13: Owner authorized developer-preview publication and necessary local commits, retaining owner control of push/PR. Researched current official Vercel terms/allowances and recorded the Hobby pentesting restriction and model-training opt-out in docs/hosting-terms-2026-10-13.md. No paid upgrade, support message, commit or deployment performed in this research turn.
+
+- 2026-10-13: Owner confirmed Vercel Hobby. Connected Vercel API reports an active Hobby account; default-team read returned 403, with no installed CLI fallback. No upload or deployment attempted. Committed the reviewed layout fix locally at 606b7cd; prepared the remaining Milestone 3 snapshot for a separate local commit. Added a local Git text attribute to retain upstream licence/notice bytes across Windows checkouts. Package checks passed; push/PR remain owner actions.
