@@ -13,6 +13,10 @@ For the separate three-job local/hosted functional startup/cache check, use
 [the benign-check guide](BENIGN-CHECK.md). Do not run the adversarial `check.mjs`
 against the Hobby preview.
 
+The [local desktop continuation](DESKTOP-CHECK.md) records the WebKit stdlib
+loading fix, source recovery checks, separate undeployed candidate package and
+Firefox environment blocker. Preserve the original evidence/package summary.
+
 From `C:\Users\crate\Documents\ProjectALEVEL`, with the existing npm lockfile
 installed and Playwright Chromium available:
 

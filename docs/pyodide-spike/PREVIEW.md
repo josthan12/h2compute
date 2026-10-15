@@ -11,6 +11,12 @@ tested without publishing it. Real-host/device/activation gates remain open.
 
 ## Reproduce and inspect
 
+**15 October preservation note:** the commands below describe the original
+package. Current `worker.mjs` contains the local WebKit stdlib fix. Do not run
+`build-preview.py` in this live checkout: it replaces `preview-summary.json`.
+Use [the preservation-safe candidate guide](DESKTOP-CHECK.md) for the new local
+package. The original summary, ZIP and hosted deployment remain unchanged.
+
 From the repository root, using the existing Python/Node/Playwright installation:
 
 ```powershell

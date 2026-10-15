@@ -699,3 +699,99 @@ JSON/ZIP SHA-256 values and every roadmap checkbox state matched the preservatio
 baseline. The loopback server was stopped. Only verification scripts, the new
 sanitized result and related documentation enter the candidate; the existing
 learner app, runtime bytes, CSP/protection settings and old evidence are intact.
+
+## Local WebKit compatibility and recovery — 15 October 2026
+
+Task: continue the permitted local feasibility checks while preserving the
+original deployment/evidence, learner-disabled state and provider-policy block.
+Acceptance for this focused change: diagnose desktop-engine failures; correct
+any loading defect without broadening origin/network privileges; verify real
+runtime recovery and authored examples; retain separate evidence and package;
+record unresolved requirements honestly. This is not Milestone 3 sign-off.
+
+The [desktop guide](pyodide-spike/DESKTOP-CHECK.md) gives reproduction and limits;
+[the evidence index](pyodide-spike/local-desktop-evidence-20261015.json) binds six
+new byte-identical raw snapshots and current source/driver SHA-256 values.
+Original JSON/ZIP evidence is preserved. Failure snapshots remain failures.
+
+WebKit 27.2 could not fetch the original opaque blob stdlib URL and failed to
+import Python encodings. The worker now returns preloaded stdlib bytes through
+the same fixed-response technique previously used for WASM. Unknown fetches use
+native fetch under the existing denying CSP. The wrapper is not the security
+boundary; the opaque iframe/data worker and CSP are unchanged. Upstream bytes,
+host/frame, credentials, protection, notices and learner controls are unchanged.
+
+| Verification | Actual outcome |
+| --- | --- |
+| Full current-source Chromium 156.0.8078.4 suite | Exit 0; 99 records, 40 exact authored model/example comparisons; loop cancellation, bounds, state, local security/failure paths and throttle emulation passed. |
+| WebKit current-source recovery | Exit 0; 32 records, 20 exact authored comparisons; syntax/runtime/EOF, genuine five-second watchdog, Stop/Reset and recovery, bounded flood, fresh globals/files; one real worker created/closed per record, no remaining frame/worker. |
+| Candidate Chromium and WebKit | Three fixed I/O cold/warm/reload jobs each passed; exact runtime versions, 30-second loading/five-second execution limits, original CSP, response hashes/no CORS, core counts 5/0/5 and observed worker cleanup. |
+| Candidate delivery | All 57 response/hash/MIME/CSP/cache/no-CORS checks passed; notices/source and disabled controls intact. All 59 ZIP entries equal the candidate directory; content/ZIP digests verified. |
+| Firefox 157.0, revision 1555 | Browser launch failed before page load (`spawn UNKNOWN`); Windows SideBySide event 33 identifies missing mozglue assembly. Installed firefox.exe/mozglue.dll match the official ZIP. No Firefox runner result or system repair claimed. |
+| Driver/safety checks | Six Node driver tests, repository lint, syntax checks and two disposable-copy packager safety tests passed. |
+| Remaining account allowance | Existing installed CLI usage query failed: billing cost data unavailable for 1–15 October; not evidence of zero usage or available allowance. |
+
+The new local package is `314.0.7-a2f184eead72`, content SHA-256
+`a2f184eead72face3053c3f6331bbd268081864fe718f83351072acd1eb9c0a7`,
+ZIP SHA-256 `b19f784a820b9137b74387558efd017dec02fd3bc37da634a6b37d17cb057dc3`.
+Only `public/worker.mjs` and its package manifest changed from the hosted package.
+The [new summary](pyodide-spike/stdlib-preview-summary-20261015.json) is separate
+from preview-summary.json. It is **not deployed**. Consequently the old hosted
+package still has the WebKit loading defect; local success is not a hosted pass.
+The preparation helper uses a unique disposable copy and exclusive new outputs
+so that the existing builder cannot replace the historical summary in-place.
+
+Commands personally run for this continuation (from the repository root unless
+otherwise stated):
+
+```powershell
+node node_modules/playwright/cli.js install firefox webkit
+node --check docs/pyodide-spike/worker.mjs
+node --check docs/pyodide-spike/check-desktop.mjs
+node --check docs/pyodide-spike/check-recovery.mjs
+node --test docs/pyodide-spike/check-desktop.test.mjs docs/pyodide-spike/check-benign.test.mjs
+npm run lint
+python docs/pyodide-spike/test-preview.py
+node docs/pyodide-spike/check-desktop.mjs firefox
+node docs/pyodide-spike/check-desktop.mjs webkit
+node docs/pyodide-spike/check-desktop.mjs webkit --source
+$env:SPIKE_RESULTS_FILE='./.runtime/stdlib-response-chromium-20261015.json'
+node docs/pyodide-spike/check.mjs
+Remove-Item Env:SPIKE_RESULTS_FILE
+node docs/pyodide-spike/check-recovery.mjs webkit
+```
+
+The default Firefox and original-package WebKit commands failed as described;
+WebKit source passed after the fix. Source server ran on loopback 3190.
+Preparation used the retained ignored session helper before it was promoted to
+`prepare-stdlib-preview.py`; packaging and ZIP/file comparison succeeded.
+The candidate server on loopback 3191 selected the new summary, then:
+
+```powershell
+$env:SPIKE_PREVIEW_SUMMARY='stdlib-preview-summary-20261015.json'
+node docs/pyodide-spike/check-preview.mjs
+node docs/pyodide-spike/check-desktop.mjs webkit --candidate
+node docs/pyodide-spike/check-desktop.mjs chromium --candidate
+Remove-Item Env:SPIKE_PREVIEW_SUMMARY
+```
+
+Application typecheck/unit/content/examples/build/e2e were not rerun for this
+developer-only change; earlier dated full-suite evidence remains unchanged.
+The full runtime source suite and additional WebKit checks exercise the changed
+worker. Playwright WebKit on Windows is not Safari/iOS or physical-device proof.
+WebKit functional recovery is not a full engine-specific isolation audit.
+
+**Owner decision:** keep external contact blocked. The
+[generic policy draft](vercel-policy-question-draft.md) stays unsent; no provider
+reply or testing exemption exists. No hosted adversarial probes were run.
+Physical Android/iOS, supported-engine policy, genuine low-memory/peak resource
+assessment, deployed security/recovery and remaining allowance remain unmet.
+No gate checkbox advances. No learner activation, protection change, deployment,
+branch change, push, PR or merge was performed. Independent review must assess
+this focused candidate before a completed-change handoff.
+
+Final pre-review preservation checks: all 17 pre-existing JSON/ZIP SHA-256 values
+matched the initial baseline. Documentation checks passed 18 Markdown files and
+107 local links; `git diff --check` passed. The preparation helper compiled with
+`python -m py_compile docs/pyodide-spike/prepare-stdlib-preview.py`. Both loopback
+servers were stopped. All roadmap checkbox states are retained.

@@ -156,3 +156,14 @@ authenticated availability does not establish anonymous access.
 Real Android/iOS, intended desktop engines, supported-browser policy,
 low-memory recovery, independent educational/screen-reader review, hosted CI and
 branch protection remain required. Learner execution stays disabled.
+
+## Local follow-up — 15 October 2026
+
+The later [benign Chromium run](milestone-3-verification.md#benign-hosted-chromium-verification--15-october-2026)
+adds ordinary hosted startup/I/O/cache evidence. A separate
+[local WebKit compatibility fix](pyodide-spike/DESKTOP-CHECK.md) now exists in an
+undeployed candidate; this original hosted package remains unchanged and has
+no WebKit pass. The owner explicitly keeps external contact blocked; the policy
+draft remains unsent and hosted adversarial probes remain blocked. An installed
+CLI `usage --json --scope <existing-workspace>` query returned billing cost data
+unavailable for 1–15 October, not zero usage. Remaining allowance is unverified.

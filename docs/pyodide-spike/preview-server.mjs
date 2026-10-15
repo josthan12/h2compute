@@ -2,7 +2,9 @@
 import http from 'node:http';
 import {readFile} from 'node:fs/promises';
 import {pathToFileURL} from 'node:url';
-const summary = JSON.parse(await readFile(new URL('./preview-summary.json', import.meta.url), 'utf8'));
+const summaryName = process.env.SPIKE_PREVIEW_SUMMARY ?? 'preview-summary.json';
+if (!['preview-summary.json', 'stdlib-preview-summary-20261015.json'].includes(summaryName)) throw new Error('Choose a reviewed local preview summary');
+const summary = JSON.parse(await readFile(new URL('./' + summaryName, import.meta.url), 'utf8'));
 const packageRoot = pathToFileURL(summary.directory + '/');
 const manifest = JSON.parse(await readFile(new URL('package-manifest.json', packageRoot), 'utf8'));
 const server = http.createServer(async (req, res) => {

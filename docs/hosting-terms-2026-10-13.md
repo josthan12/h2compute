@@ -106,3 +106,13 @@ before that blocked work resumes; silence is not permission.
 The [next focused verification proposal](milestone-3-verification.md#gate-3-review-and-next-verification-proposal--13-october-2026)
 uses only normal fixed-program startup/cache measurements. It does not claim
 that the deployed security gate passes.
+
+## Owner contact decision — 15 October 2026
+
+The owner explicitly chose **keep external contact blocked**. The
+[generic policy question](vercel-policy-question-draft.md) remains an unsent
+reference; no account creation, Community post or support message is authorized.
+No provider clarification exists. The Hobby hosted-adversarial block remains in
+force. The read-only installed CLI usage query returned billing cost data
+unavailable for 1–15 October; remaining allowance cannot be inferred as zero or
+within budget from that result.

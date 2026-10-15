@@ -1,0 +1,69 @@
+{
+  "date": "2026-10-15T09:19:48.280Z",
+  "engine": "webkit",
+  "origin": "http://127.0.0.1:3191",
+  "contentSHA256": "1825befc25da4421c26bb27cfb625a3f9714220cac2652cbd6bd40a17cd6d3f2",
+  "environment": "win32 10.0.26200 x64; local desktop engine; no deployed or physical-device evidence",
+  "driverSHA256": "cb2697f74e42abc44c11f2f76df609da697bf5941f8a13ac5f4a5ebe9b66cc03",
+  "limits": {
+    "loadingMs": 30000,
+    "executionMs": 5000,
+    "driverDeadlineMs": 36000
+  },
+  "runs": [
+    {
+      "name": "cold",
+      "state": "unavailable",
+      "stdout": "",
+      "stderr": "",
+      "detail": "[object Object]",
+      "totalMs": 590
+    }
+  ],
+  "diagnostics": [
+    {
+      "kind": "console-error",
+      "message": "Not allowed to load local resource: blob:null/28ba15df-c94b-40bc-b842-203d8fd84e8b"
+    },
+    {
+      "kind": "console-error",
+      "message": "Fetch API cannot load blob:null/28ba15df-c94b-40bc-b842-203d8fd84e8b due to access control checks."
+    },
+    {
+      "kind": "console-error",
+      "message": "Error occurred while installing the standard library:"
+    },
+    {
+      "kind": "console-error",
+      "message": "TypeError: Load failed"
+    },
+    {
+      "kind": "console-error",
+      "message": "Fatal Python error: Failed to import encodings module"
+    },
+    {
+      "kind": "console-error",
+      "message": "Python runtime state: core initialized"
+    },
+    {
+      "kind": "console-error",
+      "message": "ModuleNotFoundError: No module named 'encodings'"
+    },
+    {
+      "kind": "console-error",
+      "message": ""
+    },
+    {
+      "kind": "console-error",
+      "message": "Current thread 0x003d3b20 (most recent call first):"
+    },
+    {
+      "kind": "console-error",
+      "message": "  <no Python frame>"
+    }
+  ],
+  "outcome": "failed",
+  "browser": "27.2",
+  "failureStage": "cold",
+  "failureReason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'unavailable'\n- 'completed'"
+}

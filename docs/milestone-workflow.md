@@ -29,6 +29,11 @@ not authorize paid services, scope/privacy changes, third-party messages or
 testing prohibited by the host. Request missing authorization/access only when
 it is a genuine blocker, and continue independent authorized work where useful.
 
+On 15 October 2026 the owner explicitly chose **keep external contact blocked**
+for the Vercel policy question. Do not post the retained draft or send a support
+message. Hosted adversarial checks remain blocked; continue permitted local
+verification without treating this decision as provider permission.
+
 Before every completed change or milestone handoff, call an independent reviewer
 agent and obtain its explicit sign-off using
 [the independent review protocol](independent-review.md). The reviewer builds its

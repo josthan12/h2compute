@@ -26,6 +26,25 @@ Work is in C:/Users/crate/Documents/ProjectALEVEL on feat/pyodide-feasibility. A
 
 The owner authorized local Milestone 3 commits; the layout-test correction is committed at 606b7cd, and the preparation snapshot is recorded in the following local commit on the same branch (see git log). Local main/saved origin/main remain at 092dc5f. No push, PR or merge has been performed; pushing and PR creation remain owner actions. The later owner-authorized developer preview is recorded below. SSH commands must be requested from the owner in Bash, with a reply of “Done”, before dependent work continues.
 
+## Local compatibility continuation — 15 October 2026
+
+The agent found and fixed a WebKit stdlib loading defect without changing CSP,
+origin privileges, host/frame or upstream runtime bytes. Local Chromium passed
+99 runtime records / 40 authored comparisons; WebKit passed 32 recovery records /
+20 authored comparisons. A separate undeployed package passed all 57 delivery
+checks and three Chromium/WebKit startup/I/O jobs each. The original hosted
+package and prior evidence remain unchanged; it still has the WebKit loading
+defect. Firefox fails before page load because of a Windows mozglue assembly
+problem; no Firefox runner pass is claimed. See [the local desktop guide](docs/pyodide-spike/DESKTOP-CHECK.md).
+
+The owner explicitly chose **keep external contact blocked**. The policy draft
+stays unsent and hosted adversarial probes stay blocked on Hobby. The read-only
+CLI usage query returned billing cost data unavailable, not zero usage; remaining
+allowance is still unverified. Physical Android/iOS, supported-browser policy,
+genuine low-memory/resource assessment and actual-host security/recovery remain
+unmet. Milestone 3 is incomplete; learner execution stays disabled. Do not ask
+the owner to push/open a PR as though this were a completed milestone.
+
 ## Remaining work and next action
 
 1. Review the isolated prototype, local evidence and [prepared preview package](docs/pyodide-spike/PREVIEW.md). Retained upstream notices and Pyodide source availability are packaged locally; release review remains required. Basic hosted Chromium delivery/loading/cache evidence now passes; activation remains blocked by deployed adversarial verification, supported browsers/physical devices and practical memory limits.
@@ -42,6 +61,9 @@ Local preparation verification: all 57 packaged response/hash/header checks and 
 Hosted benign continuation (15 October): desktop Chromium 156.0.8078.4 passed three fixed jobs within unchanged 30-second loading/five-second execution limits. Cold/warm/reload startup was 2.616/1.615/1.905 seconds. Same-page core transfers were zero; all five post-reload core responses came from Chromium disk cache with zero transferSize. The cold encoded core body was 6,420,696 bytes (Brotli/ZIP); browser transferSize was 6,422,196 bytes. [New sanitized evidence](docs/pyodide-spike/hosted-benign-results-20261015.json) is separate from every prior snapshot. These are single-run observations and basic functional checks, not a sandbox/device/performance certification. Driver unit tests and lint passed; application code/package are unchanged. Milestone 3 remains incomplete and learner execution disabled.
 
 ## Change log
+
+- 2026-10-15: Continued local desktop feasibility; corrected WebKit stdlib loading with fixed preloaded responses under the original CSP. Retained Chromium/WebKit successes and original Firefox/WebKit failures, a separate undeployed package, reproducible local drivers and the explicit external-contact block. Usage allowance remains unknown. No milestone gate advances or learner activation/publication.
+
 
 - 2026-10-15: Continued Milestone 3 with a separate bounded benign browser driver, target/session/output tests and new sanitized hosted evidence. Local and protected hosted Chromium each passed three jobs; recorded startup, core transfer/cache and successful cleanup. Used an existing exact-host HttpOnly session without changing protection. Preserved all earlier evidence/packages; no gate checkbox advanced, learner activation, deployment, push, PR or merge.
 

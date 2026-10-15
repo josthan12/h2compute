@@ -1,0 +1,77 @@
+{
+  "date": "2026-10-15",
+  "scope": "Local developer feasibility only; not deployed, physical-device or milestone sign-off",
+  "sourceSHA256": {
+    "index.html": "07248b3936c3acf8ce2f48d3c441f10874812cc20ce014a7849b1717ed2b9e40",
+    "host.mjs": "ca8806aaab72aa8098ff9358b15247b36d04e22ebfaa585267eee13ccf510b7c",
+    "frame.html": "975d4bbc65d5aac347c9aca1065f3c06d07899754b1168c8847ef99f1c8e64dc",
+    "worker.mjs": "e50f9aabab56778b16320e010b33c3a4cafe5960d95dd7b10f34d58d10e73265"
+  },
+  "driverSHA256": {
+    "check.mjs": "c518f07417ecb28275e80bed87757ee7432587973bc96a891db8d09578fe55c9",
+    "check-desktop.mjs": "8a123548906ac5bfe7eb7653d9b9dd99ac409e943b0b3edf9b8d250fdfc8a4ac",
+    "check-recovery.mjs": "f2cc24b9bfb36ad891b89a4471f0b4b10658a7622ece2ce60b0179634a05fb5b"
+  },
+  "evidence": {
+    "chromium-source-regression": {
+      "file": "local-chromium-source-regression-20261015.json",
+      "rawSHA256": "707d02306467b044d507c03b90bf63cfe0f0e854d7473e2f95edd73ccda90e11",
+      "rawFilename": "stdlib-response-chromium-20261015.json",
+      "records": 99,
+      "outcome": "driver exited zero; assertions passed",
+      "authoredComparisons": 40
+    },
+    "webkit-source-recovery": {
+      "file": "local-webkit-source-recovery-20261015.json",
+      "rawSHA256": "d300844e424bcf129eb0d68059e464abc49756ce85e2cd6cef80012fe46adff6",
+      "rawFilename": "recovery-webkit-2026-10-15T09-28-12.734Z-e91549f6-c7ca-4075-9b96-652146b71e18.json",
+      "records": 32,
+      "outcome": "passed"
+    },
+    "webkit-candidate": {
+      "file": "local-webkit-candidate-20261015.json",
+      "rawSHA256": "a8070e525c295a31f6e1e618538a088b538f71a53a460b788354cba31f7565d3",
+      "rawFilename": "desktop-webkit-2026-10-15T09-32-58.634Z-cc434db9-49bc-4d27-aa2e-a7a725fe11e5.json",
+      "records": 3,
+      "outcome": "passed"
+    },
+    "chromium-candidate": {
+      "file": "local-chromium-candidate-20261015.json",
+      "rawSHA256": "0cf9039443cbb94595f2af9b8ac3805d17386f1e492c9c6c93cfd24d92221367",
+      "rawFilename": "desktop-chromium-2026-10-15T09-33-04.871Z-e0129efb-b069-4343-ab86-196c743e4dd8.json",
+      "records": 3,
+      "outcome": "passed"
+    },
+    "firefox-original-launch-failure": {
+      "file": "local-firefox-original-launch-failure-20261015.json",
+      "rawSHA256": "282a519e96805508b69ee8e617a0de99ee1d18b1ee36b808a69f39590ee581c1",
+      "rawFilename": "desktop-firefox-2026-10-15T09-19-03.029Z-6e8bb6f4-4462-4a8f-ad24-556da2953ff4.json",
+      "records": 0,
+      "outcome": "failed"
+    },
+    "webkit-original-loading-failure": {
+      "file": "local-webkit-original-loading-failure-20261015.json",
+      "rawSHA256": "d98c8d67feaf3c1eeef3bca1982bedade4e15185670da7c071dd4f9fc7a02bfb",
+      "rawFilename": "desktop-webkit-2026-10-15T09-19-48.279Z-ac4da44b-91ed-4994-9b9a-a22db52aaf95.json",
+      "records": 1,
+      "outcome": "failed"
+    }
+  },
+  "package": {
+    "summaryFile": "stdlib-preview-summary-20261015.json",
+    "contentSHA256": "a2f184eead72face3053c3f6331bbd268081864fe718f83351072acd1eb9c0a7",
+    "changedFromHostedPackage": [
+      "package-manifest.json",
+      "public/worker.mjs"
+    ],
+    "zipEntriesVerified": 59,
+    "deployed": false
+  },
+  "limitations": [
+    "Firefox Windows missing mozglue assembly: browser launch failed before harness",
+    "Original hosted package unchanged and still uses blob stdlib URL",
+    "No physical Android/iOS or genuine low-memory assessment",
+    "Hosted adversarial checks blocked on Hobby; owner keeps external contact blocked",
+    "Remaining allowance unknown: CLI billing data unavailable, not zero usage"
+  ]
+}

@@ -11,10 +11,17 @@ onmessage = async ({data}) => {
       const {default: createPyodideModule} = await import(moduleURL(data.assets['pyodide.asm.mjs']));
       // Preloaded immutable core, no network allowlist usable by learner code.
       const wasmBinary = data.assets['pyodide.asm.wasm'];
+      const stdlibBinary = data.assets['python_stdlib.zip'];
       const nativeFetch = self.fetch.bind(self);
-      self.fetch = (url, options) => String(url) === 'https://invalid.invalid/pyodide.asm.wasm' ? Promise.resolve(new Response(wasmBinary, {headers: {'Content-Type': 'application/wasm'}})) : nativeFetch(url, options);
+      // Fixed preloaded responses avoid WebKit's opaque-origin blob fetch failure.
+      // Unknown URLs still use native fetch under the unchanged denying CSP.
+      self.fetch = (url, options) => {
+        if (String(url) === 'https://invalid.invalid/pyodide.asm.wasm') return Promise.resolve(new Response(wasmBinary, {headers: {'Content-Type': 'application/wasm'}}));
+        if (String(url) === 'https://invalid.invalid/python_stdlib.zip') return Promise.resolve(new Response(stdlibBinary, {headers: {'Content-Type': 'application/zip'}}));
+        return nativeFetch(url, options);
+      };
       const lockFileContents = new TextDecoder().decode(data.assets['pyodide-lock.json']);
-      const stdLibURL = URL.createObjectURL(new Blob([data.assets['python_stdlib.zip']]));
+      const stdLibURL = 'https://invalid.invalid/python_stdlib.zip';
       runtime = await loadPyodide({indexURL: 'https://invalid.invalid/', createPyodideModule, lockFileContents, stdLibURL});
       send('ready', {version: runtime.version, python: runtime.runPython('import sys; sys.version'), heapBytes: runtime._module.HEAPU8.buffer.byteLength});
     } catch (error) { send('unavailable', {detail: String(error).slice(0, 1000)}); }
