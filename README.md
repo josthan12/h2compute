@@ -8,7 +8,8 @@ A planned free learning website for Singapore H2 Computing (syllabus 9569), comb
 
 - [`implementation.md`](implementation.md) — product and technical specification, security, acceptance criteria and open decisions.
 - [`roadmap.md`](roadmap.md) — phased delivery plan.
-- [`docs/milestone-workflow.md`](docs/milestone-workflow.md) — reusable milestone workflow, Git rules and continuation prompts.
+- [`docs/milestone-workflow.md`](docs/milestone-workflow.md) — autonomous milestone delivery, owner checkpoint, Git rules and continuation prompts.
+- [`docs/independent-review.md`](docs/independent-review.md) — mandatory separate-agent checklist, repair loop and sign-off before completed handoffs.
 - [`current-status.md`](current-status.md) — confirmed decisions, blockers and next actions.
 - [`content-guide.md`](content-guide.md) — syllabus mapping and content standards.
 - [`AGENTS.md`](AGENTS.md) — rules for coding assistants and contributors.

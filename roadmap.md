@@ -3,7 +3,7 @@
 **Status:** Milestones 1 and 2 merged; Milestone 3 local feasibility investigation on feat/pyodide-feasibility. The separate protected developer preview is deployed; learner activation, hosted browser/device verification and CI remain pending. See [verification](docs/milestone-3-verification.md).
 **Scope:** Python programming, algorithms/data structures and relational databases/SQL only. Start with Python control flow. Browser practice follows theory; hosted grading is deferred.
 
-Use [docs/milestone-workflow.md](docs/milestone-workflow.md) for the repeatable task/Git workflow, milestone gates and continuation prompts.
+Use [docs/milestone-workflow.md](docs/milestone-workflow.md) for autonomous delivery and the repeatable task/Git workflow. The agent implements, verifies, documents and makes focused local commits; the owner reviews completed milestones, pushes and opens the PR. Every completed handoff requires [independent agent sign-off](docs/independent-review.md). Existing authorization boundaries and milestone gates remain in force.
 
 ## Phase 0 — Planning (completed research, conditional runtime gate)
 
@@ -79,4 +79,4 @@ Hosted grading (Judge0 or another provider), private tests and server execution 
 
 ## Definition of done
 
-Acceptance criteria and precise syllabus mapping; original reviewed content; meaningful relevant tests/build checks; accessible responsive states; error recovery; updated docs/status; no secrets/personal data; honest local self-check results. Paid services or broader scope require separate owner authorization.
+Acceptance criteria and precise syllabus mapping; original reviewed content; meaningful relevant tests/build checks; accessible responsive states; error recovery; updated docs/status; no secrets/personal data; honest local self-check results. Independent agent sign-off on the final candidate is required before presenting completion; full milestone sign-off must cover every exit criterion. Paid services or broader scope require separate owner authorization.

@@ -1,6 +1,6 @@
 # Current Status
 
-**Last updated:** 13 October 2026
+**Last updated:** 15 October 2026
 **Overall status:** Milestones 1 and 2 merged; Milestone 3 feasibility investigation with a separate protected developer preview deployed. Browser activation is NO-GO pending deployment/device gates.
 **Implementation:** The original three-lesson theory/quiz/offline-practice journey and versioned local progress remain intact. A developer-only Pyodide prototype lives in docs/pyodide-spike, outside Next.js routes/public assets. See [Milestone 3 verification](docs/milestone-3-verification.md) for exact evidence and limitations.
 
@@ -13,6 +13,12 @@
 - Source/stdin stay in browser messages. Visible results are local self-checks, not trusted grades.
 - CodeMirror and learner integration stay deferred. No execution API, hosted grading, accounts, database, analytics, payment or paid service.
 - No official affiliation or full-syllabus coverage claims.
+
+## Working arrangement — 15 October 2026
+
+The owner delegates routine milestone planning, implementation, debugging, applicable checks, documentation, evidence, focused local commits and draft PR descriptions to the agent. The owner reviews the completed milestone, pushes and opens the PR. Do not hand routine development/testing back to the owner or ask for approval of each small step. Preserve existing authorization boundaries and report genuine blockers accurately.
+
+Every completed change/milestone handoff requires a separate reviewer agent, its independently developed checklist and explicit sign-off on the candidate commit. Fix findings and obtain re-review before presenting completion; retain the review receipt under docs/reviews/. See [workflow](docs/milestone-workflow.md) and [independent review protocol](docs/independent-review.md). Scoped documentation sign-off does not complete Milestone 3. Hosted adversarial testing, physical-device evidence and learner activation remain gated; no roadmap checkbox advances for this workflow update.
 
 ## Verified Git handoff
 
@@ -34,6 +40,8 @@ Existing npm audit reports five high-severity entries tracing to the development
 Local preparation verification: all 57 packaged response/hash/header checks and two packager safety tests passed. The final Chromium runtime suite passed with 99 evidence records and 40 exact authored comparisons; see [preview evidence](docs/pyodide-spike/preview-evidence-summary.json). Lint, typecheck, content validation, 12 unit tests, 42 local Python runs, production build and contrast checks passed. The later layout-test follow-up passed all 82 browser cases; it supersedes the preparation session's unresolved timeout. No deployment/device safety is claimed. The loopback server is stopped.
 
 ## Change log
+
+- 2026-10-15: Owner authorized autonomous milestone delivery with final owner review/push/PR, focused local commits and a mandatory independent agent review/sign-off before completed handoffs. Recorded the authority boundaries, reviewer checklist/repair loop and candidate-bound review receipt protocol. Milestone 3 gates and existing evidence remain unchanged.
 
 - 2026-10-12: Initial planning and priority-topic beta documented.
 - 2026-10-12: Syllabus/hosting/Judge0 research completed; theory-first fallback proposed.
