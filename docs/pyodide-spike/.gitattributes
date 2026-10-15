@@ -1,3 +1,21 @@
 # Notice hashes describe original upstream bytes, including line endings/spacing.
 # Keep authored Markdown/code under normal whitespace checks.
 *.txt -text -whitespace
+
+# Preserve the byte-hashed local continuation evidence across Windows checkouts.
+local-chromium-source-regression-20261015.json -text
+local-webkit-source-recovery-20261015.json -text
+local-webkit-candidate-20261015.json -text
+local-chromium-candidate-20261015.json -text
+local-firefox-original-launch-failure-20261015.json -text
+local-webkit-original-loading-failure-20261015.json -text
+
+# Source/driver hashes and package input bytes use LF, including on Windows.
+index.html text eol=lf
+host.mjs text eol=lf
+frame.html text eol=lf
+worker.mjs text eol=lf
+check.mjs text eol=lf
+check-desktop.mjs text eol=lf
+check-recovery.mjs text eol=lf
+DISTRIBUTION-NOTICES.md text eol=lf

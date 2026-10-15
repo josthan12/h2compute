@@ -795,3 +795,16 @@ matched the initial baseline. Documentation checks passed 18 Markdown files and
 107 local links; `git diff --check` passed. The preparation helper compiled with
 `python -m py_compile docs/pyodide-spike/prepare-stdlib-preview.py`. Both loopback
 servers were stopped. All roadmap checkbox states are retained.
+
+Independent review found a checkout-portability defect before handoff: Windows
+line-ending conversion could invalidate the new raw-evidence and indexed code
+hashes. Repaired with narrowly scoped spike attributes, without changing any
+evidence or runtime bytes. Personally ran
+`python docs/pyodide-spike/.runtime/verify-checkout.py`: it invoked
+`git -c core.autocrlf=true checkout-index --all --prefix=<unique-disposable-export>/`,
+verified all 13 indexed source/driver/evidence hashes after checkout filters,
+copied the pinned cache into that export and ran `prepare-stdlib-preview.py`
+there. Both candidate content and ZIP digests reproduced exactly. The temporary
+export is retained under ignored `.runtime/checkout-filters-*`. The old 17
+evidence/package hashes still match. A new exact candidate requires re-review;
+the initial CHANGES_REQUIRED verdict is not a completion approval.

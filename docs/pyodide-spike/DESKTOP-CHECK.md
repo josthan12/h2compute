@@ -69,6 +69,16 @@ checks and must never target Hobby. Stop both loopback servers after verificatio
 snapshots, current source/driver hashes and the candidate digest. Failed original
 attempts retain the earlier driver's own hash, distinct from the final driver.
 
+The independent review identified a Windows checkout issue before sign-off:
+`core.autocrlf=true` could change byte-hashed evidence/source. Scoped attributes
+now preserve the six new raw JSON snapshots verbatim and keep the four indexed
+source files, three indexed drivers and packaged distribution notice at LF.
+No historical snapshot bytes were rewritten. A fresh `git checkout-index` export
+with `core.autocrlf=true` retained all 13 indexed source/driver/evidence hashes.
+Running the preparation helper there reproduced the same content and ZIP digests
+as the local candidate, using copied pinned caches and the unchanged original
+package. This also exercised the promoted helper without overwriting live output.
+
 - Chromium 156.0.8078.4: full source suite passed 99 records, including 40 exact
   authored model/example comparisons, loop/stop/reset, output/message bounds,
   fresh state, failure paths and native network denial. Includes Pixel 7 and
