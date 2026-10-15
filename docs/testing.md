@@ -18,6 +18,11 @@ No editor/runner is required for theory acceptance; do not claim offline attempt
 
 After theory works, use the actual deployment and intended desktop/mobile browsers. Pin Pyodide/Python; record device/browser/runtime versions, cold/warm asset loading and practical resource costs.
 
+For the bounded three-job basic loading/I/O/cache check, use the separate
+[benign driver](pyodide-spike/BENIGN-CHECK.md). It does not import the adversarial
+suite or satisfy the security/recovery checks below. Hosted adversarial probes
+on Hobby remain blocked under the [policy decision](hosting-terms-2026-10-13.md).
+
 Check supplied stdin, stdout/stderr, syntax/runtime errors and correct/incorrect visible comparisons. Test a separate runtime-loading timeout, a genuine infinite loop, output flooding and Stop/Reset during execution. Verify UI responsiveness, source/progress preservation and a fresh interpreter after recovery. A promise timeout that leaves Python running does not pass cancellation.
 
 Verify cases/jobs do not share globals/files, stale responses cannot overwrite current state, malformed/oversized/wrong-session messages are rejected, and repeated failures do not accumulate workers/listeners. Browser memory cannot be enforced like a hosted quota; assess failure behavior and disclose limits.

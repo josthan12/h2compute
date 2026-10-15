@@ -1,0 +1,346 @@
+{
+  "date": "2026-10-15T09:03:00.385Z",
+  "target": "https://h2compute-pyodide-preview-6xu10swwo-poopoopeepee.vercel.app",
+  "mode": "--hosted",
+  "deployment": "dpl_EtLXtsqjPxkTVUAeaGhwJ6tZQ3BA",
+  "contentSHA256": "1825befc25da4421c26bb27cfb625a3f9714220cac2652cbd6bd40a17cd6d3f2",
+  "environment": "win32 10.0.26200 x64; desktop Chromium; no physical-device evidence",
+  "auth": "Existing credential exchanged for exact-host HttpOnly cookie; no browser auth header or request routing",
+  "limits": {
+    "loadingMs": 30000,
+    "executionMs": 5000,
+    "jobs": 3,
+    "maximumRuntimeRequests": 10
+  },
+  "runs": [
+    {
+      "name": "cold",
+      "responses": [
+        {
+          "path": "runtime/314.0.7/pyodide.mjs",
+          "status": 200,
+          "sha256": "6f1d60f7bf529beb300f0f47983c921d3982363640ba20af0e38efdddbc66109",
+          "decodedBytes": 17931,
+          "cacheControl": "public, max-age=31536000, immutable",
+          "encoding": "br",
+          "cdnCache": "HIT"
+        },
+        {
+          "path": "runtime/314.0.7/python_stdlib.zip",
+          "status": 200,
+          "sha256": "fa1957e5777068fc4f7437f96d860ae2fbe9c19732ba06c84e004ec16dd7dd7a",
+          "decodedBytes": 2545637,
+          "cacheControl": "public, max-age=31536000, immutable",
+          "encoding": null,
+          "cdnCache": "HIT"
+        },
+        {
+          "path": "runtime/314.0.7/pyodide.asm.wasm",
+          "status": 200,
+          "sha256": "cc36e3cab04fdfc9a63ff13eb52eae2b911bf46c025cc7b281f394bd3de1d5e6",
+          "decodedBytes": 9598218,
+          "cacheControl": "public, max-age=31536000, immutable",
+          "encoding": "br",
+          "cdnCache": "HIT"
+        },
+        {
+          "path": "runtime/314.0.7/pyodide-lock.json",
+          "status": 200,
+          "sha256": "5dc2fc119108bc148c7457dc86e7675b5c87e1cafd420b9c34c1eaef7b36c010",
+          "decodedBytes": 119077,
+          "cacheControl": "public, max-age=31536000, immutable",
+          "encoding": "br",
+          "cdnCache": "MISS"
+        },
+        {
+          "path": "runtime/314.0.7/pyodide.asm.mjs",
+          "status": 200,
+          "sha256": "f7cdc8ece80678ceb712f8e65ebe6d3a83203a180c399865f49612a051693635",
+          "decodedBytes": 1250344,
+          "cacheControl": "public, max-age=31536000, immutable",
+          "encoding": "br",
+          "cdnCache": "MISS"
+        }
+      ],
+      "browserResponses": [
+        {
+          "path": "runtime/314.0.7/pyodide.asm.wasm",
+          "status": 200,
+          "fromDiskCache": false,
+          "fromServiceWorker": false,
+          "requestServedFromCache": false
+        },
+        {
+          "path": "runtime/314.0.7/python_stdlib.zip",
+          "status": 200,
+          "fromDiskCache": false,
+          "fromServiceWorker": false,
+          "requestServedFromCache": false
+        },
+        {
+          "path": "runtime/314.0.7/pyodide.mjs",
+          "status": 200,
+          "fromDiskCache": false,
+          "fromServiceWorker": false,
+          "requestServedFromCache": false
+        },
+        {
+          "path": "runtime/314.0.7/pyodide-lock.json",
+          "status": 200,
+          "fromDiskCache": false,
+          "fromServiceWorker": false,
+          "requestServedFromCache": false
+        },
+        {
+          "path": "runtime/314.0.7/pyodide.asm.mjs",
+          "status": 200,
+          "fromDiskCache": false,
+          "fromServiceWorker": false,
+          "requestServedFromCache": false
+        }
+      ],
+      "networkFinished": [
+        {
+          "path": "runtime/314.0.7/pyodide.mjs",
+          "encodedDataLength": 7586
+        },
+        {
+          "path": "runtime/314.0.7/python_stdlib.zip",
+          "encodedDataLength": 2547272
+        },
+        {
+          "path": "runtime/314.0.7/pyodide.asm.wasm",
+          "encodedDataLength": 3580644
+        },
+        {
+          "path": "runtime/314.0.7/pyodide-lock.json",
+          "encodedDataLength": 25206
+        },
+        {
+          "path": "runtime/314.0.7/pyodide.asm.mjs",
+          "encodedDataLength": 265452
+        }
+      ],
+      "state": "completed",
+      "stdout": "supplied input\n",
+      "stderr": "error channel\n",
+      "detail": "",
+      "version": "314.0.7",
+      "python": "3.14.2 (main, Sep 14 2026, 03:03:51) [Clang 23.0.0git (https:/github.com/llvm/llvm-project e5927fecf8a6ce89e1a4eac5b8",
+      "heapBytes": 31457280,
+      "loadMs": 2616.3000000715256,
+      "totalMs": 2623,
+      "resources": [
+        {
+          "path": "runtime/314.0.7/pyodide.mjs",
+          "transferSize": 7731,
+          "encodedBodySize": 7431,
+          "decodedBodySize": 17931
+        },
+        {
+          "path": "runtime/314.0.7/pyodide.asm.mjs",
+          "transferSize": 265384,
+          "encodedBodySize": 265084,
+          "decodedBodySize": 1250344
+        },
+        {
+          "path": "runtime/314.0.7/pyodide.asm.wasm",
+          "transferSize": 3577840,
+          "encodedBodySize": 3577540,
+          "decodedBodySize": 9598218
+        },
+        {
+          "path": "runtime/314.0.7/python_stdlib.zip",
+          "transferSize": 2545937,
+          "encodedBodySize": 2545637,
+          "decodedBodySize": 2545637
+        },
+        {
+          "path": "runtime/314.0.7/pyodide-lock.json",
+          "transferSize": 25304,
+          "encodedBodySize": 25004,
+          "decodedBodySize": 119077
+        }
+      ],
+      "framesRemaining": 0,
+      "workersRemaining": 0,
+      "hostResponsive": true
+    },
+    {
+      "name": "same-page-warm",
+      "responses": [],
+      "browserResponses": [],
+      "networkFinished": [],
+      "state": "completed",
+      "stdout": "é\n끝",
+      "stderr": "",
+      "detail": "",
+      "version": "314.0.7",
+      "python": "3.14.2 (main, Sep 14 2026, 03:03:51) [Clang 23.0.0git (https:/github.com/llvm/llvm-project e5927fecf8a6ce89e1a4eac5b8",
+      "heapBytes": 31457280,
+      "loadMs": 1615.1000000238419,
+      "totalMs": 1622.1000000238419,
+      "resources": [],
+      "framesRemaining": 0,
+      "workersRemaining": 0,
+      "hostResponsive": true
+    },
+    {
+      "name": "reload",
+      "responses": [
+        {
+          "path": "runtime/314.0.7/pyodide.mjs",
+          "status": 200,
+          "sha256": "6f1d60f7bf529beb300f0f47983c921d3982363640ba20af0e38efdddbc66109",
+          "decodedBytes": 17931,
+          "cacheControl": "public, max-age=31536000, immutable",
+          "encoding": "br",
+          "cdnCache": "HIT"
+        },
+        {
+          "path": "runtime/314.0.7/pyodide.asm.mjs",
+          "status": 200,
+          "sha256": "f7cdc8ece80678ceb712f8e65ebe6d3a83203a180c399865f49612a051693635",
+          "decodedBytes": 1250344,
+          "cacheControl": "public, max-age=31536000, immutable",
+          "encoding": "br",
+          "cdnCache": "MISS"
+        },
+        {
+          "path": "runtime/314.0.7/pyodide-lock.json",
+          "status": 200,
+          "sha256": "5dc2fc119108bc148c7457dc86e7675b5c87e1cafd420b9c34c1eaef7b36c010",
+          "decodedBytes": 119077,
+          "cacheControl": "public, max-age=31536000, immutable",
+          "encoding": "br",
+          "cdnCache": "MISS"
+        },
+        {
+          "path": "runtime/314.0.7/python_stdlib.zip",
+          "status": 200,
+          "sha256": "fa1957e5777068fc4f7437f96d860ae2fbe9c19732ba06c84e004ec16dd7dd7a",
+          "decodedBytes": 2545637,
+          "cacheControl": "public, max-age=31536000, immutable",
+          "encoding": null,
+          "cdnCache": "HIT"
+        },
+        {
+          "path": "runtime/314.0.7/pyodide.asm.wasm",
+          "status": 200,
+          "sha256": "cc36e3cab04fdfc9a63ff13eb52eae2b911bf46c025cc7b281f394bd3de1d5e6",
+          "decodedBytes": 9598218,
+          "cacheControl": "public, max-age=31536000, immutable",
+          "encoding": "br",
+          "cdnCache": "HIT"
+        }
+      ],
+      "browserResponses": [
+        {
+          "path": "runtime/314.0.7/pyodide.mjs",
+          "status": 200,
+          "fromDiskCache": true,
+          "fromServiceWorker": false,
+          "requestServedFromCache": false
+        },
+        {
+          "path": "runtime/314.0.7/pyodide.asm.mjs",
+          "status": 200,
+          "fromDiskCache": true,
+          "fromServiceWorker": false,
+          "requestServedFromCache": false
+        },
+        {
+          "path": "runtime/314.0.7/pyodide.asm.wasm",
+          "status": 200,
+          "fromDiskCache": true,
+          "fromServiceWorker": false,
+          "requestServedFromCache": false
+        },
+        {
+          "path": "runtime/314.0.7/python_stdlib.zip",
+          "status": 200,
+          "fromDiskCache": true,
+          "fromServiceWorker": false,
+          "requestServedFromCache": false
+        },
+        {
+          "path": "runtime/314.0.7/pyodide-lock.json",
+          "status": 200,
+          "fromDiskCache": true,
+          "fromServiceWorker": false,
+          "requestServedFromCache": false
+        }
+      ],
+      "networkFinished": [
+        {
+          "path": "runtime/314.0.7/pyodide.mjs",
+          "encodedDataLength": 0
+        },
+        {
+          "path": "runtime/314.0.7/pyodide.asm.mjs",
+          "encodedDataLength": 0
+        },
+        {
+          "path": "runtime/314.0.7/pyodide-lock.json",
+          "encodedDataLength": 0
+        },
+        {
+          "path": "runtime/314.0.7/python_stdlib.zip",
+          "encodedDataLength": 0
+        },
+        {
+          "path": "runtime/314.0.7/pyodide.asm.wasm",
+          "encodedDataLength": 0
+        }
+      ],
+      "state": "completed",
+      "stdout": "supplied input\n",
+      "stderr": "error channel\n",
+      "detail": "",
+      "version": "314.0.7",
+      "python": "3.14.2 (main, Sep 14 2026, 03:03:51) [Clang 23.0.0git (https:/github.com/llvm/llvm-project e5927fecf8a6ce89e1a4eac5b8",
+      "heapBytes": 31457280,
+      "loadMs": 1905,
+      "totalMs": 1912.8999999761581,
+      "resources": [
+        {
+          "path": "runtime/314.0.7/pyodide.mjs",
+          "transferSize": 0,
+          "encodedBodySize": 7431,
+          "decodedBodySize": 17931
+        },
+        {
+          "path": "runtime/314.0.7/pyodide.asm.mjs",
+          "transferSize": 0,
+          "encodedBodySize": 265084,
+          "decodedBodySize": 1250344
+        },
+        {
+          "path": "runtime/314.0.7/pyodide.asm.wasm",
+          "transferSize": 0,
+          "encodedBodySize": 3577540,
+          "decodedBodySize": 9598218
+        },
+        {
+          "path": "runtime/314.0.7/pyodide-lock.json",
+          "transferSize": 0,
+          "encodedBodySize": 25004,
+          "decodedBodySize": 119077
+        },
+        {
+          "path": "runtime/314.0.7/python_stdlib.zip",
+          "transferSize": 0,
+          "encodedBodySize": 2545637,
+          "decodedBodySize": 2545637
+        }
+      ],
+      "framesRemaining": 0,
+      "workersRemaining": 0,
+      "hostResponsive": true
+    }
+  ],
+  "outcome": "passed",
+  "browser": "156.0.8078.4",
+  "runtimeRequests": 10,
+  "totalRequests": 19
+}

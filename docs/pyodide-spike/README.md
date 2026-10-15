@@ -9,6 +9,10 @@ For the local reviewable static package, retained third-party notices and propos
 host headers, see [preview preparation](PREVIEW.md). Publication and learner
 activation remain separately gated.
 
+For the separate three-job local/hosted functional startup/cache check, use
+[the benign-check guide](BENIGN-CHECK.md). Do not run the adversarial `check.mjs`
+against the Hobby preview.
+
 From `C:\Users\crate\Documents\ProjectALEVEL`, with the existing npm lockfile
 installed and Playwright Chromium available:
 

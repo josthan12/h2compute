@@ -600,3 +600,102 @@ diff/status commands failed with the already documented work-tree/access errors.
 spike JSON files (including ignored raw results) and five retained preview ZIPs.
 Application lint/typecheck/tests/build and runtime suites were not rerun for this
 documentation-only proposal. No new hosted execution result is claimed.
+
+## Benign hosted Chromium verification — 15 October 2026
+
+The owner requested continuing Milestone 3 under the autonomous workflow. Initial
+read-only Git status was clean at `5393c6b` on `feat/pyodide-feasibility`; no branch
+switch/fetch was performed. Acceptance for this focused step was the three-job
+proposal above: actual protected-host loading, exact fixed-program I/O, original
+limits, cache observations and successful cleanup, with separate preserved
+evidence. The wider Gate 3 security/device requirements remain open.
+
+Story: protected static preview → same-origin pinned assets → opaque frame/data
+worker → fixed-program output and cleanup. There is no execution API or learner
+integration. [Driver and reproduction](pyodide-spike/BENIGN-CHECK.md).
+
+The separate `check-benign.mjs` runs only the fixed stdin/stdout/stderr, Unicode
+and reload jobs. It verifies the immutable local package and each executable/core
+response's exact hash, original CSP and absent CORS permission. It never imports
+the adversarial suite. Three unit tests check host selection, rejection of
+insecure/broad cookies, exact outputs, pinned versions and timing limits.
+
+The first CLI `env run` attempt through the PowerShell wrapper lost the command
+separator. Direct invocation of the installed CLI entry resolved it. An ordinary
+OIDC preflight then returned 302; a value-free local expiry check found the
+ignored development token was expired. `env pull .env.local` refreshed it and
+the preflight returned 200 with the expected index hash. No redirect was followed
+and no Python ran in either preflight. OIDC did not establish a browser session
+cookie. The final driver instead reads one already configured automation
+credential in memory, exchanges it for an exact-host Secure/HttpOnly cookie and
+uses that cookie in Chromium. No credential was created, printed or committed;
+protection remained `all_except_custom_domains`. No routing/interception or
+cache-disable command was used. Diagnostic source reads with incorrect working
+paths were corrected; they changed no files.
+
+The deployment remains `dpl_EtLXtsqjPxkTVUAeaGhwJ6tZQ3BA` / preview / READY at the
+exact URL in the [setup receipt](vercel-setup-2026-10-13.md). Package content digest
+remains `1825befc25da4421c26bb27cfb625a3f9714220cac2652cbd6bd40a17cd6d3f2`.
+Windows `10.0.26200` x64, Node 20.20.2, Playwright 1.64.0 and desktop Chromium
+156.0.8078.4. These are single-run development observations, not benchmarks.
+
+| Hosted job | Startup | Total job | Core requests | Core transferSize | Cache evidence |
+| --- | ---: | ---: | ---: | ---: | --- |
+| Cold stdin/stdout/stderr | 2.616 s | 2.623 s | 5 | 6,422,196 bytes | CDP: none from disk/service-worker cache. |
+| Same-page Unicode/no-final-newline | 1.615 s | 1.622 s | 0 | 0 bytes | Retained host asset buffers; fresh successful job. |
+| Reload then first example | 1.905 s | 1.913 s | 5 | 0 bytes | CDP: all five responses from disk cache. |
+
+All three exact outputs, pinned runtime/Python reports, host sentinel checks and
+zero remaining iframe/worker targets passed. The five cold core responses total
+13,531,207 decoded bytes / 6,420,696 encoded body bytes: four Brotli responses and
+the stdlib ZIP. `transferSize` is the browser Resource Timing value, including
+its reported overhead; it is not a full wire/account measurement. Cached reload
+entries retain encoded body sizes while transferSize is zero. The earlier CLI
+gzip measurements are preserved and are a different request/compression path.
+There were 19 browser GET requests, including 10 core requests across cold and
+reload; the session bootstrap and earlier auth preflights are separate requests.
+
+[Retained sanitized evidence](pyodide-spike/hosted-benign-results-20261015.json)
+copies the unique ignored hosted run byte-for-byte. Original JSON/manifests,
+raw results and all preview ZIPs remain unchanged. The new driver added no npm
+dependency, runtime change, CSP/CORS change or learner control.
+The retained evidence SHA-256 is
+`db2897494bb2a22615bcd58569c074b527d5238d145bca3767a0925c15b61489`;
+the executed driver SHA-256 is
+`d167dad6ff44c4431c3afcec84704a7ef10821f544490b971465fcd61f2aa338`.
+
+| Command/check | Outcome |
+| --- | --- |
+| `node --check docs/pyodide-spike/check-benign.mjs` | Passed. |
+| `node --test docs/pyodide-spike/check-benign.test.mjs` | Three tests passed. |
+| `npx eslint docs/pyodide-spike/check-benign.mjs docs/pyodide-spike/check-benign.test.mjs` | Passed. |
+| `npm run lint` | Passed for the repository. |
+| `node docs/pyodide-spike/preview-server.mjs` | Unchanged static loopback package server; no execution endpoint. |
+| `node docs/pyodide-spike/check-benign.mjs --local` | All three real Chromium jobs passed: 2.240 / 2.120 / 2.185 s startup. |
+| `node C:/Users/crate/Documents/ProjectALEVEL/docs/pyodide-spike/check-benign.mjs --hosted` | Passed the three jobs above, with VERCEL_CLI_ENTRY and linked staging cwd as documented. |
+| Installed engine availability | Chromium present; Firefox/WebKit absent in the browser-run environment. Sandbox paths differed and were not treated as the installed-runtime inventory. |
+
+The credential diagnostics used direct `node C:/nvm4w/nodejs/node_modules/vercel/dist/index.js`
+with `env run -- node <ignored diagnostic>` and
+`env pull .env.local --yes --environment development --scope team_Z39ZqQNlBpVBnGnt7ktsEjSc`
+in the linked ignored staging directory. Diagnostics emitted only token
+presence/expiry booleans, HTTP status/index digest and cookie names, never values.
+Application typecheck/unit/content/examples/build/e2e were not rerun: this change
+adds only a developer verification driver/tests and evidence/docs, outside the
+unchanged app and immutable hosted package. The old full-suite results remain
+dated prior evidence; no new full-suite claim is made.
+
+Milestone 3 is still incomplete. Hosted adversarial isolation/cancellation/flood
+and protocol probes remain blocked by Hobby policy; provider permission was not
+obtained. Other intended desktop engines, real Android/iOS, low-memory recovery,
+remaining account allowance and supported-device policy are still unverified.
+Physical hardware/provider permission cannot be substituted by this Chromium
+run. Further learner integration/activation remains gated. No deployment,
+protection change, support message, push, PR or merge was performed.
+
+Final pre-review checks: `python docs/pyodide-spike/check-docs.py` passed 16
+Markdown files/92 local targets; `git diff --check` passed. All 16 pre-existing
+JSON/ZIP SHA-256 values and every roadmap checkbox state matched the preservation
+baseline. The loopback server was stopped. Only verification scripts, the new
+sanitized result and related documentation enter the candidate; the existing
+learner app, runtime bytes, CSP/protection settings and old evidence are intact.

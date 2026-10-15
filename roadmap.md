@@ -43,7 +43,7 @@ The three-lesson implementation and local checks are recorded in [Milestone 2 ve
 - [x] Pin/review Pyodide 314.0.7 / CPython 3.14.2; choose five core runtime files and retain MPL/CPython notices.
 - [x] Prepare retained compiled third-party notices and Pyodide source availability for a local reviewable static preview.
 - [x] Prepare a local preview package and exact proposed host headers with versioned assets, existing opaque-frame CSP and disabled learner controls. Owner-authorized publication, CLI workspace access and confirmed model-training opt-out are recorded in [Vercel setup](docs/vercel-setup-2026-10-13.md).
-- [ ] Verify asset sizes, loading/cache/CORS/CSP on the deployment; budget host bandwidth. All 57 ordinary authenticated GET hash/header checks passed; browser startup, cold/warm caching and remaining allowance are unverified.
+- [ ] Verify asset sizes, loading/cache/CORS/CSP on the deployment; budget host bandwidth. All 57 ordinary authenticated GET hash/header checks passed. The 15 October three-job hosted Chromium check also passed basic I/O/startup, same-page reuse, reload disk caching and successful cleanup. Remaining allowance and other supported browsers/devices are unverified; this full gate remains open.
 - [ ] Prototype isolated iframe + module worker; prove main-site storage/DOM/cookie/navigation and unauthorized network separation.
 - [ ] Verify supplied stdin/stdout, syntax/runtime errors, infinite loops, output floods, cancellation, fresh case/job state and stale-message rejection.
 - [ ] Check supported desktop/mobile startup and memory/performance limitations.
@@ -51,7 +51,7 @@ The three-lesson implementation and local checks are recorded in [Milestone 2 ve
 - [ ] Use visible cases and local self-check labels; no hidden tests or trusted-grade claims.
 - [ ] Keep theory usable during runtime failure; preserve editor text and progress.
 
-Local progress and exact evidence are in [Milestone 3 verification](docs/milestone-3-verification.md). Remaining boxes retain their full deployment/device/activation requirements; local evidence alone does not complete them. Hosted adversarial probes remain blocked on Hobby under the reviewed policy. The [latest Gate 3 review](docs/milestone-3-verification.md#gate-3-review-and-next-verification-proposal--13-october-2026) proposes a bounded benign Chromium startup/cache check; it has not been run and no checkbox advances.
+Local progress and exact evidence are in [Milestone 3 verification](docs/milestone-3-verification.md). Remaining boxes retain their full deployment/device/activation requirements; local evidence alone does not complete them. Hosted adversarial probes remain blocked on Hobby under the reviewed policy. The [15 October continuation](docs/milestone-3-verification.md#benign-hosted-chromium-verification--15-october-2026) passed the bounded benign Chromium startup/cache check. Deployed adversarial, other-browser/device, memory and remaining-allowance requirements are still open; no checkbox advances.
 
 **Exit:** implementation.md Gate 3 passes before browser activation. If it fails, retain theory/quizzes and offline practice; do not add a paid/hosted service by assumption.
 
