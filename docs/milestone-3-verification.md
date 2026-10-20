@@ -808,3 +808,86 @@ there. Both candidate content and ZIP digests reproduced exactly. The temporary
 export is retained under ignored `.runtime/checkout-filters-*`. The old 17
 evidence/package hashes still match. A new exact candidate requires re-review;
 the initial CHANGES_REQUIRED verdict is not a completion approval.
+
+## Permitted desktop/resource and protected-preview continuation — 20 October 2026
+
+Acceptance for this focused continuation: resolve available desktop launch/checks
+without modifying the sandbox or installed browser security settings; measure
+bounded real resource use without exhausting the OS; retain truthful evidence;
+verify ordinary loading on the existing authorized protected preview; obtain
+independent review. This is not a full Milestone 3 completion claim.
+
+The [continuation guide](pyodide-spike/CONTINUATION-20261020.md) contains the exact
+reproduction commands, diagnostic failures, privacy/cost effects, resource
+semantics, provisional browser policy and remaining gates. The
+[evidence index](pyodide-spike/continuation-evidence-20261020.json) binds eight
+new raw snapshots, browser-cache provenance and a sanitized deployment receipt.
+No earlier evidence/package is rewritten.
+
+| Check | Actual result |
+| --- | --- |
+| Firefox 157.0 / revision 1555 | Original installed path still fails; all 61 files equal the official ZIP and expected manifests exist. A separate byte-verified private cache launches; original cache/settings remain untouched. Root cause at the installed path is undetermined. |
+| Firefox local functional/recovery | Three reviewed-package startup/I/O jobs and 32 source recovery records passed, including 20 exact authored model/example comparisons. Real loop/Stop/Reset/output bounds and fresh state work. |
+| Firefox/WebKit loopback boundary/protocol | Ten observations per engine passed: parent DOM/storage/cookie/navigation denial, native fetch/XHR/WebSocket/module-import denial to a listening trap, stale/wrong-job/malformed/flooded traffic, input limits and recovery. Zero forbidden trap requests/upgrades; positive trap HTTP control passed. |
+| Bounded desktop resources | Six jobs passed; 143 complete process-counter snapshots, zero partials. Max sampled process sums: 424,452,096-byte working set and 337,223,680-byte private commit. Minimum system available physical memory: 3,553,206,272 bytes. Worker/frame cleanup and progress preservation passed. |
+| Protected refreshed preview | Reviewed package a2f184eead72 deployed to dpl_8FWsm9aGym5xyTEqfx846eeWDbmV, CLI-confirmed preview/READY. All 57 ordinary GET hash/header checks passed; Chromium/WebKit/Firefox passed three fixed jobs each, within original 30s/5s limits, with observed worker cleanup. |
+| Provider/account access | Existing workspace still unblocked Hobby. Protection, feedback settings, production target and original preview are preserved; no setting/credential creation. Usage query failed: billing cost data unavailable for 1–20 October, not zero usage. |
+
+Diagnostic distinctions: the first private-cache attempt lacked the existing
+Windows dependency helper; the reusable preparation tool now copies and hashes
+that helper and does not skip dependency validation. Initial direct Firefox
+worker-debugger evaluations of import() failed; the actual Python/JS bridge with
+asynchronous port callback returned TypeError and no trap traffic. WebSocket
+rejection names differ by engine. Failed diagnostics remain under ignored
+.runtime; no failure was relabelled as a pass or used to relax CSP.
+
+The 32 MiB diagnostic allocation and sampled memory abort guards are test-driver
+limits, not learner quotas. Shared pages can appear in multiple process working
+sets, samples can miss transients, and per-process lifetime peaks are not a
+simultaneous aggregate. No actual memory exhaustion/MemoryError is forced.
+Physical Android/iOS and genuine low-memory recovery remain unmet. The new
+preview receives only fixed ordinary I/O jobs, never these local boundary,
+loop/flood, protocol or memory probes. Hosted adversarial/security/recovery
+verification remains blocked under the saved Hobby policy decision, and the
+owner still keeps external contact blocked.
+
+Personally ran the guide's syntax/Node/Python/lint/documentation checks and real
+browser commands. The two Python tests passed (process-scope validation and
+bad-archive rejection); eight Node driver tests passed across the four listed
+files. The cache preparation and every retained runtime/hosted driver exited 0.
+Existing application typecheck/content/unit/examples/build/e2e and the older full
+Chromium 99-record suite were not rerun because app/runtime/content/package bytes
+are unchanged; their dated evidence is preserved, not represented as new runs.
+
+The provider refresh used the existing 63.1.2 CLI and an ignored isolated staging
+copy with all 59 package hashes checked, explicit original team/project, --target
+preview, --non-interactive and --json. Metadata sourceCommit is the already
+reviewed 2633e7a candidate; package content SHA-256 is
+`a2f184eead72face3053c3f6331bbd268081864fe718f83351072acd1eb9c0a7`.
+CLI inspect confirms preview/READY; production target remains the original
+`dpl_HpYocD7TQe5V6P6nF3RCrLUeXvc2`. Existing authentication/feedback settings were
+read before and after, with no configuration mutation. The unauthenticated GET
+redirects to protection. Existing automation credentials were exchanged only for
+exact-host Secure/HttpOnly cookies; no browser-wide auth header, interception,
+trace, storage export or secret logging was added. See the sanitized receipt
+and setup record; raw credential-bearing API output is never retained in Git.
+
+Milestone 3 and every incomplete roadmap checkbox remain open. No learner
+activation, CodeMirror integration, paid service, support message, push, PR,
+merge or branch switch. Final candidate requires independent review and a
+receipt before a completed-change handoff.
+
+Final pre-review integrity: all 26 pre-existing JSON/ZIP SHA-256 values match the
+initial baseline; roadmap checkbox states and learner-app/content/dependency
+files are unchanged. Eight Node tests, both Python tests, repository lint and
+19 Markdown files/116 local links passed. All 20 indexed source/driver/evidence/
+provenance/receipt hashes survive a fresh Git checkout export with
+core.autocrlf=true, using the ignored verify-continuation-checkout.py helper.
+New authored metadata is LF. Raw cache provenance retains its original CRLF;
+only that file permits CR-at-EOL while retaining the other whitespace checks.
+The corrected staged git diff --check passes. Both loopback servers were stopped.
+
+A combined read-only Git/port-status tool request was rejected because automatic
+permission review timed out, not because the action was judged unsafe. The one
+narrower permitted Git retry succeeded. The failed request made no changes; no
+permission, protection or other policy boundary was broadened.

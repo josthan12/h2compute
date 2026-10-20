@@ -167,3 +167,19 @@ no WebKit pass. The owner explicitly keeps external contact blocked; the policy
 draft remains unsent and hosted adversarial probes remain blocked. An installed
 CLI `usage --json --scope <existing-workspace>` query returned billing cost data
 unavailable for 1–15 October, not zero usage. Remaining allowance is unverified.
+
+## Protected refresh — 20 October 2026
+
+The previously reviewed local WebKit-fix package is now also published as a
+separate [protected preview](https://h2compute-pyodide-preview-poqbeuq87-poopoopeepee.vercel.app),
+deployment `dpl_8FWsm9aGym5xyTEqfx846eeWDbmV`, confirmed preview / READY. Its
+content digest remains `a2f184eead72face3053c3f6331bbd268081864fe718f83351072acd1eb9c0a7`.
+The original preview/packages and production target remain intact. Existing
+Hobby plan, authentication and disabled feedback settings were checked before
+and after; none was changed. All 57 ordinary delivery GETs and three fixed I/O
+jobs each in Chromium, Firefox and WebKit passed. This is basic hosted behavior,
+not hosted adversarial/device certification. See the [20 October record](pyodide-spike/CONTINUATION-20261020.md)
+and [sanitized receipt](pyodide-spike/hosted-preview-receipt-20261020.json).
+The usage query again failed with billing cost data unavailable for 1–20 October;
+remaining allowance is unknown. External contact and hosted adversarial probes
+remain blocked. Learner activation, push/PR and merge remain gated.

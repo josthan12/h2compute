@@ -19,3 +19,12 @@ check.mjs text eol=lf
 check-desktop.mjs text eol=lf
 check-recovery.mjs text eol=lf
 DISTRIBUTION-NOTICES.md text eol=lf
+
+# New dated continuation snapshots and byte-indexed verification tools.
+*-20261020.json -text
+firefox-cache-provenance-20261020.json whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+check-isolation.mjs text eol=lf
+check-resources.mjs text eol=lf
+check-published-candidate.mjs text eol=lf
+windows-memory.py text eol=lf
+prepare-firefox-cache.py text eol=lf

@@ -17,6 +17,11 @@ The [local desktop continuation](DESKTOP-CHECK.md) records the WebKit stdlib
 loading fix, source recovery checks, separate undeployed candidate package and
 Firefox environment blocker. Preserve the original evidence/package summary.
 
+The [20 October continuation](CONTINUATION-20261020.md) supersedes the Firefox
+launch blocker for a verified private cache, adds local cross-engine boundary
+checks and bounded Windows resource observations, and refreshes only the
+protected developer preview. Original evidence stays historical and unchanged.
+
 From `C:\Users\crate\Documents\ProjectALEVEL`, with the existing npm lockfile
 installed and Playwright Chromium available:
 

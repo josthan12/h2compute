@@ -1,6 +1,6 @@
 # Current Status
 
-**Last updated:** 15 October 2026
+**Last updated:** 20 October 2026
 **Overall status:** Milestones 1 and 2 merged; Milestone 3 feasibility investigation with a separate protected developer preview deployed. Browser activation is NO-GO pending deployment/device gates.
 **Implementation:** The original three-lesson theory/quiz/offline-practice journey and versioned local progress remain intact. A developer-only Pyodide prototype lives in docs/pyodide-spike, outside Next.js routes/public assets. See [Milestone 3 verification](docs/milestone-3-verification.md) for exact evidence and limitations.
 
@@ -26,6 +26,33 @@ Work is in C:/Users/crate/Documents/ProjectALEVEL on feat/pyodide-feasibility. A
 
 The owner authorized local Milestone 3 commits; the layout-test correction is committed at 606b7cd, and the preparation snapshot is recorded in the following local commit on the same branch (see git log). Local main/saved origin/main remain at 092dc5f. No push, PR or merge has been performed; pushing and PR creation remain owner actions. The later owner-authorized developer preview is recorded below. SSH commands must be requested from the owner in Bash, with a reply of “Done”, before dependent work continues.
 
+## Permitted feasibility continuation — 20 October 2026
+
+Firefox now launches from a separate verified extraction of the exact pinned
+browser bytes; the installed cache is untouched and its path-specific failure
+remains undetermined. Local Firefox passed three package startup jobs and 32
+recovery records / 20 authored comparisons. Firefox and WebKit each passed ten
+local boundary/protocol observations, including direct native network denial to
+a listening loopback trap. A six-job bounded Chromium resource observation passed
+143 complete snapshots; sampled maxima were 424,452,096-byte aggregate working set
+and 337,223,680-byte aggregate private commit. These are desktop observations,
+not genuine low-memory or mobile results, and the diagnostic cap is no learner
+memory quota.
+
+Under the existing developer-preview publication authorization, the already
+reviewed package was published to a new protected preview. All 57 ordinary GET
+checks and three fixed I/O jobs each in Chromium, WebKit and Firefox passed.
+Protection, feedback flags, production target and original preview/packages are
+unchanged. See [the 20 October continuation](docs/pyodide-spike/CONTINUATION-20261020.md)
+and [evidence index](docs/pyodide-spike/continuation-evidence-20261020.json).
+
+Milestone 3 remains incomplete: hosted adversarial/security/recovery checks are
+blocked on Hobby with external contact blocked by owner decision. Real Android/
+iOS, genuine low-memory recovery, supported-device release policy and remaining
+account allowance remain unverified. The new usage query returned billing cost
+data unavailable for 1–20 October, not zero usage. Learner integration stays
+gated. No push, PR, merge, branch switch, paid service or external message.
+
 ## Local compatibility continuation — 15 October 2026
 
 The agent found and fixed a WebKit stdlib loading defect without changing CSP,
@@ -47,7 +74,7 @@ the owner to push/open a PR as though this were a completed milestone.
 
 ## Remaining work and next action
 
-1. Review the isolated prototype, local evidence and [prepared preview package](docs/pyodide-spike/PREVIEW.md). Retained upstream notices and Pyodide source availability are packaged locally; release review remains required. Basic hosted Chromium delivery/loading/cache evidence now passes; activation remains blocked by deployed adversarial verification, supported browsers/physical devices and practical memory limits.
+1. Review the isolated prototype, local evidence and [prepared preview package](docs/pyodide-spike/PREVIEW.md). Retained upstream notices and Pyodide source availability are packaged locally; release review remains required. Basic hosted Chromium/Firefox/WebKit loading and I/O now pass on the new preview; activation remains blocked by deployed adversarial verification, supported-device policy/physical devices and practical memory limits.
 2. The owner authorized developer-preview publication and necessary local commits on 13 October; pushing and PR creation remain owner actions. [Hosting terms research](docs/hosting-terms-2026-10-13.md) is complete. CLI access verified active Hobby and the correct workspace; the owner confirmed model-training opt-out. Monitor remaining usage and personal/non-commercial eligibility. The current official policy excludes Hobby pentesting; no browser-only exemption was found, so hosted adversarial probes remain blocked pending explicit provider clarification. The three benign hosted Chromium jobs passed on 15 October: exact fixed I/O, startup, same-page/reload cache measurements and successful frame/worker cleanup. See the dated continuation in docs/milestone-3-verification.md and docs/pyodide-spike/hosted-benign-results-20261015.json. This does not pass deployed adversarial or device gates. Local commits are authorized; learner execution remains disabled. The [Vercel setup record](docs/vercel-setup-2026-10-13.md) records the protected preview and all 57 ordinary authenticated GET checks. CLI workspace access works; MCP workspace reads remain blocked by 403. Basic fixed-program hosted execution now passes; hostile-job recovery and device gates remain open.
 3. Obtain real-device Safari/iOS and Android evidence and choose an honest supported-browser policy. Emulation is not device evidence.
 4. Add CodeMirror and learner-facing Run/Check examples only after the full feasibility/activation gate passes; preserve theory/offline fallback.
@@ -61,6 +88,9 @@ Local preparation verification: all 57 packaged response/hash/header checks and 
 Hosted benign continuation (15 October): desktop Chromium 156.0.8078.4 passed three fixed jobs within unchanged 30-second loading/five-second execution limits. Cold/warm/reload startup was 2.616/1.615/1.905 seconds. Same-page core transfers were zero; all five post-reload core responses came from Chromium disk cache with zero transferSize. The cold encoded core body was 6,420,696 bytes (Brotli/ZIP); browser transferSize was 6,422,196 bytes. [New sanitized evidence](docs/pyodide-spike/hosted-benign-results-20261015.json) is separate from every prior snapshot. These are single-run observations and basic functional checks, not a sandbox/device/performance certification. Driver unit tests and lint passed; application code/package are unchanged. Milestone 3 remains incomplete and learner execution disabled.
 
 ## Change log
+
+- 2026-10-20: Continued permitted Milestone 3 verification. Added a pinned private Firefox cache, local Firefox/WebKit boundary/message probes and bounded Windows resource observations. Refreshed only the protected developer preview with the already reviewed package; all 57 ordinary delivery checks and nine fixed jobs across three engines passed. Preserved original evidence and all activation/provider/device gates; no roadmap checkbox advances.
+
 
 - 2026-10-15: Continued local desktop feasibility; corrected WebKit stdlib loading with fixed preloaded responses under the original CSP. Retained Chromium/WebKit successes and original Firefox/WebKit failures, a separate undeployed package, reproducible local drivers and the explicit external-contact block. Usage allowance remains unknown. No milestone gate advances or learner activation/publication.
 

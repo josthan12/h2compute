@@ -1,0 +1,174 @@
+{
+  "date": "2026-10-20T05:21:01.285Z",
+  "engine": "webkit",
+  "origin": "http://127.0.0.1:3190",
+  "trapOrigin": "http://127.0.0.1:3192",
+  "environment": "win32 10.0.26200 x64; loopback only, not hosted/device certification",
+  "sourceSHA256": {
+    "host.mjs": "ca8806aaab72aa8098ff9358b15247b36d04e22ebfaa585267eee13ccf510b7c",
+    "frame.html": "975d4bbc65d5aac347c9aca1065f3c06d07899754b1168c8847ef99f1c8e64dc",
+    "worker.mjs": "e50f9aabab56778b16320e010b33c3a4cafe5960d95dd7b10f34d58d10e73265"
+  },
+  "driverSHA256": "db1a167f246f54ee1cc233327deda11b70220185da2785866fb547686e04d526",
+  "runs": [
+    {
+      "name": "ready fixture boundaries",
+      "boundary": {
+        "DOM": true,
+        "storage": true,
+        "cookies": true,
+        "navigation": true
+      },
+      "network": {
+        "nativeFetch": "TypeError",
+        "xhr": "NetworkError",
+        "websocket": "SecurityError",
+        "exposed": {
+          "window": false,
+          "document": false,
+          "parent": false,
+          "localStorage": false,
+          "sessionStorage": false,
+          "cookieStore": false
+        },
+        "remoteImport": "TypeError"
+      }
+    },
+    {
+      "name": "stale session",
+      "state": "completed",
+      "stdout": "real\n",
+      "stderr": "",
+      "detail": "",
+      "version": "314.0.7",
+      "python": "3.14.2 (main, Sep 14 2026, 03:03:51) [Clang 23.0.0git (https:/github.com/llvm/llvm-project e5927fecf8a6ce89e1a4eac5b8",
+      "heapBytes": 31457280,
+      "loadMs": 6142,
+      "totalMs": 6167,
+      "workersCreated": 1,
+      "workersRemaining": 0,
+      "framesRemaining": 0
+    },
+    {
+      "name": "wrong job",
+      "state": "completed",
+      "stdout": "real\n",
+      "stderr": "",
+      "detail": "",
+      "version": "314.0.7",
+      "python": "3.14.2 (main, Sep 14 2026, 03:03:51) [Clang 23.0.0git (https:/github.com/llvm/llvm-project e5927fecf8a6ce89e1a4eac5b8",
+      "heapBytes": 31457280,
+      "loadMs": 6155,
+      "totalMs": 6180,
+      "workersCreated": 1,
+      "workersRemaining": 0,
+      "framesRemaining": 0
+    },
+    {
+      "name": "malformed type",
+      "state": "protocol-error",
+      "stdout": "",
+      "stderr": "",
+      "detail": "",
+      "version": "314.0.7",
+      "python": "3.14.2 (main, Sep 14 2026, 03:03:51) [Clang 23.0.0git (https:/github.com/llvm/llvm-project e5927fecf8a6ce89e1a4eac5b8",
+      "heapBytes": 31457280,
+      "loadMs": 4961,
+      "totalMs": 4973,
+      "workersCreated": 1,
+      "workersRemaining": 0,
+      "framesRemaining": 0
+    },
+    {
+      "name": "invalid stream",
+      "state": "protocol-error",
+      "stdout": "",
+      "stderr": "",
+      "detail": "",
+      "version": "314.0.7",
+      "python": "3.14.2 (main, Sep 14 2026, 03:03:51) [Clang 23.0.0git (https:/github.com/llvm/llvm-project e5927fecf8a6ce89e1a4eac5b8",
+      "heapBytes": 31457280,
+      "loadMs": 4606,
+      "totalMs": 4622,
+      "workersCreated": 1,
+      "workersRemaining": 0,
+      "framesRemaining": 0
+    },
+    {
+      "name": "oversized message",
+      "state": "output-limit",
+      "stdout": "",
+      "stderr": "",
+      "detail": "",
+      "version": "314.0.7",
+      "python": "3.14.2 (main, Sep 14 2026, 03:03:51) [Clang 23.0.0git (https:/github.com/llvm/llvm-project e5927fecf8a6ce89e1a4eac5b8",
+      "heapBytes": 31457280,
+      "loadMs": 5439,
+      "totalMs": 5455,
+      "workersCreated": 1,
+      "workersRemaining": 0,
+      "framesRemaining": 0
+    },
+    {
+      "name": "message flood",
+      "state": "output-limit",
+      "stdout": "1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n",
+      "stderr": "",
+      "detail": "",
+      "version": "314.0.7",
+      "python": "3.14.2 (main, Sep 14 2026, 03:03:51) [Clang 23.0.0git (https:/github.com/llvm/llvm-project e5927fecf8a6ce89e1a4eac5b8",
+      "heapBytes": 31457280,
+      "loadMs": 4690,
+      "totalMs": 4941,
+      "workersCreated": 1,
+      "workersRemaining": 0,
+      "framesRemaining": 0
+    },
+    {
+      "name": "protocol recovery",
+      "state": "completed",
+      "stdout": "recovered\n",
+      "stderr": "",
+      "detail": "",
+      "version": "314.0.7",
+      "python": "3.14.2 (main, Sep 14 2026, 03:03:51) [Clang 23.0.0git (https:/github.com/llvm/llvm-project e5927fecf8a6ce89e1a4eac5b8",
+      "heapBytes": 31457280,
+      "loadMs": 4746,
+      "totalMs": 4764,
+      "workersCreated": 1,
+      "workersRemaining": 0,
+      "framesRemaining": 0
+    },
+    {
+      "name": "source input bound",
+      "state": "invalid-input",
+      "workersCreated": 0,
+      "workersRemaining": 0,
+      "framesRemaining": 0
+    },
+    {
+      "name": "stdin input bound",
+      "state": "invalid-input",
+      "workersRemaining": 0
+    }
+  ],
+  "trapRequests": 0,
+  "trapUpgrades": 0,
+  "outcome": "passed",
+  "trapControlPassed": true,
+  "browser": "27.2",
+  "fixtureNetwork": {
+    "nativeFetch": "TypeError",
+    "xhr": "NetworkError",
+    "websocket": "SecurityError",
+    "exposed": {
+      "window": false,
+      "document": false,
+      "parent": false,
+      "localStorage": false,
+      "sessionStorage": false,
+      "cookieStore": false
+    },
+    "remoteImport": "TypeError"
+  }
+}

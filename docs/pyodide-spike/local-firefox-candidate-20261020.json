@@ -1,0 +1,143 @@
+{
+  "date": "2026-10-20T05:23:27.307Z",
+  "engine": "firefox",
+  "variant": "--candidate",
+  "origin": "http://127.0.0.1:3191",
+  "contentSHA256": "a2f184eead72face3053c3f6331bbd268081864fe718f83351072acd1eb9c0a7",
+  "baselinePackageContentSHA256": "1825befc25da4421c26bb27cfb625a3f9714220cac2652cbd6bd40a17cd6d3f2",
+  "sourceSHA256": {},
+  "environment": "win32 10.0.26200 x64; local desktop engine; no deployed or physical-device evidence",
+  "driverSHA256": "8a123548906ac5bfe7eb7653d9b9dd99ac409e943b0b3edf9b8d250fdfc8a4ac",
+  "limits": {
+    "loadingMs": 30000,
+    "executionMs": 5000,
+    "driverDeadlineMs": 36000
+  },
+  "runs": [
+    {
+      "name": "cold",
+      "state": "completed",
+      "stdout": "supplied input\n",
+      "stderr": "error channel\n",
+      "detail": "",
+      "version": "314.0.7",
+      "python": "3.14.2 (main, Sep 14 2026, 03:03:51) [Clang 23.0.0git (https:/github.com/llvm/llvm-project e5927fecf8a6ce89e1a4eac5b8",
+      "heapBytes": 31457280,
+      "loadMs": 3559,
+      "totalMs": 3609,
+      "resources": [
+        {
+          "path": "runtime/314.0.7/pyodide.mjs",
+          "transferSize": 18231,
+          "encodedBodySize": 17931,
+          "decodedBodySize": 17931
+        },
+        {
+          "path": "runtime/314.0.7/pyodide-lock.json",
+          "transferSize": 119377,
+          "encodedBodySize": 119077,
+          "decodedBodySize": 119077
+        },
+        {
+          "path": "runtime/314.0.7/pyodide.asm.mjs",
+          "transferSize": 1250644,
+          "encodedBodySize": 1250344,
+          "decodedBodySize": 1250344
+        },
+        {
+          "path": "runtime/314.0.7/python_stdlib.zip",
+          "transferSize": 2545937,
+          "encodedBodySize": 2545637,
+          "decodedBodySize": 2545637
+        },
+        {
+          "path": "runtime/314.0.7/pyodide.asm.wasm",
+          "transferSize": 9598518,
+          "encodedBodySize": 9598218,
+          "decodedBodySize": 9598218
+        }
+      ],
+      "framesRemaining": 0,
+      "workersCreated": 1,
+      "workersRemaining": 0,
+      "hostSentinel": "Theory/progress sentinel"
+    },
+    {
+      "name": "same-page-warm",
+      "state": "completed",
+      "stdout": "é\n끝",
+      "stderr": "",
+      "detail": "",
+      "version": "314.0.7",
+      "python": "3.14.2 (main, Sep 14 2026, 03:03:51) [Clang 23.0.0git (https:/github.com/llvm/llvm-project e5927fecf8a6ce89e1a4eac5b8",
+      "heapBytes": 31457280,
+      "loadMs": 4137,
+      "totalMs": 4178,
+      "resources": [],
+      "framesRemaining": 0,
+      "workersCreated": 1,
+      "workersRemaining": 0,
+      "hostSentinel": "Theory/progress sentinel"
+    },
+    {
+      "name": "reload",
+      "state": "completed",
+      "stdout": "supplied input\n",
+      "stderr": "error channel\n",
+      "detail": "",
+      "version": "314.0.7",
+      "python": "3.14.2 (main, Sep 14 2026, 03:03:51) [Clang 23.0.0git (https:/github.com/llvm/llvm-project e5927fecf8a6ce89e1a4eac5b8",
+      "heapBytes": 31457280,
+      "loadMs": 4318,
+      "totalMs": 4363,
+      "resources": [
+        {
+          "path": "runtime/314.0.7/pyodide.mjs",
+          "transferSize": 0,
+          "encodedBodySize": 17931,
+          "decodedBodySize": 17931
+        },
+        {
+          "path": "runtime/314.0.7/pyodide.asm.mjs",
+          "transferSize": 0,
+          "encodedBodySize": 1250344,
+          "decodedBodySize": 1250344
+        },
+        {
+          "path": "runtime/314.0.7/pyodide.asm.wasm",
+          "transferSize": 0,
+          "encodedBodySize": 9598218,
+          "decodedBodySize": 9598218
+        },
+        {
+          "path": "runtime/314.0.7/pyodide-lock.json",
+          "transferSize": 0,
+          "encodedBodySize": 119077,
+          "decodedBodySize": 119077
+        },
+        {
+          "path": "runtime/314.0.7/python_stdlib.zip",
+          "transferSize": 0,
+          "encodedBodySize": 2545637,
+          "decodedBodySize": 2545637
+        }
+      ],
+      "framesRemaining": 0,
+      "workersCreated": 1,
+      "workersRemaining": 0,
+      "hostSentinel": "Theory/progress sentinel"
+    }
+  ],
+  "diagnostics": [
+    {
+      "kind": "console-error",
+      "message": "[JavaScript Error: \"Content-Security-Policy: The page’s settings blocked the loading of a resource (img-src) at http://127.0.0.1:3191/favicon.ico because it violates the following directive: “default-src 'none'”\" {file: \"resource:///modules/FaviconLoader.sys.mjs\" line: 232}]"
+    },
+    {
+      "kind": "console-error",
+      "message": "[JavaScript Error: \"Content-Security-Policy: The page’s settings blocked the loading of a resource (img-src) at http://127.0.0.1:3191/favicon.ico because it violates the following directive: “default-src 'none'”\" {file: \"resource:///modules/FaviconLoader.sys.mjs\" line: 232}]"
+    }
+  ],
+  "outcome": "passed",
+  "browser": "157.0"
+}

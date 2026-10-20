@@ -1,0 +1,5851 @@
+{
+  "date": "2026-10-20T05:22:46.808Z",
+  "environment": "win32 10.0.26200 x64; local desktop; not physical mobile or low-memory exhaustion",
+  "origin": "http://127.0.0.1:3190",
+  "limits": {
+    "loadingMs": 30000,
+    "executionMs": 5000,
+    "allocationBytes": 33554432,
+    "initialAvailableFloorBytes": 1610612736,
+    "abortAvailableFloorBytes": 805306368,
+    "abortSampledPrivateBytes": 1073741824,
+    "requestedSamplingIntervalMs": 250
+  },
+  "sourceSHA256": {
+    "host.mjs": "ca8806aaab72aa8098ff9358b15247b36d04e22ebfaa585267eee13ccf510b7c",
+    "frame.html": "975d4bbc65d5aac347c9aca1065f3c06d07899754b1168c8847ef99f1c8e64dc",
+    "worker.mjs": "e50f9aabab56778b16320e010b33c3a4cafe5960d95dd7b10f34d58d10e73265"
+  },
+  "driverSHA256": {
+    "check-resources.mjs": "4ba8038743fded06e6b458e47e87722a41a82a3bfb76b4044dda79461466b115",
+    "windows-memory.py": "85d10cd5092938d3a9a3e1d1ccdb191c766f754de116c5382984b8e9427550ce"
+  },
+  "samples": [
+    {
+      "elapsedMs": 284,
+      "phase": "idle",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 54833152,
+          "privateUsage": 18538496,
+          "peakWorkingSetBytes": 54833152,
+          "peakPrivateBytes": 18542592,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 62205952,
+          "privateUsage": 23130112,
+          "peakWorkingSetBytes": 62205952,
+          "peakPrivateBytes": 23130112,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40816640,
+          "privateUsage": 19947520,
+          "peakWorkingSetBytes": 40816640,
+          "peakPrivateBytes": 19947520,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 36626432,
+          "privateUsage": 14102528,
+          "peakWorkingSetBytes": 36626432,
+          "peakPrivateBytes": 14110720,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3885899776
+    },
+    {
+      "elapsedMs": 545,
+      "phase": "cold baseline",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 59174912,
+          "privateUsage": 20361216,
+          "peakWorkingSetBytes": 59174912,
+          "peakPrivateBytes": 20361216,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 142651392,
+          "privateUsage": 110161920,
+          "peakWorkingSetBytes": 250576896,
+          "peakPrivateBytes": 226926592,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40820736,
+          "privateUsage": 19951616,
+          "peakWorkingSetBytes": 40820736,
+          "peakPrivateBytes": 19951616,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41529344,
+          "privateUsage": 18952192,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3777802240
+    },
+    {
+      "elapsedMs": 799,
+      "phase": "cold baseline",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 56274944,
+          "privateUsage": 18780160,
+          "peakWorkingSetBytes": 68915200,
+          "peakPrivateBytes": 31526912,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 199139328,
+          "privateUsage": 186777600,
+          "peakWorkingSetBytes": 250576896,
+          "peakPrivateBytes": 229965824,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40820736,
+          "privateUsage": 19951616,
+          "peakWorkingSetBytes": 40820736,
+          "peakPrivateBytes": 19951616,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41570304,
+          "privateUsage": 18952192,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3730292736
+    },
+    {
+      "elapsedMs": 1056,
+      "phase": "cold baseline",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 56324096,
+          "privateUsage": 18792448,
+          "peakWorkingSetBytes": 68915200,
+          "peakPrivateBytes": 31526912,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 214708224,
+          "privateUsage": 192274432,
+          "peakWorkingSetBytes": 250576896,
+          "peakPrivateBytes": 235937792,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40820736,
+          "privateUsage": 19951616,
+          "peakWorkingSetBytes": 40820736,
+          "peakPrivateBytes": 19951616,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41570304,
+          "privateUsage": 18952192,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3708366848
+    },
+    {
+      "elapsedMs": 1325,
+      "phase": "cold baseline",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 56328192,
+          "privateUsage": 18792448,
+          "peakWorkingSetBytes": 68915200,
+          "peakPrivateBytes": 31526912,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 242659328,
+          "privateUsage": 224194560,
+          "peakWorkingSetBytes": 264978432,
+          "peakPrivateBytes": 253358080,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40820736,
+          "privateUsage": 19951616,
+          "peakWorkingSetBytes": 40820736,
+          "peakPrivateBytes": 19951616,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41570304,
+          "privateUsage": 18952192,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3665821696
+    },
+    {
+      "elapsedMs": 1589,
+      "phase": "cold baseline",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 56328192,
+          "privateUsage": 18792448,
+          "peakWorkingSetBytes": 68915200,
+          "peakPrivateBytes": 31526912,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 205041664,
+          "privateUsage": 176234496,
+          "peakWorkingSetBytes": 264978432,
+          "peakPrivateBytes": 253358080,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40820736,
+          "privateUsage": 19951616,
+          "peakWorkingSetBytes": 40820736,
+          "peakPrivateBytes": 19951616,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41570304,
+          "privateUsage": 18952192,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3697508352
+    },
+    {
+      "elapsedMs": 1861,
+      "phase": "cold baseline",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 56328192,
+          "privateUsage": 18792448,
+          "peakWorkingSetBytes": 68915200,
+          "peakPrivateBytes": 31526912,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 206512128,
+          "privateUsage": 176586752,
+          "peakWorkingSetBytes": 264978432,
+          "peakPrivateBytes": 253358080,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40820736,
+          "privateUsage": 19951616,
+          "peakWorkingSetBytes": 40820736,
+          "peakPrivateBytes": 19951616,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41570304,
+          "privateUsage": 18952192,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3698671616
+    },
+    {
+      "elapsedMs": 2130,
+      "phase": "cold baseline",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 56328192,
+          "privateUsage": 18792448,
+          "peakWorkingSetBytes": 68915200,
+          "peakPrivateBytes": 31526912,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 207876096,
+          "privateUsage": 177938432,
+          "peakWorkingSetBytes": 264978432,
+          "peakPrivateBytes": 253358080,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40820736,
+          "privateUsage": 19951616,
+          "peakWorkingSetBytes": 40820736,
+          "peakPrivateBytes": 19951616,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41570304,
+          "privateUsage": 18952192,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3686191104
+    },
+    {
+      "elapsedMs": 2467,
+      "phase": "cold baseline",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57438208,
+          "privateUsage": 19914752,
+          "peakWorkingSetBytes": 68915200,
+          "peakPrivateBytes": 31526912,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 139845632,
+          "privateUsage": 87674880,
+          "peakWorkingSetBytes": 264978432,
+          "peakPrivateBytes": 253358080,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40824832,
+          "privateUsage": 19955712,
+          "peakWorkingSetBytes": 40824832,
+          "peakPrivateBytes": 19955712,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41570304,
+          "privateUsage": 18952192,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3729993728
+    },
+    {
+      "elapsedMs": 2744,
+      "phase": "warm baseline",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57262080,
+          "privateUsage": 19689472,
+          "peakWorkingSetBytes": 69943296,
+          "peakPrivateBytes": 32436224,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 231944192,
+          "privateUsage": 218398720,
+          "peakWorkingSetBytes": 264978432,
+          "peakPrivateBytes": 253358080,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40833024,
+          "privateUsage": 19963904,
+          "peakWorkingSetBytes": 40833024,
+          "peakPrivateBytes": 19963904,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41570304,
+          "privateUsage": 18952192,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3621593088
+    },
+    {
+      "elapsedMs": 3002,
+      "phase": "warm baseline",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57262080,
+          "privateUsage": 19689472,
+          "peakWorkingSetBytes": 69943296,
+          "peakPrivateBytes": 32436224,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 219607040,
+          "privateUsage": 201076736,
+          "peakWorkingSetBytes": 264978432,
+          "peakPrivateBytes": 253358080,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40833024,
+          "privateUsage": 19963904,
+          "peakWorkingSetBytes": 40833024,
+          "peakPrivateBytes": 19963904,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41570304,
+          "privateUsage": 18952192,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3639775232
+    },
+    {
+      "elapsedMs": 3262,
+      "phase": "warm baseline",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57262080,
+          "privateUsage": 19689472,
+          "peakWorkingSetBytes": 69943296,
+          "peakPrivateBytes": 32436224,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 248983552,
+          "privateUsage": 236531712,
+          "peakWorkingSetBytes": 265101312,
+          "peakPrivateBytes": 257028096,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40833024,
+          "privateUsage": 19963904,
+          "peakWorkingSetBytes": 40833024,
+          "peakPrivateBytes": 19963904,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41570304,
+          "privateUsage": 18952192,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3606564864
+    },
+    {
+      "elapsedMs": 3535,
+      "phase": "warm baseline",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57262080,
+          "privateUsage": 19689472,
+          "peakWorkingSetBytes": 69943296,
+          "peakPrivateBytes": 32436224,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 242806784,
+          "privateUsage": 225808384,
+          "peakWorkingSetBytes": 265101312,
+          "peakPrivateBytes": 257028096,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40833024,
+          "privateUsage": 19963904,
+          "peakWorkingSetBytes": 40833024,
+          "peakPrivateBytes": 19963904,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41570304,
+          "privateUsage": 18952192,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3609477120
+    },
+    {
+      "elapsedMs": 3797,
+      "phase": "warm baseline",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57262080,
+          "privateUsage": 19689472,
+          "peakWorkingSetBytes": 69943296,
+          "peakPrivateBytes": 32436224,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 222793728,
+          "privateUsage": 200835072,
+          "peakWorkingSetBytes": 265101312,
+          "peakPrivateBytes": 257028096,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40833024,
+          "privateUsage": 19963904,
+          "peakWorkingSetBytes": 40833024,
+          "peakPrivateBytes": 19963904,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41570304,
+          "privateUsage": 18952192,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3626016768
+    },
+    {
+      "elapsedMs": 4059,
+      "phase": "warm baseline",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57262080,
+          "privateUsage": 19689472,
+          "peakWorkingSetBytes": 69943296,
+          "peakPrivateBytes": 32436224,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 222982144,
+          "privateUsage": 201015296,
+          "peakWorkingSetBytes": 265101312,
+          "peakPrivateBytes": 257028096,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40833024,
+          "privateUsage": 19963904,
+          "peakWorkingSetBytes": 40833024,
+          "peakPrivateBytes": 19963904,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41570304,
+          "privateUsage": 18952192,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3622932480
+    },
+    {
+      "elapsedMs": 4324,
+      "phase": "warm baseline",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57262080,
+          "privateUsage": 19689472,
+          "peakWorkingSetBytes": 69943296,
+          "peakPrivateBytes": 32436224,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 224051200,
+          "privateUsage": 201043968,
+          "peakWorkingSetBytes": 265101312,
+          "peakPrivateBytes": 257028096,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40833024,
+          "privateUsage": 19963904,
+          "peakWorkingSetBytes": 40833024,
+          "peakPrivateBytes": 19963904,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41570304,
+          "privateUsage": 18952192,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3625365504
+    },
+    {
+      "elapsedMs": 4583,
+      "phase": "warm baseline",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57262080,
+          "privateUsage": 19689472,
+          "peakWorkingSetBytes": 69943296,
+          "peakPrivateBytes": 32436224,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 224202752,
+          "privateUsage": 201150464,
+          "peakWorkingSetBytes": 265101312,
+          "peakPrivateBytes": 257028096,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40833024,
+          "privateUsage": 19963904,
+          "peakWorkingSetBytes": 40833024,
+          "peakPrivateBytes": 19963904,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41570304,
+          "privateUsage": 18952192,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3622801408
+    },
+    {
+      "elapsedMs": 4843,
+      "phase": "warm baseline",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57262080,
+          "privateUsage": 19689472,
+          "peakWorkingSetBytes": 69943296,
+          "peakPrivateBytes": 32436224,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 224317440,
+          "privateUsage": 201261056,
+          "peakWorkingSetBytes": 265101312,
+          "peakPrivateBytes": 257028096,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40833024,
+          "privateUsage": 19963904,
+          "peakWorkingSetBytes": 40833024,
+          "peakPrivateBytes": 19963904,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41570304,
+          "privateUsage": 18952192,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3633319936
+    },
+    {
+      "elapsedMs": 5116,
+      "phase": "warm baseline",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57266176,
+          "privateUsage": 19689472,
+          "peakWorkingSetBytes": 69943296,
+          "peakPrivateBytes": 32436224,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 224342016,
+          "privateUsage": 201277440,
+          "peakWorkingSetBytes": 265101312,
+          "peakPrivateBytes": 257028096,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40833024,
+          "privateUsage": 19963904,
+          "peakWorkingSetBytes": 40833024,
+          "peakPrivateBytes": 19963904,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41570304,
+          "privateUsage": 18952192,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3640225792
+    },
+    {
+      "elapsedMs": 5381,
+      "phase": "warm baseline",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57327616,
+          "privateUsage": 19705856,
+          "peakWorkingSetBytes": 69943296,
+          "peakPrivateBytes": 32436224,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 224468992,
+          "privateUsage": 201400320,
+          "peakWorkingSetBytes": 265101312,
+          "peakPrivateBytes": 257028096,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40833024,
+          "privateUsage": 19963904,
+          "peakWorkingSetBytes": 40833024,
+          "peakPrivateBytes": 19963904,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41590784,
+          "privateUsage": 18952192,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3641470976
+    },
+    {
+      "elapsedMs": 5642,
+      "phase": "warm baseline",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57327616,
+          "privateUsage": 19705856,
+          "peakWorkingSetBytes": 69943296,
+          "peakPrivateBytes": 32436224,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 225132544,
+          "privateUsage": 202166272,
+          "peakWorkingSetBytes": 265101312,
+          "peakPrivateBytes": 257028096,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40833024,
+          "privateUsage": 19963904,
+          "peakWorkingSetBytes": 40833024,
+          "peakPrivateBytes": 19963904,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41590784,
+          "privateUsage": 18952192,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3642966016
+    },
+    {
+      "elapsedMs": 5902,
+      "phase": "warm baseline",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57327616,
+          "privateUsage": 19705856,
+          "peakWorkingSetBytes": 69943296,
+          "peakPrivateBytes": 32436224,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 225234944,
+          "privateUsage": 202240000,
+          "peakWorkingSetBytes": 265101312,
+          "peakPrivateBytes": 257028096,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40833024,
+          "privateUsage": 19963904,
+          "peakWorkingSetBytes": 40833024,
+          "peakPrivateBytes": 19963904,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41590784,
+          "privateUsage": 18952192,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3633991680
+    },
+    {
+      "elapsedMs": 6162,
+      "phase": "warm baseline",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57327616,
+          "privateUsage": 19705856,
+          "peakWorkingSetBytes": 69943296,
+          "peakPrivateBytes": 32436224,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 225533952,
+          "privateUsage": 202551296,
+          "peakWorkingSetBytes": 265101312,
+          "peakPrivateBytes": 257028096,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40833024,
+          "privateUsage": 19963904,
+          "peakWorkingSetBytes": 40833024,
+          "peakPrivateBytes": 19963904,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41590784,
+          "privateUsage": 18952192,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3634106368
+    },
+    {
+      "elapsedMs": 6426,
+      "phase": "warm baseline",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57327616,
+          "privateUsage": 19705856,
+          "peakWorkingSetBytes": 69943296,
+          "peakPrivateBytes": 32436224,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 225611776,
+          "privateUsage": 202629120,
+          "peakWorkingSetBytes": 265101312,
+          "peakPrivateBytes": 257028096,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40833024,
+          "privateUsage": 19963904,
+          "peakWorkingSetBytes": 40833024,
+          "peakPrivateBytes": 19963904,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41590784,
+          "privateUsage": 18952192,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3633561600
+    },
+    {
+      "elapsedMs": 6697,
+      "phase": "warm baseline",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57327616,
+          "privateUsage": 19705856,
+          "peakWorkingSetBytes": 69943296,
+          "peakPrivateBytes": 32436224,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 226775040,
+          "privateUsage": 203313152,
+          "peakWorkingSetBytes": 265101312,
+          "peakPrivateBytes": 257028096,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40833024,
+          "privateUsage": 19963904,
+          "peakWorkingSetBytes": 40833024,
+          "peakPrivateBytes": 19963904,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41590784,
+          "privateUsage": 18952192,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3647209472
+    },
+    {
+      "elapsedMs": 6991,
+      "phase": "warm baseline",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57327616,
+          "privateUsage": 19705856,
+          "peakWorkingSetBytes": 69943296,
+          "peakPrivateBytes": 32436224,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 227221504,
+          "privateUsage": 203341824,
+          "peakWorkingSetBytes": 265101312,
+          "peakPrivateBytes": 257028096,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40833024,
+          "privateUsage": 19963904,
+          "peakWorkingSetBytes": 40833024,
+          "peakPrivateBytes": 19963904,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41590784,
+          "privateUsage": 18952192,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3649110016
+    },
+    {
+      "elapsedMs": 7267,
+      "phase": "warm baseline",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57327616,
+          "privateUsage": 19705856,
+          "peakWorkingSetBytes": 69943296,
+          "peakPrivateBytes": 32436224,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 228679680,
+          "privateUsage": 203452416,
+          "peakWorkingSetBytes": 265101312,
+          "peakPrivateBytes": 257028096,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40833024,
+          "privateUsage": 19963904,
+          "peakWorkingSetBytes": 40833024,
+          "peakPrivateBytes": 19963904,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41590784,
+          "privateUsage": 18952192,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3633139712
+    },
+    {
+      "elapsedMs": 7526,
+      "phase": "warm baseline",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57327616,
+          "privateUsage": 19705856,
+          "peakWorkingSetBytes": 69943296,
+          "peakPrivateBytes": 32436224,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 156413952,
+          "privateUsage": 111939584,
+          "peakWorkingSetBytes": 265101312,
+          "peakPrivateBytes": 257028096,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40833024,
+          "privateUsage": 19963904,
+          "peakWorkingSetBytes": 40833024,
+          "peakPrivateBytes": 19963904,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41590784,
+          "privateUsage": 18952192,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3706736640
+    },
+    {
+      "elapsedMs": 7790,
+      "phase": "bounded allocation",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57528320,
+          "privateUsage": 19935232,
+          "peakWorkingSetBytes": 69943296,
+          "peakPrivateBytes": 32436224,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 170221568,
+          "privateUsage": 126959616,
+          "peakWorkingSetBytes": 265101312,
+          "peakPrivateBytes": 257028096,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40833024,
+          "privateUsage": 19963904,
+          "peakWorkingSetBytes": 40833024,
+          "peakPrivateBytes": 19963904,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41611264,
+          "privateUsage": 18956288,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3718864896
+    },
+    {
+      "elapsedMs": 8058,
+      "phase": "bounded allocation",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57688064,
+          "privateUsage": 20094976,
+          "peakWorkingSetBytes": 69943296,
+          "peakPrivateBytes": 32436224,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 192651264,
+          "privateUsage": 149778432,
+          "peakWorkingSetBytes": 265101312,
+          "peakPrivateBytes": 257028096,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40833024,
+          "privateUsage": 19963904,
+          "peakWorkingSetBytes": 40833024,
+          "peakPrivateBytes": 19963904,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41611264,
+          "privateUsage": 18956288,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3682185216
+    },
+    {
+      "elapsedMs": 8318,
+      "phase": "bounded allocation",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57688064,
+          "privateUsage": 20094976,
+          "peakWorkingSetBytes": 70381568,
+          "peakPrivateBytes": 32854016,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 253763584,
+          "privateUsage": 240193536,
+          "peakWorkingSetBytes": 265101312,
+          "peakPrivateBytes": 257028096,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40833024,
+          "privateUsage": 19963904,
+          "peakWorkingSetBytes": 40833024,
+          "peakPrivateBytes": 19963904,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41611264,
+          "privateUsage": 18956288,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3624886272
+    },
+    {
+      "elapsedMs": 8578,
+      "phase": "bounded allocation",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57688064,
+          "privateUsage": 20094976,
+          "peakWorkingSetBytes": 70381568,
+          "peakPrivateBytes": 32854016,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 224223232,
+          "privateUsage": 211968000,
+          "peakWorkingSetBytes": 265101312,
+          "peakPrivateBytes": 257028096,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40833024,
+          "privateUsage": 19963904,
+          "peakWorkingSetBytes": 40833024,
+          "peakPrivateBytes": 19963904,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41611264,
+          "privateUsage": 18956288,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3643711488
+    },
+    {
+      "elapsedMs": 8849,
+      "phase": "bounded allocation",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57688064,
+          "privateUsage": 20094976,
+          "peakWorkingSetBytes": 70381568,
+          "peakPrivateBytes": 32854016,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 238415872,
+          "privateUsage": 226971648,
+          "peakWorkingSetBytes": 265101312,
+          "peakPrivateBytes": 257028096,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40833024,
+          "privateUsage": 19963904,
+          "peakWorkingSetBytes": 40833024,
+          "peakPrivateBytes": 19963904,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41611264,
+          "privateUsage": 18956288,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3631943680
+    },
+    {
+      "elapsedMs": 9111,
+      "phase": "bounded allocation",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57688064,
+          "privateUsage": 20094976,
+          "peakWorkingSetBytes": 70381568,
+          "peakPrivateBytes": 32854016,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 221634560,
+          "privateUsage": 204697600,
+          "peakWorkingSetBytes": 265101312,
+          "peakPrivateBytes": 257028096,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40833024,
+          "privateUsage": 19963904,
+          "peakWorkingSetBytes": 40833024,
+          "peakPrivateBytes": 19963904,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41611264,
+          "privateUsage": 18956288,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3630718976
+    },
+    {
+      "elapsedMs": 9379,
+      "phase": "bounded allocation",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57688064,
+          "privateUsage": 20094976,
+          "peakWorkingSetBytes": 70381568,
+          "peakPrivateBytes": 32854016,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 236388352,
+          "privateUsage": 221282304,
+          "peakWorkingSetBytes": 265101312,
+          "peakPrivateBytes": 257028096,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40833024,
+          "privateUsage": 19963904,
+          "peakWorkingSetBytes": 40833024,
+          "peakPrivateBytes": 19963904,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41611264,
+          "privateUsage": 18956288,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3602108416
+    },
+    {
+      "elapsedMs": 9678,
+      "phase": "bounded allocation",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57688064,
+          "privateUsage": 20094976,
+          "peakWorkingSetBytes": 70381568,
+          "peakPrivateBytes": 32854016,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 242163712,
+          "privateUsage": 228495360,
+          "peakWorkingSetBytes": 265101312,
+          "peakPrivateBytes": 257028096,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40833024,
+          "privateUsage": 19963904,
+          "peakWorkingSetBytes": 40833024,
+          "peakPrivateBytes": 19963904,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41611264,
+          "privateUsage": 18956288,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3562909696
+    },
+    {
+      "elapsedMs": 9966,
+      "phase": "bounded allocation",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57688064,
+          "privateUsage": 20094976,
+          "peakWorkingSetBytes": 70381568,
+          "peakPrivateBytes": 32854016,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 241659904,
+          "privateUsage": 227762176,
+          "peakWorkingSetBytes": 265101312,
+          "peakPrivateBytes": 257028096,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40833024,
+          "privateUsage": 19963904,
+          "peakWorkingSetBytes": 40833024,
+          "peakPrivateBytes": 19963904,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41611264,
+          "privateUsage": 18956288,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3553206272
+    },
+    {
+      "elapsedMs": 10381,
+      "phase": "bounded allocation",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57733120,
+          "privateUsage": 20094976,
+          "peakWorkingSetBytes": 70381568,
+          "peakPrivateBytes": 32854016,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 221880320,
+          "privateUsage": 201748480,
+          "peakWorkingSetBytes": 265101312,
+          "peakPrivateBytes": 257028096,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40833024,
+          "privateUsage": 19963904,
+          "peakWorkingSetBytes": 40833024,
+          "peakPrivateBytes": 19963904,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41611264,
+          "privateUsage": 18956288,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3639324672
+    },
+    {
+      "elapsedMs": 10655,
+      "phase": "bounded allocation",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57733120,
+          "privateUsage": 20094976,
+          "peakWorkingSetBytes": 70381568,
+          "peakPrivateBytes": 32854016,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 222134272,
+          "privateUsage": 201756672,
+          "peakWorkingSetBytes": 265101312,
+          "peakPrivateBytes": 257028096,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40833024,
+          "privateUsage": 19963904,
+          "peakWorkingSetBytes": 40833024,
+          "peakPrivateBytes": 19963904,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41611264,
+          "privateUsage": 18956288,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3642712064
+    },
+    {
+      "elapsedMs": 10927,
+      "phase": "bounded allocation",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57733120,
+          "privateUsage": 20094976,
+          "peakWorkingSetBytes": 70381568,
+          "peakPrivateBytes": 32854016,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 263094272,
+          "privateUsage": 252706816,
+          "peakWorkingSetBytes": 265101312,
+          "peakPrivateBytes": 257028096,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40833024,
+          "privateUsage": 19963904,
+          "peakWorkingSetBytes": 40833024,
+          "peakPrivateBytes": 19963904,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41611264,
+          "privateUsage": 18956288,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3610304512
+    },
+    {
+      "elapsedMs": 11193,
+      "phase": "bounded allocation",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57733120,
+          "privateUsage": 20094976,
+          "peakWorkingSetBytes": 70381568,
+          "peakPrivateBytes": 32854016,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 284274688,
+          "privateUsage": 278208512,
+          "peakWorkingSetBytes": 284348416,
+          "peakPrivateBytes": 278208512,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40833024,
+          "privateUsage": 19963904,
+          "peakWorkingSetBytes": 40833024,
+          "peakPrivateBytes": 19963904,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41611264,
+          "privateUsage": 18956288,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3691446272
+    },
+    {
+      "elapsedMs": 11454,
+      "phase": "bounded allocation",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57733120,
+          "privateUsage": 20094976,
+          "peakWorkingSetBytes": 70381568,
+          "peakPrivateBytes": 32854016,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 246321152,
+          "privateUsage": 229220352,
+          "peakWorkingSetBytes": 284348416,
+          "peakPrivateBytes": 278208512,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40833024,
+          "privateUsage": 19963904,
+          "peakWorkingSetBytes": 40833024,
+          "peakPrivateBytes": 19963904,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41611264,
+          "privateUsage": 18956288,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3737997312
+    },
+    {
+      "elapsedMs": 11718,
+      "phase": "bounded allocation",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57733120,
+          "privateUsage": 20094976,
+          "peakWorkingSetBytes": 70381568,
+          "peakPrivateBytes": 32854016,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 224899072,
+          "privateUsage": 202297344,
+          "peakWorkingSetBytes": 284348416,
+          "peakPrivateBytes": 278208512,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40833024,
+          "privateUsage": 19963904,
+          "peakWorkingSetBytes": 40833024,
+          "peakPrivateBytes": 19963904,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41611264,
+          "privateUsage": 18956288,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3762851840
+    },
+    {
+      "elapsedMs": 11990,
+      "phase": "bounded allocation",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57733120,
+          "privateUsage": 20094976,
+          "peakWorkingSetBytes": 70381568,
+          "peakPrivateBytes": 32854016,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 225034240,
+          "privateUsage": 202428416,
+          "peakWorkingSetBytes": 284348416,
+          "peakPrivateBytes": 278208512,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40833024,
+          "privateUsage": 19963904,
+          "peakWorkingSetBytes": 40833024,
+          "peakPrivateBytes": 19963904,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41611264,
+          "privateUsage": 18956288,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3753336832
+    },
+    {
+      "elapsedMs": 12264,
+      "phase": "bounded allocation",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57737216,
+          "privateUsage": 20094976,
+          "peakWorkingSetBytes": 70381568,
+          "peakPrivateBytes": 32854016,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 226136064,
+          "privateUsage": 202461184,
+          "peakWorkingSetBytes": 284348416,
+          "peakPrivateBytes": 278208512,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40833024,
+          "privateUsage": 19963904,
+          "peakWorkingSetBytes": 40833024,
+          "peakPrivateBytes": 19963904,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41611264,
+          "privateUsage": 18956288,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3752914944
+    },
+    {
+      "elapsedMs": 12533,
+      "phase": "bounded allocation",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57737216,
+          "privateUsage": 20094976,
+          "peakWorkingSetBytes": 70381568,
+          "peakPrivateBytes": 32854016,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 226254848,
+          "privateUsage": 202579968,
+          "peakWorkingSetBytes": 284348416,
+          "peakPrivateBytes": 278208512,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40833024,
+          "privateUsage": 19963904,
+          "peakWorkingSetBytes": 40833024,
+          "peakPrivateBytes": 19963904,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41611264,
+          "privateUsage": 18956288,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3753086976
+    },
+    {
+      "elapsedMs": 12798,
+      "phase": "bounded allocation",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57737216,
+          "privateUsage": 20094976,
+          "peakWorkingSetBytes": 70381568,
+          "peakPrivateBytes": 32854016,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 226267136,
+          "privateUsage": 202588160,
+          "peakWorkingSetBytes": 284348416,
+          "peakPrivateBytes": 278208512,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40833024,
+          "privateUsage": 19963904,
+          "peakWorkingSetBytes": 40833024,
+          "peakPrivateBytes": 19963904,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41611264,
+          "privateUsage": 18956288,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3736772608
+    },
+    {
+      "elapsedMs": 13055,
+      "phase": "bounded allocation",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57737216,
+          "privateUsage": 20094976,
+          "peakWorkingSetBytes": 70381568,
+          "peakPrivateBytes": 32854016,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 226340864,
+          "privateUsage": 202657792,
+          "peakWorkingSetBytes": 284348416,
+          "peakPrivateBytes": 278208512,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40833024,
+          "privateUsage": 19963904,
+          "peakWorkingSetBytes": 40833024,
+          "peakPrivateBytes": 19963904,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41611264,
+          "privateUsage": 18956288,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3755524096
+    },
+    {
+      "elapsedMs": 13318,
+      "phase": "bounded allocation",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57737216,
+          "privateUsage": 20094976,
+          "peakWorkingSetBytes": 70381568,
+          "peakPrivateBytes": 32854016,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 227053568,
+          "privateUsage": 203464704,
+          "peakWorkingSetBytes": 284348416,
+          "peakPrivateBytes": 278208512,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40833024,
+          "privateUsage": 19963904,
+          "peakWorkingSetBytes": 40833024,
+          "peakPrivateBytes": 19963904,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41611264,
+          "privateUsage": 18956288,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3761725440
+    },
+    {
+      "elapsedMs": 13582,
+      "phase": "bounded allocation",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57737216,
+          "privateUsage": 20094976,
+          "peakWorkingSetBytes": 70381568,
+          "peakPrivateBytes": 32854016,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 227172352,
+          "privateUsage": 203550720,
+          "peakWorkingSetBytes": 284348416,
+          "peakPrivateBytes": 278208512,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40833024,
+          "privateUsage": 19963904,
+          "peakWorkingSetBytes": 40833024,
+          "peakPrivateBytes": 19963904,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41611264,
+          "privateUsage": 18956288,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3763523584
+    },
+    {
+      "elapsedMs": 13858,
+      "phase": "bounded allocation",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57737216,
+          "privateUsage": 20094976,
+          "peakWorkingSetBytes": 70381568,
+          "peakPrivateBytes": 32854016,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 227450880,
+          "privateUsage": 203862016,
+          "peakWorkingSetBytes": 284348416,
+          "peakPrivateBytes": 278208512,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40833024,
+          "privateUsage": 19963904,
+          "peakWorkingSetBytes": 40833024,
+          "peakPrivateBytes": 19963904,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41611264,
+          "privateUsage": 18956288,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3753594880
+    },
+    {
+      "elapsedMs": 14127,
+      "phase": "bounded allocation",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57737216,
+          "privateUsage": 20094976,
+          "peakWorkingSetBytes": 70381568,
+          "peakPrivateBytes": 32854016,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 227495936,
+          "privateUsage": 203902976,
+          "peakWorkingSetBytes": 284348416,
+          "peakPrivateBytes": 278208512,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40833024,
+          "privateUsage": 19963904,
+          "peakWorkingSetBytes": 40833024,
+          "peakPrivateBytes": 19963904,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41611264,
+          "privateUsage": 18956288,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3765161984
+    },
+    {
+      "elapsedMs": 14388,
+      "phase": "bounded allocation",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57737216,
+          "privateUsage": 20094976,
+          "peakWorkingSetBytes": 70381568,
+          "peakPrivateBytes": 32854016,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 228569088,
+          "privateUsage": 204464128,
+          "peakWorkingSetBytes": 284348416,
+          "peakPrivateBytes": 278208512,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40833024,
+          "privateUsage": 19963904,
+          "peakWorkingSetBytes": 40833024,
+          "peakPrivateBytes": 19963904,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41611264,
+          "privateUsage": 18956288,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3761516544
+    },
+    {
+      "elapsedMs": 14658,
+      "phase": "bounded allocation",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57737216,
+          "privateUsage": 20094976,
+          "peakWorkingSetBytes": 70381568,
+          "peakPrivateBytes": 32854016,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 229068800,
+          "privateUsage": 204509184,
+          "peakWorkingSetBytes": 284348416,
+          "peakPrivateBytes": 278208512,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40833024,
+          "privateUsage": 19963904,
+          "peakWorkingSetBytes": 40833024,
+          "peakPrivateBytes": 19963904,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41611264,
+          "privateUsage": 18956288,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3770159104
+    },
+    {
+      "elapsedMs": 14922,
+      "phase": "bounded allocation",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57737216,
+          "privateUsage": 20094976,
+          "peakWorkingSetBytes": 70381568,
+          "peakPrivateBytes": 32854016,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 230481920,
+          "privateUsage": 204648448,
+          "peakWorkingSetBytes": 284348416,
+          "peakPrivateBytes": 278208512,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40833024,
+          "privateUsage": 19963904,
+          "peakWorkingSetBytes": 40833024,
+          "peakPrivateBytes": 19963904,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41611264,
+          "privateUsage": 18956288,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3768860672
+    },
+    {
+      "elapsedMs": 15190,
+      "phase": "bounded allocation",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57737216,
+          "privateUsage": 20094976,
+          "peakWorkingSetBytes": 70381568,
+          "peakPrivateBytes": 32854016,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 229679104,
+          "privateUsage": 203546624,
+          "peakWorkingSetBytes": 284348416,
+          "peakPrivateBytes": 278208512,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40833024,
+          "privateUsage": 19963904,
+          "peakWorkingSetBytes": 40833024,
+          "peakPrivateBytes": 19963904,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41611264,
+          "privateUsage": 18956288,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3760459776
+    },
+    {
+      "elapsedMs": 15448,
+      "phase": "bounded allocation",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57802752,
+          "privateUsage": 20164608,
+          "peakWorkingSetBytes": 70381568,
+          "peakPrivateBytes": 32854016,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 263143424,
+          "privateUsage": 232345600,
+          "peakWorkingSetBytes": 284348416,
+          "peakPrivateBytes": 278208512,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40833024,
+          "privateUsage": 19963904,
+          "peakWorkingSetBytes": 40833024,
+          "peakPrivateBytes": 19963904,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41611264,
+          "privateUsage": 18956288,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3731357696
+    },
+    {
+      "elapsedMs": 15706,
+      "phase": "bounded allocation",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57802752,
+          "privateUsage": 20164608,
+          "peakWorkingSetBytes": 70381568,
+          "peakPrivateBytes": 32854016,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 263147520,
+          "privateUsage": 232345600,
+          "peakWorkingSetBytes": 284348416,
+          "peakPrivateBytes": 278208512,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40833024,
+          "privateUsage": 19963904,
+          "peakWorkingSetBytes": 40833024,
+          "peakPrivateBytes": 19963904,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41611264,
+          "privateUsage": 18956288,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3731083264
+    },
+    {
+      "elapsedMs": 15962,
+      "phase": "bounded allocation",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57802752,
+          "privateUsage": 20164608,
+          "peakWorkingSetBytes": 70381568,
+          "peakPrivateBytes": 32854016,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 263151616,
+          "privateUsage": 232349696,
+          "peakWorkingSetBytes": 284348416,
+          "peakPrivateBytes": 278208512,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40833024,
+          "privateUsage": 19963904,
+          "peakWorkingSetBytes": 40833024,
+          "peakPrivateBytes": 19963904,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41611264,
+          "privateUsage": 18956288,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3734208512
+    },
+    {
+      "elapsedMs": 16224,
+      "phase": "fresh state",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57487360,
+          "privateUsage": 19906560,
+          "peakWorkingSetBytes": 70381568,
+          "peakPrivateBytes": 32854016,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 172605440,
+          "privateUsage": 128483328,
+          "peakWorkingSetBytes": 284348416,
+          "peakPrivateBytes": 278208512,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40833024,
+          "privateUsage": 19963904,
+          "peakWorkingSetBytes": 40833024,
+          "peakPrivateBytes": 19963904,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41619456,
+          "privateUsage": 18956288,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3827212288
+    },
+    {
+      "elapsedMs": 16483,
+      "phase": "fresh state",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57864192,
+          "privateUsage": 20283392,
+          "peakWorkingSetBytes": 70381568,
+          "peakPrivateBytes": 32854016,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 196591616,
+          "privateUsage": 153305088,
+          "peakWorkingSetBytes": 284348416,
+          "peakPrivateBytes": 278208512,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40833024,
+          "privateUsage": 19963904,
+          "peakWorkingSetBytes": 40833024,
+          "peakPrivateBytes": 19963904,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41619456,
+          "privateUsage": 18956288,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3846012928
+    },
+    {
+      "elapsedMs": 16744,
+      "phase": "fresh state",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57864192,
+          "privateUsage": 20283392,
+          "peakWorkingSetBytes": 70557696,
+          "peakPrivateBytes": 33042432,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 245907456,
+          "privateUsage": 202584064,
+          "peakWorkingSetBytes": 284348416,
+          "peakPrivateBytes": 278208512,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40833024,
+          "privateUsage": 19963904,
+          "peakWorkingSetBytes": 40833024,
+          "peakPrivateBytes": 19963904,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41619456,
+          "privateUsage": 18956288,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3793936384
+    },
+    {
+      "elapsedMs": 17014,
+      "phase": "fresh state",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57864192,
+          "privateUsage": 20283392,
+          "peakWorkingSetBytes": 70557696,
+          "peakPrivateBytes": 33042432,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 225591296,
+          "privateUsage": 212549632,
+          "peakWorkingSetBytes": 284348416,
+          "peakPrivateBytes": 278208512,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40833024,
+          "privateUsage": 19963904,
+          "peakWorkingSetBytes": 40833024,
+          "peakPrivateBytes": 19963904,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41623552,
+          "privateUsage": 18956288,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3819732992
+    },
+    {
+      "elapsedMs": 17274,
+      "phase": "fresh state",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57864192,
+          "privateUsage": 20283392,
+          "peakWorkingSetBytes": 70557696,
+          "peakPrivateBytes": 33042432,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 239718400,
+          "privateUsage": 227921920,
+          "peakWorkingSetBytes": 284348416,
+          "peakPrivateBytes": 278208512,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40833024,
+          "privateUsage": 19963904,
+          "peakWorkingSetBytes": 40833024,
+          "peakPrivateBytes": 19963904,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41623552,
+          "privateUsage": 18956288,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3795595264
+    },
+    {
+      "elapsedMs": 17546,
+      "phase": "fresh state",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57864192,
+          "privateUsage": 20283392,
+          "peakWorkingSetBytes": 70557696,
+          "peakPrivateBytes": 33042432,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 236232704,
+          "privateUsage": 218480640,
+          "peakWorkingSetBytes": 284348416,
+          "peakPrivateBytes": 278208512,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40833024,
+          "privateUsage": 19963904,
+          "peakWorkingSetBytes": 40833024,
+          "peakPrivateBytes": 19963904,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41623552,
+          "privateUsage": 18956288,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3808010240
+    },
+    {
+      "elapsedMs": 17809,
+      "phase": "fresh state",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57864192,
+          "privateUsage": 20283392,
+          "peakWorkingSetBytes": 70557696,
+          "peakPrivateBytes": 33042432,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 242589696,
+          "privateUsage": 228102144,
+          "peakWorkingSetBytes": 284348416,
+          "peakPrivateBytes": 278208512,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40833024,
+          "privateUsage": 19963904,
+          "peakWorkingSetBytes": 40833024,
+          "peakPrivateBytes": 19963904,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41623552,
+          "privateUsage": 18956288,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3791212544
+    },
+    {
+      "elapsedMs": 18078,
+      "phase": "fresh state",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57864192,
+          "privateUsage": 20283392,
+          "peakWorkingSetBytes": 70557696,
+          "peakPrivateBytes": 33042432,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 254099456,
+          "privateUsage": 237412352,
+          "peakWorkingSetBytes": 284348416,
+          "peakPrivateBytes": 278208512,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40833024,
+          "privateUsage": 19963904,
+          "peakWorkingSetBytes": 40833024,
+          "peakPrivateBytes": 19963904,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41623552,
+          "privateUsage": 18956288,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3783000064
+    },
+    {
+      "elapsedMs": 18340,
+      "phase": "fresh state",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57864192,
+          "privateUsage": 20283392,
+          "peakWorkingSetBytes": 70557696,
+          "peakPrivateBytes": 33042432,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 280809472,
+          "privateUsage": 274259968,
+          "peakWorkingSetBytes": 286834688,
+          "peakPrivateBytes": 281296896,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40833024,
+          "privateUsage": 19963904,
+          "peakWorkingSetBytes": 40833024,
+          "peakPrivateBytes": 19963904,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41623552,
+          "privateUsage": 18956288,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3760070656
+    },
+    {
+      "elapsedMs": 18601,
+      "phase": "fresh state",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57864192,
+          "privateUsage": 20283392,
+          "peakWorkingSetBytes": 70557696,
+          "peakPrivateBytes": 33042432,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 225517568,
+          "privateUsage": 202407936,
+          "peakWorkingSetBytes": 286834688,
+          "peakPrivateBytes": 281296896,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40833024,
+          "privateUsage": 19963904,
+          "peakWorkingSetBytes": 40833024,
+          "peakPrivateBytes": 19963904,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41623552,
+          "privateUsage": 18956288,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3807227904
+    },
+    {
+      "elapsedMs": 18870,
+      "phase": "fresh state",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57864192,
+          "privateUsage": 20283392,
+          "peakWorkingSetBytes": 70557696,
+          "peakPrivateBytes": 33042432,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 225742848,
+          "privateUsage": 202604544,
+          "peakWorkingSetBytes": 286834688,
+          "peakPrivateBytes": 281296896,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40833024,
+          "privateUsage": 19963904,
+          "peakWorkingSetBytes": 40833024,
+          "peakPrivateBytes": 19963904,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41623552,
+          "privateUsage": 18956288,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3809075200
+    },
+    {
+      "elapsedMs": 19134,
+      "phase": "fresh state",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57864192,
+          "privateUsage": 20283392,
+          "peakWorkingSetBytes": 70557696,
+          "peakPrivateBytes": 33042432,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 226824192,
+          "privateUsage": 202641408,
+          "peakWorkingSetBytes": 286834688,
+          "peakPrivateBytes": 281296896,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40833024,
+          "privateUsage": 19963904,
+          "peakWorkingSetBytes": 40833024,
+          "peakPrivateBytes": 19963904,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41623552,
+          "privateUsage": 18956288,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3809308672
+    },
+    {
+      "elapsedMs": 19392,
+      "phase": "fresh state",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57864192,
+          "privateUsage": 20283392,
+          "peakWorkingSetBytes": 70557696,
+          "peakPrivateBytes": 33042432,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 226951168,
+          "privateUsage": 202735616,
+          "peakWorkingSetBytes": 286834688,
+          "peakPrivateBytes": 281296896,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40833024,
+          "privateUsage": 19963904,
+          "peakWorkingSetBytes": 40833024,
+          "peakPrivateBytes": 19963904,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41623552,
+          "privateUsage": 18956288,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3809759232
+    },
+    {
+      "elapsedMs": 19676,
+      "phase": "fresh state",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57864192,
+          "privateUsage": 20283392,
+          "peakWorkingSetBytes": 70557696,
+          "peakPrivateBytes": 33042432,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 227016704,
+          "privateUsage": 202788864,
+          "peakWorkingSetBytes": 286834688,
+          "peakPrivateBytes": 281296896,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40833024,
+          "privateUsage": 19963904,
+          "peakWorkingSetBytes": 40833024,
+          "peakPrivateBytes": 19963904,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41623552,
+          "privateUsage": 18956288,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3827892224
+    },
+    {
+      "elapsedMs": 19943,
+      "phase": "fresh state",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57864192,
+          "privateUsage": 20283392,
+          "peakWorkingSetBytes": 70557696,
+          "peakPrivateBytes": 33042432,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 227090432,
+          "privateUsage": 202858496,
+          "peakWorkingSetBytes": 286834688,
+          "peakPrivateBytes": 281296896,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40833024,
+          "privateUsage": 19963904,
+          "peakWorkingSetBytes": 40833024,
+          "peakPrivateBytes": 19963904,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41623552,
+          "privateUsage": 18956288,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3827982336
+    },
+    {
+      "elapsedMs": 20210,
+      "phase": "fresh state",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57868288,
+          "privateUsage": 20287488,
+          "peakWorkingSetBytes": 70557696,
+          "peakPrivateBytes": 33042432,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 227135488,
+          "privateUsage": 202903552,
+          "peakWorkingSetBytes": 286834688,
+          "peakPrivateBytes": 281296896,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40833024,
+          "privateUsage": 19963904,
+          "peakWorkingSetBytes": 40833024,
+          "peakPrivateBytes": 19963904,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41623552,
+          "privateUsage": 18956288,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3830038528
+    },
+    {
+      "elapsedMs": 20472,
+      "phase": "fresh state",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57868288,
+          "privateUsage": 20287488,
+          "peakWorkingSetBytes": 70557696,
+          "peakPrivateBytes": 33042432,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 227852288,
+          "privateUsage": 203677696,
+          "peakWorkingSetBytes": 286834688,
+          "peakPrivateBytes": 281296896,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40833024,
+          "privateUsage": 19963904,
+          "peakWorkingSetBytes": 40833024,
+          "peakPrivateBytes": 19963904,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41623552,
+          "privateUsage": 18956288,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3828641792
+    },
+    {
+      "elapsedMs": 20743,
+      "phase": "fresh state",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57868288,
+          "privateUsage": 20287488,
+          "peakWorkingSetBytes": 70557696,
+          "peakPrivateBytes": 33042432,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 228134912,
+          "privateUsage": 203980800,
+          "peakWorkingSetBytes": 286834688,
+          "peakPrivateBytes": 281296896,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40833024,
+          "privateUsage": 19963904,
+          "peakWorkingSetBytes": 40833024,
+          "peakPrivateBytes": 19963904,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41623552,
+          "privateUsage": 18956288,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3829612544
+    },
+    {
+      "elapsedMs": 21000,
+      "phase": "fresh state",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57868288,
+          "privateUsage": 20287488,
+          "peakWorkingSetBytes": 70557696,
+          "peakPrivateBytes": 33042432,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 228208640,
+          "privateUsage": 204050432,
+          "peakWorkingSetBytes": 286834688,
+          "peakPrivateBytes": 281296896,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40833024,
+          "privateUsage": 19963904,
+          "peakWorkingSetBytes": 40833024,
+          "peakPrivateBytes": 19963904,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41623552,
+          "privateUsage": 18956288,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3823190016
+    },
+    {
+      "elapsedMs": 21271,
+      "phase": "fresh state",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57868288,
+          "privateUsage": 20287488,
+          "peakWorkingSetBytes": 70557696,
+          "peakPrivateBytes": 33042432,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 232816640,
+          "privateUsage": 209215488,
+          "peakWorkingSetBytes": 286834688,
+          "peakPrivateBytes": 281296896,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40833024,
+          "privateUsage": 19963904,
+          "peakWorkingSetBytes": 40833024,
+          "peakPrivateBytes": 19963904,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41623552,
+          "privateUsage": 18956288,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3815878656
+    },
+    {
+      "elapsedMs": 21562,
+      "phase": "fresh state",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57868288,
+          "privateUsage": 20287488,
+          "peakWorkingSetBytes": 70557696,
+          "peakPrivateBytes": 33042432,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 230088704,
+          "privateUsage": 205008896,
+          "peakWorkingSetBytes": 286834688,
+          "peakPrivateBytes": 281296896,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40833024,
+          "privateUsage": 19963904,
+          "peakWorkingSetBytes": 40833024,
+          "peakPrivateBytes": 19963904,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41623552,
+          "privateUsage": 18956288,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3812270080
+    },
+    {
+      "elapsedMs": 21817,
+      "phase": "fresh state",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57868288,
+          "privateUsage": 20287488,
+          "peakWorkingSetBytes": 70557696,
+          "peakPrivateBytes": 33042432,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 231493632,
+          "privateUsage": 205152256,
+          "peakWorkingSetBytes": 286834688,
+          "peakPrivateBytes": 281296896,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40833024,
+          "privateUsage": 19963904,
+          "peakWorkingSetBytes": 40833024,
+          "peakPrivateBytes": 19963904,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41623552,
+          "privateUsage": 18956288,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3811819520
+    },
+    {
+      "elapsedMs": 22071,
+      "phase": "fresh state",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57888768,
+          "privateUsage": 20307968,
+          "peakWorkingSetBytes": 70557696,
+          "peakPrivateBytes": 33042432,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 159514624,
+          "privateUsage": 113917952,
+          "peakWorkingSetBytes": 286834688,
+          "peakPrivateBytes": 281296896,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40833024,
+          "privateUsage": 19963904,
+          "peakWorkingSetBytes": 40833024,
+          "peakPrivateBytes": 19963904,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41623552,
+          "privateUsage": 18956288,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3880980480
+    },
+    {
+      "elapsedMs": 22328,
+      "phase": "cancel bounded allocation",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57847808,
+          "privateUsage": 20295680,
+          "peakWorkingSetBytes": 70557696,
+          "peakPrivateBytes": 33042432,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 255262720,
+          "privateUsage": 229285888,
+          "peakWorkingSetBytes": 308641792,
+          "peakPrivateBytes": 281296896,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40833024,
+          "privateUsage": 19963904,
+          "peakWorkingSetBytes": 40833024,
+          "peakPrivateBytes": 19963904,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41635840,
+          "privateUsage": 18968576,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3792662528
+    },
+    {
+      "elapsedMs": 22598,
+      "phase": "cancel bounded allocation",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57790464,
+          "privateUsage": 20197376,
+          "peakWorkingSetBytes": 70557696,
+          "peakPrivateBytes": 33042432,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 196018176,
+          "privateUsage": 152506368,
+          "peakWorkingSetBytes": 308641792,
+          "peakPrivateBytes": 281296896,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40837120,
+          "privateUsage": 19968000,
+          "peakWorkingSetBytes": 40837120,
+          "peakPrivateBytes": 19968000,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41635840,
+          "privateUsage": 18968576,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3838525440
+    },
+    {
+      "elapsedMs": 22866,
+      "phase": "cancel bounded allocation",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57790464,
+          "privateUsage": 20197376,
+          "peakWorkingSetBytes": 70557696,
+          "peakPrivateBytes": 33042432,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 257646592,
+          "privateUsage": 244666368,
+          "peakWorkingSetBytes": 308641792,
+          "peakPrivateBytes": 281296896,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40837120,
+          "privateUsage": 19968000,
+          "peakWorkingSetBytes": 40837120,
+          "peakPrivateBytes": 19968000,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41635840,
+          "privateUsage": 18968576,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3778617344
+    },
+    {
+      "elapsedMs": 23127,
+      "phase": "cancel bounded allocation",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57806848,
+          "privateUsage": 21254144,
+          "peakWorkingSetBytes": 70557696,
+          "peakPrivateBytes": 33042432,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 233832448,
+          "privateUsage": 221114368,
+          "peakWorkingSetBytes": 308641792,
+          "peakPrivateBytes": 281296896,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40837120,
+          "privateUsage": 19968000,
+          "peakWorkingSetBytes": 40837120,
+          "peakPrivateBytes": 19968000,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41635840,
+          "privateUsage": 18968576,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3801919488
+    },
+    {
+      "elapsedMs": 23383,
+      "phase": "cancel bounded allocation",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57806848,
+          "privateUsage": 21254144,
+          "peakWorkingSetBytes": 70557696,
+          "peakPrivateBytes": 33042432,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 246804480,
+          "privateUsage": 235245568,
+          "peakWorkingSetBytes": 308641792,
+          "peakPrivateBytes": 281296896,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40837120,
+          "privateUsage": 19968000,
+          "peakWorkingSetBytes": 40837120,
+          "peakPrivateBytes": 19968000,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41635840,
+          "privateUsage": 18968576,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3799379968
+    },
+    {
+      "elapsedMs": 23669,
+      "phase": "cancel bounded allocation",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57806848,
+          "privateUsage": 21254144,
+          "peakWorkingSetBytes": 70557696,
+          "peakPrivateBytes": 33042432,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 241020928,
+          "privateUsage": 224485376,
+          "peakWorkingSetBytes": 308641792,
+          "peakPrivateBytes": 281296896,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40837120,
+          "privateUsage": 19968000,
+          "peakWorkingSetBytes": 40837120,
+          "peakPrivateBytes": 19968000,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41635840,
+          "privateUsage": 18968576,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3806007296
+    },
+    {
+      "elapsedMs": 23939,
+      "phase": "cancel bounded allocation",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57806848,
+          "privateUsage": 21254144,
+          "peakWorkingSetBytes": 70557696,
+          "peakPrivateBytes": 33042432,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 225402880,
+          "privateUsage": 204865536,
+          "peakWorkingSetBytes": 308641792,
+          "peakPrivateBytes": 281296896,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40837120,
+          "privateUsage": 19968000,
+          "peakWorkingSetBytes": 40837120,
+          "peakPrivateBytes": 19968000,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41635840,
+          "privateUsage": 18968576,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3809935360
+    },
+    {
+      "elapsedMs": 24206,
+      "phase": "cancel bounded allocation",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57806848,
+          "privateUsage": 21254144,
+          "peakWorkingSetBytes": 70557696,
+          "peakPrivateBytes": 33042432,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 252243968,
+          "privateUsage": 237490176,
+          "peakWorkingSetBytes": 308641792,
+          "peakPrivateBytes": 281296896,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40837120,
+          "privateUsage": 19968000,
+          "peakWorkingSetBytes": 40837120,
+          "peakPrivateBytes": 19968000,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41635840,
+          "privateUsage": 18968576,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3796660224
+    },
+    {
+      "elapsedMs": 24470,
+      "phase": "cancel bounded allocation",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57806848,
+          "privateUsage": 21254144,
+          "peakWorkingSetBytes": 70557696,
+          "peakPrivateBytes": 33042432,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 251392000,
+          "privateUsage": 236576768,
+          "peakWorkingSetBytes": 308641792,
+          "peakPrivateBytes": 284606464,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40837120,
+          "privateUsage": 19968000,
+          "peakWorkingSetBytes": 40837120,
+          "peakPrivateBytes": 19968000,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41635840,
+          "privateUsage": 18968576,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3790426112
+    },
+    {
+      "elapsedMs": 24732,
+      "phase": "cancel bounded allocation",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57806848,
+          "privateUsage": 21254144,
+          "peakWorkingSetBytes": 70557696,
+          "peakPrivateBytes": 33042432,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 228188160,
+          "privateUsage": 205381632,
+          "peakWorkingSetBytes": 308641792,
+          "peakPrivateBytes": 284606464,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40837120,
+          "privateUsage": 19968000,
+          "peakWorkingSetBytes": 40837120,
+          "peakPrivateBytes": 19968000,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41635840,
+          "privateUsage": 18968576,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3880214528
+    },
+    {
+      "elapsedMs": 25022,
+      "phase": "cancel bounded allocation",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57806848,
+          "privateUsage": 21254144,
+          "peakWorkingSetBytes": 70557696,
+          "peakPrivateBytes": 33042432,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 228278272,
+          "privateUsage": 205455360,
+          "peakWorkingSetBytes": 308641792,
+          "peakPrivateBytes": 284606464,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40837120,
+          "privateUsage": 19968000,
+          "peakWorkingSetBytes": 40837120,
+          "peakPrivateBytes": 19968000,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41635840,
+          "privateUsage": 18968576,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3828690944
+    },
+    {
+      "elapsedMs": 25288,
+      "phase": "cancel bounded allocation",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57806848,
+          "privateUsage": 21254144,
+          "peakWorkingSetBytes": 70557696,
+          "peakPrivateBytes": 33042432,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 228405248,
+          "privateUsage": 205570048,
+          "peakWorkingSetBytes": 308641792,
+          "peakPrivateBytes": 284606464,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40841216,
+          "privateUsage": 19972096,
+          "peakWorkingSetBytes": 40841216,
+          "peakPrivateBytes": 19972096,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41635840,
+          "privateUsage": 18968576,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3815878656
+    },
+    {
+      "elapsedMs": 25549,
+      "phase": "cancel bounded allocation",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57806848,
+          "privateUsage": 21254144,
+          "peakWorkingSetBytes": 70557696,
+          "peakPrivateBytes": 33042432,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 228425728,
+          "privateUsage": 205590528,
+          "peakWorkingSetBytes": 308641792,
+          "peakPrivateBytes": 284606464,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40841216,
+          "privateUsage": 19972096,
+          "peakWorkingSetBytes": 40841216,
+          "peakPrivateBytes": 19972096,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41635840,
+          "privateUsage": 18968576,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3835654144
+    },
+    {
+      "elapsedMs": 25812,
+      "phase": "cancel bounded allocation",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57806848,
+          "privateUsage": 21254144,
+          "peakWorkingSetBytes": 70557696,
+          "peakPrivateBytes": 33042432,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 229531648,
+          "privateUsage": 205615104,
+          "peakWorkingSetBytes": 308641792,
+          "peakPrivateBytes": 284606464,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40845312,
+          "privateUsage": 19976192,
+          "peakWorkingSetBytes": 40845312,
+          "peakPrivateBytes": 19976192,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41635840,
+          "privateUsage": 18968576,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3835113472
+    },
+    {
+      "elapsedMs": 26074,
+      "phase": "cancel bounded allocation",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57806848,
+          "privateUsage": 21254144,
+          "peakWorkingSetBytes": 70557696,
+          "peakPrivateBytes": 33042432,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 229679104,
+          "privateUsage": 205758464,
+          "peakWorkingSetBytes": 308641792,
+          "peakPrivateBytes": 284606464,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40845312,
+          "privateUsage": 19976192,
+          "peakWorkingSetBytes": 40845312,
+          "peakPrivateBytes": 19976192,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41635840,
+          "privateUsage": 18968576,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3830665216
+    },
+    {
+      "elapsedMs": 26339,
+      "phase": "cancel bounded allocation",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57806848,
+          "privateUsage": 21254144,
+          "peakWorkingSetBytes": 70557696,
+          "peakPrivateBytes": 33042432,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 229732352,
+          "privateUsage": 205824000,
+          "peakWorkingSetBytes": 308641792,
+          "peakPrivateBytes": 284606464,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40845312,
+          "privateUsage": 19976192,
+          "peakWorkingSetBytes": 40845312,
+          "peakPrivateBytes": 19976192,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41635840,
+          "privateUsage": 18968576,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3832459264
+    },
+    {
+      "elapsedMs": 26611,
+      "phase": "cancel bounded allocation",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57806848,
+          "privateUsage": 21254144,
+          "peakWorkingSetBytes": 70557696,
+          "peakPrivateBytes": 33042432,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 230420480,
+          "privateUsage": 206610432,
+          "peakWorkingSetBytes": 308641792,
+          "peakPrivateBytes": 284606464,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40845312,
+          "privateUsage": 19976192,
+          "peakWorkingSetBytes": 40845312,
+          "peakPrivateBytes": 19976192,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41635840,
+          "privateUsage": 18968576,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3820699648
+    },
+    {
+      "elapsedMs": 26885,
+      "phase": "cancel bounded allocation",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57806848,
+          "privateUsage": 21254144,
+          "peakWorkingSetBytes": 70557696,
+          "peakPrivateBytes": 33042432,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 230621184,
+          "privateUsage": 206798848,
+          "peakWorkingSetBytes": 308641792,
+          "peakPrivateBytes": 284606464,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40845312,
+          "privateUsage": 19976192,
+          "peakWorkingSetBytes": 40845312,
+          "peakPrivateBytes": 19976192,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41635840,
+          "privateUsage": 18968576,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3819642880
+    },
+    {
+      "elapsedMs": 27154,
+      "phase": "cancel bounded allocation",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57806848,
+          "privateUsage": 21254144,
+          "peakWorkingSetBytes": 70557696,
+          "peakPrivateBytes": 33042432,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 230928384,
+          "privateUsage": 207106048,
+          "peakWorkingSetBytes": 308641792,
+          "peakPrivateBytes": 284606464,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40845312,
+          "privateUsage": 19976192,
+          "peakWorkingSetBytes": 40845312,
+          "peakPrivateBytes": 19976192,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41635840,
+          "privateUsage": 18968576,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3823083520
+    },
+    {
+      "elapsedMs": 27426,
+      "phase": "cancel bounded allocation",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57806848,
+          "privateUsage": 21254144,
+          "peakWorkingSetBytes": 70557696,
+          "peakPrivateBytes": 33042432,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 231002112,
+          "privateUsage": 207159296,
+          "peakWorkingSetBytes": 308641792,
+          "peakPrivateBytes": 284606464,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40845312,
+          "privateUsage": 19976192,
+          "peakWorkingSetBytes": 40845312,
+          "peakPrivateBytes": 19976192,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41635840,
+          "privateUsage": 18968576,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3822727168
+    },
+    {
+      "elapsedMs": 27697,
+      "phase": "cancel bounded allocation",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57806848,
+          "privateUsage": 21254144,
+          "peakWorkingSetBytes": 70557696,
+          "peakPrivateBytes": 33042432,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 232054784,
+          "privateUsage": 207732736,
+          "peakWorkingSetBytes": 308641792,
+          "peakPrivateBytes": 284606464,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40845312,
+          "privateUsage": 19976192,
+          "peakWorkingSetBytes": 40845312,
+          "peakPrivateBytes": 19976192,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41635840,
+          "privateUsage": 18968576,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3814604800
+    },
+    {
+      "elapsedMs": 27956,
+      "phase": "cancel bounded allocation",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57806848,
+          "privateUsage": 21254144,
+          "peakWorkingSetBytes": 70557696,
+          "peakPrivateBytes": 33042432,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 232538112,
+          "privateUsage": 208039936,
+          "peakWorkingSetBytes": 308641792,
+          "peakPrivateBytes": 284606464,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40845312,
+          "privateUsage": 19976192,
+          "peakWorkingSetBytes": 40845312,
+          "peakPrivateBytes": 19976192,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41635840,
+          "privateUsage": 18968576,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3814686720
+    },
+    {
+      "elapsedMs": 28216,
+      "phase": "cancel bounded allocation",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57827328,
+          "privateUsage": 21282816,
+          "peakWorkingSetBytes": 70557696,
+          "peakPrivateBytes": 33042432,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 233345024,
+          "privateUsage": 236601344,
+          "peakWorkingSetBytes": 308641792,
+          "peakPrivateBytes": 284606464,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40845312,
+          "privateUsage": 19976192,
+          "peakWorkingSetBytes": 40845312,
+          "peakPrivateBytes": 19976192,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41635840,
+          "privateUsage": 18968576,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3815690240
+    },
+    {
+      "elapsedMs": 28478,
+      "phase": "cancel bounded allocation",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57827328,
+          "privateUsage": 21282816,
+          "peakWorkingSetBytes": 70557696,
+          "peakPrivateBytes": 33042432,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 266964992,
+          "privateUsage": 236687360,
+          "peakWorkingSetBytes": 308641792,
+          "peakPrivateBytes": 284606464,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40845312,
+          "privateUsage": 19976192,
+          "peakWorkingSetBytes": 40845312,
+          "peakPrivateBytes": 19976192,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41635840,
+          "privateUsage": 18968576,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3783921664
+    },
+    {
+      "elapsedMs": 28745,
+      "phase": "cancel bounded allocation",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57827328,
+          "privateUsage": 21282816,
+          "peakWorkingSetBytes": 70557696,
+          "peakPrivateBytes": 33042432,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 266964992,
+          "privateUsage": 236687360,
+          "peakWorkingSetBytes": 308641792,
+          "peakPrivateBytes": 284606464,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40845312,
+          "privateUsage": 19976192,
+          "peakWorkingSetBytes": 40845312,
+          "peakPrivateBytes": 19976192,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41635840,
+          "privateUsage": 18968576,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3784601600
+    },
+    {
+      "elapsedMs": 29011,
+      "phase": "cancel bounded allocation",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57831424,
+          "privateUsage": 21286912,
+          "peakWorkingSetBytes": 70557696,
+          "peakPrivateBytes": 33042432,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 266981376,
+          "privateUsage": 236691456,
+          "peakWorkingSetBytes": 308641792,
+          "peakPrivateBytes": 284606464,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40845312,
+          "privateUsage": 19976192,
+          "peakWorkingSetBytes": 40845312,
+          "peakPrivateBytes": 19976192,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41635840,
+          "privateUsage": 18968576,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3784241152
+    },
+    {
+      "elapsedMs": 29276,
+      "phase": "cancel bounded allocation",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57831424,
+          "privateUsage": 21286912,
+          "peakWorkingSetBytes": 70557696,
+          "peakPrivateBytes": 33042432,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 266981376,
+          "privateUsage": 236691456,
+          "peakWorkingSetBytes": 308641792,
+          "peakPrivateBytes": 284606464,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40845312,
+          "privateUsage": 19976192,
+          "peakWorkingSetBytes": 40845312,
+          "peakPrivateBytes": 19976192,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41635840,
+          "privateUsage": 18968576,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3785035776
+    },
+    {
+      "elapsedMs": 29544,
+      "phase": "cancel bounded allocation",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57831424,
+          "privateUsage": 21286912,
+          "peakWorkingSetBytes": 70557696,
+          "peakPrivateBytes": 33042432,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 266981376,
+          "privateUsage": 236691456,
+          "peakWorkingSetBytes": 308641792,
+          "peakPrivateBytes": 284606464,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40845312,
+          "privateUsage": 19976192,
+          "peakWorkingSetBytes": 40845312,
+          "peakPrivateBytes": 19976192,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41635840,
+          "privateUsage": 18968576,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3785641984
+    },
+    {
+      "elapsedMs": 29812,
+      "phase": "cancel bounded allocation",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57831424,
+          "privateUsage": 21286912,
+          "peakWorkingSetBytes": 70557696,
+          "peakPrivateBytes": 33042432,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 266981376,
+          "privateUsage": 236691456,
+          "peakWorkingSetBytes": 308641792,
+          "peakPrivateBytes": 284606464,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40845312,
+          "privateUsage": 19976192,
+          "peakWorkingSetBytes": 40845312,
+          "peakPrivateBytes": 19976192,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41635840,
+          "privateUsage": 18968576,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3786203136
+    },
+    {
+      "elapsedMs": 30075,
+      "phase": "cancel bounded allocation",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57835520,
+          "privateUsage": 21286912,
+          "peakWorkingSetBytes": 70557696,
+          "peakPrivateBytes": 33042432,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 266981376,
+          "privateUsage": 236691456,
+          "peakWorkingSetBytes": 308641792,
+          "peakPrivateBytes": 284606464,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40845312,
+          "privateUsage": 19976192,
+          "peakWorkingSetBytes": 40845312,
+          "peakPrivateBytes": 19976192,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41635840,
+          "privateUsage": 18968576,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3785879552
+    },
+    {
+      "elapsedMs": 30344,
+      "phase": "cancel bounded allocation",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57835520,
+          "privateUsage": 21286912,
+          "peakWorkingSetBytes": 70557696,
+          "peakPrivateBytes": 33042432,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 266924032,
+          "privateUsage": 236593152,
+          "peakWorkingSetBytes": 308641792,
+          "peakPrivateBytes": 284606464,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40906752,
+          "privateUsage": 20058112,
+          "peakWorkingSetBytes": 40906752,
+          "peakPrivateBytes": 20058112,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41619456,
+          "privateUsage": 18935808,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3782492160
+    },
+    {
+      "elapsedMs": 30603,
+      "phase": "cancel bounded allocation",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57835520,
+          "privateUsage": 21286912,
+          "peakWorkingSetBytes": 70557696,
+          "peakPrivateBytes": 33042432,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 251858944,
+          "privateUsage": 212430848,
+          "peakWorkingSetBytes": 308641792,
+          "peakPrivateBytes": 284606464,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40906752,
+          "privateUsage": 20058112,
+          "peakWorkingSetBytes": 40906752,
+          "peakPrivateBytes": 20058112,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41619456,
+          "privateUsage": 18935808,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3798618112
+    },
+    {
+      "elapsedMs": 30870,
+      "phase": "cancel bounded allocation",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57835520,
+          "privateUsage": 21286912,
+          "peakWorkingSetBytes": 70557696,
+          "peakPrivateBytes": 33042432,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 251858944,
+          "privateUsage": 212430848,
+          "peakWorkingSetBytes": 308641792,
+          "peakPrivateBytes": 284606464,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40906752,
+          "privateUsage": 20058112,
+          "peakWorkingSetBytes": 40906752,
+          "peakPrivateBytes": 20058112,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41619456,
+          "privateUsage": 18935808,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3800977408
+    },
+    {
+      "elapsedMs": 31129,
+      "phase": "post-cancel recovery",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57851904,
+          "privateUsage": 21254144,
+          "peakWorkingSetBytes": 70557696,
+          "peakPrivateBytes": 33042432,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 194158592,
+          "privateUsage": 160890880,
+          "peakWorkingSetBytes": 308641792,
+          "peakPrivateBytes": 284606464,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40914944,
+          "privateUsage": 20058112,
+          "peakWorkingSetBytes": 40914944,
+          "peakPrivateBytes": 20058112,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41623552,
+          "privateUsage": 18935808,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3859607552
+    },
+    {
+      "elapsedMs": 31391,
+      "phase": "post-cancel recovery",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57896960,
+          "privateUsage": 21295104,
+          "peakWorkingSetBytes": 70557696,
+          "peakPrivateBytes": 33042432,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 197894144,
+          "privateUsage": 153841664,
+          "peakWorkingSetBytes": 308641792,
+          "peakPrivateBytes": 284606464,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40914944,
+          "privateUsage": 20058112,
+          "peakWorkingSetBytes": 40914944,
+          "peakPrivateBytes": 20058112,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41623552,
+          "privateUsage": 18935808,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3855593472
+    },
+    {
+      "elapsedMs": 31647,
+      "phase": "post-cancel recovery",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57896960,
+          "privateUsage": 21295104,
+          "peakWorkingSetBytes": 70590464,
+          "peakPrivateBytes": 34054144,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 257011712,
+          "privateUsage": 242180096,
+          "peakWorkingSetBytes": 308641792,
+          "peakPrivateBytes": 284606464,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40914944,
+          "privateUsage": 20058112,
+          "peakWorkingSetBytes": 40914944,
+          "peakPrivateBytes": 20058112,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41623552,
+          "privateUsage": 18935808,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3796590592
+    },
+    {
+      "elapsedMs": 31912,
+      "phase": "post-cancel recovery",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57901056,
+          "privateUsage": 21299200,
+          "peakWorkingSetBytes": 70590464,
+          "peakPrivateBytes": 34054144,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 234217472,
+          "privateUsage": 219557888,
+          "peakWorkingSetBytes": 308641792,
+          "peakPrivateBytes": 284606464,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40914944,
+          "privateUsage": 20058112,
+          "peakWorkingSetBytes": 40914944,
+          "peakPrivateBytes": 20058112,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41623552,
+          "privateUsage": 18935808,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3812638720
+    },
+    {
+      "elapsedMs": 32191,
+      "phase": "post-cancel recovery",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57901056,
+          "privateUsage": 21299200,
+          "peakWorkingSetBytes": 70590464,
+          "peakPrivateBytes": 34054144,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 249114624,
+          "privateUsage": 238190592,
+          "peakWorkingSetBytes": 308641792,
+          "peakPrivateBytes": 284606464,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40914944,
+          "privateUsage": 20058112,
+          "peakWorkingSetBytes": 40914944,
+          "peakPrivateBytes": 20058112,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41623552,
+          "privateUsage": 18935808,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3799650304
+    },
+    {
+      "elapsedMs": 32447,
+      "phase": "post-cancel recovery",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57901056,
+          "privateUsage": 21299200,
+          "peakWorkingSetBytes": 70590464,
+          "peakPrivateBytes": 34054144,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 254066688,
+          "privateUsage": 239734784,
+          "peakWorkingSetBytes": 308641792,
+          "peakPrivateBytes": 284606464,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40914944,
+          "privateUsage": 20058112,
+          "peakWorkingSetBytes": 40914944,
+          "peakPrivateBytes": 20058112,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41623552,
+          "privateUsage": 18935808,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3801116672
+    },
+    {
+      "elapsedMs": 32708,
+      "phase": "post-cancel recovery",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57901056,
+          "privateUsage": 21299200,
+          "peakWorkingSetBytes": 70590464,
+          "peakPrivateBytes": 34054144,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 244695040,
+          "privateUsage": 229322752,
+          "peakWorkingSetBytes": 308641792,
+          "peakPrivateBytes": 284606464,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40914944,
+          "privateUsage": 20058112,
+          "peakWorkingSetBytes": 40914944,
+          "peakPrivateBytes": 20058112,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41623552,
+          "privateUsage": 18935808,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3808149504
+    },
+    {
+      "elapsedMs": 32980,
+      "phase": "post-cancel recovery",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57901056,
+          "privateUsage": 21299200,
+          "peakWorkingSetBytes": 70590464,
+          "peakPrivateBytes": 34054144,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 246288384,
+          "privateUsage": 229642240,
+          "peakWorkingSetBytes": 308641792,
+          "peakPrivateBytes": 284606464,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40914944,
+          "privateUsage": 20058112,
+          "peakWorkingSetBytes": 40914944,
+          "peakPrivateBytes": 20058112,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41623552,
+          "privateUsage": 18935808,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3805560832
+    },
+    {
+      "elapsedMs": 33249,
+      "phase": "post-cancel recovery",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57901056,
+          "privateUsage": 21299200,
+          "peakWorkingSetBytes": 70590464,
+          "peakPrivateBytes": 34054144,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 239665152,
+          "privateUsage": 220143616,
+          "peakWorkingSetBytes": 308641792,
+          "peakPrivateBytes": 284606464,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40914944,
+          "privateUsage": 20058112,
+          "peakWorkingSetBytes": 40914944,
+          "peakPrivateBytes": 20058112,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41623552,
+          "privateUsage": 18935808,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3815899136
+    },
+    {
+      "elapsedMs": 33513,
+      "phase": "post-cancel recovery",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57901056,
+          "privateUsage": 21299200,
+          "peakWorkingSetBytes": 70590464,
+          "peakPrivateBytes": 34054144,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 250220544,
+          "privateUsage": 231890944,
+          "peakWorkingSetBytes": 308641792,
+          "peakPrivateBytes": 284606464,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40914944,
+          "privateUsage": 20058112,
+          "peakWorkingSetBytes": 40914944,
+          "peakPrivateBytes": 20058112,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41623552,
+          "privateUsage": 18935808,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3795931136
+    },
+    {
+      "elapsedMs": 33790,
+      "phase": "post-cancel recovery",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57901056,
+          "privateUsage": 21299200,
+          "peakWorkingSetBytes": 70590464,
+          "peakPrivateBytes": 34054144,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 227889152,
+          "privateUsage": 203997184,
+          "peakWorkingSetBytes": 308641792,
+          "peakPrivateBytes": 284606464,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40914944,
+          "privateUsage": 20058112,
+          "peakWorkingSetBytes": 40914944,
+          "peakPrivateBytes": 20058112,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41623552,
+          "privateUsage": 18935808,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3818164224
+    },
+    {
+      "elapsedMs": 34062,
+      "phase": "post-cancel recovery",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57901056,
+          "privateUsage": 21299200,
+          "peakWorkingSetBytes": 70590464,
+          "peakPrivateBytes": 34054144,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 228958208,
+          "privateUsage": 204025856,
+          "peakWorkingSetBytes": 308641792,
+          "peakPrivateBytes": 284606464,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40914944,
+          "privateUsage": 20058112,
+          "peakWorkingSetBytes": 40914944,
+          "peakPrivateBytes": 20058112,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41623552,
+          "privateUsage": 18935808,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3817988096
+    },
+    {
+      "elapsedMs": 34326,
+      "phase": "post-cancel recovery",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57901056,
+          "privateUsage": 21299200,
+          "peakWorkingSetBytes": 70590464,
+          "peakPrivateBytes": 34054144,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 229023744,
+          "privateUsage": 204058624,
+          "peakWorkingSetBytes": 308641792,
+          "peakPrivateBytes": 284606464,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40914944,
+          "privateUsage": 20058112,
+          "peakWorkingSetBytes": 40914944,
+          "peakPrivateBytes": 20058112,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41623552,
+          "privateUsage": 18935808,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3818180608
+    },
+    {
+      "elapsedMs": 34597,
+      "phase": "post-cancel recovery",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57901056,
+          "privateUsage": 21299200,
+          "peakWorkingSetBytes": 70590464,
+          "peakPrivateBytes": 34054144,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 229117952,
+          "privateUsage": 204148736,
+          "peakWorkingSetBytes": 308641792,
+          "peakPrivateBytes": 284606464,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40914944,
+          "privateUsage": 20058112,
+          "peakWorkingSetBytes": 40914944,
+          "peakPrivateBytes": 20058112,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41623552,
+          "privateUsage": 18935808,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3817500672
+    },
+    {
+      "elapsedMs": 34873,
+      "phase": "post-cancel recovery",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57901056,
+          "privateUsage": 21299200,
+          "peakWorkingSetBytes": 70590464,
+          "peakPrivateBytes": 34054144,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 229195776,
+          "privateUsage": 204218368,
+          "peakWorkingSetBytes": 308641792,
+          "peakPrivateBytes": 284606464,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40914944,
+          "privateUsage": 20058112,
+          "peakWorkingSetBytes": 40914944,
+          "peakPrivateBytes": 20058112,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41623552,
+          "privateUsage": 18935808,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3822080000
+    },
+    {
+      "elapsedMs": 35135,
+      "phase": "post-cancel recovery",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57901056,
+          "privateUsage": 21299200,
+          "peakWorkingSetBytes": 70590464,
+          "peakPrivateBytes": 34054144,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 229244928,
+          "privateUsage": 204267520,
+          "peakWorkingSetBytes": 308641792,
+          "peakPrivateBytes": 284606464,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40914944,
+          "privateUsage": 20058112,
+          "peakWorkingSetBytes": 40914944,
+          "peakPrivateBytes": 20058112,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41623552,
+          "privateUsage": 18935808,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3819167744
+    },
+    {
+      "elapsedMs": 35403,
+      "phase": "post-cancel recovery",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57901056,
+          "privateUsage": 21299200,
+          "peakWorkingSetBytes": 70590464,
+          "peakPrivateBytes": 34054144,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 229949440,
+          "privateUsage": 205049856,
+          "peakWorkingSetBytes": 308641792,
+          "peakPrivateBytes": 284606464,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40914944,
+          "privateUsage": 20058112,
+          "peakWorkingSetBytes": 40914944,
+          "peakPrivateBytes": 20058112,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41623552,
+          "privateUsage": 18935808,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3810267136
+    },
+    {
+      "elapsedMs": 35664,
+      "phase": "post-cancel recovery",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57901056,
+          "privateUsage": 21299200,
+          "peakWorkingSetBytes": 70590464,
+          "peakPrivateBytes": 34054144,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 230227968,
+          "privateUsage": 205348864,
+          "peakWorkingSetBytes": 308641792,
+          "peakPrivateBytes": 284606464,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40914944,
+          "privateUsage": 20058112,
+          "peakWorkingSetBytes": 40914944,
+          "peakPrivateBytes": 20058112,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41623552,
+          "privateUsage": 18935808,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3810168832
+    },
+    {
+      "elapsedMs": 35921,
+      "phase": "post-cancel recovery",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57901056,
+          "privateUsage": 21299200,
+          "peakWorkingSetBytes": 70590464,
+          "peakPrivateBytes": 34054144,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 230281216,
+          "privateUsage": 205389824,
+          "peakWorkingSetBytes": 308641792,
+          "peakPrivateBytes": 284606464,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40914944,
+          "privateUsage": 20058112,
+          "peakWorkingSetBytes": 40914944,
+          "peakPrivateBytes": 20058112,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41623552,
+          "privateUsage": 18935808,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3810672640
+    },
+    {
+      "elapsedMs": 36176,
+      "phase": "post-cancel recovery",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57901056,
+          "privateUsage": 21299200,
+          "peakWorkingSetBytes": 70590464,
+          "peakPrivateBytes": 34054144,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 231178240,
+          "privateUsage": 205520896,
+          "peakWorkingSetBytes": 308641792,
+          "peakPrivateBytes": 284606464,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40914944,
+          "privateUsage": 20058112,
+          "peakWorkingSetBytes": 40914944,
+          "peakPrivateBytes": 20058112,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41623552,
+          "privateUsage": 18935808,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3817869312
+    },
+    {
+      "elapsedMs": 36440,
+      "phase": "post-cancel recovery",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57901056,
+          "privateUsage": 21299200,
+          "peakWorkingSetBytes": 70590464,
+          "peakPrivateBytes": 34054144,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 231739392,
+          "privateUsage": 205565952,
+          "peakWorkingSetBytes": 308641792,
+          "peakPrivateBytes": 284606464,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40914944,
+          "privateUsage": 20058112,
+          "peakWorkingSetBytes": 40914944,
+          "peakPrivateBytes": 20058112,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41623552,
+          "privateUsage": 18935808,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3819118592
+    },
+    {
+      "elapsedMs": 36703,
+      "phase": "post-cancel recovery",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57901056,
+          "privateUsage": 21299200,
+          "peakWorkingSetBytes": 70590464,
+          "peakPrivateBytes": 34054144,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 232017920,
+          "privateUsage": 204791808,
+          "peakWorkingSetBytes": 308641792,
+          "peakPrivateBytes": 284606464,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40914944,
+          "privateUsage": 20058112,
+          "peakWorkingSetBytes": 40914944,
+          "peakPrivateBytes": 20058112,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41623552,
+          "privateUsage": 18935808,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3811241984
+    },
+    {
+      "elapsedMs": 36962,
+      "phase": "settled",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57929728,
+          "privateUsage": 21323776,
+          "peakWorkingSetBytes": 70590464,
+          "peakPrivateBytes": 34054144,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 162201600,
+          "privateUsage": 116256768,
+          "peakWorkingSetBytes": 308641792,
+          "peakPrivateBytes": 284606464,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40914944,
+          "privateUsage": 20058112,
+          "peakWorkingSetBytes": 40914944,
+          "peakPrivateBytes": 20058112,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41623552,
+          "privateUsage": 18935808,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3882430464
+    },
+    {
+      "elapsedMs": 37216,
+      "phase": "settled",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57929728,
+          "privateUsage": 21323776,
+          "peakWorkingSetBytes": 70590464,
+          "peakPrivateBytes": 34054144,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 162201600,
+          "privateUsage": 116256768,
+          "peakWorkingSetBytes": 308641792,
+          "peakPrivateBytes": 284606464,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40914944,
+          "privateUsage": 20058112,
+          "peakWorkingSetBytes": 40914944,
+          "peakPrivateBytes": 20058112,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41623552,
+          "privateUsage": 18935808,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3882586112
+    },
+    {
+      "elapsedMs": 37478,
+      "phase": "settled",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57929728,
+          "privateUsage": 21323776,
+          "peakWorkingSetBytes": 70590464,
+          "peakPrivateBytes": 34054144,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 162201600,
+          "privateUsage": 116256768,
+          "peakWorkingSetBytes": 308641792,
+          "peakPrivateBytes": 284606464,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40914944,
+          "privateUsage": 20058112,
+          "peakWorkingSetBytes": 40914944,
+          "peakPrivateBytes": 20058112,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41623552,
+          "privateUsage": 18935808,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3883151360
+    },
+    {
+      "elapsedMs": 37750,
+      "phase": "settled",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57929728,
+          "privateUsage": 21323776,
+          "peakWorkingSetBytes": 70590464,
+          "peakPrivateBytes": 34054144,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 162201600,
+          "privateUsage": 116256768,
+          "peakWorkingSetBytes": 308641792,
+          "peakPrivateBytes": 284606464,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40914944,
+          "privateUsage": 20058112,
+          "peakWorkingSetBytes": 40914944,
+          "peakPrivateBytes": 20058112,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41623552,
+          "privateUsage": 18935808,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3883253760
+    },
+    {
+      "elapsedMs": 38008,
+      "phase": "settled",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57929728,
+          "privateUsage": 21323776,
+          "peakWorkingSetBytes": 70590464,
+          "peakPrivateBytes": 34054144,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 162201600,
+          "privateUsage": 116256768,
+          "peakWorkingSetBytes": 308641792,
+          "peakPrivateBytes": 284606464,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40914944,
+          "privateUsage": 20058112,
+          "peakWorkingSetBytes": 40914944,
+          "peakPrivateBytes": 20058112,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41623552,
+          "privateUsage": 18935808,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3884306432
+    },
+    {
+      "elapsedMs": 38271,
+      "phase": "settled",
+      "processes": [
+        {
+          "pid": 7932,
+          "workingSetBytes": 57929728,
+          "privateUsage": 21323776,
+          "peakWorkingSetBytes": 70590464,
+          "peakPrivateBytes": 34054144,
+          "type": "browser"
+        },
+        {
+          "pid": 44444,
+          "workingSetBytes": 162201600,
+          "privateUsage": 116256768,
+          "peakWorkingSetBytes": 308641792,
+          "peakPrivateBytes": 284606464,
+          "type": "renderer"
+        },
+        {
+          "pid": 27552,
+          "workingSetBytes": 40914944,
+          "privateUsage": 20058112,
+          "peakWorkingSetBytes": 40914944,
+          "peakPrivateBytes": 20058112,
+          "type": "GPU"
+        },
+        {
+          "pid": 4224,
+          "workingSetBytes": 41623552,
+          "privateUsage": 18935808,
+          "peakWorkingSetBytes": 52432896,
+          "peakPrivateBytes": 32313344,
+          "type": "network.mojom.NetworkService"
+        }
+      ],
+      "totalPhysicalBytes": 16573128704,
+      "availablePhysicalBytes": 3885436928
+    }
+  ],
+  "runs": [
+    {
+      "name": "cold baseline",
+      "state": "completed",
+      "stdout": "ready\n",
+      "stderr": "",
+      "detail": "",
+      "version": "314.0.7",
+      "python": "3.14.2 (main, Sep 14 2026, 03:03:51) [Clang 23.0.0git (https:/github.com/llvm/llvm-project e5927fecf8a6ce89e1a4eac5b8",
+      "heapBytes": 31457280,
+      "loadMs": 2070.100000023842,
+      "totalMs": 2077.800000011921,
+      "workersCreated": 1,
+      "workersRemaining": 0,
+      "framesRemaining": 0
+    },
+    {
+      "name": "warm baseline",
+      "state": "completed",
+      "stdout": "ready\n",
+      "stderr": "",
+      "detail": "",
+      "version": "314.0.7",
+      "python": "3.14.2 (main, Sep 14 2026, 03:03:51) [Clang 23.0.0git (https:/github.com/llvm/llvm-project e5927fecf8a6ce89e1a4eac5b8",
+      "heapBytes": 31457280,
+      "loadMs": 4797.099999964237,
+      "totalMs": 4903.5,
+      "workersCreated": 1,
+      "workersRemaining": 0,
+      "framesRemaining": 0
+    },
+    {
+      "name": "bounded allocation",
+      "state": "completed",
+      "stdout": "33554432\n",
+      "stderr": "",
+      "detail": "",
+      "version": "314.0.7",
+      "python": "3.14.2 (main, Sep 14 2026, 03:03:51) [Clang 23.0.0git (https:/github.com/llvm/llvm-project e5927fecf8a6ce89e1a4eac5b8",
+      "heapBytes": 31457280,
+      "loadMs": 7530.699999988079,
+      "totalMs": 8366.399999976158,
+      "workersCreated": 1,
+      "workersRemaining": 0,
+      "framesRemaining": 0
+    },
+    {
+      "name": "fresh state",
+      "state": "completed",
+      "stdout": "False\n",
+      "stderr": "",
+      "detail": "",
+      "version": "314.0.7",
+      "python": "3.14.2 (main, Sep 14 2026, 03:03:51) [Clang 23.0.0git (https:/github.com/llvm/llvm-project e5927fecf8a6ce89e1a4eac5b8",
+      "heapBytes": 31457280,
+      "loadMs": 5951.800000011921,
+      "totalMs": 5974.5,
+      "workersCreated": 1,
+      "workersRemaining": 0,
+      "framesRemaining": 0
+    },
+    {
+      "name": "cancel bounded allocation",
+      "state": "cancelled",
+      "stdout": "",
+      "stderr": "",
+      "detail": "",
+      "version": "314.0.7",
+      "python": "3.14.2 (main, Sep 14 2026, 03:03:51) [Clang 23.0.0git (https:/github.com/llvm/llvm-project e5927fecf8a6ce89e1a4eac5b8",
+      "heapBytes": 31457280,
+      "loadMs": 6040.100000023842,
+      "totalMs": 6825.900000035763,
+      "workersCreated": 1,
+      "workersRemaining": 0,
+      "framesRemaining": 0
+    },
+    {
+      "name": "post-cancel recovery",
+      "state": "completed",
+      "stdout": "recovered\n",
+      "stderr": "",
+      "detail": "",
+      "version": "314.0.7",
+      "python": "3.14.2 (main, Sep 14 2026, 03:03:51) [Clang 23.0.0git (https:/github.com/llvm/llvm-project e5927fecf8a6ce89e1a4eac5b8",
+      "heapBytes": 31457280,
+      "loadMs": 5652,
+      "totalMs": 5684.399999976158,
+      "workersCreated": 1,
+      "workersRemaining": 0,
+      "framesRemaining": 0
+    }
+  ],
+  "outcome": "passed",
+  "preflight": {
+    "processes": [],
+    "totalPhysicalBytes": 16573128704,
+    "availablePhysicalBytes": 4032204800
+  },
+  "browser": "156.0.8078.4",
+  "summary": {
+    "samples": 143,
+    "partialSamples": 0,
+    "minAvailablePhysicalBytes": 3553206272,
+    "maxSampledAggregateWorkingSetBytes": 424452096,
+    "maxSampledAggregatePrivateBytes": 337223680
+  }
+}

@@ -7,6 +7,7 @@ files.extend(['docs/pyodide-spike/PREVIEW.md', 'docs/pyodide-spike/DISTRIBUTION-
 files.extend(['docs/hosting-terms-2026-10-13.md', 'docs/vercel-setup-2026-10-13.md'])
 files.append('docs/pyodide-spike/BENIGN-CHECK.md')
 files.extend(['docs/pyodide-spike/DESKTOP-CHECK.md', 'docs/vercel-policy-question-draft.md'])
+files.append('docs/pyodide-spike/CONTINUATION-20261020.md')
 for file in files:
     path = root / file
     text = path.read_text(encoding='utf-8')
