@@ -74,6 +74,39 @@ The three proposed open milestones are retained in
 Current exact reviewed D1 candidate and hosted results remain pending.
 Publication must follow independent sign-off.
 
+### Noninteractive publication transport
+
+The GH CLI OAuth credential's reported scopes do not include `workflow`, which
+[GitHub documents](https://docs.github.com/en/enterprise-cloud%40latest/apps/oauth-apps/building-oauth-apps/scopes-for-oauth-apps)
+as required for new workflow-file content. No token refresh/login or global
+credential/configuration change was attempted. A strict, noninteractive read
+probe of the existing SSH transport failed with `Permission denied (publickey)`:
+
+```powershell
+git -c 'core.sshCommand=ssh -o BatchMode=yes -o StrictHostKeyChecking=yes' ls-remote --heads git@github.com:josthan12/h2compute.git refs/heads/main refs/heads/feat/pyodide-feasibility
+```
+
+That read probe did not push or alter keys, host checking or remote state.
+Publication uses HTTPS only. A redacted read of existing `credential.helper`
+reported `manager`; `git credential-manager github list` reported only the
+existing `josthan12` account. No credential value was printed.
+
+```powershell
+$env:GIT_TERMINAL_PROMPT='0'; $env:GCM_INTERACTIVE='Never'; git -c credential.interactive=never push --dry-run https://github.com/josthan12/h2compute.git HEAD:refs/heads/feat/pyodide-feasibility
+```
+
+The dry run exited 0 and reported the new feature ref would be created. It did
+not publish a ref and does not prove the server will accept workflow-file
+updates on an actual push. Use the existing manager without configuration or
+scope changes; if the actual reviewed push is rejected, preserve local work,
+record the exact rejection and continue independent authorized work rather than
+broaden credentials or force-push.
+
+The first independent review attempt was interrupted before writing a receipt
+by an agent usage limit. After the owner said to continue, the same reviewer
+resumed with its own earlier checks preserved. No sign-off was invented for
+that interrupted attempt.
+
 ## D2 discovery evidence (not fixed by D1)
 
 Agent `/root/hardening_audit_next` reproduced both failures against the existing

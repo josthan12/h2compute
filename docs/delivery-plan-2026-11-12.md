@@ -7,8 +7,10 @@ and asks for milestone-driven improvement with defensive behavior and fallback
 plans. All writes and remote mutations are limited to ProjectALEVEL and its
 existing `josthan12/h2compute` repository. No global Git/CLI/authentication
 settings, other worktrees/projects, provider project settings or credentials
-will be changed. Existing GitHub CLI credentials may be used through an explicit
-HTTPS destination; the saved SSH handoff restriction is preserved by avoiding SSH.
+will be changed. Existing GitHub CLI credentials serve repository API/PR
+operations; the existing Git Credential Manager account serves explicit HTTPS
+Git publication, with interactive authentication disabled. Do not refresh token
+scopes, alter a global credential helper or use SSH for publication.
 
 The current-branch exception remains: continue `feat/pyodide-feasibility` without
 switching branches or rewriting its history. New permission covers push/PR and
@@ -91,7 +93,7 @@ agent sign-off substitutes for those gates.
 
 | Increment | State | Evidence |
 | --- | --- | --- |
-| D1 | In progress | Clean baseline, target identity/auth confirmed; implementation/review/publication pending. |
+| D1 | In progress | Local CI/configuration checks pass; exact-candidate review, publication and hosted results pending. |
 | D2 | Reproduced; implementation queued | Two-tab data-loss reproduction by discovery agent; no fix claimed. |
 | D3 | Pending D1/D2 | Exact-head CI and final delivery record required. |
 
