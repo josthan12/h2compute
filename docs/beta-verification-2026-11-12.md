@@ -23,7 +23,7 @@ or learner activation. Historical runner packages/evidence are unchanged.
 | Failed initially; repaired | 320px design-task table cells | Initial browser run: 172 passed, 2 failed, both design-task cell overflow at 320px. Added bounded wrapping; unchanged overflow assertions remain. Final rerun status below. |
 | Blocked external evidence | Educational/student review | Independent teacher/content feedback and student feedback are not supplied or fabricated. Agent source/example review is not teacher review. |
 | Blocked external evidence | Accessibility/physical devices | Required independent educational/screen-reader/accessibility review and physical-device checks remain open. Chromium emulation and semantic/contrast tests do not replace them. |
-| Blocked access / owner release | Hosting, CI, production | Current team/project/billing connector reads are 403; CLI lacks credentials. Remaining allowance, production theory deployment, hosted CI and branch protection unverified. Protected runner preview is different evidence. |
+| Blocked access / owner release | Hosting, CI, production | Current team/project/billing connector reads are 403; CLI lacks credentials. Remaining allowance, production theory deployment and candidate hosted CI unverified. Public GitHub API reports main unprotected; detailed protection endpoint is 401 and owner review remains open. Historical main CI passed. Protected runner preview is different evidence. |
 | Deferred; disabled | Browser execution | Existing feasibility runner remains outside learner routes/assets; `.vercelignore` excludes its directory from future theory uploads. Actual-host security/recovery, device/low-memory, provider-policy and activation gates remain open. |
 | Deferred; optional | Donations and later features | No donation setup, accounts, hosted grading/private tests, SQL execution, comprehensive coverage or extra areas. |
 
@@ -47,7 +47,7 @@ Next.js **16.4.6**, Playwright **1.64.0**, Chromium **156.0.8078.4** (revision
 | `python scripts/check-contrast.py` | Exit 0; eight actual theme pairs, 5.30–12.62:1. This is a palette check, not an accessibility audit. |
 | `npx playwright install chromium` | Exit 0; installed required Chromium, headless shell, FFmpeg and Winldd. No app dependency added. |
 | `npm run build` | Exit 0 after final layout/filter changes; all 24 generated Next entries. Local warning: unrelated parent `C:\Users\crate\package-lock.json` ignored outside repository. No root change required. |
-| `npm run test:e2e` | Exit 0; **176 passed**, no skips, 1.6 minutes; production server on loopback port 3100, two Chromium profiles, two workers, no timeout/assertion weakening. |
+| `npm run test:e2e` | Exit 0; **178 passed**, no skips, 1.6 minutes; production server on loopback port 3100, two Chromium profiles, two workers, no timeout/assertion weakening. |
 | `npm audit --json --ignore-scripts --fetch-retries=0 --fetch-timeout=15000` | Exit 0; zero known vulnerabilities after patch. Initial audit had one critical Next package and eight propagated moderate tooling entries. |
 | `npm ls --all --json` | Discovery agent independently reran: exit 0, with six `extraneous` optional WASM artifacts reported. All match locked optional versions; applicable Windows native bindings are installed. This is not a clean dependency-graph claim. |
 | `python docs/beta-evidence-2026-11-12/check.py` | Exit 0; 53 local documentation targets, four screenshot hashes and eight production traces without developer-runner files. |
@@ -76,3 +76,20 @@ deployment or hosted CI result is inferred from these local checks.
 - Independent reviewer receipt must bind the exact final candidate and scope
   under `docs/reviews/`. Local implementation sign-off cannot waive any blocked
   milestone or public-release gate.
+
+## Independent review repair
+
+The independent reviewer `/root/independent_beta_review` inspected initial
+candidate `f376d91e9caf8fea902f92807700531a8368f60f`, independently reproduced
+all 176 browser checks and the other applicable checks, and found a missing
+scope prop: the home page's three-lesson Python introduction displayed global
+eight-lesson progress. Completing SQL/search could therefore change that Python
+badge. The primary agent passed `topicId="python-control-flow"` and added a
+browser regression seeded only with completed search/SQL lessons. It asserts
+the Python introduction and card remain 0 of 3, the other cards show their own
+progress, and the global total is 2 of 8. The original 176-case summary is
+retained as `beta-evidence-2026-11-12/initial-candidate-summary.json`.
+Repair validation: lint/typecheck, production rebuild and the full **178-case**
+production-browser suite pass (1.6 minutes, no skips). Exact candidate re-review
+is required before handoff. No other actionable finding
+was identified in the initial independent review.

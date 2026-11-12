@@ -50,7 +50,7 @@ export default function Home() {
             Three lessons with worked examples, explanatory checkpoints and
             offline tasks.
           </p>
-          <ProgressBadge />
+          <ProgressBadge topicId="python-control-flow" />
         </div>
         <ol className="path">
           <li>

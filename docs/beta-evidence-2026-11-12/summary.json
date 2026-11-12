@@ -19,7 +19,7 @@
     "npm run test:examples": "passed:62 ordinary Python runs,2966 search runs,19 SQL queries,8 rejected constraints,key-design contract",
     "python scripts/check-contrast.py": "passed:8 pairs,minimum5.30:1",
     "npm run build": "passed:24 generated Next entries",
-    "npm run test:e2e": "passed:176 tests,two Chromium profiles,production loopback3100,1.6 minutes",
+    "npm run test:e2e": "passed:178 tests,two Chromium profiles,production loopback3100,1.6 minutes",
     "npm audit --json --ignore-scripts --fetch-retries=0 --fetch-timeout=15000": "passed:0 known vulnerabilities"
   },
   "earlier_failures_repaired": [
@@ -56,5 +56,12 @@
     "production deployment",
     "remaining host allowance",
     "runner activation"
-  ]
+  ],
+  "independent_review_repair": {
+    "initial_candidate": "f376d91e9caf8fea902f92807700531a8368f60f",
+    "finding": "Home Python introduction badge counted all topics",
+    "fix": "Explicit python-control-flow topicId plus seeded search/SQL completion regression in both browser profiles",
+    "validation": "lint,typecheck,production build and full178browser checks passed",
+    "original_evidence": "initial-candidate-summary.json"
+  }
 }

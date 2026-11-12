@@ -28,8 +28,9 @@ handoff. Scoped local sign-off cannot complete the release gates below.
   vulnerabilities. This is a dated result, not a security certification.
 - Blocked release evidence: independent teacher/student feedback and educational/
   screen-reader accessibility review; real-device review; production theory-beta
-  deployment and hosted CI; current host project/allowance and branch-protection
-  verification. Connector team/project/billing access is 403 and CLI is signed
+  deployment and candidate hosted CI; current host project/allowance. Public
+  GitHub reports main unprotected; detailed protection access and owner review
+  remain open. Connector team/project/billing access is 403 and CLI is signed
   out. Restoring deliberate authentication/scoped access is the smallest hosting
   access action. No unverified gate is marked passed.
 - Deferred: browser execution/editor, optional donations and all previously

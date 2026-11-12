@@ -76,3 +76,18 @@ test("a completed path has an honest empty incomplete filter and can be revisite
   await page.getByRole("button", { name: "All lessons" }).click();
   await expect(page.locator("article.lesson-card")).toHaveCount(2);
 });
+
+test("home Python path progress excludes completed searching and SQL lessons", async ({ page }) => {
+  await page.goto("/");
+  await page.evaluate(() => localStorage.setItem("h2compute.progress", JSON.stringify({ version: 2, lessons: {
+    "lists-and-linear-search": { quizReviewed: true, practiceReviewed: true, completed: true },
+    "relations-and-keys": { quizReviewed: true, practiceReviewed: true, completed: true }
+  } })));
+  await page.reload();
+  await expect(page.locator(".intro-grid").getByText("0 of 3 lessons complete", { exact: true })).toBeVisible();
+  for (const [title, badge] of [["Python control flow", "0 of 3 lessons complete"], ["Searching lists", "1 of 2 lessons complete"], ["Relational data and SQL", "1 of 3 lessons complete"]]) {
+    const card = page.getByRole("article").filter({ has: page.getByRole("heading", { name: title, exact: true }) });
+    await expect(card.getByText(badge, { exact: true })).toBeVisible();
+  }
+  await expect(page.getByRole("region", { name: "Local learning progress" }).getByText("2 of 8 published journeys complete.", { exact: false })).toBeVisible();
+});

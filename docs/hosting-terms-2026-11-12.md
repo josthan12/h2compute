@@ -56,3 +56,30 @@ exposed a new-issue link. Posting requires GitHub sign-in. No issue was filed.
 The learner site links this route and asks writers to omit personal information
 and credentials; it requires no app account to learn. The external site's
 privacy policy applies when following the link.
+
+## Public GitHub release checks
+
+The discovery agent subsequently read the public GitHub API, with no
+authentication, Git fetch, mutation or workflow trigger:
+
+```powershell
+Invoke-WebRequest -Uri 'https://api.github.com/repos/josthan12/h2compute/branches/main' -Headers @{Accept='application/vnd.github+json';'User-Agent'='H2Compute-Beta-Readiness'}
+Invoke-WebRequest -Uri 'https://api.github.com/repos/josthan12/h2compute/branches/main/protection' -Headers @{Accept='application/vnd.github+json';'User-Agent'='H2Compute-Beta-Readiness'}
+Invoke-WebRequest -Uri 'https://api.github.com/repos/josthan12/h2compute/actions/workflows?per_page=10' -Headers @{Accept='application/vnd.github+json';'User-Agent'='H2Compute-Beta-Readiness'}
+Invoke-WebRequest -Uri 'https://api.github.com/repos/josthan12/h2compute/actions/runs?branch=main&per_page=3' -Headers @{Accept='application/vnd.github+json';'User-Agent'='H2Compute-Beta-Readiness'}
+```
+
+The branch response (200) reports main at
+`092dc5f3014a64e5a3d6255dac6ecfb784790769`, `protected:false` and
+`protection.enabled:false`. The detailed protection endpoint returns 401,
+requiring authentication. Main is therefore publicly reported **unprotected**;
+owner review of that setting and detailed authenticated verification remain
+open. No protection setting was changed.
+
+Workflow/run reads return 200: the single active workflow is
+`.github/workflows/checks.yml` (Theory foundation checks). The latest
+[successful main run](https://github.com/josthan12/h2compute/actions/runs/38268802208)
+covered that October main SHA on 12 October 2026, 23:14:42–23:17:01 SGT.
+This is historical default-branch CI, not a pass for the current unpushed beta
+candidate. Two historical main runs succeeded; no current-candidate hosted
+check or production deployment is inferred.

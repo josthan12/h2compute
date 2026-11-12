@@ -17,7 +17,7 @@ The [historical feasibility review](docs/phase-1-feasibility.md) is research, no
 
 ## Phase 1 — Minimal theory foundation
 
-- [ ] Verify branch/CI settings; preserve existing worktree changes. Local branch and preservation verified; CI configured. Owner reported passing checks for merged PR #1. Branch protection remains unverified.
+- [ ] Verify branch/CI settings; preserve existing worktree changes. Local branch and preservation verified; CI configured. Historical main checks pass (public API rechecked 12 November); no hosted CI for the current candidate. Main is publicly reported unprotected; detailed authenticated verification/owner review remain open.
 - [x] Set up Next.js/TypeScript, Tailwind CSS/daisyUI as the styling system and relevant lint/typecheck/tests/build/CI.
 - [x] Load Git-based content with validated metadata, numeric syllabus references and internal links.
 - [x] Establish readable responsive navigation and accessible lesson/quiz components.

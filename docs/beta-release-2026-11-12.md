@@ -76,8 +76,10 @@ Donations are optional and not configured.
    serious findings and obtain re-review; emulation is not physical evidence.
 3. Restore deliberate Vercel authentication or scoped connector access, then
    verify intended **theory app** project, personal/non-commercial Hobby
-   eligibility, current team opt-out/allowance, CI and branch protection without
-   changing protection. See [hosting/access record](hosting-terms-2026-11-12.md).
+   eligibility, current team opt-out/allowance and candidate CI. Public GitHub
+   reads report main unprotected; owner review and detailed authenticated
+   protection verification remain open. Do not change protection under this
+   authorization. See [hosting/access record](hosting-terms-2026-11-12.md).
    A signed-out CLI may launch device login even for a read command; complete
    authentication deliberately rather than letting automation create a link.
 4. Obtain authorization for the concrete reviewed theory deployment. Existing

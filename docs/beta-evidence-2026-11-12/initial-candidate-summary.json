@@ -1,0 +1,60 @@
+{
+  "date": "2026-11-12",
+  "scope": "Local theory/quiz/offline-practice beta only; public release and learner execution remain gated",
+  "environment": {
+    "os": "Windows",
+    "node": "20.20.2",
+    "npm": "10.8.2",
+    "python": "3.14.5",
+    "sqlite": "3.50.4",
+    "next": "16.4.6",
+    "playwright": "1.64.0",
+    "chromium": "156.0.8078.4"
+  },
+  "commands": {
+    "npm run lint": "passed",
+    "npm run typecheck": "passed",
+    "npm run check:content": "passed:16 files",
+    "npm test": "passed:14 tests",
+    "npm run test:examples": "passed:62 ordinary Python runs,2966 search runs,19 SQL queries,8 rejected constraints,key-design contract",
+    "python scripts/check-contrast.py": "passed:8 pairs,minimum5.30:1",
+    "npm run build": "passed:24 generated Next entries",
+    "npm run test:e2e": "passed:176 tests,two Chromium profiles,production loopback3100,1.6 minutes",
+    "npm audit --json --ignore-scripts --fetch-retries=0 --fetch-timeout=15000": "passed:0 known vulnerabilities"
+  },
+  "earlier_failures_repaired": [
+    "Stale generated .next/dev/types after topic-route replacement",
+    "Two 320px design-task cell-overflow failures (initial172passed2failed), fixed without changing assertions"
+  ],
+  "playwright_last_run": {
+    "status": "passed",
+    "failedTests": []
+  },
+  "screenshots": [
+    {
+      "file": "home-1280.png",
+      "sha256": "e9e797beddc8973546b487d3d29ea3d00ebab1886985ae0deff600fa626dd544"
+    },
+    {
+      "file": "lists-and-linear-search-320.png",
+      "sha256": "256d1f9052553855c50fa55a0a5ff954fec4eaf5800ae58f31e6482c02625169"
+    },
+    {
+      "file": "model-club-keys-320.png",
+      "sha256": "53ffa0e077418811c059a225dd3410206ecb91c90ab826d7c8d41e87368cfdf7"
+    },
+    {
+      "file": "summarise-club-bookings-320.png",
+      "sha256": "0f903391f0b8818a1ace5c886dc2035803642c52913d3e481a12998a741f50b4"
+    }
+  ],
+  "not_evidence_for": [
+    "physical devices",
+    "independent screen-reader/accessibility review",
+    "independent teacher/student feedback",
+    "hosted CI",
+    "production deployment",
+    "remaining host allowance",
+    "runner activation"
+  ]
+}
