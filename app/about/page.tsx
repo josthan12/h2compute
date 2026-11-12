@@ -1,3 +1,5 @@
+import Link from "next/link";
+import { TOPICS } from "@/lib/lesson-ids";
 import { syllabus } from "@/lib/content";
 export const metadata = { title: "About & syllabus coverage" };
 export default function About() {
@@ -9,9 +11,9 @@ export default function About() {
         H2Compute is an independent learning project for H2 Computing 9569.
       </p>
       <p>
-        This site publishes three connected control-flow lessons with three
-        offline tasks. They cover a bounded topic, not all Python or the full
-        syllabus. This is not an official resource, or a replacement for school
+        This theory beta publishes eight lessons with explanatory checkpoints
+        and offline tasks across three bounded paths. It covers selected
+        concepts, not complete topic areas or the full syllabus. This is not an official resource, or a replacement for school
         teaching.
       </p>
       <h2>2026 coverage register</h2>
@@ -36,14 +38,8 @@ export default function About() {
         covered by this foundation.
       </p>
       <h2>Within the MVP</h2>
-      <ul>
-        <li>
-          Python programming: partial, sequence, selection, iteration and
-          non-recursive tracing published.
-        </li>
-        <li>Algorithms and data structures: planned, no lessons published.</li>
-        <li>Relational databases and SQL: planned, no lessons published.</li>
-      </ul>
+      <ul>{TOPICS.map(topic => <li key={topic.id}><Link href={`/topics/${topic.id}`}>{topic.area}: published, partial</Link>. {topic.coverage}</li>)}</ul>
+      <p>Planned: further material within the three approved areas, subject to review. Not covered: every unlisted syllabus outcome, including NoSQL, networking and other syllabus areas. Planning is not a publication promise.</p>
       <h2>Content provenance & corrections</h2>
       <p>
         Explanations, scenarios, questions and model solutions were created for
@@ -51,12 +47,13 @@ export default function About() {
         independent teacher review is pending. Offline completion is
         self-marked.
       </p>
+      <h2 id="feedback">Feedback & corrections</h2>
       <p>
         For corrections, include the lesson URL and a description in the{" "}
         <a href="https://github.com/josthan12/h2compute/issues">
           repository issue tracker
         </a>
-        . Do not include personal information or credentials.
+        . Reporting there requires GitHub sign-in; learning here requires no account. Do not include personal information or credentials.
       </p>
     </article>
   );

@@ -21,6 +21,11 @@ expected = {
     "sequence-and-selection": ["60\n", "Ready\nRecorded\n"],
     "counted-and-conditional-loops": ["6\n", "3\n6\n9\n12\n", "10\n"],
     "combined-flow-and-tracing": ["2\n244\n"],
+    "lists-and-linear-search": ["4\n8\n", "1\n"],
+    "binary-search": ["4\n"],
+    "relations-and-keys": [],
+    "select-filter-and-order": [],
+    "joins-and-aggregation": [],
 }
 lesson_blocks = {}
 for file in sorted(Path("content/lessons").glob("*.md")):
@@ -52,9 +57,19 @@ for file in sorted(Path("content/exercises").glob("*.md")):
     prompt, model = source.split("<!-- model -->")
     assert not code_blocks(prompt), f"Add prompt-example tests for {file}"
     blocks = code_blocks(model)
+    if metadata["format"] != "python":
+        assert metadata["format"] in {"sql", "design"}, file
+        assert not blocks, f"Unexpected Python block in non-Python task: {file}"
+        assert file.stem in {"model-club-keys", "select-club-members", "summarise-club-bookings"}, f"Register non-Python task checker: {file}"
+        continue
     assert blocks, f"Missing model program: {file}"
     for code in blocks:
         for example in metadata["examples"]:
             actual = run(code, example["input"])
             assert actual == example["output"], (file, example, actual)
 print(f"Passed {runs} authored Python runs on Python {sys.version.split()[0]} (all lesson/model blocks, loop boundaries, empty/repeated scores and visible cases).")
+
+# Closed registries in these checkers cover SQL/design blocks and search
+# invariants; a new language or content item must acquire explicit expectations.
+for checker in ["tests/check_search_examples.py", "tests/check_sql_examples.py"]:
+    subprocess.run([sys.executable, checker], check=True)

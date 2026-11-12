@@ -1,10 +1,11 @@
 # Implementation Specification — Singapore A-Level Computing Learning Platform
 
-**Status:** Theory-first direction approved; Pyodide practice planned subject to feasibility — documentation only
+**Status:** Theory-first beta implemented locally; public release and Pyodide activation remain gated
 **Version:** 0.2
 **Date:** 12 October 2026
 **Owner:** Solo developer
-**Implementation status:** Milestones 1 and 2 merged; local main and the saved origin/main reference match 092dc5f. Milestone 3 investigates a developer-only isolated Pyodide prototype on feat/pyodide-feasibility. Learner execution, deployed isolation and physical-device compatibility remain gated. See current-status.md and docs/milestone-3-verification.md. The scope and activation gates below remain in force.
+**Implementation status:** Eight theory/quiz/offline journeys across the three approved areas are implemented on feat/pyodide-feasibility under the owner's 12 November 2026 current-branch exception. Public release evidence remains open; see current-status.md and docs/beta-verification-2026-11-12.md. The developer-only runner and its historical evidence are preserved. All acceptance requirements and activation gates below remain in force.
+
 
 ## 1. Product summary
 

@@ -29,7 +29,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               Compute
             </Link>
             <nav aria-label="Main navigation">
-              <Link href="/topics/python-control-flow">Learning path</Link>
+              <Link href="/#learning-paths">Learning paths</Link>
               <Link href="/about">About & coverage</Link>
             </nav>
             <span className="header-note">Free · No account</span>
@@ -46,6 +46,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               SEAB, MOE, NUS or school affiliation.
             </p>
             <Link href="/privacy">Privacy & local progress</Link>
+            <Link href="/about#feedback">Feedback & corrections</Link>
           </footer>
         </ProgressProvider>
       </body>

@@ -1,6 +1,6 @@
 # Roadmap
 
-**Status:** Milestones 1 and 2 merged; Milestone 3 local feasibility investigation on feat/pyodide-feasibility. The separate protected developer preview is deployed; learner activation, hosted browser/device verification and CI remain pending. See [verification](docs/milestone-3-verification.md).
+**Status:** Eight-lesson theory-beta candidate is implemented locally across the three approved areas. Current checks and external release blockers are in [beta verification](docs/beta-verification-2026-11-12.md). Milestones 4/5 remain open. Milestone 3 stays NO-GO; developer-preview evidence is preserved and is separate from theory-beta deployment evidence.
 **Scope:** Python programming, algorithms/data structures and relational databases/SQL only. Start with Python control flow. Browser practice follows theory; hosted grading is deferred.
 
 Use [docs/milestone-workflow.md](docs/milestone-workflow.md) for autonomous delivery and the repeatable task/Git workflow. The agent implements, verifies, documents and makes focused local commits; the owner reviews completed milestones, pushes and opens the PR. Every completed handoff requires [independent agent sign-off](docs/independent-review.md). Existing authorization boundaries and milestone gates remain in force.
@@ -57,20 +57,20 @@ Local progress and exact evidence are in [Milestone 3 verification](docs/milesto
 
 ## Phase 4 — MVP content and beta hardening
 
-- [ ] Expand reviewed connected lessons within the three confirmed areas; keep lesson/exercise counts flexible.
-- [ ] Display planned/published/partial/uncovered outcomes and related revision links.
-- [ ] Add filtering/search only where useful; validate links/content in CI.
-- [ ] Add privacy/attribution, feedback and optional external donation link.
+- [x] Implement connected source-mapped lessons within the three confirmed areas: 3 Python, 2 searching-list and 3 relational/SQL journeys. Independent teacher/student review remains open below; counts remain flexible.
+- [x] Display published partial mappings, planned expansion and explicit unlisted/uncovered outcomes with related revision links.
+- [x] Add local incomplete filtering per topic and validate content/links in the existing CI command. Local checks pass; hosted CI for this candidate remains unverified.
+- [x] Provide privacy/attribution and a verified active feedback issue tracker (external GitHub sign-in disclosed). Optional donation setup is deferred.
 - [ ] Recheck Vercel Hobby terms/usage, verify production deployment and run relevant automated/manual checks.
 - [ ] If browser practice ships, verify runner security/recovery on deployed browsers and disclose self-check limitations.
 - [ ] Obtain student/teacher feedback and resolve serious accuracy/accessibility/security problems.
 
-**Exit:** worthwhile theory beta with honest coverage and no mandatory runner. Runtime controls appear only if the browser gate passes.
+**Local scope:** eight complete offline learning journeys and applicable automated checks; independent candidate review is required. **Milestone exit remains open:** external educational/accessibility/device and production release evidence is missing. A worthwhile theory beta has honest coverage and no mandatory runner. Runtime controls appear only if the browser gate passes.
 
 ## Phase 5 — Public beta and portfolio evidence
 
 - [ ] Publish site/repository, setup guidance, screenshots and known limitations.
-- [ ] Record corrections, release notes and engineering decisions.
+- [x] Prepare local beta release notes, correction route and dated mapping/security decisions. Public-release validation and feedback-led corrections remain pending.
 - [ ] Draft resume claims only from shipped features and measured evidence.
 
 ## Later / deferred

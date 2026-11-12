@@ -1,13 +1,14 @@
 import Link from "next/link";
 import fs from "node:fs";
 import path from "node:path";
+import { TOPICS } from "@/lib/lesson-ids";
 import { ProgressBadge } from "@/components/ProgressProvider";
 export default function Home() {
   return (
     <div className="shell">
       <section className="home-hero">
         <div>
-          <p className="eyebrow">H2 Computing / Theory foundation</p>
+          <p className="eyebrow">H2 Computing / Priority-topic beta</p>
           <h1>
             Understand the code.
             <br />
@@ -15,7 +16,7 @@ export default function Home() {
           </h1>
           <p className="lead">
             Clear explanations, small checkpoints, and time to practise. Work
-            through three connected Python lessons, at your own pace.
+            through Python, searching and relational SQL paths, at your own pace.
           </p>
           <Link className="btn btn-primary" href="/topics/python-control-flow">
             Explore Python control flow <span aria-hidden="true">→</span>
@@ -75,13 +76,23 @@ export default function Home() {
           </li>
         </ol>
       </section>
+      <section aria-labelledby="learning-paths" className="my-12">
+        <p className="eyebrow">Choose your next concept</p>
+        <h2 id="learning-paths">Three connected learning paths</h2>
+        {TOPICS.map(topic => <article className="card lesson-card border border-base-300 bg-base-100" key={topic.id}>
+          <p className="eyebrow">{topic.area} · {topic.lessonIds.length} lessons</p>
+          <h3><Link href={`/topics/${topic.id}`}>{topic.title}</Link></h3>
+          <p>{topic.summary}</p><ProgressBadge topicId={topic.id} />
+          <Link className="mt-4" href={`/topics/${topic.id}`}>Explore this path →</Link>
+        </article>)}
+      </section>
       <section className="coverage-strip">
         <h2>A focused beginning</h2>
         <p>
-          Python programming is the first published area. Algorithms and data
-          structures, and relational databases and SQL, are planned. This topic
-          teaches sequence, selection and iteration; full syllabus coverage is
-          not claimed.
+          Eight lessons teach selected parts of Python control flow, list searching
+          and relational data/SQL. Each has a checkpoint and offline task.
+          Browser execution is disabled. Full-topic and full-syllabus coverage
+          are not claimed.
         </p>
         <Link href="/about">See syllabus mapping & limits →</Link>
       </section>

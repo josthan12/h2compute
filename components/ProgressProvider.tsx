@@ -18,7 +18,7 @@ import {
   type LessonProgress,
   updateLesson,
 } from "@/lib/progress";
-import { LESSON_IDS, type LessonId } from "@/lib/lesson-ids";
+import { LESSON_IDS, TOPICS, type TopicId, type LessonId } from "@/lib/lesson-ids";
 const EVENT = "h2compute-progress";
 function subscribe(callback: () => void) {
   window.addEventListener("storage", callback);
@@ -135,10 +135,12 @@ export function useProgress(lessonId: LessonId) {
     update: (value: Partial<LessonProgress>) => state.update(lessonId, value),
   };
 }
-export function ProgressBadge({ lessonId }: { lessonId?: LessonId }) {
+export function useProgressSummary() { return useProgressState(); }
+export function ProgressBadge({ lessonId, topicId }: { lessonId?: LessonId; topicId?: TopicId }) {
   const { progress, ready } = useProgressState();
   const entry = lessonId ? progress.lessons[lessonId] : null;
-  const count = LESSON_IDS.filter(
+  const ids: readonly LessonId[] = topicId ? TOPICS.find(topic => topic.id === topicId)!.lessonIds : LESSON_IDS;
+  const count = ids.filter(
     (id) => progress.lessons[id].completed,
   ).length;
   return (
@@ -151,7 +153,7 @@ export function ProgressBadge({ lessonId }: { lessonId?: LessonId }) {
             : entry.quizReviewed || entry.practiceReviewed
               ? "In progress"
               : "Not yet completed"
-          : `${count} of ${LESSON_IDS.length} lessons complete`}
+          : `${count} of ${ids.length} lessons complete`}
     </span>
   );
 }

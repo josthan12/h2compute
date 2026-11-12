@@ -1,6 +1,6 @@
 ---
 {
-  "title": "Sum a sequence", "slug": "sum-a-sequence", "topic": "python-control-flow",
+  "title": "Sum a sequence", "slug": "sum-a-sequence", "topic": "python-control-flow", "format": "python",
   "summary": "Build a running total from 1 through n, including the case where there is nothing to add.",
   "syllabus": { "year": 2026, "outcomes": ["2.2.3", "2.2.6"] },
   "difficulty": "core", "estimatedMinutes": 10,

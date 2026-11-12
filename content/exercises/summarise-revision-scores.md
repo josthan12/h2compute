@@ -1,6 +1,6 @@
 ---
 {
-  "title": "Summarise revision scores", "slug": "summarise-revision-scores", "topic": "python-control-flow",
+  "title": "Summarise revision scores", "slug": "summarise-revision-scores", "topic": "python-control-flow", "format": "python",
   "summary": "Read several scores, count those meeting a threshold, and total every score in one pass.",
   "syllabus": { "year": 2026, "outcomes": ["2.2.3", "2.2.6"] },
   "difficulty": "core", "estimatedMinutes": 12,

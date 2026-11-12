@@ -1,8 +1,42 @@
 # Current Status
 
-**Last updated:** 20 October 2026
-**Overall status:** Milestones 1 and 2 merged; Milestone 3 feasibility investigation with a separate protected developer preview deployed. Browser activation is NO-GO pending deployment/device gates.
-**Implementation:** The original three-lesson theory/quiz/offline-practice journey and versioned local progress remain intact. A developer-only Pyodide prototype lives in docs/pyodide-spike, outside Next.js routes/public assets. See [Milestone 3 verification](docs/milestone-3-verification.md) for exact evidence and limitations.
+**Last updated:** 12 November 2026
+**Overall status:** Local theory-beta candidate across all three approved areas; public release is blocked by outstanding external evidence/access. Milestones 4/5 are not complete. Milestone 3 stays NO-GO for learner activation.
+**Implementation:** Eight lessons, sixteen explanatory MCQs and eight offline tasks: Python control flow (3), list searching (2), relational data/SQL (3). Topic-specific navigation, incomplete filtering and resilient account-free local progress are implemented. No learner execution, account, hosted grader or new service. The developer-only spike/preview and historical evidence are preserved.
+
+## Beta continuation — 12 November 2026
+
+The owner explicitly authorized beta work **on the current branch** after the
+agent identified the saved focused-branch workflow conflict. Work remains in
+the original checkout on feat/pyodide-feasibility, starting from clean
+9da44a0b31df4c7875efaf7eee9f7949ea16bd21. No branch switch, fetch, stash, push,
+PR, merge, deployment, protection change, external message or learner activation.
+This exception applies to this beta work; it does not erase the usual workflow.
+
+See [beta verification/checklist](docs/beta-verification-2026-11-12.md),
+[setup and release steps](docs/beta-release-2026-11-12.md) and
+[draft PR description](docs/beta-pr-description-2026-11-12.md).
+The candidate must receive independent agent sign-off before a completed
+handoff. Scoped local sign-off cannot complete the release gates below.
+
+- Implemented: connected theory/quiz/offline journeys in all three areas;
+  precise partial coverage/provenance; topic navigation/filtering; local
+  progress migration/reset/recovery; privacy and verified external feedback route.
+- Verified local checks and repaired failures: see the dated verification record
+  for exact commands, versions and final outcomes. Next/config are patched to
+  16.4.6 with a scoped lint-tool override; the current audit reports zero known
+  vulnerabilities. This is a dated result, not a security certification.
+- Blocked release evidence: independent teacher/student feedback and educational/
+  screen-reader accessibility review; real-device review; production theory-beta
+  deployment and hosted CI; current host project/allowance and branch-protection
+  verification. Connector team/project/billing access is 403 and CLI is signed
+  out. Restoring deliberate authentication/scoped access is the smallest hosting
+  access action. No unverified gate is marked passed.
+- Deferred: browser execution/editor, optional donations and all previously
+  deferred scope. Runner policy/device/low-memory/actual-host security gates
+  remain open; they do not block the theory-only beta's local work.
+
+Historical records below describe their dates, not the current beta candidate.
 
 ## Confirmed decisions
 
@@ -20,7 +54,7 @@ The owner delegates routine milestone planning, implementation, debugging, appli
 
 Every completed change/milestone handoff requires a separate reviewer agent, its independently developed checklist and explicit sign-off on the candidate commit. Fix findings and obtain re-review before presenting completion; retain the review receipt under docs/reviews/. See [workflow](docs/milestone-workflow.md) and [independent review protocol](docs/independent-review.md). Scoped documentation sign-off does not complete Milestone 3. Hosted adversarial testing, physical-device evidence and learner activation remain gated; no roadmap checkbox advances for this workflow update.
 
-## Verified Git handoff
+## Historical Git handoff — October 2026
 
 Work is in C:/Users/crate/Documents/ProjectALEVEL on feat/pyodide-feasibility. At the start of the original feasibility investigation, elevated Git status was clean. At the 13 October preparation continuation, the expected uncommitted work was present; the owner explicitly authorized preserving it on this branch. At the initial handoff HEAD, local main and saved origin/main matched 092dc5f; main...origin/main is 0/0. The owner reported squash-merging PR #2. No fresh remote fetch or hosted CI verification is claimed. Backup branch backup/original-planning-2026-10-12 remains at 516e0dd. The older .codex worktree remains intact and untouched.
 

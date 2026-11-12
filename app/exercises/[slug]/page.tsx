@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { exercises } from "@/lib/content";
+import { exercises, syllabus, syllabusPages } from "@/lib/content";
 import Markdown from "@/components/Markdown";
 import { PracticeReview } from "@/components/Journey";
 export function generateStaticParams() {
@@ -37,15 +37,16 @@ export default async function ExercisePage({
       <h1>{exercise.title}</h1>
       <p className="lead">{exercise.summary}</p>
       <p className="meta">
-        2026 outcomes {exercise.syllabus.outcomes.join(", ")} · Page 8 · Partial
+        2026 outcomes {exercise.syllabus.outcomes.join(", ")} · Printed pages {syllabusPages(exercise.syllabus.outcomes)} · Partial
         coverage
       </p>
       <Markdown body={exercise.body} />
       <section>
         <h2>Visible examples</h2>
         <p>
-          Each row is a separate example. Line breaks follow the input/output
-          contract above.
+          Each row is a separate visible example. Follow the task contract above;
+          SQL and data-design tasks use the stated fixed dataset. These are
+          inspectable examples for offline practice, not hidden tests or grades.
         </p>
         <div className="table-scroll">
           <table className="table table-fixed">
@@ -60,12 +61,12 @@ export default async function ExercisePage({
               {exercise.examples.map((example) => (
                 <tr key={example.input}>
                   <td>
-                    <code className="inline-block whitespace-pre-wrap">
+                    <code className="inline-block max-w-full whitespace-pre-wrap [overflow-wrap:anywhere]">
                       {example.input.trim()}
                     </code>
                   </td>
                   <td>
-                    <code className="inline-block whitespace-pre-wrap">
+                    <code className="inline-block max-w-full whitespace-pre-wrap [overflow-wrap:anywhere]">
                       {example.output.trim()}
                     </code>
                   </td>
@@ -98,6 +99,7 @@ export default async function ExercisePage({
       />
       <section className="source-note">
         <h2>Content review</h2>
+        <p><a href={syllabus.source}>Official 2026 syllabus, printed pages {syllabusPages(exercise.syllabus.outcomes)}</a>.</p>
         <p>
           {exercise.provenance} Reviewed {exercise.reviewedOn}.{" "}
           {exercise.reviewer}.

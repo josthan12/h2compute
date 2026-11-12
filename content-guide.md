@@ -119,8 +119,25 @@ Link to sources and identify external assets. Do not upload commercial textbooks
 
 Milestone 1 uses plain `.md` files with JSON frontmatter between `---` lines. JSON is a YAML subset, but the loader deliberately accepts JSON only to avoid a separate YAML parser. Lesson quizzes live in frontmatter with IDs, objectives, outcome subsets, time/difficulty, answer indices and per-option explanations. Offline exercise frontmatter includes visible examples and hints; `<!-- model -->` separates the prompt and model Markdown. Raw HTML, images and MDX are unsupported in this first slice. Only published items are linked.
 
-The checked 2026 register currently contains 2.2.3 and 2.2.6, printed page 8, with explicit partial-coverage notes. Extending it requires reading the official syllabus and recording exact scope; an invented ID must never be added merely to pass validation. Publication here reflects automated example/source-mapping review; an independent teacher review remains pending and is disclosed on the learner pages.
+The checked 2026 register contains 2.2.3/2.2.6 (printed page 8), 1.2.3–1.2.5 (page 7), 2.3.2 (page 9) and 3.3.1/3.3.2/3.3.8 (page 11), all with explicit partial-coverage notes. Search and SQL mapping records are in docs/decisions/search-mapping-2026-11-12.md and docs/decisions/sql-mapping-2026-11-12.md. Extending it requires reading the official syllabus and recording exact scope; an invented ID must never be added merely to pass validation. Publication here reflects automated example/source-mapping review; an independent teacher review remains pending and is disclosed on the learner pages.
 
 ## Multi-lesson topic authoring
 
-Published lesson slugs must match the typed catalog in lib/lesson-ids.ts, which defines navigation order and progress keys. Each lesson supplies coverageNote and one relatedExercises entry; the exercise must point back to that lesson, use an outcome subset and link only published prerequisite lessons. Add expected traces for every new Python code block to tests/check_examples.py; every model is run against all visible examples. Input/output examples may span multiple lines, which the learner table preserves. Keep shared page copy generic and state partial coverage precisely.
+Published lesson slugs and topic IDs must match the typed catalog in lib/lesson-ids.ts, which defines navigation order, topic boundaries and progress keys. Topic pages offer an incomplete-lesson filter based only on local self-marked progress. All navigation sequences stay within their topic. Each lesson supplies coverageNote and one relatedExercises entry; the exercise must point back to that lesson, use an outcome subset and link only published prerequisite lessons. Add expected traces for every new Python code block to tests/check_examples.py; every model is run against all visible examples. Input/output examples may span multiple lines, which the learner table preserves. Keep shared page copy generic and state partial coverage precisely.
+
+## Offline task formats
+
+Every exercise declares `format`: `python`, `sql` or `design`. Python tasks use
+the documented single-file stdin/stdout contract. SQL tasks use the fixed club
+schema/records and show column-labelled result rows, including explicit empty
+results. A design task expects written reasoning. The app renders these as
+offline tasks; none executes or grades learner input.
+
+`npm run test:examples` runs all three closed registries: Python block/visible
+case traces, search property/boundary checks, and standard-library SQLite checks
+for every SQL block/model, displayed table/result, visible case and key rule.
+New content must acquire explicit expected traces/results rather than being
+silently skipped. SQL fixture commands are checked by executing the fixture in
+fresh in-memory databases; invalid primary/foreign-key cases must be rejected.
+No database server or npm SQL dependency is needed. Only future published
+browser-runnable tasks need pinned-Pyodide checks; this beta has none.

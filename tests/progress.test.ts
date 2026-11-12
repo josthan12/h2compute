@@ -125,3 +125,17 @@ test("storage failures are explicit; reset removes only the owned key", () => {
   assert.equal(saveProgress(blocked, progress), false);
   assert.equal(resetProgress(blocked), false);
 });
+
+test("earlier three-lesson v2 data expands without losing progress and preserves all areas", () => {
+  const earlier = Object.fromEntries(LESSON_IDS.slice(0, 3).map(id => [id, complete]));
+  const decoded = decodeProgress(JSON.stringify({ version: 2, lessons: earlier }));
+  assert.equal(decoded.recovered, false);
+  assert.equal(decoded.migrated, false);
+  for (const id of LESSON_IDS.slice(0, 3)) assert.deepEqual(decoded.progress.lessons[id], complete);
+  for (const id of LESSON_IDS.slice(3)) assert.equal(decoded.progress.lessons[id].completed, false);
+  let next = updateLesson(decoded.progress, "binary-search", complete);
+  next = updateLesson(next, "relations-and-keys", complete);
+  const saved = decodeProgress(encodeProgress(next)).progress;
+  for (const id of [...LESSON_IDS.slice(0, 3), "binary-search", "relations-and-keys"] as const) assert.deepEqual(saved.lessons[id], complete);
+  assert.equal(saved.lessons["select-filter-and-order"].completed, false);
+});

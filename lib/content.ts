@@ -3,7 +3,7 @@ import path from "node:path";
 import { fromMarkdown } from "mdast-util-from-markdown";
 import type { Root, RootContent } from "mdast";
 import syllabus from "../content/syllabus/2026.json";
-import { LESSON_IDS, isLessonId, type LessonId } from "./lesson-ids";
+import { LESSON_IDS, TOPICS, isTopicId, isLessonId, type TopicId, type LessonId } from "./lesson-ids";
 
 export { syllabus };
 export type Option = { text: string; explanation: string };
@@ -20,7 +20,7 @@ export type Question = {
 export type Metadata = {
   title: string;
   slug: string;
-  topic: "python-control-flow";
+  topic: TopicId;
   summary: string;
   syllabus: { year: 2026; outcomes: string[] };
   difficulty: "core";
@@ -43,6 +43,7 @@ export type Exercise = Metadata & {
   kind: "exercises";
   body: string;
   model: string;
+  format: "python" | "sql" | "design";
   lesson: LessonId;
   objective: string;
   examples: { input: string; output: string }[];
@@ -114,7 +115,7 @@ export function parseContent(
   );
   slug(meta.slug);
   assert(
-    meta.topic === "python-control-flow" && meta.difficulty === "core",
+    isTopicId(meta.topic) && meta.difficulty === "core",
     "Unsupported topic or difficulty",
   );
   assert(
@@ -191,6 +192,7 @@ export function parseContent(
     }
     return { ...meta, kind, body: match[2] } as Lesson;
   }
+  assert(["python", "sql", "design"].includes(String(meta.format)), "Invalid offline task format");
   slug(meta.lesson);
   assert(isLessonId(meta.lesson), "Unknown parent lesson ID");
   text(meta.objective);
@@ -247,9 +249,9 @@ export function headings(body: string): { id: string; title: string }[] {
 export function validateCollection(items: Content[]) {
   const routes = new Map<string, Set<string>>([
     ["/", new Set()],
-    ["/topics/python-control-flow", new Set()],
+    ...TOPICS.map(topic => [`/topics/${topic.id}`, new Set<string>()] as const),
     ["/privacy", new Set()],
-    ["/about", new Set()],
+    ["/about", new Set(["feedback"])],
   ]);
   const ids = new Set<string>();
   for (const item of items) {
@@ -280,6 +282,7 @@ export function validateCollection(items: Content[]) {
     if (item.kind === "exercises")
       assert(routes.has(`/lessons/${item.lesson}`), "Missing parent lesson");
     if (item.kind === "lessons") {
+      assert(TOPICS.some(topic => topic.id === item.topic && (topic.lessonIds as readonly string[]).includes(item.slug)), "Lesson registered under a different topic");
       assert(
         item.relatedExercises.length === 1,
         "Each lesson requires one offline journey task",
@@ -301,6 +304,7 @@ export function validateCollection(items: Content[]) {
       );
       assert(
         lesson?.kind === "lessons" &&
+          lesson.topic === item.topic &&
           lesson.relatedExercises.includes(item.slug),
         "Parent lesson does not link this exercise",
       );
@@ -382,6 +386,10 @@ export function loadContent(): Content[] {
   );
   validateCollection(items);
   return items;
+}
+export function syllabusPages(ids: readonly string[]): string {
+  const register = syllabus.outcomes as Record<string, { page: number }>;
+  return [...new Set(ids.map(id => register[id].page))].sort((a, b) => a - b).join(", ");
 }
 export function lessons(): Lesson[] {
   return loadContent()
