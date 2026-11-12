@@ -1,6 +1,6 @@
 # Search sequence: syllabus mapping and boundaries
 
-**Checked:** 12 November 2026.  
+**Checked:** 12 November 2026.
 **Scope:** two original algorithms/data structures lessons, explanatory checkpoints and offline Python tasks. Source mapping is verified; integration checks and independent agent sign-off are recorded by the delivery workflow. Independent teacher review remains pending.
 
 ## Official source and identifiers

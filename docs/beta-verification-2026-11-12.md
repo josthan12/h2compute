@@ -52,6 +52,7 @@ Next.js **16.4.6**, Playwright **1.64.0**, Chromium **156.0.8078.4** (revision
 | `npm ls --all --json` | Discovery agent independently reran: exit 0, with six `extraneous` optional WASM artifacts reported. All match locked optional versions; applicable Windows native bindings are installed. This is not a clean dependency-graph claim. |
 | `python docs/beta-evidence-2026-11-12/check.py` | Exit 0; 53 local documentation targets, four screenshot hashes and eight production traces without developer-runner files. |
 | `git diff --check` | Exit 0. |
+| `git diff --cached --check` | Initial staged check caught one Markdown trailing-space line in the new search mapping record; corrected before independent review. |
 
 The primary agent also ran this exact compatibility smoke command (exit 0):
 
