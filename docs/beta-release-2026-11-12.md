@@ -67,9 +67,11 @@ Donations are optional and not configured.
 
 ## Release sequence still required
 
-1. Obtain independent local candidate review under `independent-review.md`.
-   The owner reviews the completed diff. Push/PR/merge remain owner actions;
-   this task authorizes none of them.
+1. Obtain independent candidate review under `independent-review.md`.
+   The owner's later 12 November instruction now authorizes agent push and PR
+   creation/update for this repository. Follow the incremental delivery plan;
+   merge, production publication and learner activation remain gated. Older
+   handoff records retain the earlier owner-only authority as historical evidence.
 2. Obtain the existing required teacher/student educational feedback,
    independent accessibility/screen-reader review and real-device checks.
    Record reviewer/device/browser/date, findings, fixes and evidence. Resolve

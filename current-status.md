@@ -4,7 +4,31 @@
 **Overall status:** Local theory-beta candidate across all three approved areas; public release is blocked by outstanding external evidence/access. Milestones 4/5 are not complete. Milestone 3 stays NO-GO for learner activation.
 **Implementation:** Eight lessons, sixteen explanatory MCQs and eight offline tasks: Python control flow (3), list searching (2), relational data/SQL (3). Topic-specific navigation, incomplete filtering and resilient account-free local progress are implemented. No learner execution, account, hosted grader or new service. The developer-only spike/preview and historical evidence are preserved.
 
-## Beta continuation — 12 November 2026
+## Incremental delivery authorization — 12 November 2026
+
+The owner now authorizes the agent to push and create/update the PR and asks for
+small milestone-based improvements, defensive programming and fallback plans,
+with all changes confined to this repository. This supersedes the earlier
+owner-only push/PR wording for this continuation; merge and production/learner
+activation remain unauthorized. No global configuration or other project may
+be changed. Existing current-branch and SSH restrictions remain; explicit
+HTTPS operations use existing credentials without changing those settings.
+
+Follow [the incremental delivery plan](docs/delivery-plan-2026-11-12.md):
+D1 bounded CI/deployment hold and reviewed draft publication; D2 separately
+reproduced two-tab progress recovery/reset fixes; D3 exact-head hosted evidence.
+The current clean baseline was `5a3be84`. Existing local beta sign-off is in
+[its receipt](docs/reviews/2026-11-12-local-beta-review.md). Every new increment
+requires independent review; public-beta milestone gates remain open.
+
+Current repo-only reads confirm existing GitHub ADMIN access, no existing PR for
+this branch and no existing milestones. Fresh HTTPS ref listing reports main
+`092dc5f3014a64e5a3d6255dac6ecfb784790769`; the feature ref is not yet published.
+Full branch scope includes preserved developer-only feasibility history as well
+as the beta. See [delivery verification](docs/delivery-verification-2026-11-12.md)
+and [full-branch draft description](docs/delivery-pr-description-2026-11-12.md).
+
+## Beta continuation — 12 November 2026 (earlier local handoff)
 
 The owner explicitly authorized beta work **on the current branch** after the
 agent identified the saved focused-branch workflow conflict. Work remains in

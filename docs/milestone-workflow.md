@@ -6,6 +6,20 @@
 
 ## Current direction
 
+### Current-session authorization — 12 November 2026
+
+The owner now authorizes the agent to push and create/update the PR for this
+repository and requests incremental milestones, defensive programming and
+fallback plans. Follow [the delivery plan](delivery-plan-2026-11-12.md).
+This narrowly supersedes the older owner-only push/PR wording below. Continue
+on the already authorized current branch; no branch switch/history rewrite,
+merge, protection change, production publication, learner activation, paid
+service, scope/privacy expansion or external policy contact is authorized.
+Keep all writes and remote mutations confined to ProjectALEVEL/
+`josthan12/h2compute`; do not change global configuration or other projects.
+Use explicit HTTPS Git operations with existing credentials to avoid the saved
+owner-only SSH handoff. Independent candidate review remains mandatory.
+
 Current handoff: Milestones 1 and 2 merged at local main/saved origin/main 092dc5f. Milestone 3 investigates a developer-only prototype on feat/pyodide-feasibility in the original project folder. See current-status.md and milestone-3-verification.md; activation remains gated. The historical workflow context below is retained.
 
 Planning research is complete and the owner approved theory-first implementation. The repository and origin remote are connected; Milestone 1 is merged and Milestone 2 has a local three-lesson implementation. Use current-status.md for current checks and review limits. Build lessons, quizzes, offline practice/model explanations and local progress first. Evaluate Pyodide only after the first theory topic works. Browser practice uses visible examples and local self-checks; hosted grading/private tests are deferred.

@@ -13,6 +13,7 @@
     "typecheck": "next typegen && tsc --noEmit",
     "test": "tsx --test tests/content.test.ts tests/progress.test.ts tests/quiz.test.ts",
     "test:examples": "python tests/check_examples.py",
+    "test:runner-drivers": "node --test docs/pyodide-spike/check-benign.test.mjs docs/pyodide-spike/check-desktop.test.mjs docs/pyodide-spike/check-resources.test.mjs docs/pyodide-spike/check-published-candidate.test.mjs",
     "test:e2e": "playwright test",
     "check:content": "tsx scripts/check-content.ts"
   },

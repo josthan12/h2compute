@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Milestone 3 - Browser feasibility (activation gated)",
+    "state": "open",
+    "description": "Preserve the developer-only isolated runner and evidence. Exit only after actual-host isolation/recovery, supported desktop/mobile devices, practical memory/resource behavior, provider-policy/allowance and explicit activation authorization are satisfied. Local/benign preview evidence is partial; learner execution stays disabled. Theory beta delivery may proceed independently. Tracked in roadmap.md and docs/milestone-3-verification.md."
+  },
+  {
+    "title": "Milestone 4 - Theory beta content and hardening",
+    "state": "open",
+    "description": "Deliver bounded connected Python, algorithms/data-structures and relational/SQL learning journeys with verified partial 9569 mapping, explanatory quizzes, offline models, resilient local progress and accessible navigation. Integrate small reviewed D1 CI/delivery and D2 progress-recovery increments; require exact-head CI and resolve serious content/accessibility/security findings. Independent teacher/student, accessibility/device and applicable hosting/deployment evidence remain exit gates. Tracked in roadmap.md and docs/delivery-plan-2026-11-12.md."
+  },
+  {
+    "title": "Milestone 5 - Public beta release",
+    "state": "open",
+    "description": "Publish only the reviewed theory beta after all applicable content, human/device, privacy/coverage/feedback, CI, hosting allowance/deployment and owner publication gates pass. Record release notes, corrections and truthful shipped evidence. Runner inclusion requires the separate Milestone 3 gate and activation approval; otherwise retain offline practice. No invented user, learning-outcome or device/provider evidence. Tracked in roadmap.md and docs/beta-release-2026-11-12.md."
+  }
+]
