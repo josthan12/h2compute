@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { headings, lessons, exercises, syllabus } from "@/lib/content";
+import { headings, lessons, exercises, syllabus, syllabusPages } from "@/lib/content";
+import { TOPICS } from "@/lib/lesson-ids";
 import Markdown from "@/components/Markdown";
 import { Checkpoint, Completion } from "@/components/Journey";
 export function generateStaticParams() {
@@ -28,9 +29,11 @@ export default async function LessonPage({
   const path = lessons();
   const lesson = path.find((item) => item.slug === slug);
   if (!lesson) notFound();
-  const position = path.findIndex((item) => item.slug === lesson.slug);
-  const previous = path[position - 1];
-  const next = path[position + 1];
+  const topic = TOPICS.find(topic => topic.id === lesson.topic)!;
+  const topicPath = path.filter(item => item.topic === lesson.topic);
+  const position = topicPath.findIndex((item) => item.slug === lesson.slug);
+  const previous = topicPath[position - 1];
+  const next = topicPath[position + 1];
   const exercise = exercises().find(
     (item) => item.slug === lesson.relatedExercises[0],
   );
@@ -38,7 +41,7 @@ export default async function LessonPage({
   return (
     <div className="shell lesson-layout">
       <aside className="toc">
-        <Link href="/topics/python-control-flow">← Python control flow</Link>
+        <Link href={`/topics/${topic.id}`}>← {topic.title}</Link>
         <nav aria-label="On this page">
           <p className="eyebrow">In this lesson</p>
           {headings(lesson.body).map((heading) => (
@@ -59,7 +62,7 @@ export default async function LessonPage({
         <h1>{lesson.title}</h1>
         <p className="lead">{lesson.summary}</p>
         <p className="meta">
-          SEAB 2026 · Outcomes {lesson.syllabus.outcomes.join(", ")} · Page 8 ·
+          SEAB 2026 · Outcomes {lesson.syllabus.outcomes.join(", ")} · Printed pages {syllabusPages(lesson.syllabus.outcomes)} ·
           Partial coverage
         </p>
         <div className="prerequisites">
@@ -100,12 +103,12 @@ export default async function LessonPage({
               ← Previous: {previous.title}
             </Link>
           ) : (
-            <Link href="/topics/python-control-flow">← Topic overview</Link>
+            <Link href={`/topics/${topic.id}`}>← Topic overview</Link>
           )}
           {next ? (
             <Link href={`/lessons/${next.slug}`}>Next: {next.title} →</Link>
           ) : (
-            <Link href="/topics/python-control-flow">Review the topic →</Link>
+            <Link href={`/topics/${topic.id}`}>Review the topic →</Link>
           )}
         </nav>
         <section className="source-note">
@@ -115,7 +118,7 @@ export default async function LessonPage({
             Mapping and example review: {lesson.reviewedOn}. {lesson.reviewer}.
           </p>
           <p>
-            <a href={syllabus.source}>Official 2026 syllabus, printed page 8</a>
+            <a href={syllabus.source}>Official 2026 syllabus, printed pages {syllabusPages(lesson.syllabus.outcomes)}</a>
             . {lesson.coverageNote}
           </p>
         </section>

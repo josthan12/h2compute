@@ -1,0 +1,62 @@
+{
+  "date": "2026-10-13",
+  "url": "https://h2compute-pyodide-preview-6xu10swwo-poopoopeepee.vercel.app",
+  "deployment": "dpl_EtLXtsqjPxkTVUAeaGhwJ6tZQ3BA",
+  "contentSHA256": "1825befc25da4421c26bb27cfb625a3f9714220cac2652cbd6bd40a17cd6d3f2",
+  "method": "Authenticated CLI curl ordinary GETs with --compressed; no runtime execution or adversarial probes",
+  "files": 5,
+  "decodedBytes": 13531207,
+  "transferBytes": 6424104,
+  "records": [
+    {
+      "path": "runtime/314.0.7/pyodide.mjs",
+      "status": 200,
+      "sha256": "6f1d60f7bf529beb300f0f47983c921d3982363640ba20af0e38efdddbc66109",
+      "decodedBytes": 17931,
+      "transferBytes": 7161,
+      "encoding": "gzip",
+      "cache": "HIT",
+      "corsPermission": false
+    },
+    {
+      "path": "runtime/314.0.7/pyodide.asm.mjs",
+      "status": 200,
+      "sha256": "f7cdc8ece80678ceb712f8e65ebe6d3a83203a180c399865f49612a051693635",
+      "decodedBytes": 1250344,
+      "transferBytes": 261999,
+      "encoding": "gzip",
+      "cache": "HIT",
+      "corsPermission": false
+    },
+    {
+      "path": "runtime/314.0.7/pyodide.asm.wasm",
+      "status": 200,
+      "sha256": "cc36e3cab04fdfc9a63ff13eb52eae2b911bf46c025cc7b281f394bd3de1d5e6",
+      "decodedBytes": 9598218,
+      "transferBytes": 3582449,
+      "encoding": "gzip",
+      "cache": "HIT",
+      "corsPermission": false
+    },
+    {
+      "path": "runtime/314.0.7/pyodide-lock.json",
+      "status": 200,
+      "sha256": "5dc2fc119108bc148c7457dc86e7675b5c87e1cafd420b9c34c1eaef7b36c010",
+      "decodedBytes": 119077,
+      "transferBytes": 26858,
+      "encoding": "gzip",
+      "cache": "HIT",
+      "corsPermission": false
+    },
+    {
+      "path": "runtime/314.0.7/python_stdlib.zip",
+      "status": 200,
+      "sha256": "fa1957e5777068fc4f7437f96d860ae2fbe9c19732ba06c84e004ec16dd7dd7a",
+      "decodedBytes": 2545637,
+      "transferBytes": 2545637,
+      "encoding": null,
+      "cache": "HIT",
+      "corsPermission": false
+    }
+  ]
+}

@@ -1,0 +1,697 @@
+{
+  "date": "2026-10-13T04:56:57.454Z",
+  "environment": "Windows loopback; desktop and Pixel 7 emulation; no deployment or physical device",
+  "browser": "156.0.8078.4",
+  "testURL": "http://127.0.0.1:3191",
+  "packageContentSHA256": "4c374617b43ca6dc9a8222fdf22c1b9449db674d9719b407e074c502425701c3",
+  "zipSHA256": "f9fb445acb61f85361da080e7b6dd45a9777272d419dc35b869f61945bf79a17",
+  "records": 99,
+  "exactAuthoredComparisons": 40,
+  "outcomes": {
+    "completed": 65,
+    "runtime-error": 6,
+    "timeout": 2,
+    "cancelled": 4,
+    "output-limit": 6,
+    "protocol-error": 4,
+    "invalid-input": 4,
+    "unavailable": 4
+  },
+  "checks": [
+    {
+      "mode": "desktop",
+      "name": "cold stdin/stdout/stderr",
+      "state": "completed",
+      "loadMs": 1711.3999999761581,
+      "totalMs": 1718
+    },
+    {
+      "mode": "desktop",
+      "name": "warm unicode/no-final-newline",
+      "state": "completed",
+      "loadMs": 3217.899999976158,
+      "totalMs": 3266.7999999523163
+    },
+    {
+      "mode": "desktop",
+      "name": "syntax",
+      "state": "runtime-error",
+      "loadMs": 6195.300000011921,
+      "totalMs": 6298.300000011921
+    },
+    {
+      "mode": "desktop",
+      "name": "runtime",
+      "state": "runtime-error",
+      "loadMs": 6697.400000035763,
+      "totalMs": 6785.699999988079
+    },
+    {
+      "mode": "desktop",
+      "name": "EOF",
+      "state": "runtime-error",
+      "loadMs": 7616.800000011921,
+      "totalMs": 7644.600000023842
+    },
+    {
+      "mode": "desktop",
+      "name": "infinite loop watchdog",
+      "state": "timeout",
+      "loadMs": 5867.900000035763,
+      "totalMs": 6384.700000047684
+    },
+    {
+      "mode": "desktop",
+      "name": "cancel",
+      "state": "cancelled",
+      "loadMs": 5867.799999952316,
+      "totalMs": 5892.5
+    },
+    {
+      "mode": "desktop",
+      "name": "cancel recovery",
+      "state": "completed",
+      "loadMs": 7365.5,
+      "totalMs": 7384.199999988079
+    },
+    {
+      "mode": "desktop",
+      "name": "reset",
+      "state": "cancelled",
+      "loadMs": 5558.599999964237,
+      "totalMs": 5570.599999964237
+    },
+    {
+      "mode": "desktop",
+      "name": "reset recovery",
+      "state": "completed",
+      "loadMs": 5658.599999964237,
+      "totalMs": 5695.300000011921
+    },
+    {
+      "mode": "desktop",
+      "name": "output flood",
+      "state": "output-limit",
+      "loadMs": 5136.100000023842,
+      "totalMs": 5174.899999976158
+    },
+    {
+      "mode": "desktop",
+      "name": "set globals/files",
+      "state": "completed",
+      "loadMs": 6046.800000011921,
+      "totalMs": 6067.200000047684
+    },
+    {
+      "mode": "desktop",
+      "name": "fresh job/case",
+      "state": "completed",
+      "loadMs": 8614,
+      "totalMs": 8650.299999952316
+    },
+    {
+      "mode": "desktop",
+      "name": "worker DOM/storage/navigation",
+      "state": "completed",
+      "loadMs": 3829.600000023842,
+      "totalMs": 3836.2000000476837
+    },
+    {
+      "mode": "desktop",
+      "name": "CSP network denial",
+      "state": "completed",
+      "loadMs": 1717.300000011921,
+      "totalMs": 1852.300000011921
+    },
+    {
+      "mode": "desktop",
+      "name": "opaque frame boundary"
+    },
+    {
+      "mode": "desktop",
+      "name": "stale messages",
+      "state": "completed",
+      "loadMs": 4426.199999988079,
+      "totalMs": 4494.5
+    },
+    {
+      "mode": "desktop",
+      "name": "wrong job discarded",
+      "state": "completed",
+      "loadMs": 6195.800000011921,
+      "totalMs": 6222.900000035763
+    },
+    {
+      "mode": "desktop",
+      "name": "malformed",
+      "state": "protocol-error",
+      "loadMs": 7226.300000011921,
+      "totalMs": 7237.300000011921
+    },
+    {
+      "mode": "desktop",
+      "name": "invalid stream",
+      "state": "protocol-error",
+      "loadMs": 5780.399999976158,
+      "totalMs": 5845
+    },
+    {
+      "mode": "desktop",
+      "name": "oversized output",
+      "state": "output-limit",
+      "loadMs": 7656.699999988079,
+      "totalMs": 7683.600000023842
+    },
+    {
+      "mode": "desktop",
+      "name": "message flood",
+      "state": "output-limit",
+      "loadMs": 8913.800000011921,
+      "totalMs": 9020.300000011921
+    },
+    {
+      "mode": "desktop",
+      "name": "native fetch/import/websocket CSP",
+      "state": "completed",
+      "loadMs": 7083.100000023842,
+      "totalMs": 7334.5
+    },
+    {
+      "mode": "desktop",
+      "name": "oversized source",
+      "state": "invalid-input"
+    },
+    {
+      "mode": "desktop",
+      "name": "oversized stdin",
+      "state": "invalid-input"
+    },
+    {
+      "mode": "desktop",
+      "name": "loading watchdog",
+      "state": "unavailable",
+      "totalMs": 12.899999976158142
+    },
+    {
+      "mode": "desktop",
+      "name": "blocked download",
+      "state": "unavailable",
+      "totalMs": 18.599999964237213
+    },
+    {
+      "mode": "desktop",
+      "name": "download recovery",
+      "state": "completed",
+      "loadMs": 7405,
+      "totalMs": 7421
+    },
+    {
+      "mode": "desktop",
+      "name": "authored classify-a-score.md model 0 case 0",
+      "state": "completed",
+      "loadMs": 8611.400000035763,
+      "totalMs": 8658.900000035763
+    },
+    {
+      "mode": "desktop",
+      "name": "authored classify-a-score.md model 0 case 1",
+      "state": "completed",
+      "loadMs": 9519.700000047684,
+      "totalMs": 9635.200000047684
+    },
+    {
+      "mode": "desktop",
+      "name": "authored classify-a-score.md model 0 case 2",
+      "state": "completed",
+      "loadMs": 8972.300000011921,
+      "totalMs": 8995.800000011921
+    },
+    {
+      "mode": "desktop",
+      "name": "authored classify-a-score.md model 0 case 3",
+      "state": "completed",
+      "loadMs": 7838.600000023842,
+      "totalMs": 7859.300000011921
+    },
+    {
+      "mode": "desktop",
+      "name": "authored classify-a-score.md model 0 case 4",
+      "state": "completed",
+      "loadMs": 6964.099999964237,
+      "totalMs": 6991.299999952316
+    },
+    {
+      "mode": "desktop",
+      "name": "authored classify-a-score.md model 0 case 5",
+      "state": "completed",
+      "loadMs": 6489.099999964237,
+      "totalMs": 6512.299999952316
+    },
+    {
+      "mode": "desktop",
+      "name": "authored sum-a-sequence.md model 0 case 0",
+      "state": "completed",
+      "loadMs": 5938.700000047684,
+      "totalMs": 5964.400000035763
+    },
+    {
+      "mode": "desktop",
+      "name": "authored sum-a-sequence.md model 0 case 1",
+      "state": "completed",
+      "loadMs": 6830,
+      "totalMs": 6854.600000023842
+    },
+    {
+      "mode": "desktop",
+      "name": "authored sum-a-sequence.md model 0 case 2",
+      "state": "completed",
+      "loadMs": 7896.899999976158,
+      "totalMs": 7916.300000011921
+    },
+    {
+      "mode": "desktop",
+      "name": "authored sum-a-sequence.md model 0 case 3",
+      "state": "completed",
+      "loadMs": 7392,
+      "totalMs": 7532.599999964237
+    },
+    {
+      "mode": "desktop",
+      "name": "authored sum-a-sequence.md model 1 case 0",
+      "state": "completed",
+      "loadMs": 6802.300000011921,
+      "totalMs": 6855.5
+    },
+    {
+      "mode": "desktop",
+      "name": "authored sum-a-sequence.md model 1 case 1",
+      "state": "completed",
+      "loadMs": 5920.399999976158,
+      "totalMs": 6005
+    },
+    {
+      "mode": "desktop",
+      "name": "authored sum-a-sequence.md model 1 case 2",
+      "state": "completed",
+      "loadMs": 6082.5,
+      "totalMs": 6114
+    },
+    {
+      "mode": "desktop",
+      "name": "authored sum-a-sequence.md model 1 case 3",
+      "state": "completed",
+      "loadMs": 6151.699999988079,
+      "totalMs": 6184.900000035763
+    },
+    {
+      "mode": "desktop",
+      "name": "authored summarise-revision-scores.md model 0 case 0",
+      "state": "completed",
+      "loadMs": 4665.199999988079,
+      "totalMs": 4684.800000011921
+    },
+    {
+      "mode": "desktop",
+      "name": "authored summarise-revision-scores.md model 0 case 1",
+      "state": "completed",
+      "loadMs": 5402.599999964237,
+      "totalMs": 5424.199999988079
+    },
+    {
+      "mode": "desktop",
+      "name": "authored summarise-revision-scores.md model 0 case 2",
+      "state": "completed",
+      "loadMs": 5518.300000011921,
+      "totalMs": 5548.899999976158
+    },
+    {
+      "mode": "desktop",
+      "name": "authored summarise-revision-scores.md model 0 case 3",
+      "state": "completed",
+      "loadMs": 5569.200000047684,
+      "totalMs": 5596.600000023842
+    },
+    {
+      "mode": "desktop",
+      "name": "authored summarise-revision-scores.md model 0 case 4",
+      "state": "completed",
+      "loadMs": 6134.300000011921,
+      "totalMs": 6159.400000035763
+    },
+    {
+      "mode": "desktop",
+      "name": "authored summarise-revision-scores.md model 0 case 5",
+      "state": "completed",
+      "loadMs": 6060.700000047684,
+      "totalMs": 6099.100000023842
+    },
+    {
+      "mode": "desktop",
+      "name": "failed requests"
+    },
+    {
+      "mode": "mobile-emulation",
+      "name": "cold stdin/stdout/stderr",
+      "state": "completed",
+      "loadMs": 2586.800000011921,
+      "totalMs": 2598.699999988079
+    },
+    {
+      "mode": "mobile-emulation",
+      "name": "warm unicode/no-final-newline",
+      "state": "completed",
+      "loadMs": 8331.899999976158,
+      "totalMs": 8346.5
+    },
+    {
+      "mode": "mobile-emulation",
+      "name": "syntax",
+      "state": "runtime-error",
+      "loadMs": 4664.300000011921,
+      "totalMs": 4774.600000023842
+    },
+    {
+      "mode": "mobile-emulation",
+      "name": "runtime",
+      "state": "runtime-error",
+      "loadMs": 5330.399999976158,
+      "totalMs": 5367.199999988079
+    },
+    {
+      "mode": "mobile-emulation",
+      "name": "EOF",
+      "state": "runtime-error",
+      "loadMs": 5164.299999952316,
+      "totalMs": 5200.599999964237
+    },
+    {
+      "mode": "mobile-emulation",
+      "name": "infinite loop watchdog",
+      "state": "timeout",
+      "loadMs": 5470,
+      "totalMs": 5974.400000035763
+    },
+    {
+      "mode": "mobile-emulation",
+      "name": "cancel",
+      "state": "cancelled",
+      "loadMs": 4070.199999988079,
+      "totalMs": 4088.100000023842
+    },
+    {
+      "mode": "mobile-emulation",
+      "name": "cancel recovery",
+      "state": "completed",
+      "loadMs": 5254.399999976158,
+      "totalMs": 5277.599999964237
+    },
+    {
+      "mode": "mobile-emulation",
+      "name": "reset",
+      "state": "cancelled",
+      "loadMs": 5684.5,
+      "totalMs": 5702.100000023842
+    },
+    {
+      "mode": "mobile-emulation",
+      "name": "reset recovery",
+      "state": "completed",
+      "loadMs": 5723.100000023842,
+      "totalMs": 5896.800000011921
+    },
+    {
+      "mode": "mobile-emulation",
+      "name": "output flood",
+      "state": "output-limit",
+      "loadMs": 5323.600000023842,
+      "totalMs": 5349.900000035763
+    },
+    {
+      "mode": "mobile-emulation",
+      "name": "set globals/files",
+      "state": "completed",
+      "loadMs": 4839.5,
+      "totalMs": 4860.399999976158
+    },
+    {
+      "mode": "mobile-emulation",
+      "name": "fresh job/case",
+      "state": "completed",
+      "loadMs": 4092.099999964237,
+      "totalMs": 4100.899999976158
+    },
+    {
+      "mode": "mobile-emulation",
+      "name": "worker DOM/storage/navigation",
+      "state": "completed",
+      "loadMs": 1757.2000000476837,
+      "totalMs": 1764.1000000238419
+    },
+    {
+      "mode": "mobile-emulation",
+      "name": "CSP network denial",
+      "state": "completed",
+      "loadMs": 1703.300000011921,
+      "totalMs": 1816.9000000357628
+    },
+    {
+      "mode": "mobile-emulation",
+      "name": "opaque frame boundary"
+    },
+    {
+      "mode": "mobile-emulation",
+      "name": "stale messages",
+      "state": "completed",
+      "loadMs": 4436.100000023842,
+      "totalMs": 4462.800000011921
+    },
+    {
+      "mode": "mobile-emulation",
+      "name": "wrong job discarded",
+      "state": "completed",
+      "loadMs": 5781.900000035763,
+      "totalMs": 5802.300000011921
+    },
+    {
+      "mode": "mobile-emulation",
+      "name": "malformed",
+      "state": "protocol-error",
+      "loadMs": 5645.5,
+      "totalMs": 5668.399999976158
+    },
+    {
+      "mode": "mobile-emulation",
+      "name": "invalid stream",
+      "state": "protocol-error",
+      "loadMs": 7441.400000035763,
+      "totalMs": 7487.300000011921
+    },
+    {
+      "mode": "mobile-emulation",
+      "name": "oversized output",
+      "state": "output-limit",
+      "loadMs": 7214,
+      "totalMs": 7230.5
+    },
+    {
+      "mode": "mobile-emulation",
+      "name": "message flood",
+      "state": "output-limit",
+      "loadMs": 8146.399999976158,
+      "totalMs": 8202.699999988079
+    },
+    {
+      "mode": "mobile-emulation",
+      "name": "native fetch/import/websocket CSP",
+      "state": "completed",
+      "loadMs": 8331.699999988079,
+      "totalMs": 8819.699999988079
+    },
+    {
+      "mode": "mobile-emulation",
+      "name": "oversized source",
+      "state": "invalid-input"
+    },
+    {
+      "mode": "mobile-emulation",
+      "name": "oversized stdin",
+      "state": "invalid-input"
+    },
+    {
+      "mode": "mobile-emulation",
+      "name": "loading watchdog",
+      "state": "unavailable",
+      "totalMs": 6.900000035762787
+    },
+    {
+      "mode": "mobile-emulation",
+      "name": "blocked download",
+      "state": "unavailable",
+      "totalMs": 47.90000003576279
+    },
+    {
+      "mode": "mobile-emulation",
+      "name": "download recovery",
+      "state": "completed",
+      "loadMs": 8482,
+      "totalMs": 8496.5
+    },
+    {
+      "mode": "mobile-emulation",
+      "name": "authored classify-a-score.md model 0 case 0",
+      "state": "completed",
+      "loadMs": 6305.900000035763,
+      "totalMs": 6329
+    },
+    {
+      "mode": "mobile-emulation",
+      "name": "authored classify-a-score.md model 0 case 1",
+      "state": "completed",
+      "loadMs": 9533.199999988079,
+      "totalMs": 9642.899999976158
+    },
+    {
+      "mode": "mobile-emulation",
+      "name": "authored classify-a-score.md model 0 case 2",
+      "state": "completed",
+      "loadMs": 9130.199999988079,
+      "totalMs": 9139.699999988079
+    },
+    {
+      "mode": "mobile-emulation",
+      "name": "authored classify-a-score.md model 0 case 3",
+      "state": "completed",
+      "loadMs": 3107.399999976158,
+      "totalMs": 3114.399999976158
+    },
+    {
+      "mode": "mobile-emulation",
+      "name": "authored classify-a-score.md model 0 case 4",
+      "state": "completed",
+      "loadMs": 1591.8999999761581,
+      "totalMs": 1598.3999999761581
+    },
+    {
+      "mode": "mobile-emulation",
+      "name": "authored classify-a-score.md model 0 case 5",
+      "state": "completed",
+      "loadMs": 7380.699999988079,
+      "totalMs": 7415.099999964237
+    },
+    {
+      "mode": "mobile-emulation",
+      "name": "authored sum-a-sequence.md model 0 case 0",
+      "state": "completed",
+      "loadMs": 3222.399999976158,
+      "totalMs": 3230
+    },
+    {
+      "mode": "mobile-emulation",
+      "name": "authored sum-a-sequence.md model 0 case 1",
+      "state": "completed",
+      "loadMs": 1701,
+      "totalMs": 1709.1000000238419
+    },
+    {
+      "mode": "mobile-emulation",
+      "name": "authored sum-a-sequence.md model 0 case 2",
+      "state": "completed",
+      "loadMs": 1690.7000000476837,
+      "totalMs": 1698.7000000476837
+    },
+    {
+      "mode": "mobile-emulation",
+      "name": "authored sum-a-sequence.md model 0 case 3",
+      "state": "completed",
+      "loadMs": 1726.199999988079,
+      "totalMs": 1734
+    },
+    {
+      "mode": "mobile-emulation",
+      "name": "authored sum-a-sequence.md model 1 case 0",
+      "state": "completed",
+      "loadMs": 1600.5,
+      "totalMs": 1609.4000000357628
+    },
+    {
+      "mode": "mobile-emulation",
+      "name": "authored sum-a-sequence.md model 1 case 1",
+      "state": "completed",
+      "loadMs": 1576.6000000238419,
+      "totalMs": 1587
+    },
+    {
+      "mode": "mobile-emulation",
+      "name": "authored sum-a-sequence.md model 1 case 2",
+      "state": "completed",
+      "loadMs": 2319.5,
+      "totalMs": 2333
+    },
+    {
+      "mode": "mobile-emulation",
+      "name": "authored sum-a-sequence.md model 1 case 3",
+      "state": "completed",
+      "loadMs": 2745,
+      "totalMs": 2753.800000011921
+    },
+    {
+      "mode": "mobile-emulation",
+      "name": "authored summarise-revision-scores.md model 0 case 0",
+      "state": "completed",
+      "loadMs": 2160,
+      "totalMs": 2168.5
+    },
+    {
+      "mode": "mobile-emulation",
+      "name": "authored summarise-revision-scores.md model 0 case 1",
+      "state": "completed",
+      "loadMs": 2683.300000011921,
+      "totalMs": 2692.100000023842
+    },
+    {
+      "mode": "mobile-emulation",
+      "name": "authored summarise-revision-scores.md model 0 case 2",
+      "state": "completed",
+      "loadMs": 2158.5,
+      "totalMs": 2168.5
+    },
+    {
+      "mode": "mobile-emulation",
+      "name": "authored summarise-revision-scores.md model 0 case 3",
+      "state": "completed",
+      "loadMs": 1959.300000011921,
+      "totalMs": 1966.8999999761581
+    },
+    {
+      "mode": "mobile-emulation",
+      "name": "authored summarise-revision-scores.md model 0 case 4",
+      "state": "completed",
+      "loadMs": 2890.800000011921,
+      "totalMs": 2901
+    },
+    {
+      "mode": "mobile-emulation",
+      "name": "authored summarise-revision-scores.md model 0 case 5",
+      "state": "completed",
+      "loadMs": 2723.399999976158,
+      "totalMs": 2731.399999976158
+    },
+    {
+      "mode": "mobile-emulation",
+      "name": "failed requests"
+    },
+    {
+      "mode": "emulated 10Mbps, 80ms latency, 4x CPU slowdown",
+      "name": "cold loading",
+      "state": "completed",
+      "loadMs": 13322.600000023842,
+      "totalMs": 13332.699999988079
+    }
+  ],
+  "limits": [
+    "Local Chromium and mobile emulation only",
+    "No deployed or physical-device result",
+    "No strict memory quota or memory-exhaustion result",
+    "Application mobile layout timeout unresolved"
+  ]
+}

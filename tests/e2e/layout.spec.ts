@@ -1,3 +1,5 @@
+import { lessons, exercises } from "../../lib/content";
+import { TOPICS } from "../../lib/lesson-ids";
 import { test, expect } from "@playwright/test";
 test("notes theme and generated controls remain readable with dark system preference", async ({
   page,
@@ -31,23 +33,17 @@ test("notes theme and generated controls remain readable with dark system prefer
       .evaluate((element) => getComputedStyle(element).backgroundColor),
   ).toBe("rgb(248, 247, 242)");
 });
-test("published routes fit narrow screens and expose semantic navigation", async ({
-  page,
-}, testInfo) => {
-  for (const width of [320, 768, 1280]) {
-    await page.setViewportSize({ width, height: 900 });
-    for (const route of [
-      "/",
-      "/topics/python-control-flow",
-      "/lessons/sequence-and-selection",
-      "/lessons/counted-and-conditional-loops",
-      "/lessons/combined-flow-and-tracing",
-      "/exercises/classify-a-score",
-      "/exercises/sum-a-sequence",
-      "/exercises/summarise-revision-scores",
-      "/about",
-      "/privacy",
-    ]) {
+// Each route/viewport has its own unchanged test timeout. A single 30-navigation
+// test exhausted its shared budget at unrelated steps on slower local runs.
+const publishedRoutes = ["/", ...TOPICS.map(topic => `/topics/${topic.id}`), ...lessons().map(lesson => `/lessons/${lesson.slug}`), ...exercises().map(exercise => `/exercises/${exercise.slug}`), "/about", "/privacy"];
+
+
+for (const width of [320, 768, 1280]) {
+  for (const route of publishedRoutes) {
+    test(`published route ${route} fits ${width}px and exposes semantic navigation`, async ({
+      page,
+    }, testInfo) => {
+      await page.setViewportSize({ width, height: 900 });
       await page.goto(route);
       await expect(page.getByRole("heading", { level: 1 })).toHaveCount(1);
       await expect(
@@ -83,11 +79,13 @@ test("published routes fit narrow screens and expose semantic navigation", async
             });
         }
         await page.getByText("Show model explanation", { exact: true }).click();
-        await expect(page.locator("details[open] pre").first()).toBeVisible();
-        await expect(page.locator("details[open] pre").first()).toHaveCSS(
-          "background-color",
-          "rgb(32, 55, 47)",
-        );
+        const task = exercises().find(exercise => route === `/exercises/${exercise.slug}`)!;
+        if (task.format === "design") {
+          await expect(page.locator("details[open]").getByRole("heading", { name: "Model explanation", exact: true })).toBeVisible();
+        } else {
+          await expect(page.locator("details[open] pre").first()).toBeVisible();
+          await expect(page.locator("details[open] pre").first()).toHaveCSS("background-color", "rgb(32, 55, 47)");
+        }
         expect(
           await page.evaluate(
             () => document.documentElement.scrollWidth <= window.innerWidth,
@@ -103,6 +101,6 @@ test("published routes fit narrow screens and expose semantic navigation", async
           path: testInfo.outputPath(`${route.split("/").pop()}-320.png`),
         });
       }
-    }
+    });
   }
-});
+}

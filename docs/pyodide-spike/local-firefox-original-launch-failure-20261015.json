@@ -1,0 +1,18 @@
+{
+  "date": "2026-10-15T09:19:03.030Z",
+  "engine": "firefox",
+  "origin": "http://127.0.0.1:3191",
+  "contentSHA256": "1825befc25da4421c26bb27cfb625a3f9714220cac2652cbd6bd40a17cd6d3f2",
+  "environment": "win32 10.0.26200 x64; local desktop engine; no deployed or physical-device evidence",
+  "driverSHA256": "cb2697f74e42abc44c11f2f76df609da697bf5941f8a13ac5f4a5ebe9b66cc03",
+  "limits": {
+    "loadingMs": 30000,
+    "executionMs": 5000,
+    "driverDeadlineMs": 36000
+  },
+  "runs": [],
+  "diagnostics": [],
+  "outcome": "failed",
+  "failureStage": "launch",
+  "failureReason": "browserType.launch: spawn UNKNOWN\nCall log:\n\u001b[2m  - <launching> C:\\Users\\crate\\AppData\\Local\\ms-playwright\\firefox-1555\\firefox\\firefox.exe -no-remote -headless -profile C:\\Users\\crate\\AppData\\Local\\Temp\\playwright_firefoxdev_profile-UjL9cB -juggler-pipe -silent\u001b[22m\n"
+}

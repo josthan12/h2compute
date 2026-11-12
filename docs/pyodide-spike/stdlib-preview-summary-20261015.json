@@ -1,0 +1,16 @@
+{
+  "directory": "C:\\Users\\crate\\Documents\\ProjectALEVEL\\docs\\pyodide-spike\\.preview\\314.0.7-a2f184eead72",
+  "zip": "C:\\Users\\crate\\Documents\\ProjectALEVEL\\docs\\pyodide-spike\\.preview\\314.0.7-a2f184eead72.zip",
+  "zipBytes": 8242709,
+  "zipSHA256": "b19f784a820b9137b74387558efd017dec02fd3bc37da634a6b37d17cb057dc3",
+  "contentSHA256": "a2f184eead72face3053c3f6331bbd268081864fe718f83351072acd1eb9c0a7",
+  "publicBytes": 16217243,
+  "publicFiles": 57,
+  "runtimeBytes": 13531207,
+  "baselineContentSHA256": "1825befc25da4421c26bb27cfb625a3f9714220cac2652cbd6bd40a17cd6d3f2",
+  "changedPackageFiles": [
+    "package-manifest.json",
+    "public/worker.mjs"
+  ],
+  "workerSHA256": "e50f9aabab56778b16320e010b33c3a4cafe5960d95dd7b10f34d58d10e73265"
+}

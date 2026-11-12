@@ -1,0 +1,84 @@
+{
+  "date": "2026-10-20",
+  "scope": "Permitted local desktop/resource and ordinary protected-preview checks; not full Milestone 3 sign-off",
+  "baselineCommit": "5824b428f64f86c7f6d4b4d1a8215aba6d4c714a",
+  "sourceSHA256": {
+    "host.mjs": "ca8806aaab72aa8098ff9358b15247b36d04e22ebfaa585267eee13ccf510b7c",
+    "frame.html": "975d4bbc65d5aac347c9aca1065f3c06d07899754b1168c8847ef99f1c8e64dc",
+    "worker.mjs": "e50f9aabab56778b16320e010b33c3a4cafe5960d95dd7b10f34d58d10e73265"
+  },
+  "driverSHA256": {
+    "check-desktop.mjs": "8a123548906ac5bfe7eb7653d9b9dd99ac409e943b0b3edf9b8d250fdfc8a4ac",
+    "check-recovery.mjs": "f2cc24b9bfb36ad891b89a4471f0b4b10658a7622ece2ce60b0179634a05fb5b",
+    "check-isolation.mjs": "db1a167f246f54ee1cc233327deda11b70220185da2785866fb547686e04d526",
+    "check-resources.mjs": "4ba8038743fded06e6b458e47e87722a41a82a3bfb76b4044dda79461466b115",
+    "windows-memory.py": "85d10cd5092938d3a9a3e1d1ccdb191c766f754de116c5382984b8e9427550ce",
+    "prepare-firefox-cache.py": "1e08e8cd34399f916a249989c0d4e6cd68a8b55fe9fae1a1b55a066b4cbc9d59",
+    "check-published-candidate.mjs": "8a30d013e7f0e6b7d7e0f81d45020536f38d81f3761832a20ad49606eb784f22"
+  },
+  "evidence": {
+    "local-firefox-candidate-20261020.json": {
+      "rawFilename": "desktop-firefox-2026-10-20T05-23-27.305Z-4ecf5dbd-bcb8-4993-9640-00379a9cb125.json",
+      "sha256": "b3b725ed2075784282c651fcde597d0f24c085a42afca445793b097fced9509f",
+      "records": 3,
+      "outcome": "passed"
+    },
+    "local-firefox-recovery-20261020.json": {
+      "rawFilename": "recovery-firefox-2026-10-20T05-11-18.985Z-2729504a-fae6-4a3a-b0df-d49a0f4b53be.json",
+      "sha256": "fbf834d8d4b5ed484057c396dc606cbc21974706b0d4c516b57b57e2e148a3d9",
+      "records": 32,
+      "outcome": "passed"
+    },
+    "local-firefox-isolation-20261020.json": {
+      "rawFilename": "isolation-firefox-2026-10-20T05-20-23.096Z-96edf743-61eb-479e-9f1d-ed470ccf3dbe.json",
+      "sha256": "a85173083209b1e8d089d965fa684c9cc50cc6ffb2866feef0e4ed4311359e04",
+      "records": 10,
+      "outcome": "passed"
+    },
+    "local-webkit-isolation-20261020.json": {
+      "rawFilename": "isolation-webkit-2026-10-20T05-21-01.303Z-e0060e75-537b-4c35-a2d6-d1d7e7919110.json",
+      "sha256": "74bcf409dba7927d6ea2942db7b9584e53783702a888381edf6b743c2993ed3f",
+      "records": 10,
+      "outcome": "passed"
+    },
+    "local-resources-20261020.json": {
+      "rawFilename": "resources-2026-10-20T05-22-46.802Z-e504daa8-3372-45d4-bad1-a7ff226d36ab.json",
+      "sha256": "bcd2196adc154f499a6dbf75489a496479e347d6d52cd13e196fc0db7a9076dd",
+      "records": 6,
+      "outcome": "passed"
+    },
+    "hosted-chromium-candidate-20261020.json": {
+      "rawFilename": "published-chromium-2026-10-20T05-31-03.406Z-9b500a8a-c8ed-4cae-9534-7e1bf9413ccd.json",
+      "sha256": "ca02c6bffe6d7c62dca809efa01f98589cc47849fb43fe1eb0c0c4004b83e845",
+      "records": 3,
+      "outcome": "passed"
+    },
+    "hosted-webkit-candidate-20261020.json": {
+      "rawFilename": "published-webkit-2026-10-20T05-32-47.917Z-0d01d4a8-5ee3-44bf-8508-e5a91db79693.json",
+      "sha256": "60ebb1298e1bdc0af9c8efd6b1674d6652f86b91cf65d8d4fb8bb0931f8962dc",
+      "records": 3,
+      "outcome": "passed"
+    },
+    "hosted-firefox-candidate-20261020.json": {
+      "rawFilename": "published-firefox-2026-10-20T05-33-13.163Z-fdb333ee-6314-4c8b-8fdd-6d5aeb7bbb3c.json",
+      "sha256": "7c56ee9b64dd484b70467128da1d82cb8465d35fa8609cca0878a9d0881a5ea7",
+      "records": 3,
+      "outcome": "passed"
+    }
+  },
+  "cacheProvenance": {
+    "file": "firefox-cache-provenance-20261020.json",
+    "sha256": "0a7fd592a0f214d44a7fa6e3699470b34778b7b4658e4ba369668c8d04787ef9",
+    "note": "Recovery used the earlier byte-identical private extraction; final candidate/isolation/hosted runs used this prepared cache."
+  },
+  "deploymentReceipt": {
+    "file": "hosted-preview-receipt-20261020.json",
+    "sha256": "e0c46cf8c19127dee4601054f30dcb368e7286534f06d6936d951f879debbbf9"
+  },
+  "limitations": [
+    "Hosted adversarial/security/recovery testing blocked on Hobby; external contact blocked by owner",
+    "Physical Android/iOS and genuine low-memory recovery unverified",
+    "Supported-device release policy and remaining usage allowance unverified",
+    "No CodeMirror/learner integration, push, PR, merge or branch switch"
+  ]
+}

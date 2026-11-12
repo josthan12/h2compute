@@ -1,7 +1,7 @@
 # Runner strategy decision
 
 **Date:** 12 October 2026
-**Status:** Owner-approved planning direction; implementation/activation conditional on browser feasibility. Supersedes the hosted-only proposal. No runtime installed or tested.
+**Status:** Pyodide 314.0.7 / CPython 3.14.2 locally prototyped. NO-GO for learner activation pending deployment/device gates. Supersedes the hosted-only proposal. See [verification](../milestone-3-verification.md).
 
 ## Context and decision
 
@@ -28,6 +28,16 @@ No execution-provider subscription/quota/API key. Runtime asset transfer still u
 Skulpt has compatibility gaps; PyScript adds a framework layer. Pyodide is selected for feasibility, not a proven runtime. If its gates fail, retain theory/quizzes/offline practice. No silent paid-service substitution.
 
 Judge0/other hosted grading and self-hosted sandboxes are deferred. Keep [earlier hosted-service research](../phase-1-feasibility.md) for later private-test/trusted-grading decisions; its unknowns do not block theory. No /api/run or provider setup now.
+
+## Pinned local spike decision — 12 October 2026
+
+Use unmodified Pyodide 314.0.7 core with observed CPython 3.14.2, selected after checking the official [changelog](https://pyodide.org/en/stable/project/changelog.html), [download guide](https://pyodide.org/en/stable/usage/downloading-and-deploying.html), [streams](https://pyodide.org/en/stable/usage/streams.html) and [pinned JS API](https://pyodide.org/en/314.0.7/usage/api/js-api.html). Experimental createPyodideModule requires maintenance review on upgrades. No npm runtime dependency, runtime CDN fetch or service is added to the app.
+
+Five assets total 13,531,207 bytes before HTTP compression. Hashes and upstream URL are in [asset-manifest.json](../pyodide-spike/asset-manifest.json). Approximately 10,000 uncached loads would transfer 135.3 GB before compression/protocol overhead. Verify host allowances, compression, versioned immutable caching and actual terms before release. A fresh interpreter per case trades startup time for state separation. Learners supply compute; there is no provider execution fee or promise of permanent free hosting.
+
+Retain [Pyodide MPL-2.0](../pyodide-spike/PYODIDE-LICENSE.txt) and [CPython combined licence text](../pyodide-spike/CPYTHON-LICENSE.txt). Source availability: [Pyodide tag](https://github.com/pyodide/pyodide/tree/314.0.7), [CPython tag](https://github.com/python/cpython/tree/v3.14.2). Upstream module bytes are not rewritten. Review compiled third-party notices/source-availability packaging before public distribution; the ignored local cache is not a complete release package.
+
+Local evidence supports continued investigation, not Gate 3 activation. Actual-host headers/loading, real devices, supported-browser policy and practical memory exhaustion remain unverified. Keep CodeMirror/learner controls deferred and theory/offline practice intact. No extra service or alternative origin privilege is implicitly authorized.
 
 ## Revisit triggers
 

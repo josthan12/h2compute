@@ -3,7 +3,7 @@ import { useState, type ReactNode } from "react";
 import Link from "next/link";
 import type { Question } from "@/lib/content";
 import { checkAnswers } from "@/lib/quiz";
-import type { LessonId } from "@/lib/lesson-ids";
+import { topicForLesson, type LessonId } from "@/lib/lesson-ids";
 import { useProgress } from "./ProgressProvider";
 export function Checkpoint({
   questions,
@@ -131,7 +131,7 @@ export function PracticeReview({
         <div className="collapse-content">{model}</div>
       </details>
       <p>
-        Compare your branch order and boundary reasoning. Completion is
+        Compare your reasoning, results and boundary cases with the model. Completion is
         self-marked, not a grade.
       </p>
       <button
@@ -161,7 +161,7 @@ export function Completion({ lessonId }: { lessonId: LessonId }) {
       <span className="eyebrow">04 / Make it stick</span>
       <h2>Finish your journey</h2>
       <p>
-        Can you explain the first matching branch and what runs afterwards? Mark
+        Can you explain the method, result and limitations in your own words? Mark
         complete when you have read the lesson, reviewed the checkpoint and
         compared your offline attempt with the model.
       </p>
@@ -191,7 +191,7 @@ export function Completion({ lessonId }: { lessonId: LessonId }) {
           ? "Completed locally. Revisit the lesson whenever you want to revise."
           : "Review both steps above to enable completion."}
       </p>
-      <Link href="/topics/python-control-flow">Back to the topic →</Link>
+      <Link href={`/topics/${topicForLesson(lessonId).id}`}>Back to the topic →</Link>
     </section>
   );
 }

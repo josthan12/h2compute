@@ -8,14 +8,14 @@ import {
   headings,
   lessons,
 } from "../lib/content";
-import { LESSON_IDS } from "../lib/lesson-ids";
+import { LESSON_IDS, TOPICS } from "../lib/lesson-ids";
 const source = fs.readFileSync(
   "content/lessons/sequence-and-selection.md",
   "utf8",
 );
 test("published journey validates and maps each question", () => {
   const items = loadContent();
-  assert.equal(items.length, 6);
+  assert.equal(items.length, LESSON_IDS.length * 2);
   const lesson = items.find(
     (item) => item.kind === "lessons" && item.slug === "sequence-and-selection",
   )!;
@@ -139,4 +139,19 @@ test("published lesson order matches progress IDs and each task belongs to its p
     () => validateCollection(broken),
     /different lesson|does not link/,
   );
+});
+
+test("all topic paths are nonempty, disjoint and cover the published catalog", () => {
+  const paths = TOPICS.flatMap(topic => {
+    const path = lessons().filter(lesson => lesson.topic === topic.id);
+    assert.deepEqual(path.map(lesson => lesson.slug), [...topic.lessonIds]);
+    return path.map(lesson => lesson.slug);
+  });
+  assert.deepEqual(paths, [...LESSON_IDS]);
+  assert.equal(new Set(paths).size, paths.length);
+  const items = loadContent();
+  const changed = items.map(item => item.slug === "binary-search" ? { ...item, topic: "python-control-flow" as const } : item);
+  assert.throws(() => validateCollection(changed), /different topic/);
+  const wrongTask = items.map(item => item.kind === "exercises" && item.lesson === "binary-search" ? { ...item, topic: "python-control-flow" as const } : item);
+  assert.throws(() => validateCollection(wrongTask), /Parent lesson/);
 });

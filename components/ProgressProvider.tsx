@@ -3,22 +3,28 @@ import {
   createContext,
   useContext,
   useEffect,
+  useRef,
   useState,
   useSyncExternalStore,
   type ReactNode,
 } from "react";
 import {
   decodeProgress,
-  emptyProgress,
-  readProgress,
-  resetProgress,
+  createEmptyProgress,
+  createPendingProgress,
+  applyPendingProgress,
+  queueProgressUpdate,
+  readProgressResult,
+  resetProgressWithSignal,
   saveProgress,
   STORAGE_KEY,
   type Progress,
   type LessonProgress,
-  updateLesson,
+  type PendingProgress,
+  type ProgressRead,
 } from "@/lib/progress";
-import { LESSON_IDS, type LessonId } from "@/lib/lesson-ids";
+import { openProgressResetChannel, type ProgressResetChannel } from "@/lib/progress-channel";
+import { LESSON_IDS, TOPICS, type TopicId, type LessonId } from "@/lib/lesson-ids";
 const EVENT = "h2compute-progress";
 function subscribe(callback: () => void) {
   window.addEventListener("storage", callback);
@@ -30,7 +36,10 @@ function subscribe(callback: () => void) {
 }
 function snapshot() {
   try {
-    return readProgress(window.localStorage);
+    const stored = readProgressResult(window.localStorage);
+    return stored.available
+      ? stored.raw === null ? "absent" : `stored:${stored.raw}`
+      : "unavailable";
   } catch {
     return "unavailable";
   }
@@ -44,39 +53,62 @@ const Context = createContext<{
 } | null>(null);
 export function ProgressProvider({ children }: { children: ReactNode }) {
   const raw = useSyncExternalStore(subscribe, snapshot, () => "loading");
-  const [memory, setMemory] = useState<Progress | null>(null);
+  const [pending, setPending] = useState(createPendingProgress);
+  const pendingRef = useRef(pending);
+  const channelRef = useRef<ProgressResetChannel | null>(null);
   const [notice, setNotice] = useState("");
   useEffect(() => {
+    // Keep identity for event filtering if the getter is denied later. Reads and
+    // writes still use the live getter; this reference never bypasses its denial.
+    let storageArea: Storage | null = null;
+    try { storageArea = window.localStorage; } catch { /* Initially inaccessible. */ }
+    function receiveReset(cleared: boolean) {
+      const next = createPendingProgress(!cleared);
+      pendingRef.current = next;
+      setPending(next);
+      setNotice("Local progress reset in another tab.");
+    }
+    const channel = openProgressResetChannel(receiveReset);
+    channelRef.current = channel;
     function handleExternalReset(event: StorageEvent) {
       if (event.newValue !== null) return;
       if (event.key !== STORAGE_KEY && event.key !== null) return;
       try {
-        if (event.storageArea !== window.localStorage) return;
+        if (storageArea === null) storageArea = window.localStorage;
+        if (event.storageArea !== storageArea) return;
       } catch {
         return;
       }
-      // A failed save may leave memory overriding storage, even after reset.
-      setMemory(null);
-      setNotice("Local progress reset in another tab.");
+      receiveReset(true);
     }
     window.addEventListener("storage", handleExternalReset);
-    return () => window.removeEventListener("storage", handleExternalReset);
+    return () => {
+      window.removeEventListener("storage", handleExternalReset);
+      channelRef.current = null;
+      channel.close();
+    };
   }, []);
   const decoded = decodeProgress(
-    raw === "loading" || raw === "unavailable" ? null : raw,
+    raw.startsWith("stored:") ? raw.slice("stored:".length) : null,
   );
-  const progress = memory ?? decoded.progress;
+  const progress = applyPendingProgress(decoded.progress, pending);
+  function replacePending(next: PendingProgress) {
+    // Actions can run before React rerenders. Never write inside a state updater.
+    pendingRef.current = next;
+    setPending(next);
+  }
   function update(lessonId: LessonId, value: Partial<LessonProgress>) {
-    // Re-read storage to preserve updates from another tab before writing.
-    const latest = memory ?? decodeProgress(snapshot()).progress;
-    const next = updateLesson(latest, lessonId, value);
+    let stored: ProgressRead = { available: false };
+    try { stored = readProgressResult(window.localStorage); } catch { /* Blocked getter. */ }
+    const base = stored.available ? decodeProgress(stored.raw).progress : createEmptyProgress();
+    const nextPending = queueProgressUpdate(base, pendingRef.current, lessonId, value);
+    const next = applyPendingProgress(base, nextPending);
     let saved = false;
-    try {
-      saved = saveProgress(window.localStorage, next);
-    } catch {
-      /* Storage may be blocked. */
+    // An unreadable base must never be replaced by an invented empty snapshot.
+    if (stored.available) {
+      try { saved = saveProgress(window.localStorage, next); } catch { /* Blocked getter. */ }
     }
-    setMemory(saved ? null : next);
+    replacePending(saved ? createPendingProgress() : nextPending);
     setNotice(
       saved
         ? "Progress saved on this browser."
@@ -85,18 +117,18 @@ export function ProgressProvider({ children }: { children: ReactNode }) {
     window.dispatchEvent(new Event(EVENT));
   }
   function reset() {
-    let removed = false;
-    try {
-      removed = resetProgress(window.localStorage);
-    } catch {
-      /* Storage may be blocked. */
-    }
-    setMemory(removed ? null : emptyProgress);
-    setNotice(
-      removed
-        ? "Local progress reset."
-        : "Progress cleared for this visit. Stored progress could not be removed; try clearing site data in your browser.",
-    );
+    let result: ReturnType<typeof resetProgressWithSignal> = {
+      removed: false, cleared: false, notification: "channel",
+    };
+    try { result = resetProgressWithSignal(window.localStorage); } catch { /* Blocked getter. */ }
+    replacePending(createPendingProgress(!result.cleared));
+    const sent = result.notification === "channel" && channelRef.current?.notify(result.cleared);
+    const peerNotice = result.notification === "uncertain" || (result.notification === "channel" && !sent)
+      ? " Other open tabs may need their own reset."
+      : "";
+    setNotice((result.removed
+      ? "Local progress reset."
+      : "Progress cleared for this visit. Stored progress could not be removed; try clearing site data in your browser.") + peerNotice);
     window.dispatchEvent(new Event(EVENT));
   }
   const message =
@@ -135,10 +167,12 @@ export function useProgress(lessonId: LessonId) {
     update: (value: Partial<LessonProgress>) => state.update(lessonId, value),
   };
 }
-export function ProgressBadge({ lessonId }: { lessonId?: LessonId }) {
+export function useProgressSummary() { return useProgressState(); }
+export function ProgressBadge({ lessonId, topicId }: { lessonId?: LessonId; topicId?: TopicId }) {
   const { progress, ready } = useProgressState();
   const entry = lessonId ? progress.lessons[lessonId] : null;
-  const count = LESSON_IDS.filter(
+  const ids: readonly LessonId[] = topicId ? TOPICS.find(topic => topic.id === topicId)!.lessonIds : LESSON_IDS;
+  const count = ids.filter(
     (id) => progress.lessons[id].completed,
   ).length;
   return (
@@ -151,7 +185,7 @@ export function ProgressBadge({ lessonId }: { lessonId?: LessonId }) {
             : entry.quizReviewed || entry.practiceReviewed
               ? "In progress"
               : "Not yet completed"
-          : `${count} of ${LESSON_IDS.length} lessons complete`}
+          : `${count} of ${ids.length} lessons complete`}
     </span>
   );
 }

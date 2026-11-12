@@ -4,7 +4,7 @@ This file describes how coding assistants and contributors should work in this r
 
 ## Approval gate
 
-The owner approved theory-first implementation and requested the Pyodide browser-practice planning revision on 12 October 2026. Follow `implementation.md`, `roadmap.md` and `current-status.md`: theory/quiz/local progress first; browser execution only after its feasibility and activation gates. This documentation task does not implement code. Do not request approval again for already-authorized ordinary theory work. Paid services, hosted grading or scope/privacy changes require separate owner authorization.
+The owner approved theory-first implementation and requested the Pyodide browser-practice planning revision on 12 October 2026. Follow `implementation.md`, `roadmap.md` and `current-status.md`: theory/quiz/local progress first; browser execution only after its feasibility and activation gates. The original planning task did not activate learner execution. The owner authorized autonomous milestone delivery and independent agent review on 15 October 2026 as recorded below. Do not request approval again for already-authorized ordinary theory work. Paid services, hosted grading or scope/privacy changes require separate owner authorization.
 
 ## General rules
 
@@ -23,7 +23,15 @@ The owner approved theory-first implementation and requested the Pyodide browser
 
 ## Milestone and Git workflow
 
-Read [docs/milestone-workflow.md](docs/milestone-workflow.md) before each task. Use a focused feature/documentation branch from synchronized main; do not edit main directly. Stop and report dirty/divergent/conflicted states unless the owner explicitly authorizes how to preserve them. Do not automatically stash, commit, push or merge. Follow the saved workflow and retain existing implementation approvals.
+Read [docs/milestone-workflow.md](docs/milestone-workflow.md) before each task. Use a focused feature/documentation branch from synchronized main; do not edit main directly. Stop and report unexpected pre-existing dirty/divergent/conflicted states unless the owner explicitly authorizes how to preserve them; retain the agent's own in-scope changes during the task. Focused local commits are authorized by the standing workflow below. Do not automatically stash, push, open a PR or merge. Follow the saved workflow and retain existing implementation approvals.
+
+## Autonomous delivery and independent review
+
+Effective 15 October 2026, the owner delegates routine milestone planning, technical decisions, implementation, debugging, applicable verification, documentation, evidence, focused local commits and a draft PR description to the agent. Carry authorized work through to milestone readiness without asking the owner to perform routine development or approve each small step. The owner reviews the completed milestone, pushes and opens the PR.
+
+Before presenting any completed change or milestone, call a separate reviewer agent with a fresh conversation and require its own checklist and explicit sign-off under [docs/independent-review.md](docs/independent-review.md). Fix actionable findings and obtain re-review; the implementation agent cannot sign off its own work. Record the reviewer's identity, exact candidate commit, scope, checklist, evidence and verdict in docs/reviews/. If the reviewer or required evidence is unavailable, report a blocker and do not claim completion. Progress updates and honest blocker reports are allowed without sign-off.
+
+Preserve existing approvals and narrower session restrictions. This workflow does not authorize push, PR creation, merge, branch changes prohibited by the current session, protection changes, learner activation, paid services, scope/privacy changes, prohibited hosted testing or third-party messages. Continue independent authorized work while resolving genuine blockers; do not invent device/provider evidence or waive milestone gates.
 
 ## Required workflow for a change
 
@@ -34,7 +42,8 @@ Read [docs/milestone-workflow.md](docs/milestone-workflow.md) before each task. 
 5. Run relevant lint, typecheck, tests, and build.
 6. Report exact commands run and any failures or unverified checks.
 7. Update `current-status.md` and roadmap checkboxes when progress materially changes.
-8. Do not silently modify this specification; propose material changes for owner approval.
+8. Obtain independent agent sign-off on the final candidate before a completed handoff; include the review receipt and distinguish focused-change readiness from full milestone completion.
+9. Do not silently modify this specification beyond the owner's authorization; propose further material changes for owner approval.
 
 ## Educational content
 
@@ -52,4 +61,4 @@ Read [docs/milestone-workflow.md](docs/milestone-workflow.md) before each task. 
 
 ## Definition of done
 
-A change is done only when acceptance criteria are met, relevant tests pass, errors are handled, docs are updated, and remaining limitations are stated.
+A change is done only when acceptance criteria are met, relevant tests pass, errors are handled, docs are updated, remaining limitations are stated, and a separate reviewer agent has explicitly signed off the final candidate for that scope. A milestone additionally requires all of its exit gates; scoped sign-off cannot waive missing evidence.

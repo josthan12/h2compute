@@ -1,6 +1,6 @@
 ---
 {
-  "title": "Classify a score", "slug": "classify-a-score", "topic": "python-control-flow",
+  "title": "Classify a score", "slug": "classify-a-score", "topic": "python-control-flow", "format": "python",
   "summary": "Design an ordered branch chain, then check its boundaries by hand or in your own Python installation.",
   "syllabus": { "year": 2026, "outcomes": ["2.2.3", "2.2.6"] },
   "difficulty": "core", "estimatedMinutes": 8, "prerequisites": ["sequence-and-selection"],

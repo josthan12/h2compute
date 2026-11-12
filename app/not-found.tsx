@@ -8,6 +8,7 @@ export default function NotFound() {
       <Link className="btn btn-primary" href="/topics/python-control-flow">
         Browse Python control flow →
       </Link>
+      <p><Link href="/#learning-paths">Browse all learning paths →</Link></p>
     </div>
   );
 }

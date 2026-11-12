@@ -56,7 +56,7 @@ test("three connected journeys keep separate progress across navigation, refresh
     3,
   );
   await expect(
-    page.getByText("3 of 3 published journeys complete.", { exact: false }),
+    page.getByText("3 of 8 published journeys complete.", { exact: false }),
   ).toBeVisible();
   await page.screenshot({
     path: testInfo.outputPath("completed-topic.png"),
@@ -66,7 +66,7 @@ test("three connected journeys keep separate progress across navigation, refresh
     JSON.parse(localStorage.getItem("h2compute.progress")!),
   );
   expect(saved.version).toBe(2);
-  expect(Object.keys(saved.lessons)).toHaveLength(3);
+  expect(Object.keys(saved.lessons)).toHaveLength(8);
   await page.getByRole("button", { name: "Reset local progress" }).click();
   await page.getByRole("button", { name: "Confirm reset" }).click();
   await page.reload();
@@ -164,7 +164,7 @@ for (const resetMethod of ["owned key removal", "site storage clear"]) {
     });
     await page.goto("/lessons/counted-and-conditional-loops");
     await expect(
-      page.getByText("1 of 3 published journeys complete.", { exact: false }),
+      page.getByText("1 of 8 published journeys complete.", { exact: false }),
     ).toBeVisible();
     const second = await page.context().newPage();
     await second.goto("/topics/python-control-flow");
@@ -202,7 +202,7 @@ for (const resetMethod of ["owned key removal", "site storage clear"]) {
       page.getByText("Checkpoint: awaiting review", { exact: true }),
     ).toBeVisible();
     await expect(
-      page.getByText("0 of 3 published journeys complete.", { exact: false }),
+      page.getByText("0 of 8 published journeys complete.", { exact: false }),
     ).toBeVisible();
     await expect(
       page.getByText("Local progress reset in another tab.", { exact: true }),
@@ -232,7 +232,7 @@ for (const resetMethod of ["owned key removal", "site storage clear"]) {
     });
     await page.reload();
     await expect(
-      page.getByText("0 of 3 published journeys complete.", { exact: false }),
+      page.getByText("0 of 8 published journeys complete.", { exact: false }),
     ).toBeVisible();
     await second.close();
   });
@@ -257,7 +257,7 @@ test("blocked storage preserves all three journeys in memory until refresh", asy
     .click();
   await completeLesson(page, [2, 0]);
   await expect(
-    page.getByText("3 of 3 published journeys complete.", { exact: false }),
+    page.getByText("3 of 8 published journeys complete.", { exact: false }),
   ).toBeVisible();
   await expect(
     page.getByText("Progress is available for this visit only", {
@@ -269,6 +269,6 @@ test("blocked storage preserves all three journeys in memory until refresh", asy
     page.getByRole("button", { name: "Mark lesson complete" }),
   ).toBeDisabled();
   await expect(
-    page.getByText("0 of 3 published journeys complete.", { exact: false }),
+    page.getByText("0 of 8 published journeys complete.", { exact: false }),
   ).toBeVisible();
 });

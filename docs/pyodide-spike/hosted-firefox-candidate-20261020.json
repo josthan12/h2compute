@@ -1,0 +1,134 @@
+{
+  "date": "2026-10-20T05:33:13.165Z",
+  "target": "https://h2compute-pyodide-preview-poqbeuq87-poopoopeepee.vercel.app",
+  "deployment": "dpl_8FWsm9aGym5xyTEqfx846eeWDbmV",
+  "engine": "firefox",
+  "contentSHA256": "a2f184eead72face3053c3f6331bbd268081864fe718f83351072acd1eb9c0a7",
+  "environment": "win32 10.0.26200 x64; protected preview, no physical-device/security evidence",
+  "auth": "Existing project credential exchanged for exact-host Secure HttpOnly cookie; no global browser auth headers, routing, traces or storage export",
+  "driverSHA256": "8a30d013e7f0e6b7d7e0f81d45020536f38d81f3761832a20ad49606eb784f22",
+  "limits": {
+    "loadingMs": 30000,
+    "executionMs": 5000,
+    "jobs": 3,
+    "maximumBrowserRequests": 24,
+    "maximumRuntimeRequests": 10
+  },
+  "delivery": [],
+  "runs": [
+    {
+      "name": "cold",
+      "state": "completed",
+      "stdout": "supplied input\n",
+      "stderr": "error channel\n",
+      "detail": "",
+      "version": "314.0.7",
+      "python": "3.14.2 (main, Sep 14 2026, 03:03:51) [Clang 23.0.0git (https:/github.com/llvm/llvm-project e5927fecf8a6ce89e1a4eac5b8",
+      "heapBytes": 31457280,
+      "loadMs": 4083,
+      "totalMs": 4163,
+      "resources": [
+        {
+          "path": "runtime/314.0.7/pyodide.mjs",
+          "transferSize": 7731,
+          "encodedBodySize": 7431,
+          "decodedBodySize": 17931
+        },
+        {
+          "path": "runtime/314.0.7/pyodide.asm.mjs",
+          "transferSize": 265384,
+          "encodedBodySize": 265084,
+          "decodedBodySize": 1250344
+        },
+        {
+          "path": "runtime/314.0.7/pyodide-lock.json",
+          "transferSize": 25304,
+          "encodedBodySize": 25004,
+          "decodedBodySize": 119077
+        },
+        {
+          "path": "runtime/314.0.7/python_stdlib.zip",
+          "transferSize": 2545937,
+          "encodedBodySize": 2545637,
+          "decodedBodySize": 2545637
+        },
+        {
+          "path": "runtime/314.0.7/pyodide.asm.wasm",
+          "transferSize": 3577840,
+          "encodedBodySize": 3577540,
+          "decodedBodySize": 9598218
+        }
+      ],
+      "workersCreated": 1,
+      "workersRemaining": 0,
+      "framesRemaining": 0
+    },
+    {
+      "name": "same-page-warm",
+      "state": "completed",
+      "stdout": "é\n끝",
+      "stderr": "",
+      "detail": "",
+      "version": "314.0.7",
+      "python": "3.14.2 (main, Sep 14 2026, 03:03:51) [Clang 23.0.0git (https:/github.com/llvm/llvm-project e5927fecf8a6ce89e1a4eac5b8",
+      "heapBytes": 31457280,
+      "loadMs": 3324,
+      "totalMs": 3367,
+      "resources": [],
+      "workersCreated": 1,
+      "workersRemaining": 0,
+      "framesRemaining": 0
+    },
+    {
+      "name": "reload",
+      "state": "completed",
+      "stdout": "supplied input\n",
+      "stderr": "error channel\n",
+      "detail": "",
+      "version": "314.0.7",
+      "python": "3.14.2 (main, Sep 14 2026, 03:03:51) [Clang 23.0.0git (https:/github.com/llvm/llvm-project e5927fecf8a6ce89e1a4eac5b8",
+      "heapBytes": 31457280,
+      "loadMs": 7012,
+      "totalMs": 7092,
+      "resources": [
+        {
+          "path": "runtime/314.0.7/pyodide.mjs",
+          "transferSize": 0,
+          "encodedBodySize": 7431,
+          "decodedBodySize": 17931
+        },
+        {
+          "path": "runtime/314.0.7/pyodide.asm.mjs",
+          "transferSize": 0,
+          "encodedBodySize": 265084,
+          "decodedBodySize": 1250344
+        },
+        {
+          "path": "runtime/314.0.7/python_stdlib.zip",
+          "transferSize": 0,
+          "encodedBodySize": 2545637,
+          "decodedBodySize": 2545637
+        },
+        {
+          "path": "runtime/314.0.7/pyodide.asm.wasm",
+          "transferSize": 0,
+          "encodedBodySize": 3577540,
+          "decodedBodySize": 9598218
+        },
+        {
+          "path": "runtime/314.0.7/pyodide-lock.json",
+          "transferSize": 0,
+          "encodedBodySize": 25004,
+          "decodedBodySize": 119077
+        }
+      ],
+      "workersCreated": 1,
+      "workersRemaining": 0,
+      "framesRemaining": 0
+    }
+  ],
+  "outcome": "passed",
+  "browser": "157.0",
+  "totalBrowserRequests": 19,
+  "runtimeRequests": 10
+}

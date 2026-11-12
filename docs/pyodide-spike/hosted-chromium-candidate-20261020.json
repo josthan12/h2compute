@@ -1,0 +1,534 @@
+{
+  "date": "2026-10-20T05:31:03.411Z",
+  "target": "https://h2compute-pyodide-preview-poqbeuq87-poopoopeepee.vercel.app",
+  "deployment": "dpl_8FWsm9aGym5xyTEqfx846eeWDbmV",
+  "engine": "chromium",
+  "contentSHA256": "a2f184eead72face3053c3f6331bbd268081864fe718f83351072acd1eb9c0a7",
+  "environment": "win32 10.0.26200 x64; protected preview, no physical-device/security evidence",
+  "auth": "Existing project credential exchanged for exact-host Secure HttpOnly cookie; no global browser auth headers, routing, traces or storage export",
+  "driverSHA256": "8a30d013e7f0e6b7d7e0f81d45020536f38d81f3761832a20ad49606eb784f22",
+  "limits": {
+    "loadingMs": 30000,
+    "executionMs": 5000,
+    "jobs": 3,
+    "maximumBrowserRequests": 24,
+    "maximumRuntimeRequests": 10
+  },
+  "delivery": [
+    {
+      "path": "runtime/314.0.7/pyodide.mjs",
+      "status": 200,
+      "sha256": "6f1d60f7bf529beb300f0f47983c921d3982363640ba20af0e38efdddbc66109",
+      "decodedBytes": 17931,
+      "encoding": "br"
+    },
+    {
+      "path": "runtime/314.0.7/pyodide.asm.mjs",
+      "status": 200,
+      "sha256": "f7cdc8ece80678ceb712f8e65ebe6d3a83203a180c399865f49612a051693635",
+      "decodedBytes": 1250344,
+      "encoding": "br"
+    },
+    {
+      "path": "runtime/314.0.7/pyodide.asm.wasm",
+      "status": 200,
+      "sha256": "cc36e3cab04fdfc9a63ff13eb52eae2b911bf46c025cc7b281f394bd3de1d5e6",
+      "decodedBytes": 9598218,
+      "encoding": "br"
+    },
+    {
+      "path": "runtime/314.0.7/pyodide-lock.json",
+      "status": 200,
+      "sha256": "5dc2fc119108bc148c7457dc86e7675b5c87e1cafd420b9c34c1eaef7b36c010",
+      "decodedBytes": 119077,
+      "encoding": "br"
+    },
+    {
+      "path": "runtime/314.0.7/python_stdlib.zip",
+      "status": 200,
+      "sha256": "fa1957e5777068fc4f7437f96d860ae2fbe9c19732ba06c84e004ec16dd7dd7a",
+      "decodedBytes": 2545637,
+      "encoding": null
+    },
+    {
+      "path": "index.html",
+      "status": 200,
+      "sha256": "2032bec0c231688f3ca8088dbbfaba0b7e80a12577546dec388efb85c2b31a26",
+      "decodedBytes": 426,
+      "encoding": null
+    },
+    {
+      "path": "host.mjs",
+      "status": 200,
+      "sha256": "8ce5ee9019fd8b65c70fa7c2091a572750e888940716633253d141fe963a424d",
+      "decodedBytes": 6074,
+      "encoding": "br"
+    },
+    {
+      "path": "frame.html",
+      "status": 200,
+      "sha256": "975d4bbc65d5aac347c9aca1065f3c06d07899754b1168c8847ef99f1c8e64dc",
+      "decodedBytes": 1199,
+      "encoding": "br"
+    },
+    {
+      "path": "worker.mjs",
+      "status": 200,
+      "sha256": "e50f9aabab56778b16320e010b33c3a4cafe5960d95dd7b10f34d58d10e73265",
+      "decodedBytes": 3390,
+      "encoding": "br"
+    },
+    {
+      "path": "notices/PYODIDE-LICENSE.txt",
+      "status": 200,
+      "sha256": "1f256ecad192880510e84ad60474eab7589218784b9a50bc7ceee34c2b91f1d5",
+      "decodedBytes": 16725,
+      "encoding": "br"
+    },
+    {
+      "path": "notices/CPYTHON-LICENSE.txt",
+      "status": 200,
+      "sha256": "b0e25a78cffb43f4d92de8b61ccfa1f1f98ecbc22330b54b5251e7b6ba010231",
+      "decodedBytes": 13804,
+      "encoding": "br"
+    },
+    {
+      "path": "notices/DISTRIBUTION-NOTICES.md",
+      "status": 200,
+      "sha256": "a526964d88d8c3680556a0a85dd50bc46fea229d89a9f7c80287c7260a3a1aeb",
+      "decodedBytes": 4664,
+      "encoding": "br"
+    },
+    {
+      "path": "notices/asset-manifest.json",
+      "status": 200,
+      "sha256": "48be58a2e59bc39fd2601e682bcb4daf30a3f4eaf8ea59132faea1fc68d7b17f",
+      "decodedBytes": 988,
+      "encoding": null
+    },
+    {
+      "path": "notices/notice-manifest.json",
+      "status": 200,
+      "sha256": "27c01ff5458800fd43fb370dc4d31c22f9c149d4f32fe3ff03cc98de50f6b768",
+      "decodedBytes": 11624,
+      "encoding": "br"
+    },
+    {
+      "path": "notices/PROJECT-LICENSE.txt",
+      "status": 200,
+      "sha256": "53c2a65144a11181c5b2392dc9a52ac5c23f4c2a2d1dab5892943df157816775",
+      "decodedBytes": 1087,
+      "encoding": "br"
+    },
+    {
+      "path": "notices/pyodide--LICENSE.txt",
+      "status": 200,
+      "sha256": "1f256ecad192880510e84ad60474eab7589218784b9a50bc7ceee34c2b91f1d5",
+      "decodedBytes": 16725,
+      "encoding": "br"
+    },
+    {
+      "path": "notices/pyodide--src--js--vendor--stackframe--LICENSE.txt",
+      "status": 200,
+      "sha256": "899da9d991cb211a3642b84e82a9ae0b4b4e44546fd207e34d7d4ec2eb40f420",
+      "decodedBytes": 1080,
+      "encoding": "br"
+    },
+    {
+      "path": "notices/pyodide--src--js--vendor--stackframe--error-stack-parser.ts.txt",
+      "status": 200,
+      "sha256": "06cb52d1e4ae6a0f9c3f349ba4751b1839dfe7a3515f74373f0a7fab62c52b8d",
+      "decodedBytes": 4899,
+      "encoding": "br"
+    },
+    {
+      "path": "notices/pyodide--src--js--vendor--stackframe--stackframe.ts.txt",
+      "status": 200,
+      "sha256": "f1ac1bce24f9a936957975f6205cf49337c46f6b32591e807f168ca377b392a4",
+      "decodedBytes": 5635,
+      "encoding": "br"
+    },
+    {
+      "path": "notices/cpython--Doc--copyright.rst.txt",
+      "status": 200,
+      "sha256": "f2c1d094466270ed41fc4dd2904d91b34d58cbb5033403b2de5cc153aba8e608",
+      "decodedBytes": 446,
+      "encoding": null
+    },
+    {
+      "path": "notices/cpython--Doc--license.rst.txt",
+      "status": 200,
+      "sha256": "c695d550b135e53e38807e76496d1db17d22c40e461d1f3f354c86188d3305dd",
+      "decodedBytes": 57595,
+      "encoding": "br"
+    },
+    {
+      "path": "notices/cpython--LICENSE.txt",
+      "status": 200,
+      "sha256": "b0e25a78cffb43f4d92de8b61ccfa1f1f98ecbc22330b54b5251e7b6ba010231",
+      "decodedBytes": 13804,
+      "encoding": "br"
+    },
+    {
+      "path": "notices/cpython--Modules--_decimal--libmpdec--mpdecimal.h.txt",
+      "status": 200,
+      "sha256": "ea0b9c6b296c13aed6ecaa50b463e39a9c1bdc059b84f50507fd8247b2e660f9",
+      "decodedBytes": 41684,
+      "encoding": "br"
+    },
+    {
+      "path": "notices/cpython--Modules--_hacl--Hacl_Hash_SHA2.h.txt",
+      "status": 200,
+      "sha256": "442d8997d2bcda20ddf628665e2e69945400e1ab3019bc14fc7c8e20db20c320",
+      "decodedBytes": 6928,
+      "encoding": "br"
+    },
+    {
+      "path": "notices/cpython--Modules--_hacl--include--krml--internal--types.h.txt",
+      "status": 200,
+      "sha256": "404691cf9b2269ecc754ceca27bb8f8f029f1c8deaa4d967990dcf5ce08cd016",
+      "decodedBytes": 3649,
+      "encoding": "br"
+    },
+    {
+      "path": "notices/cpython--Modules--expat--COPYING.txt",
+      "status": 200,
+      "sha256": "122f2c27000472a201d337b9b31f7eb2b52d091b02857061a8880371612d9534",
+      "decodedBytes": 1144,
+      "encoding": "br"
+    },
+    {
+      "path": "notices/cpython--Python--pyhash.c.txt",
+      "status": 200,
+      "sha256": "aca23d14c3f4d5407eaacce66edb138167c26a2a89a947b941cd34de73e5680b",
+      "decodedBytes": 15206,
+      "encoding": "br"
+    },
+    {
+      "path": "notices/emscripten--AUTHORS.txt",
+      "status": 200,
+      "sha256": "8585fa1b981f576f52806833481323007ccac5c00f31a873215e31c0f42820f0",
+      "decodedBytes": 29004,
+      "encoding": "br"
+    },
+    {
+      "path": "notices/emscripten--LICENSE.txt",
+      "status": 200,
+      "sha256": "620a78084fc7ca97c0b5dea9abf891f3ffcadfdbf305276f099c9c4e12fc1d86",
+      "decodedBytes": 5093,
+      "encoding": "br"
+    },
+    {
+      "path": "notices/emscripten--system--include--SDL--COPYING.txt",
+      "status": 200,
+      "sha256": "c0340bf02391530fb13cf4170c31253ecd09868fa483553652699584eb4db6ae",
+      "decodedBytes": 1031,
+      "encoding": "br"
+    },
+    {
+      "path": "notices/emscripten--system--lib--compiler-rt--LICENSE.TXT.txt",
+      "status": 200,
+      "sha256": "1a8f1058753f1ba890de984e48f0242a3a5c29a6a8f2ed9fd813f36985387e8d",
+      "decodedBytes": 16708,
+      "encoding": "br"
+    },
+    {
+      "path": "notices/emscripten--system--lib--libc--musl--COPYRIGHT.txt",
+      "status": 200,
+      "sha256": "f9bc4423732350eb0b3f7ed7e91d530298476f8fec0c6c427a1c04ade22655af",
+      "decodedBytes": 6204,
+      "encoding": "br"
+    },
+    {
+      "path": "notices/emscripten--system--lib--libcxx--LICENSE.TXT.txt",
+      "status": 200,
+      "sha256": "539dd7aed86e8a4f12cbdd0e6c50c189c7d74847e4fecc64ce2c6ee3a01da38b",
+      "decodedBytes": 16703,
+      "encoding": "br"
+    },
+    {
+      "path": "notices/emscripten--system--lib--libcxxabi--LICENSE.TXT.txt",
+      "status": 200,
+      "sha256": "e2b35be49f7284a45b7baca8fc7b3ab7440e7902392b2528a457816b5bb2a15c",
+      "decodedBytes": 16706,
+      "encoding": "br"
+    },
+    {
+      "path": "notices/emscripten--system--lib--libunwind--LICENSE.TXT.txt",
+      "status": 200,
+      "sha256": "b5efebcaca80879234098e52d1725e6d9eb8fb96a19fce625d39184b705f7b6d",
+      "decodedBytes": 16706,
+      "encoding": "br"
+    },
+    {
+      "path": "notices/emscripten--system--lib--llvm-libc--LICENSE.TXT.txt",
+      "status": 200,
+      "sha256": "ebcd9bbf783a73d05c53ba4d586b8d5813dcdf3bbec50265860ccc885e606f47",
+      "decodedBytes": 15140,
+      "encoding": "br"
+    },
+    {
+      "path": "notices/emscripten--system--lib--mimalloc--LICENSE.txt",
+      "status": 200,
+      "sha256": "19c99805e7a44a34b297a75d1edea9985e300066dfc024d5c99d4236d4573b5d",
+      "decodedBytes": 1096,
+      "encoding": "br"
+    },
+    {
+      "path": "notices/emscripten--third_party--mini-lz4.js.txt",
+      "status": 200,
+      "sha256": "ac1eaa04b68d792d962d5946504ee5141ef58a9df86a0dfcf0ffa63d08634e46",
+      "decodedBytes": 10269,
+      "encoding": "br"
+    },
+    {
+      "path": "notices/libffi--LICENSE.txt",
+      "status": 200,
+      "sha256": "2c9c2acb9743e6b007b91350475308aee44691d96aa20eacef8e199988c8c388",
+      "decodedBytes": 1132,
+      "encoding": "br"
+    },
+    {
+      "path": "notices/libffi--LICENSE-BUILDTOOLS.txt",
+      "status": 200,
+      "sha256": "e67978cd18816c0cb7d29aaaacde7b7447402c2fb321a051698890a8eaedda94",
+      "decodedBytes": 18698,
+      "encoding": "br"
+    },
+    {
+      "path": "notices/hiwire--LICENSE.txt",
+      "status": 200,
+      "sha256": "1f256ecad192880510e84ad60474eab7589218784b9a50bc7ceee34c2b91f1d5",
+      "decodedBytes": 16725,
+      "encoding": "br"
+    },
+    {
+      "path": "notices/xz--COPYING.txt",
+      "status": 200,
+      "sha256": "c4f8e14fafe458d84808a4cd8b69f94673ebe2bf8fc992291629a69ac12218f8",
+      "decodedBytes": 2774,
+      "encoding": "br"
+    },
+    {
+      "path": "notices/xz--COPYING.GPLv2.txt",
+      "status": 200,
+      "sha256": "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643",
+      "decodedBytes": 18092,
+      "encoding": "br"
+    },
+    {
+      "path": "notices/xz--COPYING.GPLv3.txt",
+      "status": 200,
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+      "decodedBytes": 35147,
+      "encoding": "br"
+    },
+    {
+      "path": "notices/xz--COPYING.LGPLv2.1.txt",
+      "status": 200,
+      "sha256": "dc626520dcd53a22f727af3ee42c770e56c97a64fe3adb063799d8ab032fe551",
+      "decodedBytes": 26530,
+      "encoding": "br"
+    },
+    {
+      "path": "notices/zstd--COPYING.txt",
+      "status": 200,
+      "sha256": "f9c375a1be4a41f7b70301dd83c91cb89e41567478859b77eef375a52d782505",
+      "decodedBytes": 18091,
+      "encoding": "br"
+    },
+    {
+      "path": "notices/zstd--LICENSE.txt",
+      "status": 200,
+      "sha256": "7055266497633c9025b777c78eb7235af13922117480ed5c674677adc381c9d8",
+      "decodedBytes": 1549,
+      "encoding": "br"
+    },
+    {
+      "path": "notices/zstd--build--LICENSE.txt",
+      "status": 200,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "decodedBytes": 0,
+      "encoding": null
+    },
+    {
+      "path": "notices/zlib--LICENSE.txt",
+      "status": 200,
+      "sha256": "845efc77857d485d91fb3e0b884aaa929368c717ae8186b66fe1ed2495753243",
+      "decodedBytes": 1002,
+      "encoding": "br"
+    },
+    {
+      "path": "notices/zlib--contrib--dotzlib--LICENSE_1_0.txt.txt",
+      "status": 200,
+      "sha256": "36266a8fd073568394cb81cdb2b124f7fdae2c64c1a7ed09db34b4d22efa2951",
+      "decodedBytes": 1359,
+      "encoding": "br"
+    },
+    {
+      "path": "notices/zlib--zlib.h.txt",
+      "status": 200,
+      "sha256": "8a5579af72ea4f427ff00a4150f0ccb3fc5c1e4379f726e101133b1ab9fc600c",
+      "decodedBytes": 96829,
+      "encoding": "br"
+    },
+    {
+      "path": "notices/bzip2--LICENSE.txt",
+      "status": 200,
+      "sha256": "4919cfb14a73cd64fcef67b107613970cf1659a09aa675dba31314f373bc7204",
+      "decodedBytes": 1901,
+      "encoding": "br"
+    },
+    {
+      "path": "notices/sqlite--tea--license.terms.txt",
+      "status": 200,
+      "sha256": "66e056b6e8687f32af30d5187611b98b12a8f46f07aaf62f43585f276e8f0ac9",
+      "decodedBytes": 257,
+      "encoding": null
+    },
+    {
+      "path": "notices/sqlite--sqlite3.h.txt",
+      "status": 200,
+      "sha256": "abe0057c5506263d399da1f3d577f957b1f4fdbb3f340481f8cd4da7dc9f1ae5",
+      "decodedBytes": 613415,
+      "encoding": "br"
+    },
+    {
+      "path": "sources/pyodide-314.0.7.tar.gz",
+      "status": 200,
+      "sha256": "0731cd39bd1897c8cf0cac4da5cf9752594e5427cf4bad584200f8c9b617b9ef",
+      "decodedBytes": 1464973,
+      "encoding": null
+    },
+    {
+      "path": "notices/index.html",
+      "status": 200,
+      "sha256": "ae451746fbee6074ddad3f006d86e1c91b51ceebb6a81cd1f487848b70692b2b",
+      "decodedBytes": 4100,
+      "encoding": "br"
+    },
+    {
+      "path": "robots.txt",
+      "status": 200,
+      "sha256": "331ea9090db0c9f6f597bd9840fd5b171830f6e0b3ba1cb24dfa91f0c95aedc1",
+      "decodedBytes": 26,
+      "encoding": null
+    }
+  ],
+  "runs": [
+    {
+      "name": "cold",
+      "state": "completed",
+      "stdout": "supplied input\n",
+      "stderr": "error channel\n",
+      "detail": "",
+      "version": "314.0.7",
+      "python": "3.14.2 (main, Sep 14 2026, 03:03:51) [Clang 23.0.0git (https:/github.com/llvm/llvm-project e5927fecf8a6ce89e1a4eac5b8",
+      "heapBytes": 31457280,
+      "loadMs": 6791.300000011921,
+      "totalMs": 6809.199999988079,
+      "resources": [
+        {
+          "path": "runtime/314.0.7/pyodide.mjs",
+          "transferSize": 7731,
+          "encodedBodySize": 7431,
+          "decodedBodySize": 17931
+        },
+        {
+          "path": "runtime/314.0.7/pyodide.asm.mjs",
+          "transferSize": 265384,
+          "encodedBodySize": 265084,
+          "decodedBodySize": 1250344
+        },
+        {
+          "path": "runtime/314.0.7/pyodide.asm.wasm",
+          "transferSize": 3577840,
+          "encodedBodySize": 3577540,
+          "decodedBodySize": 9598218
+        },
+        {
+          "path": "runtime/314.0.7/python_stdlib.zip",
+          "transferSize": 2545937,
+          "encodedBodySize": 2545637,
+          "decodedBodySize": 2545637
+        },
+        {
+          "path": "runtime/314.0.7/pyodide-lock.json",
+          "transferSize": 25304,
+          "encodedBodySize": 25004,
+          "decodedBodySize": 119077
+        }
+      ],
+      "workersCreated": 1,
+      "workersRemaining": 0,
+      "framesRemaining": 0
+    },
+    {
+      "name": "same-page-warm",
+      "state": "completed",
+      "stdout": "é\n끝",
+      "stderr": "",
+      "detail": "",
+      "version": "314.0.7",
+      "python": "3.14.2 (main, Sep 14 2026, 03:03:51) [Clang 23.0.0git (https:/github.com/llvm/llvm-project e5927fecf8a6ce89e1a4eac5b8",
+      "heapBytes": 31457280,
+      "loadMs": 4971.599999964237,
+      "totalMs": 4995.099999964237,
+      "resources": [],
+      "workersCreated": 1,
+      "workersRemaining": 0,
+      "framesRemaining": 0
+    },
+    {
+      "name": "reload",
+      "state": "completed",
+      "stdout": "supplied input\n",
+      "stderr": "error channel\n",
+      "detail": "",
+      "version": "314.0.7",
+      "python": "3.14.2 (main, Sep 14 2026, 03:03:51) [Clang 23.0.0git (https:/github.com/llvm/llvm-project e5927fecf8a6ce89e1a4eac5b8",
+      "heapBytes": 31457280,
+      "loadMs": 6189.599999964237,
+      "totalMs": 6217.699999988079,
+      "resources": [
+        {
+          "path": "runtime/314.0.7/pyodide.mjs",
+          "transferSize": 0,
+          "encodedBodySize": 7431,
+          "decodedBodySize": 17931
+        },
+        {
+          "path": "runtime/314.0.7/pyodide.asm.mjs",
+          "transferSize": 0,
+          "encodedBodySize": 265084,
+          "decodedBodySize": 1250344
+        },
+        {
+          "path": "runtime/314.0.7/pyodide.asm.wasm",
+          "transferSize": 0,
+          "encodedBodySize": 3577540,
+          "decodedBodySize": 9598218
+        },
+        {
+          "path": "runtime/314.0.7/python_stdlib.zip",
+          "transferSize": 0,
+          "encodedBodySize": 2545637,
+          "decodedBodySize": 2545637
+        },
+        {
+          "path": "runtime/314.0.7/pyodide-lock.json",
+          "transferSize": 0,
+          "encodedBodySize": 25004,
+          "decodedBodySize": 119077
+        }
+      ],
+      "workersCreated": 1,
+      "workersRemaining": 0,
+      "framesRemaining": 0
+    }
+  ],
+  "outcome": "passed",
+  "browser": "156.0.8078.4",
+  "totalBrowserRequests": 19,
+  "runtimeRequests": 10
+}

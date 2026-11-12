@@ -1,0 +1,445 @@
+{
+  "date": "2026-10-12",
+  "environment": "Windows loopback; desktop and Pixel 7 emulation; no deployment or physical device",
+  "browser": "156.0.8078.4",
+  "authoredExactComparisons": 40,
+  "mainRecords": 95,
+  "supplementalChecks": 6,
+  "modes": {
+    "desktop": {
+      "jobResults": 45,
+      "cold": {
+        "mode": "desktop",
+        "name": "cold stdin/stdout/stderr",
+        "state": "completed",
+        "stdout": "supplied input\n",
+        "stderr": "error channel\n",
+        "detail": "",
+        "version": "314.0.7",
+        "python": "3.14.2 (main, Sep 14 2026, 03:03:51) [Clang 23.0.0git (https:/github.com/llvm/llvm-project e5927fecf8a6ce89e1a4eac5b8",
+        "heapBytes": 31457280,
+        "loadMs": 1855.1000000238419,
+        "totalMs": 1866.5,
+        "assets": [
+          {
+            "name": "pyodide.mjs",
+            "transferSize": 18231,
+            "encodedBodySize": 17931,
+            "decodedBodySize": 17931
+          },
+          {
+            "name": "pyodide.asm.mjs",
+            "transferSize": 1250644,
+            "encodedBodySize": 1250344,
+            "decodedBodySize": 1250344
+          },
+          {
+            "name": "pyodide.asm.wasm",
+            "transferSize": 9598518,
+            "encodedBodySize": 9598218,
+            "decodedBodySize": 9598218
+          },
+          {
+            "name": "python_stdlib.zip",
+            "transferSize": 2545937,
+            "encodedBodySize": 2545637,
+            "decodedBodySize": 2545637
+          },
+          {
+            "name": "pyodide-lock.json",
+            "transferSize": 119377,
+            "encodedBodySize": 119077,
+            "decodedBodySize": 119077
+          }
+        ]
+      },
+      "warm": {
+        "mode": "desktop",
+        "name": "warm unicode/no-final-newline",
+        "state": "completed",
+        "stdout": "\u00e9\n\ub05d",
+        "stderr": "",
+        "detail": "",
+        "version": "314.0.7",
+        "python": "3.14.2 (main, Sep 14 2026, 03:03:51) [Clang 23.0.0git (https:/github.com/llvm/llvm-project e5927fecf8a6ce89e1a4eac5b8",
+        "heapBytes": 31457280,
+        "loadMs": 1819.7999999523163,
+        "totalMs": 1830.7999999523163,
+        "assets": []
+      },
+      "medianLoadMs": 1816,
+      "outcomes": {
+        "cold stdin/stdout/stderr": "completed",
+        "warm unicode/no-final-newline": "completed",
+        "syntax": "runtime-error",
+        "runtime": "runtime-error",
+        "EOF": "runtime-error",
+        "infinite loop watchdog": "timeout",
+        "cancel": "cancelled",
+        "cancel recovery": "completed",
+        "reset": "cancelled",
+        "reset recovery": "completed",
+        "output flood": "output-limit",
+        "set globals/files": "completed",
+        "fresh job/case": "completed",
+        "worker DOM/storage/navigation": "completed",
+        "CSP network denial": "completed",
+        "opaque frame boundary": {
+          "DOM": true,
+          "storage": true,
+          "cookies": true,
+          "navigation": true
+        },
+        "stale messages": "completed",
+        "malformed": "protocol-error",
+        "oversized output": "output-limit",
+        "message flood": "output-limit",
+        "native fetch/import/websocket CSP": "completed",
+        "oversized source": "invalid-input",
+        "oversized stdin": "invalid-input",
+        "loading watchdog": "unavailable",
+        "blocked download": "unavailable",
+        "download recovery": "completed",
+        "authored classify-a-score.md model 0 case 0": "completed",
+        "authored classify-a-score.md model 0 case 1": "completed",
+        "authored classify-a-score.md model 0 case 2": "completed",
+        "authored classify-a-score.md model 0 case 3": "completed",
+        "authored classify-a-score.md model 0 case 4": "completed",
+        "authored classify-a-score.md model 0 case 5": "completed",
+        "authored sum-a-sequence.md model 0 case 0": "completed",
+        "authored sum-a-sequence.md model 0 case 1": "completed",
+        "authored sum-a-sequence.md model 0 case 2": "completed",
+        "authored sum-a-sequence.md model 0 case 3": "completed",
+        "authored sum-a-sequence.md model 1 case 0": "completed",
+        "authored sum-a-sequence.md model 1 case 1": "completed",
+        "authored sum-a-sequence.md model 1 case 2": "completed",
+        "authored sum-a-sequence.md model 1 case 3": "completed",
+        "authored summarise-revision-scores.md model 0 case 0": "completed",
+        "authored summarise-revision-scores.md model 0 case 1": "completed",
+        "authored summarise-revision-scores.md model 0 case 2": "completed",
+        "authored summarise-revision-scores.md model 0 case 3": "completed",
+        "authored summarise-revision-scores.md model 0 case 4": "completed",
+        "authored summarise-revision-scores.md model 0 case 5": "completed",
+        "failed requests": {
+          "failures": [
+            {
+              "url": "http://127.0.0.1:3190/leak?source=secret",
+              "error": {
+                "errorText": "csp"
+              }
+            },
+            {
+              "url": "https://example.com/leak?source=secret",
+              "error": {
+                "errorText": "csp"
+              }
+            },
+            {
+              "url": "https://example.com/leak.mjs",
+              "error": {
+                "errorText": "csp"
+              }
+            },
+            {
+              "url": "http://127.0.0.1:3190/runtime/pyodide.asm.wasm",
+              "error": {
+                "errorText": "net::ERR_FAILED"
+              }
+            },
+            {
+              "url": "http://127.0.0.1:3190/runtime/pyodide.asm.mjs",
+              "error": {
+                "errorText": "net::ERR_ABORTED"
+              }
+            },
+            {
+              "url": "http://127.0.0.1:3190/runtime/python_stdlib.zip",
+              "error": {
+                "errorText": "net::ERR_ABORTED"
+              }
+            },
+            {
+              "url": "http://127.0.0.1:3190/runtime/pyodide-lock.json",
+              "error": {
+                "errorText": "net::ERR_ABORTED"
+              }
+            },
+            {
+              "url": "http://127.0.0.1:3190/worker.mjs",
+              "error": {
+                "errorText": "net::ERR_ABORTED"
+              }
+            }
+          ]
+        }
+      }
+    },
+    "mobile-emulation": {
+      "jobResults": 45,
+      "cold": {
+        "mode": "mobile-emulation",
+        "name": "cold stdin/stdout/stderr",
+        "state": "completed",
+        "stdout": "supplied input\n",
+        "stderr": "error channel\n",
+        "detail": "",
+        "version": "314.0.7",
+        "python": "3.14.2 (main, Sep 14 2026, 03:03:51) [Clang 23.0.0git (https:/github.com/llvm/llvm-project e5927fecf8a6ce89e1a4eac5b8",
+        "heapBytes": 31457280,
+        "loadMs": 1846.5,
+        "totalMs": 1855.199999988079,
+        "assets": [
+          {
+            "name": "pyodide.mjs",
+            "transferSize": 18231,
+            "encodedBodySize": 17931,
+            "decodedBodySize": 17931
+          },
+          {
+            "name": "pyodide.asm.mjs",
+            "transferSize": 1250644,
+            "encodedBodySize": 1250344,
+            "decodedBodySize": 1250344
+          },
+          {
+            "name": "python_stdlib.zip",
+            "transferSize": 2545937,
+            "encodedBodySize": 2545637,
+            "decodedBodySize": 2545637
+          },
+          {
+            "name": "pyodide.asm.wasm",
+            "transferSize": 9598518,
+            "encodedBodySize": 9598218,
+            "decodedBodySize": 9598218
+          },
+          {
+            "name": "pyodide-lock.json",
+            "transferSize": 119377,
+            "encodedBodySize": 119077,
+            "decodedBodySize": 119077
+          }
+        ]
+      },
+      "warm": {
+        "mode": "mobile-emulation",
+        "name": "warm unicode/no-final-newline",
+        "state": "completed",
+        "stdout": "\u00e9\n\ub05d",
+        "stderr": "",
+        "detail": "",
+        "version": "314.0.7",
+        "python": "3.14.2 (main, Sep 14 2026, 03:03:51) [Clang 23.0.0git (https:/github.com/llvm/llvm-project e5927fecf8a6ce89e1a4eac5b8",
+        "heapBytes": 31457280,
+        "loadMs": 1887.8999999761581,
+        "totalMs": 1898.5,
+        "assets": []
+      },
+      "medianLoadMs": 1867.300000011921,
+      "outcomes": {
+        "cold stdin/stdout/stderr": "completed",
+        "warm unicode/no-final-newline": "completed",
+        "syntax": "runtime-error",
+        "runtime": "runtime-error",
+        "EOF": "runtime-error",
+        "infinite loop watchdog": "timeout",
+        "cancel": "cancelled",
+        "cancel recovery": "completed",
+        "reset": "cancelled",
+        "reset recovery": "completed",
+        "output flood": "output-limit",
+        "set globals/files": "completed",
+        "fresh job/case": "completed",
+        "worker DOM/storage/navigation": "completed",
+        "CSP network denial": "completed",
+        "opaque frame boundary": {
+          "DOM": true,
+          "storage": true,
+          "cookies": true,
+          "navigation": true
+        },
+        "stale messages": "completed",
+        "malformed": "protocol-error",
+        "oversized output": "output-limit",
+        "message flood": "output-limit",
+        "native fetch/import/websocket CSP": "completed",
+        "oversized source": "invalid-input",
+        "oversized stdin": "invalid-input",
+        "loading watchdog": "unavailable",
+        "blocked download": "unavailable",
+        "download recovery": "completed",
+        "authored classify-a-score.md model 0 case 0": "completed",
+        "authored classify-a-score.md model 0 case 1": "completed",
+        "authored classify-a-score.md model 0 case 2": "completed",
+        "authored classify-a-score.md model 0 case 3": "completed",
+        "authored classify-a-score.md model 0 case 4": "completed",
+        "authored classify-a-score.md model 0 case 5": "completed",
+        "authored sum-a-sequence.md model 0 case 0": "completed",
+        "authored sum-a-sequence.md model 0 case 1": "completed",
+        "authored sum-a-sequence.md model 0 case 2": "completed",
+        "authored sum-a-sequence.md model 0 case 3": "completed",
+        "authored sum-a-sequence.md model 1 case 0": "completed",
+        "authored sum-a-sequence.md model 1 case 1": "completed",
+        "authored sum-a-sequence.md model 1 case 2": "completed",
+        "authored sum-a-sequence.md model 1 case 3": "completed",
+        "authored summarise-revision-scores.md model 0 case 0": "completed",
+        "authored summarise-revision-scores.md model 0 case 1": "completed",
+        "authored summarise-revision-scores.md model 0 case 2": "completed",
+        "authored summarise-revision-scores.md model 0 case 3": "completed",
+        "authored summarise-revision-scores.md model 0 case 4": "completed",
+        "authored summarise-revision-scores.md model 0 case 5": "completed",
+        "failed requests": {
+          "failures": [
+            {
+              "url": "http://127.0.0.1:3190/leak?source=secret",
+              "error": {
+                "errorText": "csp"
+              }
+            },
+            {
+              "url": "https://example.com/leak?source=secret",
+              "error": {
+                "errorText": "csp"
+              }
+            },
+            {
+              "url": "https://example.com/leak.mjs",
+              "error": {
+                "errorText": "csp"
+              }
+            },
+            {
+              "url": "http://127.0.0.1:3190/runtime/pyodide.asm.wasm",
+              "error": {
+                "errorText": "net::ERR_FAILED"
+              }
+            },
+            {
+              "url": "http://127.0.0.1:3190/runtime/pyodide.mjs",
+              "error": {
+                "errorText": "net::ERR_ABORTED"
+              }
+            },
+            {
+              "url": "http://127.0.0.1:3190/runtime/pyodide.asm.mjs",
+              "error": {
+                "errorText": "net::ERR_ABORTED"
+              }
+            },
+            {
+              "url": "http://127.0.0.1:3190/runtime/python_stdlib.zip",
+              "error": {
+                "errorText": "net::ERR_ABORTED"
+              }
+            },
+            {
+              "url": "http://127.0.0.1:3190/runtime/pyodide-lock.json",
+              "error": {
+                "errorText": "net::ERR_ABORTED"
+              }
+            },
+            {
+              "url": "http://127.0.0.1:3190/worker.mjs",
+              "error": {
+                "errorText": "net::ERR_ABORTED"
+              }
+            }
+          ]
+        }
+      }
+    }
+  },
+  "throttled": {
+    "mode": "emulated 10Mbps, 80ms latency, 4x CPU slowdown",
+    "name": "cold loading",
+    "state": "completed",
+    "stdout": "throttled\n",
+    "stderr": "",
+    "detail": "",
+    "version": "314.0.7",
+    "python": "3.14.2 (main, Sep 14 2026, 03:03:51) [Clang 23.0.0git (https:/github.com/llvm/llvm-project e5927fecf8a6ce89e1a4eac5b8",
+    "heapBytes": 31457280,
+    "loadMs": 13219.300000011921,
+    "totalMs": 13229.199999988079
+  },
+  "supplemental": [
+    {
+      "mobile": false,
+      "name": "wrong job discarded",
+      "state": "completed",
+      "stdout": "real\n",
+      "stderr": "",
+      "detail": "",
+      "version": "314.0.7",
+      "python": "3.14.2 (main, Sep 14 2026, 03:03:51) [Clang 23.0.0git (https:/github.com/llvm/llvm-project e5927fecf8a6ce89e1a4eac5b8",
+      "heapBytes": 31457280,
+      "loadMs": 2376.5,
+      "totalMs": 2385.699999988079
+    },
+    {
+      "mobile": false,
+      "name": "invalid stream",
+      "state": "protocol-error",
+      "stdout": "",
+      "stderr": "",
+      "detail": "",
+      "version": "314.0.7",
+      "python": "3.14.2 (main, Sep 14 2026, 03:03:51) [Clang 23.0.0git (https:/github.com/llvm/llvm-project e5927fecf8a6ce89e1a4eac5b8",
+      "heapBytes": 31457280,
+      "loadMs": 2383.199999988079,
+      "totalMs": 2393
+    },
+    {
+      "mobile": false,
+      "name": "recovery",
+      "state": "completed",
+      "stdout": "fresh\n",
+      "stderr": "",
+      "detail": "",
+      "version": "314.0.7",
+      "python": "3.14.2 (main, Sep 14 2026, 03:03:51) [Clang 23.0.0git (https:/github.com/llvm/llvm-project e5927fecf8a6ce89e1a4eac5b8",
+      "heapBytes": 31457280,
+      "loadMs": 2509.899999976158,
+      "totalMs": 2519.599999964237
+    },
+    {
+      "mobile": true,
+      "name": "wrong job discarded",
+      "state": "completed",
+      "stdout": "real\n",
+      "stderr": "",
+      "detail": "",
+      "version": "314.0.7",
+      "python": "3.14.2 (main, Sep 14 2026, 03:03:51) [Clang 23.0.0git (https:/github.com/llvm/llvm-project e5927fecf8a6ce89e1a4eac5b8",
+      "heapBytes": 31457280,
+      "loadMs": 2973.199999988079,
+      "totalMs": 2986
+    },
+    {
+      "mobile": true,
+      "name": "invalid stream",
+      "state": "protocol-error",
+      "stdout": "",
+      "stderr": "",
+      "detail": "",
+      "version": "314.0.7",
+      "python": "3.14.2 (main, Sep 14 2026, 03:03:51) [Clang 23.0.0git (https:/github.com/llvm/llvm-project e5927fecf8a6ce89e1a4eac5b8",
+      "heapBytes": 31457280,
+      "loadMs": 2755.399999976158,
+      "totalMs": 2761.800000011921
+    },
+    {
+      "mobile": true,
+      "name": "recovery",
+      "state": "completed",
+      "stdout": "fresh\n",
+      "stderr": "",
+      "detail": "",
+      "version": "314.0.7",
+      "python": "3.14.2 (main, Sep 14 2026, 03:03:51) [Clang 23.0.0git (https:/github.com/llvm/llvm-project e5927fecf8a6ce89e1a4eac5b8",
+      "heapBytes": 31457280,
+      "loadMs": 1988.800000011921,
+      "totalMs": 1993.800000011921
+    }
+  ]
+}
