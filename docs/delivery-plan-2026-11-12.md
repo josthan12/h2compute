@@ -104,8 +104,8 @@ agent sign-off substitutes for those gates.
 | Increment | State | Evidence |
 | --- | --- | --- |
 | D1 | Reviewed and published | PR #3, three open milestones, matching remote head 54a34f6; active Linux PR run 43153217623 passed. Duplicate-cancellation aggregate issue is retained for D3. |
-| D2 | Locally verified candidate | Pending-change/reset repair, 22 unit and 206 production-browser cases pass, including 28 new cases. Exact-candidate review/publication/hosted checks pending. |
-| D3 | Planned after D2 | Correct observed CI duplication/deprecation, obtain exact-head/aggregate evidence, retain final delivery record and release gates. |
+| D2 | Reviewed and published | Candidate de40544, receipt/head c7cc59a; exact Linux run 43157461908 passed 206 browser/22 unit/all pipeline checks. Fallback limits remain documented. |
+| D3 | Locally verified workflow candidate | Main-push/PR split and supported runtime pins preserve all steps/limits. Review/publication/exact-head aggregate verification pending; external review kit prepared without invented evidence. |
 
 Related: [roadmap](../roadmap.md), [independent review](independent-review.md),
 [local beta review](reviews/2026-11-12-local-beta-review.md),

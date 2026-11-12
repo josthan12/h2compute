@@ -1,7 +1,7 @@
 # Current Status
 
 **Last updated:** 12 November 2026
-**Overall status:** Local theory beta is published as draft PR #3; D1 exact-head Linux CI passed. D2 progress recovery passes 22 local unit/206 browser cases and awaits independent review/publication; D3 CI summary/runtime maintenance is planned. Public release and Milestones 4/5 remain gated; Milestone 3 stays NO-GO for learner activation.
+**Overall status:** Local theory beta is published as draft PR #3; D1 exact-head Linux CI passed. D2 progress recovery is reviewed/published and passed exact-head Linux CI (206 browser/22 unit). D3 CI summary/runtime maintenance is locally verified and awaits review/publication/hosted proof. Public release and Milestones 4/5 remain gated; Milestone 3 stays NO-GO for learner activation.
 **Implementation:** Eight lessons, sixteen explanatory MCQs and eight offline tasks: Python control flow (3), list searching (2), relational data/SQL (3). Topic-specific navigation, incomplete filtering and resilient account-free local progress are implemented. No learner execution, account, hosted grader or new service. The developer-only spike/preview and historical evidence are preserved.
 
 ## Incremental delivery authorization — 12 November 2026
@@ -21,7 +21,13 @@ D2's local candidate repairs stale pending-state loss and reset notification/
 recovery, including denied reads/getters and corrupt sentinel strings. The
 [recovery record](docs/progress-recovery-2026-11-12.md) retains pre-fix failures,
 28 new/178 original browser cases, exact checks and bounded fallback limits.
-Its independent review and own new-head hosted result are still required.
+Independent reviewer signed `de40544`; receipt/head `c7cc59a` is published and
+the [exact-head Linux run](https://github.com/josthan12/h2compute/actions/runs/43157461908)
+passed all checks. The old canceled duplicate still leaves aggregate status
+unstable; [D3 CI maintenance](docs/ci-maintenance-2026-11-12.md) is locally
+verified and awaits its own review/hosted proof. The
+[uncompleted external review kit](docs/external-review-kit-2026-11-12.md) makes
+remaining human/device evidence concrete without inventing any result.
 The current delivery baseline was `5a3be84`. Existing local beta sign-off is in
 [its receipt](docs/reviews/2026-11-12-local-beta-review.md). Every new increment
 requires independent review; public-beta milestone gates remain open.

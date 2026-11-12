@@ -130,3 +130,22 @@ in this record. The primary agent added that real intermediate checkpoint to
 the JSON summary. This correction changes only evidence documentation; source,
 tests and the final 206-case result are unchanged. Re-review of the exact new
 candidate remains required.
+
+## Subsequent review and hosted result
+
+Independent reviewer `/root/d2_independent_review` signed candidate
+`de40544f6d5a09ac0099cd023fe4d4a58100dca8` after resolving the documentation
+finding and personally reproducing all 206 browser cases and other applicable
+checks. Its verbatim receipt is retained in commit
+`c7cc59ad394c61a9e822183bd2d7e34791dc869c`; only the receipt followed the
+approved candidate before publication. The HTTPS push succeeded, remote SHA
+matched, and PR #3 stayed draft under the content/hardening milestone.
+
+The exact-head [Linux run 43157461908](https://github.com/josthan12/h2compute/actions/runs/43157461908)
+passed the entire pipeline: 206 browser cases, 22 unit tests, eight offline
+drivers, 16 content files, all authored examples/constraints, contrast and build.
+Hosted Node 22.23.4/npm 10.9.9/Python 3.14.10/SQLite 3.46.1 are distinct from
+local versions. The superseded push run was canceled, not passed; the remaining
+aggregate/runtime warning issue belongs to D3, not an unreported test failure.
+[Remote receipt](delivery-evidence-2026-11-12/d2-remote-receipt.json) preserves
+the exact source/head/run/job identifiers. Full public-beta/runner gates remain open.

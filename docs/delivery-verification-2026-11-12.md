@@ -214,3 +214,33 @@ The aggregate watch displayed both the successful active run and canceled old
 run; direct run metadata establishes the actual conclusion. A compact
 [remote receipt](delivery-evidence-2026-11-12/d1-remote-receipt.json) retains IDs,
 counts and this limitation. It is not production/provider or human evidence.
+
+## D2 actual publication and hosted verification
+
+Independent reviewer `/root/d2_independent_review` signed candidate `de40544`
+after its evidence attribution correction and independent 206-case production
+run. Receipt-only commit/head
+`c7cc59ad394c61a9e822183bd2d7e34791dc869c` was pushed over the same explicit
+noninteractive HTTPS feature ref. The remote SHA matched; PR #3's reviewed body
+was updated and it remained draft under milestone 4.
+
+The [exact-head Linux run 43157461908](https://github.com/josthan12/h2compute/actions/runs/43157461908)
+completed successfully on 12 November 2026 at 12:53:08 SGT. Logs confirm 206
+browser cases (1.0 minute), 22 unit tests, eight offline driver tests, 16 content
+files and all authored Python/search/SQL/constraint, contrast and build checks.
+Hosted versions were Node 22.23.4, npm 10.9.9, Python 3.14.10 and SQLite 3.46.1.
+The [D2 remote receipt](delivery-evidence-2026-11-12/d2-remote-receipt.json)
+retains the full head, job ID and exact counts. No D1 result was substituted.
+
+```powershell
+gh run watch 43157461908 --repo josthan12/h2compute --exit-status --interval 10
+gh run view 43157461908 --repo josthan12/h2compute --json headSha,status,conclusion,updatedAt,url,jobs
+gh run view 43157461908 --repo josthan12/h2compute --log | rg 'Validated |# pass |Passed [0-9]+|[0-9]+ passed|node: v|npm: |Successfully set up'
+```
+
+These reads/watch exited 0 and confirmed the run's successful conclusion. The
+superseded push run `43157456245` was canceled; the observed aggregate PR state
+remained `UNSTABLE`, with the same old-action warning. D3 therefore follows as
+its own [CI maintenance slice](ci-maintenance-2026-11-12.md), with learner source
+held unchanged. Current local structural/lint/offline checks pass; exact-candidate
+D3 review and actual single-head/aggregate hosted proof remain pending.

@@ -11,9 +11,9 @@ The owner now authorizes agent push/PR delivery for this repository only;
 merge, production publication and learner activation stay gated. Follow
 [D1–D3 in the delivery plan](docs/delivery-plan-2026-11-12.md) and its explicit
 acceptance/fallback gates. D1 was reviewed, published to [draft PR #3](https://github.com/josthan12/h2compute/pull/3)
-and passed its exact-head Linux PR run before D2 implementation began. D2
-addresses reproduced cross-tab recovery/reset defects. D3 separately resolves
-observed duplicate-check/deprecated-action issues and records new exact-head CI;
+and passed its exact-head Linux PR run before D2 implementation began. D2 was then independently reviewed and published with a successful 206-case
+Linux run. D3 now locally verifies the separate duplicate-check/deprecated-action
+correction and awaits review/new exact-head CI;
 local sign-off and CI cannot waive independent human/device/provider evidence.
 
 ## Phase 0 — Planning (completed research, conditional runtime gate)

@@ -38,7 +38,18 @@ absent-key/failed resets, rejects malformed fallback signals, recovers reserved
 corrupt strings and retains reset recognition through later storage-getter
 denial. Initial-inaccessible notification and non-atomic storage limits remain
 documented. D2 has its own exact-candidate review and new-head hosted check gate;
-older D1 CI is not substituted for that evidence.
+older D1 CI is not substituted for that evidence. Independent D2 candidate
+`de40544` and receipt/head `c7cc59a` have now passed the new exact-head Linux run
+[43157461908](https://github.com/josthan12/h2compute/actions/runs/43157461908),
+including all 206 browser cases and 22 unit tests.
+
+D3 restricts push verification to main while retaining feature PR verification,
+and pins supported Node 24 action releases. Application Node 22/Python 3.14,
+all commands/assertions, read-only credentials and resource limits are preserved.
+Its own candidate review and exact-head single-run/aggregate checks are required
+before claiming that delivery issue resolved. An uncompleted
+[external review kit](https://github.com/josthan12/h2compute/blob/feat/pyodide-feasibility/docs/external-review-kit-2026-11-12.md)
+prepares the remaining human/device evidence without claiming those reviews occurred.
 
 ## Validation and review
 
