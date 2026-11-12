@@ -123,3 +123,10 @@ the new head's hosted CI remain required before delivered D2 readiness.
 
 [Delivery evidence](delivery-verification-2026-11-12.md) retains the separate
 D1/PR/CI history; D3 workflow changes remain queued until D2 integration.
+
+During independent review, the reviewer found that delivery prose attributed
+the earlier 204-case checkpoint to the machine summary, while it appeared only
+in this record. The primary agent added that real intermediate checkpoint to
+the JSON summary. This correction changes only evidence documentation; source,
+tests and the final 206-case result are unchanged. Re-review of the exact new
+candidate remains required.

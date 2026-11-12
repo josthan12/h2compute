@@ -8,6 +8,13 @@
     "laterGetterDenial": 1,
     "expectedExitCode": 1
   },
+  "earlierRepairedCheckpoint": {
+    "unitTests": 22,
+    "newBrowserCases": 26,
+    "fullBrowserCases": 204,
+    "fullSuiteMinutes": 1.9,
+    "supersededByFinalGetterDenialRepair": true
+  },
   "finalLocalChecks": {
     "npm test": "passed:22",
     "npm run lint": "passed",
