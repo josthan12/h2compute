@@ -1,7 +1,7 @@
 # Current Status
 
 **Last updated:** 12 November 2026
-**Overall status:** Local theory-beta candidate across all three approved areas; public release is blocked by outstanding external evidence/access. Milestones 4/5 are not complete. Milestone 3 stays NO-GO for learner activation.
+**Overall status:** Local theory beta is published as draft PR #3; D1 exact-head Linux CI passed. D2 progress recovery passes 22 local unit/206 browser cases and awaits independent review/publication; D3 CI summary/runtime maintenance is planned. Public release and Milestones 4/5 remain gated; Milestone 3 stays NO-GO for learner activation.
 **Implementation:** Eight lessons, sixteen explanatory MCQs and eight offline tasks: Python control flow (3), list searching (2), relational data/SQL (3). Topic-specific navigation, incomplete filtering and resilient account-free local progress are implemented. No learner execution, account, hosted grader or new service. The developer-only spike/preview and historical evidence are preserved.
 
 ## Incremental delivery authorization — 12 November 2026
@@ -17,15 +17,28 @@ HTTPS operations use existing credentials without changing those settings.
 Follow [the incremental delivery plan](docs/delivery-plan-2026-11-12.md):
 D1 bounded CI/deployment hold and reviewed draft publication; D2 separately
 reproduced two-tab progress recovery/reset fixes; D3 exact-head hosted evidence.
-The current clean baseline was `5a3be84`. Existing local beta sign-off is in
+D2's local candidate repairs stale pending-state loss and reset notification/
+recovery, including denied reads/getters and corrupt sentinel strings. The
+[recovery record](docs/progress-recovery-2026-11-12.md) retains pre-fix failures,
+28 new/178 original browser cases, exact checks and bounded fallback limits.
+Its independent review and own new-head hosted result are still required.
+The current delivery baseline was `5a3be84`. Existing local beta sign-off is in
 [its receipt](docs/reviews/2026-11-12-local-beta-review.md). Every new increment
 requires independent review; public-beta milestone gates remain open.
 
-Current repo-only reads confirm existing GitHub ADMIN access, no existing PR for
-this branch and no existing milestones. Fresh HTTPS ref listing reports main
-`092dc5f3014a64e5a3d6255dac6ecfb784790769`; the feature ref is not yet published.
-Full branch scope includes preserved developer-only feasibility history as well
-as the beta. See [delivery verification](docs/delivery-verification-2026-11-12.md)
+D1 is independently signed off at `ae7256d`, followed only by receipt commit
+`54a34f6`, and published to [draft PR #3](https://github.com/josthan12/h2compute/pull/3)
+using existing noninteractive HTTPS credentials. The exact remote SHA matched.
+Three open GitHub roadmap milestones now exist: [3](https://github.com/josthan12/h2compute/milestone/1),
+[4](https://github.com/josthan12/h2compute/milestone/2) and
+[5](https://github.com/josthan12/h2compute/milestone/3).
+The [exact-head Linux PR run](https://github.com/josthan12/h2compute/actions/runs/43153217623)
+passed all pipeline steps, including 178 browser cases. Its superseded push run
+was canceled, not passed; the resulting aggregate `UNSTABLE` state and old-action
+Node 20 warnings are queued for a separate D3 correction after D2 integration.
+No merge, protection, production, credential or global-configuration change
+occurred; writes remain repo-only. Full branch scope includes preserved developer-only feasibility
+history as well as the beta. See [delivery verification](docs/delivery-verification-2026-11-12.md)
 and [full-branch draft description](docs/delivery-pr-description-2026-11-12.md).
 
 ## Beta continuation — 12 November 2026 (earlier local handoff)

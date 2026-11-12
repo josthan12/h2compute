@@ -71,8 +71,9 @@ reviewed publication. No fresh local browser run is claimed for D1.
 
 The three proposed open milestones are retained in
 `docs/delivery-evidence-2026-11-12/milestones.json` before remote mutation.
-Current exact reviewed D1 candidate and hosted results remain pending.
-Publication must follow independent sign-off.
+At this prepublication snapshot, the exact reviewed D1 candidate and hosted
+results were pending. Publication required independent sign-off; the subsequent
+actual review, publication and hosted results are recorded below.
 
 ### Noninteractive publication transport
 
@@ -130,8 +131,86 @@ D2 must cover pending patches, unreadable-storage recovery and reset intent;
 an exact-candidate review and production-browser evidence are required before
 claiming either defect fixed.
 
+### D2 regressions before implementation
+
+The implementation agent added production-browser regressions before changing
+the app and ran:
+
+```powershell
+npx playwright test tests/e2e/progress-recovery.spec.ts --project=desktop-chromium --grep 'failed-save retry preserves|unreadable storage|absent-key peer reset' --workers=2
+```
+
+Exit 1, all six selected cases failed as intended. A different-lesson retry
+lost the peer's saved flag; the same-lesson case hid an externally reviewed
+model beneath stale pending memory; unreadable-but-writable storage immediately
+lost the displayed checkpoint; three absent-key reset/channel modes missed the
+peer reset. These establish the gap in the old implementation, not a completed
+fix. Existing tests, assertions and timeouts were retained. Subsequent results
+and the exact repair candidate must be recorded separately.
+
+The [D2 recovery record](progress-recovery-2026-11-12.md) now retains the bounded
+implementation, fallback limits, additional getter-denial regression and final
+local **206-case** production run. Its [machine summary](delivery-evidence-2026-11-12/d2-local-summary.json)
+distinguishes the six plus one pre-fix failures, earlier 204 checkpoint and final
+28 new/178 retained cases. Independent review and exact-head hosted D2 results
+remain separate from D1's already successful run.
+
 ## D3 and public release
 
-Not complete. Record PR/milestone URLs, remote SHA and exact-head hosted check
-run results after each reviewed publication. Keep all human/device/hosting/
-production/activation gates open until genuine applicable evidence exists.
+D3 is not complete. The PR, milestones and D1 hosted result are recorded below;
+the latest D2/D3 head must receive its own review and hosted verification.
+Keep all human/device/hosting/production/activation gates open until genuine
+applicable evidence exists.
+
+## D1 actual publication and hosted verification
+
+Independent reviewer `/root/d1_independent_review` signed off candidate
+`ae7256d8bb62ea831ef06c927899b2b4fa0fba37` for local D1/draft-publication
+readiness. Its verbatim receipt-only commit is
+`54a34f687bd8ff1d6157ba7965848430039d425c`. The actual noninteractive HTTPS
+push succeeded; the existing manager accepted the workflow updates without
+changing auth scopes/helpers or global configuration. A subsequent GitHub ref
+read exactly matched the local full head SHA.
+
+The reviewed milestone payloads created three **open** milestones:
+[browser feasibility](https://github.com/josthan12/h2compute/milestone/1),
+[content/hardening](https://github.com/josthan12/h2compute/milestone/2), and
+[public beta](https://github.com/josthan12/h2compute/milestone/3).
+[Draft PR #3](https://github.com/josthan12/h2compute/pull/3) targets main with
+the expected feature head and content/hardening milestone. It was attached to
+the Codex chat. No merge, protection change or deployment command was run.
+
+The exact-head [pull-request run 43153217623](https://github.com/josthan12/h2compute/actions/runs/43153217623)
+completed successfully on Linux, 12 November 2026 at 12:14:52 SGT. It validated
+all 16 content files, 14 unit tests, eight offline driver tests, 62 ordinary
+Python runs, 2,966 search runs, 19 SQL queries/eight rejected constraints,
+contrast, build and **178 browser cases**. Hosted example versions were Python
+3.14.10 / SQLite 3.46.1, distinct from the local Windows versions.
+
+The prior push run `43153107718` was canceled by the PR run, not passed. The
+aggregate PR state is still `UNSTABLE` because both same-head checks remain
+visible. Logs also warn that the old pinned checkout/setup actions target
+deprecated Node 20 and are forced to Node 24. These observed delivery issues
+are queued as a separate D3 CI correction after D2 integration; they are not
+hidden or counted as an all-green aggregate result.
+
+Exact remote commands (repository root):
+
+```powershell
+$env:GIT_TERMINAL_PROMPT='0'; $env:GCM_INTERACTIVE='Never'; git -c credential.interactive=never push https://github.com/josthan12/h2compute.git HEAD:refs/heads/feat/pyodide-feasibility
+gh api repos/josthan12/h2compute/git/ref/heads/feat/pyodide-feasibility --jq .object.sha
+gh api --method POST repos/josthan12/h2compute/milestones --input docs/.temp/milestone-3.json --jq '{number,title,state,html_url}'
+gh api --method POST repos/josthan12/h2compute/milestones --input docs/.temp/milestone-4.json --jq '{number,title,state,html_url}'
+gh api --method POST repos/josthan12/h2compute/milestones --input docs/.temp/milestone-5.json --jq '{number,title,state,html_url}'
+gh pr create --repo josthan12/h2compute --base main --head feat/pyodide-feasibility --draft --no-maintainer-edit --title "Deliver theory beta and preserve gated browser feasibility" --body-file docs/delivery-pr-description-2026-11-12.md --milestone "Milestone 4 - Theory beta content and hardening"
+gh pr checks 3 --repo josthan12/h2compute --watch --interval 10
+gh run view 43153217623 --repo josthan12/h2compute --json headSha,status,conclusion,url,updatedAt,jobs
+gh run view 43153217623 --repo josthan12/h2compute --log | rg 'Validated |Passed [0-9]+|# pass |[0-9]+ passed|Python [0-9]|Node.js|Version:'
+```
+
+The three temporary payload files were generated verbatim from the reviewed
+`milestones.json` array. Mutations and target/head/milestone reads exited 0.
+The aggregate watch displayed both the successful active run and canceled old
+run; direct run metadata establishes the actual conclusion. A compact
+[remote receipt](delivery-evidence-2026-11-12/d1-remote-receipt.json) retains IDs,
+counts and this limitation. It is not production/provider or human evidence.

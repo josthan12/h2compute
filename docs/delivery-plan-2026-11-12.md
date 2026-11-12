@@ -83,6 +83,16 @@ Record milestone evidence, limitations and next actions. Keep the draft status
 and all public-beta/runner gates truthful. A working local product, a passing
 repository CI run, deployment readiness and public release are different states.
 
+D1's real hosted run exposed two delivery issues despite its successful active
+PR job: a canceled duplicate push check leaves the aggregate PR `UNSTABLE`, and
+the old action majors emit a Node 20 runtime-deprecation warning. After D2 is
+integrated, make a separate reviewed CI correction: retain push checks for main
+and pull-request checks for feature work, so one new head has one applicable
+verification run; retain superseded-PR cancellation and all existing assertions.
+Review/pin supported Node 24 action releases with the same inputs, permissions,
+credential/resource/artifact limits. Acceptance is a fresh exact-head hosted
+pass and clean aggregate check state, without deleting/falsifying earlier runs.
+
 The remaining non-automatable gates are independent teacher/student feedback,
 independent screen-reader/accessibility review, physical-device evidence,
 current intended hosting project/allowance and reviewed production deployment,
@@ -93,9 +103,9 @@ agent sign-off substitutes for those gates.
 
 | Increment | State | Evidence |
 | --- | --- | --- |
-| D1 | In progress | Local CI/configuration checks pass; exact-candidate review, publication and hosted results pending. |
-| D2 | Reproduced; implementation queued | Two-tab data-loss reproduction by discovery agent; no fix claimed. |
-| D3 | Pending D1/D2 | Exact-head CI and final delivery record required. |
+| D1 | Reviewed and published | PR #3, three open milestones, matching remote head 54a34f6; active Linux PR run 43153217623 passed. Duplicate-cancellation aggregate issue is retained for D3. |
+| D2 | Locally verified candidate | Pending-change/reset repair, 22 unit and 206 production-browser cases pass, including 28 new cases. Exact-candidate review/publication/hosted checks pending. |
+| D3 | Planned after D2 | Correct observed CI duplication/deprecation, obtain exact-head/aggregate evidence, retain final delivery record and release gates. |
 
 Related: [roadmap](../roadmap.md), [independent review](independent-review.md),
 [local beta review](reviews/2026-11-12-local-beta-review.md),

@@ -10,8 +10,10 @@ Use [docs/milestone-workflow.md](docs/milestone-workflow.md) for autonomous deli
 The owner now authorizes agent push/PR delivery for this repository only;
 merge, production publication and learner activation stay gated. Follow
 [D1–D3 in the delivery plan](docs/delivery-plan-2026-11-12.md) and its explicit
-acceptance/fallback gates. D1 must be reviewed and integrated before the D2
-progress-recovery implementation. Exact-head hosted results belong to D3;
+acceptance/fallback gates. D1 was reviewed, published to [draft PR #3](https://github.com/josthan12/h2compute/pull/3)
+and passed its exact-head Linux PR run before D2 implementation began. D2
+addresses reproduced cross-tab recovery/reset defects. D3 separately resolves
+observed duplicate-check/deprecated-action issues and records new exact-head CI;
 local sign-off and CI cannot waive independent human/device/provider evidence.
 
 ## Phase 0 — Planning (completed research, conditional runtime gate)

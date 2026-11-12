@@ -106,12 +106,19 @@ export function encodeProgress(progress: Progress): string {
   });
 }
 export type StorageLike = Pick<Storage, "getItem" | "setItem" | "removeItem">;
-export function readProgress(storage: StorageLike): string | null {
+export type ProgressRead =
+  | { available: true; raw: string | null }
+  | { available: false };
+export function readProgressResult(storage: StorageLike): ProgressRead {
   try {
-    return storage.getItem(STORAGE_KEY);
+    return { available: true, raw: storage.getItem(STORAGE_KEY) };
   } catch {
-    return "unavailable";
+    return { available: false };
   }
+}
+export function readProgress(storage: StorageLike): string | null {
+  const result = readProgressResult(storage);
+  return result.available ? result.raw : "unavailable";
 }
 export function saveProgress(
   storage: StorageLike,
@@ -131,4 +138,62 @@ export function resetProgress(storage: StorageLike): boolean {
   } catch {
     return false;
   }
+}
+
+// Only local changes are queued: at most three flags for each registered lesson.
+export type PendingProgress = {
+  reset: boolean;
+  lessons: Partial<Record<LessonId, Partial<LessonProgress>>>;
+};
+export function createPendingProgress(reset = false): PendingProgress {
+  return { reset, lessons: {} };
+}
+export function applyPendingProgress(base: Progress, pending: PendingProgress): Progress {
+  let next = pending.reset ? createEmptyProgress() : base;
+  for (const id of LESSON_IDS) {
+    const patch = pending.lessons[id];
+    if (patch) next = updateLesson(next, id, patch);
+  }
+  return next;
+}
+export function queueProgressUpdate(
+  base: Progress,
+  pending: PendingProgress,
+  id: LessonId,
+  value: Partial<LessonProgress>,
+): PendingProgress {
+  if (!isLessonId(id)) return pending;
+  const current = applyPendingProgress(base, pending);
+  const before = current.lessons[id];
+  const after = updateLesson(current, id, value).lessons[id];
+  const patch = { ...pending.lessons[id] };
+  for (const flag of ["quizReviewed", "practiceReviewed", "completed"] as const) {
+    if (typeof value[flag] === "boolean") patch[flag] = after[flag];
+  }
+  // Keep an invariant's effect even if a prerequisite is later restored.
+  if (before.completed !== after.completed || value.quizReviewed === false || value.practiceReviewed === false) {
+    patch.completed = after.completed;
+  }
+  return { ...pending, lessons: { ...pending.lessons, [id]: patch } };
+}
+export function resetProgressWithSignal(storage: StorageLike): {
+  removed: boolean;
+  cleared: boolean;
+  notification: "storage" | "channel" | "uncertain";
+} {
+  const before = readProgressResult(storage);
+  // An absent key must first exist for removal to notify other tabs. This is
+  // an explicit reset action, not a background save or an additional key.
+  const wroteEmpty = saveProgress(storage, createEmptyProgress());
+  // A failed write must never prevent an independent removal attempt.
+  const removed = resetProgress(storage);
+  const notification = !removed
+    ? "channel"
+    : wroteEmpty || (before.available && before.raw !== null)
+      ? "storage"
+      : before.available
+        ? "channel"
+        : "uncertain";
+  // Never send both transports: a delayed duplicate could clear a newer action.
+  return { removed, cleared: removed || wroteEmpty, notification };
 }

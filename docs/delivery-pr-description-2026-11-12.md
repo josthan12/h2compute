@@ -29,6 +29,17 @@ publication, D2 reproduced progress-recovery repair, and D3 exact-head hosted
 verification. Each implementation slice requires its own candidate-bound review
 and checks before being added to this PR. D2 is not claimed fixed by D1.
 
+D1 was published and its exact-head Linux PR run passed. The canceled duplicate
+push check left the aggregate PR unstable; a separate D3 workflow correction is
+planned. D2 now has a bounded pending-change/reset recovery implementation and
+28 new production-browser cases, with 206 total local cases and 22 unit tests
+passing. It preserves saved peer flags, prevents unreadable-base writes, handles
+absent-key/failed resets, rejects malformed fallback signals, recovers reserved
+corrupt strings and retains reset recognition through later storage-getter
+denial. Initial-inaccessible notification and non-atomic storage limits remain
+documented. D2 has its own exact-candidate review and new-head hosted check gate;
+older D1 CI is not substituted for that evidence.
+
 ## Validation and review
 
 The local beta candidate `2864709` passed all requested checks, including

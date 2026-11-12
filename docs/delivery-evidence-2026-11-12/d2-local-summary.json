@@ -1,0 +1,31 @@
+{
+  "date": "2026-11-12",
+  "scope": "D2 local progress recovery/reset implementation; independent review and exact-head hosted verification pending",
+  "baseline": "54a34f687bd8ff1d6157ba7965848430039d425c",
+  "environment": { "node": "20.20.2", "playwright": "1.64.0", "next": "16.4.6", "platform": "Windows", "profiles": ["desktop-chromium", "mobile-chromium"] },
+  "preFixFailures": {
+    "selectedRecoveryCases": 6,
+    "laterGetterDenial": 1,
+    "expectedExitCode": 1
+  },
+  "finalLocalChecks": {
+    "npm test": "passed:22",
+    "npm run lint": "passed",
+    "npm run typecheck": "passed",
+    "npm run build": "passed:24 Next entries",
+    "npx playwright test tests/e2e/progress-recovery.spec.ts": "passed:28,24.3 seconds",
+    "npm run test:e2e": "passed:206,2.0 minutes,no skips or retries",
+    "git diff --check": "passed"
+  },
+  "preservedOriginalBrowserCases": 178,
+  "storageSchema": 2,
+  "newPersistentKeys": 0,
+  "newDirectDependenciesOrServices": 0,
+  "limits": [
+    "No cross-tab atomic transaction guarantee",
+    "Failed reset retains empty-base intent until a later successful local save",
+    "Unknown-read/failed-marker/accepted-absent-removal may require peer manual reset",
+    "No usable initial storage identity or reset signal may require manual reset/reload",
+    "Emulation is not physical-device or independent human review evidence"
+  ]
+}

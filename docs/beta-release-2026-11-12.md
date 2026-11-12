@@ -37,6 +37,7 @@ npm run lint
 npm run typecheck
 npm run check:content
 npm test
+npm run test:runner-drivers
 npm run test:examples
 python scripts/check-contrast.py
 npm run build
@@ -44,7 +45,8 @@ npx playwright install chromium
 npm run test:e2e
 ```
 
-The end-to-end script starts the production build at 127.0.0.1:3100. Build first;
+The runner-driver command runs only offline unit tests, not hosted probes or
+learner execution. The end-to-end script starts the production build at 127.0.0.1:3100. Build first;
 leave that port free. On Linux a fresh browser environment may need
 `npx playwright install --with-deps chromium`, as in CI. Test output and
 failure traces go in ignored `test-results/`.
